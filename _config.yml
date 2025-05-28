@@ -1,6 +1,6 @@
-title: DSE Template 
-description: A template for Digital Scholarly Editions
-baseurl: "https://susannalles.github.io/DSE_template/"
+title: El marqués de las Navas 
+description: Edición genética digital
+baseurl: "https://annabate.github.io/EMN_DSE/"
 url: ""
 markdown: kramdown
 theme: null
