@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Presentación
+title: Esta edición
 ---
 
 ## Criterios de edición 
