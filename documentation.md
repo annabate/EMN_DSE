@@ -1,4 +1,4 @@
 ---
-layout: home
-default: Documentación
+layout: default
+title: Documentación
 ---
