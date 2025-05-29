@@ -1,6 +1,6 @@
 ---
-layout: title
-default: Créditos
+layout: default
+title: Créditos
 ---
 
 
