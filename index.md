@@ -1,5 +1,5 @@
 ---
-layout: title
+layout: home
 default: Acceder al texto
 ---
 
