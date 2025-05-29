@@ -1,6 +1,6 @@
 ---
-layout: title
-default: Bibliografía
+layout: default
+title: Bibliografía
 ---
 
 
