@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Créditos
+default: Créditos
 ---
 
 
