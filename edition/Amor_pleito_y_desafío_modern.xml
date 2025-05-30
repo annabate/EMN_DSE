@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns="http://www.tei-c.org/ns/1.0" xmlns:svg="http://www.w3.org/2000/svg">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amor, pleito y desafío</title>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl/>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <pb type="folio" n="[Fol. 1r]"/>
+            <head>Amor, pleito y desafío</head>
+            <p>En Madrid a 13 de noviembre.</p>
+            <p>Tragicomedia 1621</p>
+            <pb type="folio" n="[Fol. 1v]"/>
+            <pb type="folio" n="[Fol. 2r]"/>
+            <div type="castList">
+                <castList>
+                    <head>Personas del primer acto</head>
+                    <castItem><role xml:id="Don_Álvaro_de_Rojas_Maldonado">Don Álvaro de Rojas — Maldonado</role></castItem>
+                    <castItem><role xml:id="Don_Juan_de_Padilla_Lorenzo_Hurtado">Don Juan de
+                                Padilla<note type="aparato" n="1" subtype="A2">Reparto
+                                    &lt;-Castilla//Padilla&gt;</note> — Lorenzo Hurtado</role></castItem>
+                    <castItem><role xml:id="Don_Juan_de_Aragón_Pedro_De_Pernia">Don Juan de Aragón — Pedro De Pernia</role></castItem>
+                    <castItem><role xml:id="El_Rey_Alfonso_Juan_Bautista">El Rey Alfonso Juan — Bautista</role></castItem>
+                    <castItem><role xml:id="Doña_Beatriz_La_señora_Angela">Doña Beatriz La señora — Angela</role></castItem>
+                    <castItem><role xml:id="Doña_Ana_La_señora_Dolores">Doña Ana — La señora
+                            Dolores</role></castItem>
+                    <castItem><role xml:id="Martín_escudero_Antonio_Rodríguez">Martín, escudero — Antonio Rodríguez</role></castItem>
+                    <castItem><role xml:id="Tello_criado_Vicente">Tello, criado
+                        Vicente</role></castItem>
+                    <castItem><role xml:id="Sancho_criado_Pedro_de_Valdés">Sancho, criado — Pedro de
+                            Valdés</role></castItem>
+                    <castItem><role xml:id="Leonor_Criada_La_señora_jerónima">Leonor, Criada — La
+                            señora Jerónima<note type="comentario" n="1">Dramatis Personae: Los
+                                nombres de los actores al lado de los personajes están escritos con
+                                otra tinta, la grafía puede ser de Lope.</note></role></castItem>
+                    <pb type="folio" n="[Fol. 2v]"/>
+                    <pb type="folio" n="[Fol. 3r]"/>
+                </castList>
+            </div>
+            <div type="act" n="1">
+                <head>Acto primero</head>
+                <stage>Don Álvaro anciano con un báculo y don Juan de Padilla</stage>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <milestone unit="stanza" type="Décimas"/>
+                    <l n="1">Advierta vusiñoría…</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="2">Yo no tengo que advertir.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="3">Pues ¿por qué no me ha de oír,</l>
+                    <l n="4">por su honor y en cortesía?</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="5">¿Sabéis que esta casa es mía?</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l part="I" n="6">Sí, señor.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l part="F">¿Sabéis quién soy?</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="7">Sé que tan lejos estoy</l>
+                    <l n="8">de hacerle agravio, que apelo</l>
+                    <l n="9">de vuestro engañado celo,</l>
+                    <l n="10">y justas quejas os doy.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="11">La que yo tengo de vos,</l>
+                    <l n="12">don Juan de Padilla, fuera</l>
+                    <l n="13">menos grave cuando hubiera</l>
+                    <l n="14">la misma edad en los dos.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="15">Mi inocencia sabe Dios.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="16">Si el báculo fuera espada,</l>
+                    <l n="17">ya estuviera castigada,</l>
+                    <l n="18">Padilla, vuestra malicia.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="19">A ser vara de justicia,</l>
+                    <l n="20">yo sé<note type="aparato" n="2" subtype="A1">20: se &lt;-re&gt;
+                            que</note> que oyera informada.</l>
+                    <pb type="folio" n="[Fol. 3v]"/>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="21">Yo soy Rojas<note type="aparato" n="3" subtype="A2">21: &lt;-
+                            Aualos\Roxas y&gt;</note>, y tan bueno<note type="comentario" n="4">21:
+                                <hi rend="italic">Roxas</hi>: la primera lectura, Ávalos, remite a
+                            un personaje del segundo acto, se debe supuestamente a un lapsus del
+                            autor.</note></l>
+                    <l n="22">como cuantos Dios crïó.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="23">Lo mismo defiendo yo.<note type="aparato" n="5" subtype="A2">23: Lo
+                            mismos deffiendo yo &lt;-ni estoy de su sangre ageno&gt; en la línea
+                            siguiente.</note></l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="24">Por lo menos ya condeno,</l>
+                    <l n="25">siendo de mi casa ajeno,<note type="aparato" n="6" subtype="A2">25:
+                            siendo &lt;-en//de&gt; mi casa ajeno. Verso añadido entre las
+                            líneas.</note></l>
+                    <l n="26">el hallaros en mi casa.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="27">¿Qué ley <note type="aparato" n="7" subtype="A2">27: &lt;-de ese\ley
+                            el&gt;</note> el respeto pasa?</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="28">La ley santa de tener<note type="aparato" n="8" subtype="A2">28:
+                            &lt;-teniendo hija es necedad Alb. no es nada tener\la ley santa de
+                            tener &gt;</note></l>
+                    <l n="29">hija, que puedo temer<note type="aparato" n="9" subtype="A2">29:
+                            &lt;\\hija que&gt;&lt;-que por ver mi soledad&gt;&lt;//puedo temer
+                            &gt;</note></l>
+                    <l n="30">que por su gusto se casa.<note type="aparato" n="10" subtype="A2">30:
+                            &lt;\que por su&gt;&lt;-siendo quien es no se casa&gt;&lt;/gusto se
+                            casa&gt;</note><note type="comentario" n="2">21-30: En la reformulación
+                            de la décima, Lope corrige el apellido del padre de la dama, defecto
+                            quizá causado por un lapsus (Ávalos), perfecciona la referencia a la
+                            igualdad de sangre con el pretendiente Juan de Padilla y modifica la
+                            afirmación sobre la voluntad de la hija, eliminando la referencia a un
+                            futuro de soledad dando mayor peso a la gravedad de una decisión
+                            arbitaria según la visión patriarcal. Nótese también el cambio de rima
+                            que se produce en la nueva escritura.</note></l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="31">Si yo supe que tenía</l>
+                    <l n="32">unas reliquias que son</l>
+                    <l n="33">para el mal de corazón</l>
+                    <l n="34">y a pedírselas venía,</l>
+                    <l n="35">¿qué afrenta o descortesía</l>
+                    <l n="36">halláis en la buena fe</l>
+                    <l n="37">con que en vuestra casa entré?</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="38">¿Reliquias para esos males</l>
+                    <l n="39">en casas tan principales?<note type="aparato" n="11" subtype="A2">39:
+                            &lt;-se buscan en casas tales\\en &lt;-las&gt; casas tan
+                            principales&gt;</note><note type="comentario" n="3">39: Esta
+                            intervención debe relacionarse con la anterior (vv. 21-30), porque atañe
+                            al mismo intento de dar mayor énfasis a la autoridad del lugar de la
+                            acción, que es la casa del noble anciano don Álvaro de Rojas. El
+                            parecido de la tinta confirma el indicio.</note></l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="40">Pues, señor, ¿qué agravio fue?</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="41">Allá por los monesterios</l>
+                    <l n="42">se buscan las cosas santas,</l>
+                    <l n="43">que en mi casa no habrá tantas</l>
+                    <l n="44">para tan altos misterios;</l>
+                    <l n="45">afrentas y vituperios</l>
+                    <l n="46">hácense en las casas viles.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="47">Que tú mismo la aniquiles</l>
+                    <l n="48">me ha causado admiración.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="49">¡Qué buen mal de corazón!</l>
+                    <pb type="folio" n="[Fol. 4r]"/>
+                    <l n="50">¡Qué disculpas tan sutiles!</l>
+                    <l n="51">Aquí no se ha de venir</l>
+                    <l n="52">por reliquias para él,</l>
+                    <l n="53">por corazón sí, que en él</l>
+                    <l n="54">puedo valor infundir;<note type="aparato" n="12" subtype="A2">54:
+                            &lt;-animo&gt;puedo&lt;-ynprimir/valor infundir&gt;</note><note
+                            type="comentario" n="4">54: La corrección autógrafa es coherente con las
+                            anteriores (vv. 21-30 y v. 39), y remite al intento de Lope de ensalzar,
+                            a través de las palabras del padre, el contexto elevado en el que se
+                            encuentran.</note></l>
+                    <l n="55">aquí se pueden pedir</l>
+                    <l n="56">lanzas<note type="aparato" n="13" subtype="A2">56: lan &lt;z+Z&gt; as</note>, paveses y espadas<note type="comentario" n="5">56: La
+                            intervención parece deberse al intento de aclarar gráficamente un
+                            carácter de díficil lectura en el manuscrito, la mano puede no ser de
+                            Lope; la tinta está más diluida.</note></l>
+                    <l n="57">de tantas guerras pasadas,</l>
+                    <l n="58">q aun las hay, gracias a Dios,</l>
+                    <l n="59">para mozos como vos,</l>
+                    <l n="60">a buena mano enseñadas.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="61">De suerte estáis enojado,</l>
+                    <l n="62">que pienso que mi razón</l>
+                    <l n="63">no os dará satisfacción.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="64">Pues ¿qué razón me habéis dado?</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="65">Soy yo caballero honrado.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l part="I" n="66">Sois Padilla.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l part="F">Soy igual</l>
+                    <l part="I" n="67">a vuestra sangre.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l part="F">Sois tal</l>
+                    <l part="I" n="68">que podéis honrarme.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l part="F">Oíd</l>
+                    <l part="I" n="69">un gran remedio.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l part="F">Decid.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="70">Si habéis presumido mal…</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l part="I" n="71">Ya os escucho.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l part="F">Dadme luego</l>
+                    <l n="72">por mujer a mi señora</l>
+                    <l n="73">doña Beatriz. Si ella agora</l>
+                    <l n="74">quiere admitir lo que os ruego,</l>
+                    <l n="75">quedará todo en sosiego,</l>
+                    <l n="76">y yo con ella casado.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="77">¡Buen remedio habéis hallado</l>
+                    <l n="78">para el mal de corazón,</l>
+                    <pb type="folio" n="[Fol. 4v]"/>
+                    <l n="79">si estas las reliquias son</l>
+                    <l n="80">que en mi casa habéis buscado!</l>
+                    <l n="81">Siendo quien soy, ¿cómo puedo,</l>
+                    <l n="82">sin la licencia del Rey,</l>
+                    <l n="83">pues el ser tan noble es ley,</l>
+                    <l n="84">por quien obligado quedo?</l>
+                    <l n="85">Pedídsela, y yo concedo</l>
+                    <l n="86">en que Beatriz vuestra sea,</l>
+                    <l n="87">porque se temple o se crea</l>
+                    <l n="88">vuestro mal de corazón.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="89">Yo se que en esta ocasión</l>
+                    <l n="90">el Rey mi aumento desea,</l>
+                    <l n="91">que no ha tenido soldado</l>
+                    <l n="92">que le sirva como yo.</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l part="I" n="93">Id a hablarle.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l part="F">El cielo dio</l>
+                    <l n="94">dulce fin<note type="aparato" n="14" subtype="A1">94: &lt;-fin&gt; dulce fin</note> a mi cuidado;</l>
+                    <l n="95">agora a esos pies echado…</l>
+                </sp>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l n="96">Teneos, don Juan, que no es justo</l>
+                    <l n="97">sin saber del Rey el gusto.</l>
+                </sp>
+                <sp>
+                    <speaker>Padilla</speaker>
+                    <l n="98">Dios os guarde hasta que os den</l>
+                    <l part="I" n="99">nietos mis nietos.</l>
+                </sp>
+                <stage>Váyase</stage>
+                <sp>
+                    <speaker>Álvaro</speaker>
+                    <l part="F">¡Qué bien</l>
+                    <l n="100">quitado se me ha el disgusto!</l>
+                    <milestone unit="stanza" type="Redondillas"/>
+                    <l n="101">Bien es verdad que el pedir</l>
+                    <l n="102">que hable al Rey achaque ha sido,</l>
+                    <l n="103">q aunque es don Juan bien nacido,</l>
+                    <l n="104">y no se puede decir</l>
+                    <l n="105">que es mejor ningún fidalgo</l>
+                    <l n="106">y caballero en la corte,</l>
+                    <pb type="folio" n="[Fol. 5r]"/>
+                    <l n="107">voy por diferente norte</l>
+                    <l n="108">y de otra escusa me valgo.</l>
+                </sp>
+            </div>
+        </body>
+        <back> </back>
+    </text>
+</TEI>
