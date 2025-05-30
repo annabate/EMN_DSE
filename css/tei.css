@@ -179,8 +179,8 @@ tei-milestone[unit="stanza"]::before {
   gap: 0.5em;
   margin: 0;
   padding: 0.5em 1em;
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
+  background-color: #fafafaa6;
+  border-bottom: 1px solid #d6b68c;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -255,7 +255,7 @@ tei-milestone[unit="stanza"]::before {
 
 .tei-column {
   flex: 1;
-  background-color: #78674f8b;
+  background-color: #fafafaa6;
   padding: 1.2em;
   border-radius: 10px;
   overflow-x: auto;
@@ -315,14 +315,14 @@ tei-milestone[unit="stanza"]::before {
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   color: #262626;
-  background-color: #e6e6e6;
+  background-color: #fafafaa6;
   border: 1px solid #bbb;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #view-selector button:hover {
-  background-color: #A88A63;
+  background-color: #dac4a6;
 }
 
 #folio-controls {
@@ -373,7 +373,7 @@ tei-milestone[unit="stanza"]::before {
 }
 
 .close-button:hover {
-  background: #4e1313;
+  background: #aa2323;
 }
 
 #floating-note {
@@ -391,7 +391,7 @@ tei-milestone[unit="stanza"]::before {
   right: 0;
   width: 350px;
   height: 100%;
-  background-color: #A88A63;
+  background-color: #fafafaa6;
   border-left: 2px solid #ccc;
   overflow-y: auto;
   box-shadow: -2px 0 5px rgba(0,0,0,0.1);
