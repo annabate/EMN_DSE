@@ -1,57 +1,22 @@
-/* === Harmonized tei.css matching styles.css === */
-
 body {
   margin: 0;
   padding: 1em;
-  font-family: "EB Garamond", Georgia, serif;
-  line-height: 1.6;
-  color: #2e2e2e;
-  background-color: #f9f9f9;
+  font-family: "Georgia", sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #fafafa;
 }
 
-#back-home {
-  display: inline-block;
-  margin: 1em 0;
-  padding: 0.6em 1.2em;
-  background-color: #005377;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  font-family: "EB Garamond", serif;
-}
-#back-home:hover {
-  background-color: #003f5c;
-}
-
-/* Typography and element styling */
 tei-div, tei-p {
   margin-bottom: 1.2em;
 }
+
 tei-p {
   display: block;
   text-align: justify;
   margin: 0.8em 0;
 }
-tei-head {
-  display: block;
-  font-weight: bold;
-  font-variant: small-caps;
-  font-size: 1.5em;
-  text-align: center;
-  margin: 1em 0;
-  color: #005377;
-}
-tei-stage {
-  display: block;
-  font-style: italic;
-  font-size: 0.95em;
-  text-align: center;
-  margin: 0.5em 0;
-  color: #555;
-}
 
-/* Cast list */
 tei-castList {
   display: flex;
   flex-direction: column;
@@ -59,48 +24,30 @@ tei-castList {
   text-align: center;
   margin: 2em 0;
 }
+
 tei-castItem {
   display: block;
   margin: 0.2em 0;
 }
 
-/* TEI Speech */
-tei-sp {
-  margin-bottom: 0.5em;
-  display: grid;
-  grid-template-columns: 6em 1fr;
-  column-gap: 1em;
-}
-tei-speaker {
-  font-variant: small-caps;
-  font-weight: bold;
-  text-align: right;
-  grid-column: 1;
-}
-tei-l {
-  grid-column: 2;
-  text-align: left;
-}
-tei-l[part="M"] {
-  padding-left: 5em;
-}
-tei-l[part="F"] {
-  padding-left: 8em;
-}
-tei-l::before {
-  content: attr(n);
-  display: inline-block;
-  width: 2em;
-  text-align: right;
-  margin-right: 0.5em;
-  color: #777;
-  font-size: 0.8em;
+
+tei-note[type="comentario"] .note-icon {
+  background-color: #3366cc;
 }
 
-/* Notes and icon */
+tei-note[type="aparato"] .note-icon {
+  background-color: #cc3333;
+}
+
 tei-note {
   position: relative;
 }
+
+.note-icon[data-subtype] {
+  position: relative;
+}
+
+/* Stile di base */
 .note-icon {
   display: inline-flex;
   align-items: center;
@@ -109,122 +56,91 @@ tei-note {
   height: 17px;
   border-radius: 50%;
   font-size: 0.8em;
-  background-color: #3366cc;
+  background-color: #3366cc; /* ad esempio per il pallino blu */
   color: #fff;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
   margin-left: 0.25em;
 }
-tei-note[type="comentario"] .note-icon {
+
+.note-icon:empty {
   background-color: #3366cc;
 }
-tei-note[type="aparato"] .note-icon {
-  background-color: #cc3333;
-}
+
 tei-note::after {
   max-width: 90vw;
   word-break: normal;
+  overflow-wrap: break-word;
   white-space: normal;
 }
 
-/* Facsimile */
-#facsimile-image {
-  max-width: 100%;
-  transition: transform 0.3s ease;
-  cursor: zoom-in;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  background: white;
-}
-#facsimile-image.zoomed {
-  transform: scale(2.5);
-  cursor: zoom-out;
+tei-sp {
+  margin-bottom: 0.5em;
+  display: grid;
+  grid-template-columns: 6em 1fr;
+  column-gap: 1em;
 }
 
-/* Layout */
-#tei-wrapper {
-  display: flex;
-  gap: 1em;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1em;
-  max-width: 1400px;
-  margin: auto;
-  box-sizing: border-box;
-}
-#tei-wrapper.single-view {
-  justify-content: center;
-}
-#tei-wrapper.single-view .tei-column {
-  width: 60%;
-  margin: 0 auto;
-}
-#tei-wrapper.synoptic-view {
-  flex-wrap: wrap;
-}
-#tei-wrapper.synoptic-view .tei-column {
-  width: 30%;
-}
-.tei-column {
-  flex: 1;
-  background-color: #f4f4f4;
-  padding: 1.2em;
-  border-radius: 10px;
-  overflow-x: auto;
-  min-width: 250px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+tei-speaker {
+  display: inline;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-align: right;
+  grid-column: 1;
+  grid-row: 1;
 }
 
-/* Buttons */
-#view-selector button,
-#folio-controls button {
-  font-family: "EB Garamond", serif;
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  color: white;
-  background-color: #005377;
-  border: none;
-  border-radius: 4px;
-  margin: 0.3em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-#view-selector button:hover,
-#folio-controls button:hover {
-  background-color: #003f5c;
-}
-
-/* Notes panel */
-#note-container {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
-  background: #f7f7f7;
-  padding: 1em;
-  border-left: 1px solid #ccc;
-}
-.note-entry {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 1em;
-  padding: 0.75em 1em;
-  font-size: 0.95em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+tei-l {
+  display: inline;
   position: relative;
-}
-.note-entry .close-note {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.2em;
-  color: #4a1bf7;
-  border: none;
-  background: none;
-  cursor: pointer;
+  grid-column: 2;
+  text-align: left;
 }
 
-/* Page break & milestones */
+tei-l[part="M"] {
+  padding-left: 5em;
+}
+
+tei-l[part="F"] {
+  padding-left: 8em;
+}
+
+/* Stile per i numeri dei versi */
+tei-l::before {
+  content: attr(n);
+  display: inline-block;
+  width: 2em; /* Larghezza fissa per l'allineamento */
+  text-align: right;
+  margin-right: 0.5em; /* Spazio tra il numero e il testo del verso */
+  color: #777; /* Colore del numero */
+  font-size: 0.8em;
+}
+
+tei-head {
+  display: block;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+tei-stage {
+  display: block;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+tei-pb {
+  display: inline-block;
+  font-size: 0.9em;
+  color: #777;
+}
+
+
 tei-pb::before {
   content: attr(n);
   background-color: #e2e2e2;
@@ -234,35 +150,339 @@ tei-pb::before {
   font-weight: bold;
   color: #444;
 }
-tei-milestone[unit="stanza"]::after,
-tei-milestone[unit="stanza"]::before {
-  content: "    ";
+
+tei-milestone[unit="stanza"]::after {
+  content: "    "; /* ← tabulazione visiva (4 spazi) */
   white-space: pre;
 }
+
 tei-milestone[unit="stanza"] {
-  display: inline;
+  display: inline;      /* ← importantissimo per non causare a capo */
   margin: 0;
   padding: 0;
 }
 
-/* Selector */
-#pb-selector {
-  font-family: "EB Garamond", serif;
+tei-milestone[unit="stanza"]::before {
+  content: "    ";  /* 4 spazi normali */
+  white-space: pre;
+  display: inline;
+}
+
+#page-jump {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0.5em 1em;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+  font-family: "Georgia", sans-serif;
+}
+
+#page-jump label {
+  font-family: "Georgia", sans-serif;
   font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+
+#pb-selector {
+  font-family: "Georgia", sans-serif;
+  font-size: 0.95rem;
   padding: 0.4em 0.8em;
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: #f9f9f9;
   color: #222;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease;
 }
+
 #pb-selector:focus {
   border-color: #999;
   outline: none;
   background-color: #fff;
 }
 
-/* Utility */
-.hidden {
+/* === VISTA SINOTTICA === */
+/* Per affiancare anche il facsimile */
+#tei-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1400px;  /* ✅ non oltrepassa la larghezza leggibile */
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#facsimile-container {
+  order: -1;
+  text-align: center;
+}
+
+#facsimile-image {
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  border-radius: 8px;
+}
+
+#facsimile-image.zoomed {
+  transform: scale(2.5);
+  cursor: zoom-out;
+  z-index: 1000;
+  position: relative;
+}
+
+#tei-wrapper.single-view {
+  justify-content: center;
+}
+
+#tei-wrapper.single-view .tei-column {
+  width: 50%; /* oppure 50-70%, in base alle tue preferenze */
+  margin: 0 auto;
+}
+
+.tei-column {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 1.2em;
+  border-radius: 10px;
+  overflow-x: auto;
+  min-width: 0; /* ✅ per evitare overflow */
+  box-sizing: border-box;
+}
+.tei-column h1, .tei-column head {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5em;
+}
+
+#facsimile-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  background-color: #fff;
+  padding: 0.5em;
+}
+
+#facsimile-container.sticky {
+  position: sticky;
+  top: 4.5em; /* lascia spazio al menu */
+  align-self: flex-start;
+  z-index: 10;
+}
+
+/* Quando c’è solo un box (vista singola), centrare */
+#tei-wrapper.single-view .tei-column {
+  width: 60%;
+}
+
+/* Tre colonne in modalità sinottica */
+#tei-wrapper.synoptic-view {
+  flex-wrap: wrap;
+}
+
+#tei-wrapper.synoptic-view .tei-column {
+  width: 30%;
+}
+
+#view-selector {
+  text-align: center;
+  margin: 2em auto 1em;
+}
+
+#view-selector button {
+  margin: 0 0.5em;
+  padding: 0.6em 1.5em;
+  font-family: "Georgia", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: #262626;
+  background-color: #e6e6e6;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#view-selector button:hover {
+  background-color: #D3D8EB;
+}
+
+#folio-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+#folio-controls button,
+.zoom-control button {
+  font-family: "Georgia", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+  margin: 0 0.3em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#folio-controls button:hover,
+.zoom-control button:hover {
+  background-color: #D3D8EB;
+}
+
+
+.close-button {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 18px;
+  text-align: center;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.close-button:hover {
+  background: #cc0000;
+}
+
+#floating-note {
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 400px;
+  font-size: 0.50em;
+  line-height: 1.2;
+  color: #222;
+  background-color: #fafafa;
+}
+#note-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background-color: #f9f9f9;
+  border-left: 2px solid #ccc;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  padding: 1em;
   display: none;
+  z-index: 10000;
+}
+
+#close-panel {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #666;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.note-entry {
+  background: #fff;
+  margin-bottom: 1em;
+  padding: 0.8em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  position: relative;
+}
+
+.note-entry .close-note {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Colonna delle note allineata alle altre */
+#note-container {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* full viewport height */
+  overflow-y: auto; /* scorri le note interne */
+  background: #f7f7f7;
+  padding: 1em;
+  border-left: 1px solid #ccc;
+}
+
+/* Ogni nota all'interno del pannello */
+.note-entry {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  padding: 0.75em 1em;
+  font-size: 0.95em;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Pulsante di chiusura singola nota */
+.note-entry .close-note {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #4a1bf7;
+}
+
+/* Pulsante di chiusura pannello */
+#close-note-panel {
+  position: sticky;
+  top: 0;
+  background: #f7f7f7;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  color: #3f21ff;
+}
+
+/* Aggiunta per evitare che la colonna delle note venga sovrapposta */
+#tei-wrapper {
+  display: flex;
+  gap: 1em;
+}
+
+.tei-column {
+  flex: 1;
+  min-width: 250px;
 }
