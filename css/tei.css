@@ -271,9 +271,11 @@ tei-pb::before {
 
 #facsimile-container.sticky {
   position: sticky;
-  top: 4.5em; /* lascia spazio al menu */
+  top: 4.5em;
   align-self: flex-start;
   z-index: 10;
+  max-width: 100%;        /* ✅ Prevent overflow */
+  box-sizing: border-box; /* ✅ Include padding in width */
 }
 
 /* Quando c’è solo un box (vista singola), centrare */
