@@ -185,21 +185,28 @@
   });
 }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const controlPanel = document.createElement("div");
-    controlPanel.id = "phase-controls";
-    controlPanel.style.margin = "1em 0";
-    controlPanel.style.textAlign = "center";
-    controlPanel.innerHTML = `
-      <button onclick="filterReadings({ showAll: true })">Mostrar todas</button>
-      <button onclick="filterReadings({ wrSeq: 0 })">Fase A0 (original)</button>
-      <button onclick="filterReadings({ wrSeq: 1 })">Fase A1 (correcciones inmediatas)</button>
-      <button onclick="filterReadings({ wrSeq: 2 })">Fase A2 (revisión posterior)</button>
-      <button onclick="filterReadings({ wit: 'B1' })">B1 (intervención externa)</button>
-    `;
-    document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
-    updateLayoutClasses();
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const controlPanel = document.createElement("div");
+  controlPanel.id = "variant-controls";
+  controlPanel.style.margin = "1em 0";
+  controlPanel.style.textAlign = "center";
+
+  controlPanel.innerHTML = `
+    <label for="variant-selector" style="font-weight: bold; margin-right: 0.5em;">Visualizar intervención:</label>
+    <select id="variant-selector" onchange="handleVariantChange(this.value)"
+      style="padding: 0.5em 1em; border-radius: 6px; font-size: 1rem; border: 1px solid #aaa;">
+      <option value="all">Mostrar todas</option>
+      <option value="0">Fase A0 (original)</option>
+      <option value="1">Fase A1 (correcciones inmediatas)</option>
+      <option value="2">Fase A2 (revisión posterior)</option>
+      <option value="B1">B1 (intervención externa)</option>
+      <option value="B2">B2 (revisión externa posterior)</option>
+    </select>
+  `;
+
+  document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
+  updateLayoutClasses();
+});
 
   window.onload = function () {
     CETEIcean.getHTML5("amor_pleyto_y_desafio_diplomatic.xml", function (data) {
@@ -210,7 +217,7 @@
         if (prev && prev.tagName === "TEI-PB") verse.parentNode.insertBefore(prev, verse);
       });
 
-      const selector = document.getElementById("pb-selector");
+      const pbSelector = document.getElementById("pb-selector");
       const pbElements = data.querySelectorAll("tei-pb");
       pbElements.forEach((pb, i) => {
         const id = pb.getAttribute("xml:id") || `pb-${i + 1}`;
@@ -221,7 +228,7 @@
         opt.value = id;
         opt.textContent = n;
         opt.dataset.facs = facsName;
-        selector.appendChild(opt);
+        pbSelector.appendChild(opt);
       });
 
       document.getElementById("diplomatic-container").appendChild(data);
@@ -233,14 +240,28 @@
           const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
           if (!isNaN(seq) && seq > maxSeq) maxSeq = seq;
         });
+
+        const variantSelector = document.getElementById("variant-selector");
         if (maxSeq >= 0) {
+          if (variantSelector) variantSelector.value = String(maxSeq);
           filterReadings({ wrSeq: maxSeq });
         } else {
+          if (variantSelector) variantSelector.value = "all";
           filterReadings({ showAll: true });
         }
       });
+        function handleVariantChange(value) {
+          if (value === "all") {
+            filterReadings({ showAll: true });
+          } else if (!isNaN(parseInt(value))) {
+            filterReadings({ wrSeq: parseInt(value) });
+          } else {
+            filterReadings({ wit: value });
+          }
+        }
 
-      selector.addEventListener("change", e => {
+      // Folio selector change
+      pbSelector.addEventListener("change", e => {
         const option = e.target.selectedOptions[0];
         const facs = option.dataset.facs;
         const id = option.value;
@@ -257,7 +278,8 @@
         };
       });
 
-      const firstOption = selector.options[0];
+      // Folio init
+      const firstOption = pbSelector.options[0];
       if (firstOption) {
         const facs = firstOption.dataset.facs;
         const img = document.getElementById("facsimile-image");
@@ -267,19 +289,20 @@
         };
       }
 
+      // Folio navigation
       document.getElementById("prev-folio").addEventListener("click", () => {
-        if (selector.selectedIndex > 0) {
-          selector.selectedIndex--;
-          selector.dispatchEvent(new Event("change"));
+        if (pbSelector.selectedIndex > 0) {
+          pbSelector.selectedIndex--;
+          pbSelector.dispatchEvent(new Event("change"));
+        }
+      });
+      document.getElementById("next-folio").addEventListener("click", () => {
+        if (pbSelector.selectedIndex < pbSelector.options.length - 1) {
+          pbSelector.selectedIndex++;
+          pbSelector.dispatchEvent(new Event("change"));
         }
       });
 
-      document.getElementById("next-folio").addEventListener("click", () => {
-        if (selector.selectedIndex < selector.options.length - 1) {
-          selector.selectedIndex++;
-          selector.dispatchEvent(new Event("change"));
-        }
-      });
 
       document.getElementById("close-all-notes").addEventListener("click", () => {
         const noteContainer = document.getElementById("note-container");

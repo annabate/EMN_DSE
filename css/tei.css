@@ -469,6 +469,36 @@ tei-pb::before {
   background: #d8d8d8;
 }
 
+#variant-controls {
+  margin: 1em auto;
+  text-align: center;
+  padding: 0.5em;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
+#variant-selector {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+#variant-selector:hover {
+  border-color: #888;
+}
+
+#variant-selector:focus {
+  outline: none;
+  border-color: #555;
+}
+
 tei-subst {
   display: inline;
 }
@@ -476,13 +506,13 @@ tei-subst {
 tei-del {
   text-decoration: line-through;
   opacity: 0.6;
-  color: #900;
+  color: rgb(141, 9, 9);
   margin-right: 0.25em;
 }
 
 tei-add {
   font-weight: bold;
-  color: #0b5394;
+  color: #184267;
 }
 
 .active-reading {
