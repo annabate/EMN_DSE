@@ -9008,22 +9008,21 @@ h5 {
     font-style: normal
 }
 .dse {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 2.3rem;
-  font-style: italic;
-  font-weight: 500;
-  text-align: center;
-  color: #4b3121;
-
-  background-color: #fffbe6; /* soft parchment */
-  padding: 1.2rem 0.5rem;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1029;
-  border-bottom: 1px solid #ddd; /* subtle separator */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* soft depth */
+      font-family: 'EB Garamond', Georgia, serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    color: #47433f;
+    background-color: #f9f9f9;
+    padding: 0rem 0.5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1029;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 .offcanvas {
     padding: 10px
