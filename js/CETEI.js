@@ -82,9 +82,19 @@ var CETEI = (function () {
      "milestone": function(elt) {
       if (elt.getAttribute("unit") === "stanza") {
         const span = document.createElement("span");
-        span.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;"; // 4 spazi non-interrompibili
+        span.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;";
         span.style.whiteSpace = "pre";
         span.style.display = "inline";
+
+        // ➕ Add metric-shift to next <tei-l>
+        let next = elt.parentNode && elt.nextElementSibling;
+        while (next && next.tagName && !next.tagName.toLowerCase().includes("l")) {
+          next = next.nextElementSibling;
+        }
+        if (next) {
+          next.classList.add("metric-shift");
+        }
+
         return span;
       }
       return document.createTextNode("");

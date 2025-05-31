@@ -133,7 +133,7 @@ tei-stage {
   font-style: italic;
   font-size: 0.9em;
   text-align: center;
-  margin: 0.5em 0;
+  margin: 2em 0;
 }
 
 tei-pb {
@@ -153,21 +153,15 @@ tei-pb::before {
   color: #444;
 }
 
-tei-milestone[unit="stanza"]::after {
-  content: "    "; /* ← tabulazione visiva (4 spazi) */
-  white-space: pre;
+.metric-shift {
+  padding-left: 2em;
+  font-style: italic; /* Optional: helps testing visually */
 }
 
 tei-milestone[unit="stanza"] {
-  display: inline;      /* ← importantissimo per non causare a capo */
+  display: inline;
   margin: 0;
   padding: 0;
-}
-
-tei-milestone[unit="stanza"]::before {
-  content: "    ";  /* 4 spazi normali */
-  white-space: pre;
-  display: inline;
 }
 
 #page-jump {
