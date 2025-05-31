@@ -9004,19 +9004,20 @@ h5 {
     font-style: normal
 }
 .dse {
-    font-optical-sizing: auto;
+    font-optical-sizing: initial;
     text-align: center;
-    background: linear-gradient(90deg, #f8f9fa 0%, #f8f8f8 50%, #f1f1f1 100%);
+    background: radial-gradient(#f5f5f596, transparent);
     width: 100%;
     /* padding-right: 10px; */
     font-family: "Times New Roman", Times, serif;
-    font-size: 32px;
-    font-style: normal;
+    font-size: 34px;
+    font-style: italic;
     font-weight: 400;
     position: fixed;
     left: 0;
     top: 0;
-	z-index: 1029;
+    z-index: 1029;
+    color: #67422fba;
 }
 .offcanvas {
     padding: 10px
