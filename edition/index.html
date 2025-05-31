@@ -121,69 +121,78 @@
     else wrapper.classList.add("synoptic-view");
   }
 
-  function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
-  const apps = document.querySelectorAll("tei-app");
+ function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
+    const apps = document.querySelectorAll("tei-app");
 
-  apps.forEach(app => {
-    const rdgs = app.querySelectorAll("tei-rdg");
-    let matchFound = false;
+    apps.forEach(app => {
+      const rdgs = app.querySelectorAll("tei-rdg");
+      let matchFound = false;
 
-    rdgs.forEach(rdg => {
-      rdg.classList.remove("active-reading", "non-authorial-reading");
-      const seqAttr = rdg.getAttribute("data-wr-seq");
-      const who = rdg.getAttribute("wit");
-      const isAuthorial = rdg.getAttribute("data-authorial") === "true";
-      const seqNum = parseInt(seqAttr, 10);
+      rdgs.forEach(rdg => {
+        rdg.classList.remove("active-reading", "non-authorial-reading");
+        const seqAttr = rdg.getAttribute("data-wr-seq");
+        const who = rdg.getAttribute("wit");
+        const isAuthorial = rdg.getAttribute("data-authorial") === "true";
+        const seqNum = parseInt(seqAttr, 10);
 
-      if (showAll) {
-        rdg.style.display = "inline";
-        matchFound = true;
+        const subst = rdg.querySelector("tei-subst");
+        const add = subst?.querySelector("tei-add");
 
-      } else if (wrSeq !== null) {
-        const targetSeq = parseInt(wrSeq, 10);
-        if (!isNaN(seqNum) && seqNum <= targetSeq) {
-          // Suppress redundant A0
-          if (seqAttr === "0") {
-            const laterRdgs = app.querySelectorAll(`tei-rdg[data-wr-seq="${wrSeq}"] tei-del`);
-            const isRedundant = Array.from(laterRdgs).some(del =>
-              del.textContent.trim() === rdg.textContent.trim()
-            );
-            if (isRedundant) {
-              rdg.style.display = "none";
-              return;
-            }
-          }
-
+        if (showAll) {
           rdg.style.display = "inline";
-          if (seqNum === targetSeq) {
-            rdg.classList.add("active-reading");
-          }
           matchFound = true;
-        } else {
-          rdg.style.display = "none";
-        }
 
-      } else if (wit && who === wit) {
-        // Always show prior authorial content for context
-        if (isAuthorial || seqAttr === "0") {
-          rdg.style.display = "inline";
-        }
+        } else if (wrSeq !== null) {
+          const targetSeq = parseInt(wrSeq, 10);
 
-        if (who === wit) {
+          if (!isNaN(seqNum) && seqNum <= targetSeq) {
+            // Suppress redundant A0
+            if (seqAttr === "0") {
+              const laterRdgs = app.querySelectorAll(`tei-rdg[data-wr-seq="${wrSeq}"] tei-del`);
+              const isRedundant = Array.from(laterRdgs).some(del =>
+                del.textContent.trim() === rdg.textContent.trim()
+              );
+              if (isRedundant) {
+                rdg.style.display = "none";
+                return;
+              }
+            }
+
+            if (seqNum === targetSeq && add) {
+              rdg.innerHTML = add.outerHTML;
+            }
+
+            rdg.style.display = "inline";
+            if (seqNum === targetSeq) {
+              rdg.classList.add("active-reading");
+            }
+
+            matchFound = true;
+          } else {
+            rdg.style.display = "none";
+          }
+
+        } else if (wit && who === wit) {
+          const subst = rdg.querySelector("tei-subst");
+          const add = subst?.querySelector("tei-add");
+
+          if (add) {
+            rdg.innerHTML = add.outerHTML;
+          }
+
           rdg.style.display = "inline";
           rdg.classList.add("non-authorial-reading");
           matchFound = true;
-        } else if (!isAuthorial) {
+
+        } else {
           rdg.style.display = "none";
         }
-      } else {
-        rdg.style.display = "none";
-      }
-    });
+      });
 
-    app.style.display = matchFound ? "inline" : "none";
-  });
-}
+      app.style.display = matchFound ? "inline" : "none";
+    });
+  }
+
 
   function handleVariantChange(value) {
             if (value === "all") {
@@ -260,7 +269,15 @@
         const variantSelector = document.getElementById("variant-selector");
         if (maxSeq >= 0) {
           if (variantSelector) variantSelector.value = String(maxSeq);
+          console.log("🟡 Default view: Showing only <add> of latest authorial phase:", maxSeq);
           filterReadings({ wrSeq: maxSeq });
+
+          const rdgsShown = document.querySelectorAll(`tei-rdg[data-wr-seq="${maxSeq}"]`);
+          rdgsShown.forEach(rdg => {
+            const subst = rdg.querySelector("tei-subst");
+            const add = subst?.querySelector("tei-add");
+            console.log("🔹 Rendering <add> content from:", rdg, "➡️", add?.outerHTML || "(no add found)");
+          });
         } else {
           if (variantSelector) variantSelector.value = "all";
           filterReadings({ showAll: true });
