@@ -38,7 +38,7 @@ tei-note[type="comentario"] .note-icon {
 }
 
 tei-note[type="aparato"] .note-icon {
-  background-color: #5c0e0e;
+  background-color: #c24040;
 }
 
 tei-note {
@@ -437,7 +437,7 @@ tei-milestone[unit="stanza"]::before {
   top: 0;
   height: 100vh; /* full viewport height */
   overflow-y: auto; /* scorri le note interne */
-  background: #f7f7f7;
+  background: #fafafaa6;
   padding: 1em;
   border-left: 1px solid #ccc;
 }
