@@ -34,7 +34,7 @@ tei-castItem {
 
 
 tei-note[type="comentario"] .note-icon {
-  background-color: #18253e;
+  background-color: #456299;
 }
 
 tei-note[type="aparato"] .note-icon {
@@ -67,7 +67,7 @@ tei-note {
 }
 
 .note-icon:empty {
-  background-color: #18253e;
+  background-color: #456299;
 }
 
 tei-note::after {
@@ -198,7 +198,7 @@ tei-milestone[unit="stanza"]::before {
   padding: 0.4em 0.8em;
   border: 1px solid #ccc;
   border-radius: 6px;
-  background-color: #f9f9f9;
+  background-color: #fafafaa6;
   color: #222;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease;
@@ -349,7 +349,7 @@ tei-milestone[unit="stanza"]::before {
 
 #folio-controls button:hover,
 .zoom-control button:hover {
-  background-color: #A88A63;
+  background-color: #dac4a6;
 }
 
 
@@ -373,7 +373,7 @@ tei-milestone[unit="stanza"]::before {
 }
 
 .close-button:hover {
-  background: #aa2323;
+  background: #a77e59;
 }
 
 #floating-note {
@@ -383,7 +383,7 @@ tei-milestone[unit="stanza"]::before {
   font-size: 0.50em;
   line-height: 1.2;
   color: #222;
-  background-color: #fafafa;
+  background-color: #fafafaa6;
 }
 #note-panel {
   position: fixed;
@@ -463,7 +463,7 @@ tei-milestone[unit="stanza"]::before {
   border: none;
   font-size: 1.2em;
   cursor: pointer;
-  color: #4a1bf7;
+  color: #456299;
 }
 
 /* Pulsante di chiusura pannello */
@@ -475,7 +475,7 @@ tei-milestone[unit="stanza"]::before {
   font-size: 1.5em;
   padding: 0.5em 1em;
   cursor: pointer;
-  color: #3f21ff;
+  color: #456299;
 }
 
 /* Aggiunta per evitare che la colonna delle note venga sovrapposta */
