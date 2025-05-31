@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>El marqués de las Navas - edición genética digital</title>
   <link rel="stylesheet" href="../css/tei.css">
   <script src="../js/CETEI.js"></script>
@@ -51,6 +52,7 @@
     function toggleView(id) {
       const element = document.getElementById(id);
       element.classList.toggle("hidden");
+      updateLayoutClasses();
     }
 
     function decorateNotes(data) {
@@ -111,6 +113,42 @@
         });
       });
     }
+
+    
+    function updateLayoutClasses() {
+      const wrapper = document.getElementById("tei-wrapper");
+      const columns = wrapper.querySelectorAll(".tei-column");
+      const visibleCols = Array.from(columns).filter(col => col.offsetParent !== null).length;
+
+      wrapper.classList.remove("single-view", "dual-view", "synoptic-view");
+
+      if (visibleCols === 1) {
+        wrapper.classList.add("single-view");
+      } else if (visibleCols === 2) {
+        wrapper.classList.add("dual-view");
+      } else {
+        wrapper.classList.add("synoptic-view");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleModern = document.getElementById("toggle-modern");
+      const toggleDiplomatic = document.getElementById("toggle-diplomatic");
+
+      toggleModern?.addEventListener("click", () => {
+        document.getElementById("modern-column")?.classList.toggle("hidden");
+        updateLayoutClasses();
+      });
+
+      toggleDiplomatic?.addEventListener("click", () => {
+        document.getElementById("diplomatic-column")?.classList.toggle("hidden");
+        updateLayoutClasses();
+      });
+
+      // Initial layout check
+      updateLayoutClasses();
+    });
+
 
     window.onload = function () {
       CETEIcean.getHTML5("amor_pleyto_y_desafio_diplomatic.xml", function (data) {
