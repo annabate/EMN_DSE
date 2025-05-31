@@ -53,12 +53,11 @@
     "tei": {
       "rdg": function (el) {
         let span = document.createElement("span");
+        span.setAttribute("data-original-html", el.innerHTML);
         span.setAttribute("data-wr-seq", el.getAttribute("data-wr-seq") || "");
         span.setAttribute("wit", el.getAttribute("wit") || "");
         span.setAttribute("data-authorial", el.getAttribute("data-authorial") || "");
         span.innerHTML = el.innerHTML;
-
-        span.dataset.originalHtml = el.innerHTML;
 
         return span;
       }
@@ -159,50 +158,28 @@
           rdg.style.display = "inline";
           matchFound = true;
 
-        } else if (wrSeq !== null) {
+        } 
+        if (wrSeq !== null) {
           const targetSeq = parseInt(wrSeq, 10);
-
           if (!isNaN(seqNum) && seqNum <= targetSeq) {
-            // Suppress redundant A0
-            if (seqAttr === "0") {
-              const laterRdgs = app.querySelectorAll(`tei-rdg[data-wr-seq="${wrSeq}"] tei-del`);
-              const isRedundant = Array.from(laterRdgs).some(del =>
-                del.textContent.trim() === rdg.textContent.trim()
-              );
-              if (isRedundant) {
-                rdg.style.display = "none";
-                return;
+
+            if (seqNum === targetSeq && isAuthorial) {
+              renderFinalAuthorialRdg(rdg);
+            } else {
+              // Reset to original content for A1, A0, etc.
+              const original = rdg.getAttribute("data-original-html");
+              if (original) {
+                rdg.innerHTML = original;
               }
             }
-          
-            rdg.innerHTML = rdg.dataset.originalHtml;
-              if (seqNum === targetSeq) {
-                rdg.classList.add("active-reading");
-              }
 
+            rdg.style.display = "inline";
             matchFound = true;
           } else {
             rdg.style.display = "none";
           }
-
-        } else if (wit && who === wit) {
-          const subst = rdg.querySelector("tei-subst");
-          const add = subst?.querySelector("tei-add");
-
-          if (add) {
-            rdg.innerHTML = add.outerHTML;
-          } else {
-            rdg.innerHTML = rdg.dataset.originalHtml;
-          }
-
-
-          rdg.style.display = "inline";
-          rdg.classList.add("non-authorial-reading");
-          matchFound = true;
-
-        } else {
-          rdg.style.display = "none";
         }
+
       });
 
       app.style.display = matchFound ? "inline" : "none";
