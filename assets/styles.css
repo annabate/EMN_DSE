@@ -9008,20 +9008,22 @@ h5 {
     font-style: normal
 }
 .dse {
-    font-optical-sizing: initial;
-    text-align: center;
-    background: #ffffffad;
-    width: 100%;
-    /* padding-right: 10px; */
-    font-family: "Times New Roman", Times, serif;
-    font-size: 34px;
-    font-style: italic;
-    font-weight: 400;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1029;
-    color: #4b3121;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+  color: #4b3121;
+
+  background-color: #fffbe6; /* soft parchment */
+  padding: 1.2rem 0.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1029;
+  border-bottom: 1px solid #ddd; /* subtle separator */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* soft depth */
 }
 .offcanvas {
     padding: 10px
