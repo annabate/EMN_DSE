@@ -154,7 +154,7 @@ tei-pb::before {
 }
 
 .metric-shift {
-  padding-left: 2em;
+  padding-left: 0.5em;
   font-style: italic; /* Optional: helps testing visually */
 }
 
