@@ -53,12 +53,11 @@
     "tei": {
       "rdg": function (el) {
         let span = document.createElement("span");
-        span.setAttribute("data-original-html", el.innerHTML);
+        span.innerHTML = el.innerHTML;
         span.setAttribute("data-wr-seq", el.getAttribute("data-wr-seq") || "");
         span.setAttribute("wit", el.getAttribute("wit") || "");
         span.setAttribute("data-authorial", el.getAttribute("data-authorial") || "");
-        span.innerHTML = el.innerHTML;
-
+        span.dataset.originalHtml = el.innerHTML; // Store original for resets
         return span;
       }
     }
@@ -153,38 +152,40 @@
         const who = rdg.getAttribute("wit");
         const isAuthorial = rdg.getAttribute("data-authorial") === "true";
         const seqNum = parseInt(seqAttr, 10);
+        const original = rdg.dataset.originalHtml;
 
+        // Show all readings (full diplomatic)
         if (showAll) {
+          if (original) rdg.innerHTML = original;
           rdg.style.display = "inline";
           matchFound = true;
+          return;
+        }
 
-        } 
-        if (wrSeq !== null) {
+        // Filter by authorial phase
+        if (wrSeq !== null && !isNaN(seqNum)) {
           const targetSeq = parseInt(wrSeq, 10);
-          if (!isNaN(seqNum) && seqNum <= targetSeq) {
+          if (seqNum === targetSeq && isAuthorial) {
+            const subst = rdg.querySelector("tei-subst");
+            const add = subst?.querySelector("tei-add");
 
-            if (seqNum === targetSeq && isAuthorial) {
-              renderFinalAuthorialRdg(rdg);
-            } else {
-              // Reset to original content for A1, A0, etc.
-              const original = rdg.getAttribute("data-original-html");
-              if (original) {
-                rdg.innerHTML = original;
-              }
-            }
-
+            rdg.innerHTML = add ? add.innerHTML : rdg.textContent;
+            rdg.classList.add("active-reading");
             rdg.style.display = "inline";
             matchFound = true;
           } else {
+            // Hide older or irrelevant ones
             rdg.style.display = "none";
           }
+        } else {
+          rdg.style.display = "none";
         }
-
       });
 
       app.style.display = matchFound ? "inline" : "none";
     });
   }
+
 
 
 
@@ -265,18 +266,11 @@
           if (variantSelector) variantSelector.value = String(maxSeq);
           console.log("🟡 Default view: Showing only <add> of latest authorial phase:", maxSeq);
           filterReadings({ wrSeq: maxSeq });
-
-          // After rendering, clean only those at maxSeq
-          document.querySelectorAll(`tei-rdg[data-wr-seq="${maxSeq}"]`).forEach(rdg => {
-            renderFinalAuthorialRdg(rdg);
-            rdg.classList.add("active-reading");
-          });
-
-          
         } else {
           if (variantSelector) variantSelector.value = "all";
           filterReadings({ showAll: true });
         }
+
       });
 
       // Folio selector change
