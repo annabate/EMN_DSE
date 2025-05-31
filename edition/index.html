@@ -152,9 +152,6 @@
         const isAuthorial = rdg.getAttribute("data-authorial") === "true";
         const seqNum = parseInt(seqAttr, 10);
 
-        const subst = rdg.querySelector("tei-subst");
-        const add = subst?.querySelector("tei-add");
-
         if (showAll) {
           rdg.style.display = "inline";
           matchFound = true;
@@ -175,13 +172,11 @@
               }
             }
 
-            if (seqNum === targetSeq) {
-              renderFinalAuthorialRdg(rdg);
-            }
-
             rdg.style.display = "inline";
             if (seqNum === targetSeq) {
+              renderFinalAuthorialRdg(rdg);
               rdg.classList.add("active-reading");
+              console.log("🔹 Rendering final authorial rdg (seq:", targetSeq, "):", rdg.outerHTML);
             }
 
             matchFound = true;
@@ -209,6 +204,7 @@
       app.style.display = matchFound ? "inline" : "none";
     });
   }
+
 
 
   function handleVariantChange(value) {
@@ -288,13 +284,7 @@
           if (variantSelector) variantSelector.value = String(maxSeq);
           console.log("🟡 Default view: Showing only <add> of latest authorial phase:", maxSeq);
           filterReadings({ wrSeq: maxSeq });
-
-          const rdgsShown = document.querySelectorAll(`tei-rdg[data-wr-seq="${maxSeq}"]`);
-          rdgsShown.forEach(rdg => {
-            const subst = rdg.querySelector("tei-subst");
-            const add = subst?.querySelector("tei-add");
-            console.log("🔹 Rendering <add> content from:", rdg, "➡️", add?.outerHTML || "(no add found)");
-          });
+          
         } else {
           if (variantSelector) variantSelector.value = "all";
           filterReadings({ showAll: true });
