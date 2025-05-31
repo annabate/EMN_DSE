@@ -158,12 +158,6 @@ tei-pb::before {
   font-style: italic; /* Optional: helps testing visually */
 }
 
-tei-milestone[unit="stanza"] {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-
 #page-jump {
   position: sticky;
   top: 0;
