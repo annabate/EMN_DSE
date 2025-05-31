@@ -179,8 +179,8 @@ tei-milestone[unit="stanza"]::before {
   gap: 0.5em;
   margin: 0;
   padding: 0.5em 1em;
-  background-color: #fafafaa6;
-  border-bottom: 1px solid #d6b68c;
+  background-color: #fafafa75;
+  border-bottom: 1px solid #d6b68c12;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -338,8 +338,8 @@ tei-milestone[unit="stanza"]::before {
   font-size: 0.95rem;
   font-weight: 500;
   color: #333;
-  background-color: #e6e6e6;
-  border: 1px solid #ccc;
+  background-color: #fafafaa6;
+  border: 1px solid #8a6949a2;
   border-radius: 6px;
   padding: 0.4em 0.8em;
   margin: 0 0.3em;
