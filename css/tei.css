@@ -145,7 +145,7 @@ tei-pb {
 
 tei-pb::before {
   content: attr(n);
-  background-color: #dac4a678;
+  background-color: #dac4a65b;
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: monospace;
@@ -243,7 +243,7 @@ tei-pb::before {
 
 .tei-column {
   flex: 1;
-  background-color: #fafafaa6;
+  background-color: #f9f9f9;
   padding: 1.2em;
   border-radius: 10px;
   overflow-x: auto;
@@ -265,7 +265,7 @@ tei-pb::before {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  background-color: #fff;
+  background-color: #f9f9f9;
   padding: 0.5em;
 }
 
@@ -303,14 +303,14 @@ tei-pb::before {
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   color: #262626;
-  background-color: #fafafaa6;
-  border: 1px solid #8a6949a2;
+  background-color: #f9f9f9;
+  border: 1px solid #626161a2;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #view-selector button:hover {
-  background-color: #dac4a6;
+  background-color: #f9f9f9;
 }
 
 #folio-controls {
@@ -326,8 +326,8 @@ tei-pb::before {
   font-size: 0.95rem;
   font-weight: 500;
   color: #333;
-  background-color: #fafafaa6;
-  border: 1px solid #8a6949a2;
+  background-color: #f9f9f9;
+  border: 1px solid #88827ba2;
   border-radius: 6px;
   padding: 0.4em 0.8em;
   margin: 0 0.3em;
@@ -361,7 +361,7 @@ tei-pb::before {
 }
 
 .close-button:hover {
-  background: #a77e59;
+  background: #af9076;
 }
 
 #floating-note {
