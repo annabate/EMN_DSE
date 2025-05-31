@@ -73,12 +73,14 @@ section {
 .home-box {
     background: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 1rem;
+    padding: 0.6rem;
     text-align: center;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-	border-radius: 6px;
-	transform: translateY(0px);
+    border-radius: 6px;
+    transform: translateY(0px);
     transition: all 0.25s ease-out;
+    max-width: 600px;
+    max-height: 800px;;
 }
 
 .home-box:hover {
@@ -94,7 +96,7 @@ section {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* END: Addition by SAT for the Homepage  */
