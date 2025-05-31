@@ -145,7 +145,7 @@ tei-pb {
 
 tei-pb::before {
   content: attr(n);
-  background-color: #e2e2e2;
+  background-color: #dac4a678;
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: monospace;
