@@ -310,7 +310,7 @@ tei-pb::before {
 }
 
 #view-selector button:hover {
-  background-color: #f9f9f9;
+  background-color: #c0b483;
 }
 
 #folio-controls {
@@ -337,7 +337,7 @@ tei-pb::before {
 
 #folio-controls button:hover,
 .zoom-control button:hover {
-  background-color: #dac4a6;
+  background-color: #c0b483;
 }
 
 
@@ -361,7 +361,7 @@ tei-pb::before {
 }
 
 .close-button:hover {
-  background: #af9076;
+  background: #c0b483;
 }
 
 #note-panel {
