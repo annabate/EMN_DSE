@@ -9006,7 +9006,7 @@ h5 {
 .dse {
     font-optical-sizing: initial;
     text-align: center;
-    background: radial-gradient(#f5f5f596, transparent);
+    background: #ffffffad;
     width: 100%;
     /* padding-right: 10px; */
     font-family: "Times New Roman", Times, serif;
@@ -9017,7 +9017,7 @@ h5 {
     left: 0;
     top: 0;
     z-index: 1029;
-    color: #67422fba;
+    color: #5f5952;
 }
 .offcanvas {
     padding: 10px
