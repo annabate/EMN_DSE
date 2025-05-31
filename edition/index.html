@@ -328,6 +328,8 @@
         let matchFound = false;
 
         rdgs.forEach(rdg => {
+          rdg.classList.remove("active-reading"); // Remove highlight from all
+
           const seq = rdg.getAttribute("data-wr-seq");
           const who = rdg.getAttribute("wit");
 
@@ -336,16 +338,17 @@
             matchFound = true;
           } else if ((wrSeq !== null && seq === String(wrSeq)) || (wit && who === wit)) {
             rdg.style.display = "inline";
+            rdg.classList.add("active-reading"); // ✅ Add highlight
             matchFound = true;
           } else {
             rdg.style.display = "none";
           }
         });
 
-        // Optional: hide <app> if no visible readings
         app.style.display = matchFound ? "inline" : "none";
       });
     }
+
 
     // Example: create buttons to control the view
     document.addEventListener("DOMContentLoaded", () => {

@@ -33,18 +33,6 @@ tei-castItem {
 }
 
 
-.note-icon {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgb(118, 24, 24);
-  vertical-align: middle;
-  margin-left: 0.3em;
-  cursor: pointer;
-  vertical-align: super;
-}
-
 tei-note::after {
   max-width: 90vw;
   word-break: normal;
@@ -479,4 +467,27 @@ tei-pb::before {
 
 #phase-controls button:hover {
   background: #d8d8d8;
+}
+
+tei-subst {
+  display: inline;
+}
+
+tei-del {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #900;
+  margin-right: 0.25em;
+}
+
+tei-add {
+  font-weight: bold;
+  color: #0b5394;
+}
+
+.active-reading {
+  background-color: #fff3cd; /* light yellow highlight */
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+  transition: background-color 0.3s ease;
 }
