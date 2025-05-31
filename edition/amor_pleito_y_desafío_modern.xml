@@ -115,7 +115,7 @@
                 </sp>
                 <sp>
                     <speaker>Padilla</speaker>
-                    <l n="23">Lo mismo defiendo yo.<app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Ni estoy de su sangre ageno</rdg><rdg wit="A2" data-wr-seq="2"><subst><del>Ni estoy de su sangre ageno</del><add>Lo mismo defiendo yo</add></subst></rdg></app><note>23: añadido en la línea
+                    <l n="23"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Ni estoy de su sangre ageno</rdg><rdg wit="A2" data-wr-seq="2"><subst><del>Ni estoy de su sangre ageno</del><add>Lo mismo defiendo yo.</add></subst></rdg></app><note>23: añadido en la línea
                             siguiente.</note></l>
                 </sp>
                 <sp>
@@ -190,14 +190,13 @@
                     <l n="51">Aquí no se ha de venir</l>
                     <l n="52">por reliquias para él,</l>
                     <l n="53">por corazón sí, que en él</l>
-                    <l n="54">puedo valor infundir;<note type="aparato" n="12" subtype="A2">54:
-                            &lt;-animo&gt;puedo&lt;-ynprimir/valor infundir&gt;</note><note
-                            type="comentario" n="4">54: La corrección autógrafa es coherente con las
+                    <l n="54"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">animo puedo imprimir</rdg><rdg wit="A2" data-wr-seq="2" data-authorial="true"><del>animo</del>puedo<del>imprimir</del><add>valor infundir</add></rdg></app>
+                            <note>54: La corrección autógrafa es coherente con las
                             anteriores (vv. 21-30 y v. 39), y remite al intento de Lope de ensalzar,
                             a través de las palabras del padre, el contexto elevado en el que se
                             encuentran.</note></l>
                     <l n="55">aquí se pueden pedir</l>
-                    <l n="56">lanzas<note type="aparato" n="13" subtype="A2">56: lan &lt;z+Z&gt; as</note>, paveses y espadas<note type="comentario" n="5">56: La
+                    <l n="56">lan<app> <rdg wit="A0" data-wr-seq="0" data-authorial="true">z</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true">Z</rdg></app>as<note>56: La
                             intervención parece deberse al intento de aclarar gráficamente un
                             carácter de díficil lectura en el manuscrito, la mano puede no ser de
                             Lope; la tinta está más diluida.</note></l>
@@ -290,7 +289,7 @@
                 <sp>
                     <speaker>Padilla</speaker>
                     <l part="F">El cielo dio</l>
-                    <l n="94">dulce fin<note type="aparato" n="14" subtype="A1">94: &lt;-fin&gt; dulce fin</note> a mi cuidado;</l>
+                    <l n="94"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">fin</rdg><rdg wit="A1" data-wr-seq="1"><subst><del>dulce</del><add>fin dulce</add></subst></rdg></app> a mi cuidado;</l>
                     <l n="95">agora a esos pies echado…</l>
                 </sp>
                 <sp>

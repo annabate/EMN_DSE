@@ -121,7 +121,24 @@
     else wrapper.classList.add("synoptic-view");
   }
 
- function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
+  function renderFinalAuthorialRdg(rdg) {
+    const clone = rdg.cloneNode(true);
+
+    // Remove all <del> elements
+    clone.querySelectorAll("tei-del").forEach(del => del.remove());
+
+    // Flatten <add> content into main content (unwrap if needed)
+    clone.querySelectorAll("tei-add").forEach(add => {
+      const span = document.createElement("span");
+      span.innerHTML = add.innerHTML;
+      add.replaceWith(span);
+    });
+
+    // Replace rdg's content with the cleaned version
+    rdg.innerHTML = clone.innerHTML;
+  }
+
+  function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
     const apps = document.querySelectorAll("tei-app");
 
     apps.forEach(app => {
@@ -158,8 +175,8 @@
               }
             }
 
-            if (seqNum === targetSeq && add) {
-              rdg.innerHTML = add.outerHTML;
+            if (seqNum === targetSeq) {
+              renderFinalAuthorialRdg(rdg);
             }
 
             rdg.style.display = "inline";
