@@ -185,28 +185,44 @@
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const controlPanel = document.createElement("div");
-  controlPanel.id = "variant-controls";
-  controlPanel.style.margin = "1em 0";
-  controlPanel.style.textAlign = "center";
+  function handleVariantChange(value) {
+            if (value === "all") {
+              filterReadings({ showAll: true });
+            } else if (!isNaN(parseInt(value))) {
+              filterReadings({ wrSeq: parseInt(value) });
+            } else {
+              filterReadings({ wit: value });
+            }
+          }
 
-  controlPanel.innerHTML = `
-    <label for="variant-selector" style="font-weight: bold; margin-right: 0.5em;">Visualizar intervención:</label>
-    <select id="variant-selector" onchange="handleVariantChange(this.value)"
-      style="padding: 0.5em 1em; border-radius: 6px; font-size: 1rem; border: 1px solid #aaa;">
-      <option value="all">Mostrar todas</option>
-      <option value="0">Fase A0 (original)</option>
-      <option value="1">Fase A1 (correcciones inmediatas)</option>
-      <option value="2">Fase A2 (revisión posterior)</option>
-      <option value="B1">B1 (intervención externa)</option>
-      <option value="B2">B2 (revisión externa posterior)</option>
-    </select>
-  `;
+  document.addEventListener("DOMContentLoaded", () => {
+    const controlPanel = document.createElement("div");
+    controlPanel.id = "variant-controls";
+    controlPanel.style.margin = "1em 0";
+    controlPanel.style.textAlign = "center";
 
-  document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
-  updateLayoutClasses();
-});
+    controlPanel.innerHTML = `
+      <label for="variant-selector" style="font-weight: bold; margin-right: 0.5em;">Visualizar intervención:</label>
+      <select id="variant-selector"
+        style="padding: 0.5em 1em; border-radius: 6px; font-size: 1rem; border: 1px solid #aaa;">
+        <option value="all">Mostrar todas</option>
+        <option value="0">Fase A0 (original)</option>
+        <option value="1">Fase A1 (correcciones inmediatas)</option>
+        <option value="2">Fase A2 (revisión posterior)</option>
+        <option value="B1">B1 (intervención externa)</option>
+        <option value="B2">B2 (revisión externa posterior)</option>
+      </select>
+    `;
+
+    document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
+
+    // ✅ Add the JS event listener
+    document.getElementById("variant-selector").addEventListener("change", function () {
+      handleVariantChange(this.value);
+    });
+
+    updateLayoutClasses();
+  });
 
   window.onload = function () {
     CETEIcean.getHTML5("amor_pleyto_y_desafio_diplomatic.xml", function (data) {
@@ -250,15 +266,6 @@ document.addEventListener("DOMContentLoaded", () => {
           filterReadings({ showAll: true });
         }
       });
-        function handleVariantChange(value) {
-          if (value === "all") {
-            filterReadings({ showAll: true });
-          } else if (!isNaN(parseInt(value))) {
-            filterReadings({ wrSeq: parseInt(value) });
-          } else {
-            filterReadings({ wit: value });
-          }
-        }
 
       // Folio selector change
       pbSelector.addEventListener("change", e => {
