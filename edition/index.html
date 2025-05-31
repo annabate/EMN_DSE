@@ -45,329 +45,292 @@
       </div>
     </div>
   </div>  
+ 
+<script>
+  const CETEIcean = new CETEI();
 
-  
-
-  <script>
-    function toggleView(id) {
-      const element = document.getElementById(id);
-      element.classList.toggle("hidden");
-      updateLayoutClasses();
+  CETEIcean.addBehaviors({
+    "tei": {
+      "rdg": function (el) {
+        let span = document.createElement("span");
+        span.setAttribute("data-wr-seq", el.getAttribute("data-wr-seq") || "");
+        span.setAttribute("wit", el.getAttribute("wit") || "");
+        span.setAttribute("data-authorial", el.getAttribute("data-authorial") || "");
+        span.innerHTML = el.innerHTML;
+        return span;
+      }
     }
+  });
 
-      function decorateNotes(data) {
-        const notes = data.querySelectorAll("tei-note");
-        console.log("NOTE TROVATE:", notes.length);
+  function toggleView(id) {
+    const element = document.getElementById(id);
+    element.classList.toggle("hidden");
+    updateLayoutClasses();
+  }
 
-        notes.forEach(originalNote => {
-          // Remove any CETEIcean-generated content and extract text
-          const content = originalNote.cloneNode(true).textContent.trim();
+  function decorateNotes(data) {
+    const notes = data.querySelectorAll("tei-note");
+    notes.forEach(originalNote => {
+      const content = originalNote.cloneNode(true).textContent.trim();
+      const cleanNote = document.createElement("tei-note");
+      cleanNote.setAttribute("data-note", content);
+      const span = document.createElement("span");
+      span.className = "note-icon";
+      span.textContent = "●";
+      span.style.color = "red";
+      span.style.cursor = "pointer";
+      cleanNote.appendChild(span);
+      originalNote.replaceWith(cleanNote);
+    });
+  }
 
-          // Create a new clean <tei-note> element
-          const cleanNote = document.createElement("tei-note");
-          cleanNote.setAttribute("data-note", content);
-
-          // Create the visual icon for the note
-          const span = document.createElement("span");
-          span.className = "note-icon";
-          span.textContent = "●"; // Red dot symbol
-          span.style.color = "red"; // Red color
-          span.style.cursor = "pointer";
-
-          cleanNote.appendChild(span);
-
-          // Replace the original <tei-note> with the new element
-          originalNote.replaceWith(cleanNote);
+  function attachNoteEvents(container = document) {
+    const notes = container.querySelectorAll("tei-note");
+    notes.forEach(note => {
+      const content = note.getAttribute("data-note");
+      note.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const noteContainer = document.getElementById("note-container");
+        noteContainer.classList.remove("hidden");
+        const noteItem = document.createElement("div");
+        noteItem.className = "note-item";
+        noteItem.textContent = content;
+        const closeBtn = document.createElement("span");
+        closeBtn.className = "close-note";
+        closeBtn.textContent = "✖️";
+        closeBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          noteItem.remove();
+          if (!noteContainer.querySelector(".note-item")) {
+            noteContainer.classList.add("hidden");
+          }
+        });
+        noteItem.appendChild(closeBtn);
+        noteContainer.appendChild(noteItem);
       });
-    }
+    });
+  }
 
-    const CETEIcean = new CETEI();
+  function updateLayoutClasses() {
+    const wrapper = document.getElementById("tei-wrapper");
+    const columns = wrapper.querySelectorAll(".tei-column");
+    const visibleCols = Array.from(columns).filter(col => col.offsetParent !== null).length;
+    wrapper.classList.remove("single-view", "dual-view", "synoptic-view");
+    if (visibleCols === 1) wrapper.classList.add("single-view");
+    else if (visibleCols === 2) wrapper.classList.add("dual-view");
+    else wrapper.classList.add("synoptic-view");
+  }
 
-    CETEIcean.addBehaviors({
-      "tei": {
-        "rdg": function(el) {
-          return CETEIcean.createHTML5Element(el, ["data-wr-seq", "wit"]);
+  function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
+  const apps = document.querySelectorAll("tei-app");
+
+  apps.forEach(app => {
+    const rdgs = app.querySelectorAll("tei-rdg");
+    let matchFound = false;
+
+    rdgs.forEach(rdg => {
+      rdg.classList.remove("active-reading", "non-authorial-reading");
+      const seqAttr = rdg.getAttribute("data-wr-seq");
+      const who = rdg.getAttribute("wit");
+      const isAuthorial = rdg.getAttribute("data-authorial") === "true";
+      const seqNum = parseInt(seqAttr, 10);
+
+      if (showAll) {
+        rdg.style.display = "inline";
+        matchFound = true;
+
+      } else if (wrSeq !== null) {
+        const targetSeq = parseInt(wrSeq, 10);
+        if (!isNaN(seqNum) && seqNum <= targetSeq) {
+          // Suppress redundant A0
+          if (seqAttr === "0") {
+            const laterRdgs = app.querySelectorAll(`tei-rdg[data-wr-seq="${wrSeq}"] tei-del`);
+            const isRedundant = Array.from(laterRdgs).some(del =>
+              del.textContent.trim() === rdg.textContent.trim()
+            );
+            if (isRedundant) {
+              rdg.style.display = "none";
+              return;
+            }
+          }
+
+          rdg.style.display = "inline";
+          if (seqNum === targetSeq) {
+            rdg.classList.add("active-reading");
+          }
+          matchFound = true;
+        } else {
+          rdg.style.display = "none";
         }
+
+      } else if (wit && who === wit) {
+        // Always show prior authorial content for context
+        if (isAuthorial || seqAttr === "0") {
+          rdg.style.display = "inline";
+        }
+
+        if (who === wit) {
+          rdg.style.display = "inline";
+          rdg.classList.add("non-authorial-reading");
+          matchFound = true;
+        } else if (!isAuthorial) {
+          rdg.style.display = "none";
+        }
+      } else {
+        rdg.style.display = "none";
       }
     });
 
-    function attachNoteEvents(container = document) {
-  const notes = container.querySelectorAll("tei-note");
-
-  notes.forEach(note => {
-    const content = note.getAttribute("data-note");
-
-    note.addEventListener("click", (e) => {
-      e.stopPropagation();
-
-      const noteContainer = document.getElementById("note-container");
-      noteContainer.classList.remove("hidden");
-
-      const noteItem = document.createElement("div");
-      noteItem.className = "note-item";
-      noteItem.textContent = content;
-
-      const closeBtn = document.createElement("span");
-      closeBtn.className = "close-note";
-      closeBtn.textContent = "✖️";
-
-      closeBtn.addEventListener("click", (event) => {
-        event.stopPropagation();
-        noteItem.remove();
-
-        if (!noteContainer.querySelector(".note-item")) {
-          noteContainer.classList.add("hidden");
-        }
-      });
-
-      noteItem.appendChild(closeBtn);
-      noteContainer.appendChild(noteItem);
-    });
+    app.style.display = matchFound ? "inline" : "none";
   });
 }
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const controlPanel = document.createElement("div");
+    controlPanel.id = "phase-controls";
+    controlPanel.style.margin = "1em 0";
+    controlPanel.style.textAlign = "center";
+    controlPanel.innerHTML = `
+      <button onclick="filterReadings({ showAll: true })">Mostrar todas</button>
+      <button onclick="filterReadings({ wrSeq: 0 })">Fase A0 (original)</button>
+      <button onclick="filterReadings({ wrSeq: 1 })">Fase A1 (correcciones inmediatas)</button>
+      <button onclick="filterReadings({ wrSeq: 2 })">Fase A2 (revisión posterior)</button>
+      <button onclick="filterReadings({ wit: 'B1' })">B1 (intervención externa)</button>
+    `;
+    document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
+    updateLayoutClasses();
+  });
 
-    
-    function updateLayoutClasses() {
-      const wrapper = document.getElementById("tei-wrapper");
-      const columns = wrapper.querySelectorAll(".tei-column");
-      const visibleCols = Array.from(columns).filter(col => col.offsetParent !== null).length;
-
-      wrapper.classList.remove("single-view", "dual-view", "synoptic-view");
-
-      if (visibleCols === 1) {
-        wrapper.classList.add("single-view");
-      } else if (visibleCols === 2) {
-        wrapper.classList.add("dual-view");
-      } else {
-        wrapper.classList.add("synoptic-view");
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleModern = document.getElementById("toggle-modern");
-      const toggleDiplomatic = document.getElementById("toggle-diplomatic");
-
-      toggleModern?.addEventListener("click", () => {
-        document.getElementById("modern-column")?.classList.toggle("hidden");
-        updateLayoutClasses();
+  window.onload = function () {
+    CETEIcean.getHTML5("amor_pleyto_y_desafio_diplomatic.xml", function (data) {
+      decorateNotes(data);
+      attachNoteEvents(data);
+      data.querySelectorAll("tei-l").forEach(verse => {
+        const prev = verse.previousElementSibling;
+        if (prev && prev.tagName === "TEI-PB") verse.parentNode.insertBefore(prev, verse);
       });
 
-      toggleDiplomatic?.addEventListener("click", () => {
-        document.getElementById("diplomatic-column")?.classList.toggle("hidden");
-        updateLayoutClasses();
+      const selector = document.getElementById("pb-selector");
+      const pbElements = data.querySelectorAll("tei-pb");
+      pbElements.forEach((pb, i) => {
+        const id = pb.getAttribute("xml:id") || `pb-${i + 1}`;
+        const n = pb.getAttribute("n") || `Pagina ${i + 1}`;
+        const facsName = n.replace(/\[|\]/g, "").replace(/Fol\.?\s*/i, "fol").replace(/\s/g, "").toLowerCase();
+        pb.setAttribute("id", id);
+        const opt = document.createElement("option");
+        opt.value = id;
+        opt.textContent = n;
+        opt.dataset.facs = facsName;
+        selector.appendChild(opt);
       });
 
-      // Initial layout check
-      updateLayoutClasses();
-    });
+      document.getElementById("diplomatic-container").appendChild(data);
 
-
-    window.onload = function () {
-      CETEIcean.getHTML5("amor_pleyto_y_desafio_diplomatic.xml", function (data) {
-        decorateNotes(data);
-        attachNoteEvents(data);
-
-        // Correggi posizione dei <tei-pb>
-        data.querySelectorAll("tei-l").forEach(verse => {
-          const prev = verse.previousElementSibling;
-          if (prev && prev.tagName === "TEI-PB") verse.parentNode.insertBefore(prev, verse);
+      requestAnimationFrame(() => {
+        const allRdgs = data.querySelectorAll("tei-rdg[data-authorial='true']");
+        let maxSeq = -1;
+        allRdgs.forEach(rdg => {
+          const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+          if (!isNaN(seq) && seq > maxSeq) maxSeq = seq;
         });
-
-        const selector = document.getElementById("pb-selector");
-        const pbElements = data.querySelectorAll("tei-pb");
-
-        pbElements.forEach((pb, i) => {
-          const id = pb.getAttribute("xml:id") || `pb-${i + 1}`;
-          const n = pb.getAttribute("n") || `Pagina ${i + 1}`;
-          const facsName = n
-            .replace(/\[|\]/g, "")     // rimuove parentesi quadre
-            .replace(/Fol\.?\s*/i, "fol") // sostituisce "Fol. ", "Fol ", o "Fol." con "fol"
-            .replace(/\s/g, "")        // rimuove eventuali spazi residui
-            .toLowerCase();            // minuscolo finale
-          pb.setAttribute("id", id);
-          const opt = document.createElement("option");
-          opt.value = id;
-          opt.textContent = n;
-          opt.dataset.facs = facsName;
-          selector.appendChild(opt);
-
-        // === Auto-select highest authorial writing phase on load ===
-        (function selectLatestAuthorialPhase() {
-          const allRdgs = document.querySelectorAll("tei-rdg[data-authorial='true']");
-          let maxSeq = -1;
-
-          allRdgs.forEach(rdg => {
-            const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
-            if (!isNaN(seq) && seq > maxSeq) {
-              maxSeq = seq;
-            }
-          });
-
-          if (maxSeq >= 0) {
-            filterReadings({ wrSeq: maxSeq });
-          } else {
-            filterReadings({ showAll: true }); // fallback
-          }
-        })();
-        });
-
-        selector.addEventListener("change", e => {
-          const option = e.target.selectedOptions[0];
-          const facs = option.dataset.facs;
-          const id = option.value;
-          const target = document.getElementById(id);
-          if (target) {
-            const yOffset = -60; // puoi aumentare/diminuire per regolare la posizione
-            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: "smooth" });
-          }
-          const img = document.getElementById("facsimile-image");
-          img.src = "../facs/" + facs + ".jpg";
-          img.onerror = () => {
-            img.src = "facs/placeholder.jpg";
-          };
-        });
-
-        document.getElementById("prev-folio").addEventListener("click", () => {
-          const selector = document.getElementById("pb-selector");
-          if (selector.selectedIndex > 0) {
-            selector.selectedIndex--;
-            selector.dispatchEvent(new Event("change"));
-          }
-        });
-
-        document.getElementById("next-folio").addEventListener("click", () => {
-          const selector = document.getElementById("pb-selector");
-          if (selector.selectedIndex < selector.options.length - 1) {
-            selector.selectedIndex++;
-            selector.dispatchEvent(new Event("change"));
-          }
-        });
-
-        // Carica subito la prima immagine alla selezione iniziale
-        const firstOption = selector.options[0];
-        if (firstOption) {
-          const facs = firstOption.dataset.facs;
-          const id = firstOption.value;
-          const img = document.getElementById("facsimile-image");
-          img.src = "../facs/" + facs + ".jpg";
-          img.onerror = () => {
-            img.src = "../facs/placeholder.jpg";
-          };
-        }
-
-        document.getElementById("diplomatic-container").appendChild(data);
-      });
-
-      CETEIcean.getHTML5("amor_pleito_y_desafío_modern.xml", function (data) {
-        document.getElementById("modern-container").appendChild(data);
-        decorateNotes(data);
-        attachNoteEvents(data);
-      });
-
-      // Zoom dinamico + DRAG sull'immagine
-      // Zoom + drag dinamico sull'immagine
-      const img = document.getElementById("facsimile-image");
-      const wrapper = document.getElementById("facsimile-wrapper");
-
-      let isZoomed = false;
-      let isDragging = false, startX, startY, currentX = 0, currentY = 0;
-
-      img.addEventListener("click", (e) => {
-        isZoomed = !isZoomed;
-        if (!isZoomed) {
-          currentX = 0;
-          currentY = 0;
-          img.style.transform = "translate(0px, 0px) scale(1)";
-          wrapper.style.cursor = "grab";
+        if (maxSeq >= 0) {
+          filterReadings({ wrSeq: maxSeq });
         } else {
-          img.style.transform = "translate(0px, 0px) scale(2.5)";
-          wrapper.style.cursor = "grab";
+          filterReadings({ showAll: true });
         }
       });
 
-      wrapper.addEventListener("mousedown", (e) => {
-        if (!isZoomed) return;
-        isDragging = true;
-        startX = e.clientX - currentX;
-        startY = e.clientY - currentY;
-        wrapper.style.cursor = "grabbing";
+      selector.addEventListener("change", e => {
+        const option = e.target.selectedOptions[0];
+        const facs = option.dataset.facs;
+        const id = option.value;
+        const target = document.getElementById(id);
+        if (target) {
+          const yOffset = -60;
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+        const img = document.getElementById("facsimile-image");
+        img.src = "../facs/" + facs + ".jpg";
+        img.onerror = () => {
+          img.src = "../facs/placeholder.jpg";
+        };
       });
 
-      document.addEventListener("mousemove", (e) => {
-        if (!isZoomed || !isDragging) return;
-        currentX = e.clientX - startX;
-        currentY = e.clientY - startY;
-        img.style.transform = `translate(${currentX}px, ${currentY}px) scale(2.5)`;
-      });
+      const firstOption = selector.options[0];
+      if (firstOption) {
+        const facs = firstOption.dataset.facs;
+        const img = document.getElementById("facsimile-image");
+        img.src = "../facs/" + facs + ".jpg";
+        img.onerror = () => {
+          img.src = "../facs/placeholder.jpg";
+        };
+      }
 
-      document.addEventListener("mouseup", () => {
-        isDragging = false;
-        if (isZoomed) {
-          wrapper.style.cursor = "grab";
+      document.getElementById("prev-folio").addEventListener("click", () => {
+        if (selector.selectedIndex > 0) {
+          selector.selectedIndex--;
+          selector.dispatchEvent(new Event("change"));
         }
       });
 
-      // Event to close all notes
+      document.getElementById("next-folio").addEventListener("click", () => {
+        if (selector.selectedIndex < selector.options.length - 1) {
+          selector.selectedIndex++;
+          selector.dispatchEvent(new Event("change"));
+        }
+      });
+
       document.getElementById("close-all-notes").addEventListener("click", () => {
         const noteContainer = document.getElementById("note-container");
         noteContainer.querySelectorAll(".note-item").forEach(item => item.remove());
         noteContainer.classList.add("hidden");
       });
-    };
-
-    // === WRITING PHASE FILTER FOR TEI APPARATUS ===
-
-    // Utility function to toggle visibility based on wr-seq or wit
-    function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
-      const apps = document.querySelectorAll("tei-app");
-
-      apps.forEach(app => {
-        const rdgs = app.querySelectorAll("tei-rdg");
-        let matchFound = false;
-
-        rdgs.forEach(rdg => {
-          rdg.classList.remove("active-reading"); // Remove highlight from all
-
-          const seq = rdg.getAttribute("data-wr-seq");
-          const who = rdg.getAttribute("wit");
-
-          if (showAll) {
-            rdg.style.display = "inline";
-            matchFound = true;
-          } else if ((wrSeq !== null && seq === String(wrSeq)) || (wit && who === wit)) {
-            rdg.style.display = "inline";
-            rdg.classList.add("active-reading"); // ✅ Add highlight
-            matchFound = true;
-          } else {
-            rdg.style.display = "none";
-          }
-        });
-
-        app.style.display = matchFound ? "inline" : "none";
-      });
-    }
-
-
-    // Example: create buttons to control the view
-    document.addEventListener("DOMContentLoaded", () => {
-      const controlPanel = document.createElement("div");
-      controlPanel.id = "phase-controls";
-      controlPanel.style.margin = "1em 0";
-      controlPanel.style.textAlign = "center";
-
-      controlPanel.innerHTML = `
-        <button onclick="filterReadings({ showAll: true })">Mostrar todas</button>
-        <button onclick="filterReadings({ wrSeq: 0 })">Fase A0 (original)</button>
-        <button onclick="filterReadings({ wrSeq: 1 })">Fase A1 (correcciones inmediatas)</button>
-        <button onclick="filterReadings({ wrSeq: 2 })">Fase A2 (revisión posterior)</button>
-        <button onclick="filterReadings({ wit: 'B1' })">B1 (intervención externa)</button>
-      `;
-
-      document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
     });
 
-  </script>
+    CETEIcean.getHTML5("amor_pleito_y_desafío_modern.xml", function (data) {
+      document.getElementById("modern-container").appendChild(data);
+      decorateNotes(data);
+      attachNoteEvents(data);
+    });
+
+    const img = document.getElementById("facsimile-image");
+    const wrapper = document.getElementById("facsimile-wrapper");
+    let isZoomed = false, isDragging = false, startX, startY, currentX = 0, currentY = 0;
+
+    img.addEventListener("click", () => {
+      isZoomed = !isZoomed;
+      if (!isZoomed) {
+        currentX = currentY = 0;
+        img.style.transform = "translate(0px, 0px) scale(1)";
+        wrapper.style.cursor = "grab";
+      } else {
+        img.style.transform = "translate(0px, 0px) scale(2.5)";
+        wrapper.style.cursor = "grab";
+      }
+    });
+
+    wrapper.addEventListener("mousedown", (e) => {
+      if (!isZoomed) return;
+      isDragging = true;
+      startX = e.clientX - currentX;
+      startY = e.clientY - currentY;
+      wrapper.style.cursor = "grabbing";
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (!isZoomed || !isDragging) return;
+      currentX = e.clientX - startX;
+      currentY = e.clientY - startY;
+      img.style.transform = `translate(${currentX}px, ${currentY}px) scale(2.5)`;
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+      if (isZoomed) wrapper.style.cursor = "grab";
+    });
+  };
+</script>
+
 </body>
 </html>
