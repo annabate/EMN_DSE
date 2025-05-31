@@ -40,7 +40,7 @@
     <div id="modern-container" class="tei-column"></div>
     <div id="note-container" class="tei-column hidden">
       <div id="close-all-notes-container" style="text-align: right;">
-        <span id="close-all-notes" style="cursor: pointer; font-size: 1.2em;">❌</span>
+        <span id="close-all-notes" style="cursor: pointer; font-size: 1.2em;">✖️</span>
       </div>
     </div>
   </div>  
@@ -98,7 +98,7 @@
           noteItem.textContent = content;
           const closeBtn = document.createElement("span");
           closeBtn.className = "close-note";
-          closeBtn.textContent = "❌";
+          closeBtn.textContent = "✖️";
           closeBtn.addEventListener("click", (event) => {
             event.stopPropagation();
             noteItem.remove();
