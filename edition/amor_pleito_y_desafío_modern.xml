@@ -27,8 +27,7 @@
                     <head>Personas del primer acto</head>
                     <castItem><role xml:id="Don_Álvaro_de_Rojas_Maldonado">Don Álvaro de Rojas — Maldonado</role></castItem>
                     <castItem><role xml:id="Don_Juan_de_Padilla_Lorenzo_Hurtado">Don Juan de
-                                Padilla<note type="aparato" n="1" subtype="A2">Reparto
-                                    &lt;-Castilla//Padilla&gt;</note> — Lorenzo Hurtado</role></castItem>
+                                <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Castilla</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>Castilla</del><add>Padilla</add></subst></rdg></app> — Lorenzo Hurtado</role></castItem>
                     <castItem><role xml:id="Don_Juan_de_Aragón_Pedro_De_Pernia">Don Juan de Aragón — Pedro De Pernia</role></castItem>
                     <castItem><role xml:id="El_Rey_Alfonso_Juan_Bautista">El Rey Alfonso Juan — Bautista</role></castItem>
                     <castItem><role xml:id="Doña_Beatriz_La_señora_Angela">Doña Beatriz La señora — Angela</role></castItem>
@@ -40,7 +39,7 @@
                     <castItem><role xml:id="Sancho_criado_Pedro_de_Valdés">Sancho, criado — Pedro de
                             Valdés</role></castItem>
                     <castItem><role xml:id="Leonor_Criada_La_señora_jerónima">Leonor, Criada — La
-                            señora Jerónima<note type="comentario" n="1">Dramatis Personae: Los
+                            señora Jerónima<note>Dramatis Personae: Los
                                 nombres de los actores al lado de los personajes están escritos con
                                 otra tinta, la grafía puede ser de Lope.</note></role></castItem>
                     <pb type="folio" n="[Fol. 2v]"/>
@@ -103,14 +102,12 @@
                 <sp>
                     <speaker>Padilla</speaker>
                     <l n="19">A ser vara de justicia,</l>
-                    <l n="20">yo sé<note type="aparato" n="2" subtype="A1">20: se &lt;-re&gt;
-                            que</note> que oyera informada.</l>
+                    <l n="20">yo <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">re</rdg><rdg wit="A1" data-wr-seq="1" authorial="true"><subst><del>re</del><add>sé</add></subst></rdg></app> que oyera informada.</l>
                     <pb type="folio" n="[Fol. 3v]"/>
                 </sp>
                 <sp>
                     <speaker>Álvaro</speaker>
-                    <l n="21">Yo soy Rojas<note type="aparato" n="3" subtype="A2">21: &lt;-
-                            Aualos\Roxas y&gt;</note>, y tan bueno<note type="comentario" n="4">21:
+                    <l n="21">Yo soy <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Aualos</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>Aualos</del><add>Rojas</add></subst></rdg></app>, y tan bueno<note>21:
                                 <hi rend="italic">Roxas</hi>: la primera lectura, Ávalos, remite a
                             un personaje del segundo acto, se debe supuestamente a un lapsus del
                             autor.</note></l>
@@ -118,34 +115,28 @@
                 </sp>
                 <sp>
                     <speaker>Padilla</speaker>
-                    <l n="23">Lo mismo defiendo yo.<note type="aparato" n="5" subtype="A2">23: Lo
-                            mismos deffiendo yo &lt;-ni estoy de su sangre ageno&gt; en la línea
+                    <l n="23">Lo mismo defiendo yo.<app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Ni estoy de su sangre ageno</rdg><rdg wit="A2" data-wr-seq="2"><subst><del>Ni estoy de su sangre ageno</del><add>Lo mismo defiendo yo</add></subst></rdg></app><note>23: añadido en la línea
                             siguiente.</note></l>
                 </sp>
                 <sp>
                     <speaker>Álvaro</speaker>
                     <l n="24">Por lo menos ya condeno,</l>
-                    <l n="25">siendo de mi casa ajeno,<note type="aparato" n="6" subtype="A2">25:
+                    <l n="25">siendo <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">de</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>de</del><add>en</add></subst></rdg></app>de mi casa ajeno,<note>25:
                             siendo &lt;-en//de&gt; mi casa ajeno. Verso añadido entre las
                             líneas.</note></l>
                     <l n="26">el hallaros en mi casa.</l>
                 </sp>
                 <sp>
                     <speaker>Padilla</speaker>
-                    <l n="27">¿Qué ley <note type="aparato" n="7" subtype="A2">27: &lt;-de ese\ley
-                            el&gt;</note> el respeto pasa?</l>
+                    <l n="27">¿Qué ley <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">de ese</rdg><rdg wit="A1" data-wr-seq="1"><subst><del>de ese</del><add>el</add></subst></rdg></app> respeto pasa?</l>
                 </sp>
                 <sp>
                     <speaker>Álvaro</speaker>
-                    <l n="28">La ley santa de tener<note type="aparato" n="8" subtype="A2">28:
-                            &lt;-teniendo hija es necedad Alb. no es nada tener\la ley santa de
-                            tener &gt;</note></l>
-                    <l n="29">hija, que puedo temer<note type="aparato" n="9" subtype="A2">29:
-                            &lt;\\hija que&gt;&lt;-que por ver mi soledad&gt;&lt;//puedo temer
-                            &gt;</note></l>
-                    <l n="30">que por su gusto se casa.<note type="aparato" n="10" subtype="A2">30:
-                            &lt;\que por su&gt;&lt;-siendo quien es no se casa&gt;&lt;/gusto se
-                            casa&gt;</note><note type="comentario" n="2">21-30: En la reformulación
+                    <l n="28"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">teniendo hija es necedad</rdg><rdg wit="A2" data-wr-seq="2" data-authorial="true"><subst><del>teniendo hija es necedad</del><del>no es nada tener</del><add>la ley santa de tener</add></subst></rdg></app><note>28:
+                            &lt;-Alb. no es nada tener\la ley santa de
+                            tener &gt;: verso atribuido a Padilla.</note></l>
+                    <l n="29"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">que por ver mi soledad</rdg><rdg wit="A2" data-wr-seq="2" data-authorial="true"><subst><del>que por ver mi soledad</del><add>hija que puedo temer</add></subst></rdg></app></l>
+                    <l n="30">que por su gusto se casa.<note>21-30: En la reformulación
                             de la décima, Lope corrige el apellido del padre de la dama, defecto
                             quizá causado por un lapsus (Ávalos), perfecciona la referencia a la
                             igualdad de sangre con el pretendiente Juan de Padilla y modifica la
@@ -167,9 +158,7 @@
                 <sp>
                     <speaker>Álvaro</speaker>
                     <l n="38">¿Reliquias para esos males</l>
-                    <l n="39">en casas tan principales?<note type="aparato" n="11" subtype="A2">39:
-                            &lt;-se buscan en casas tales\\en &lt;-las&gt; casas tan
-                            principales&gt;</note><note type="comentario" n="3">39: Esta
+                    <l n="39"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">se buscan en casas tales</rdg><rdg wit="A2" data-wr-seq="true" data-authorial="true"><subst><del>se buscan en casas tales</del><add>en casas tan principales</add></subst></rdg></app>en casas tan principales?<note>39: Esta
                             intervención debe relacionarse con la anterior (vv. 21-30), porque atañe
                             al mismo intento de dar mayor énfasis a la autoridad del lugar de la
                             acción, que es la casa del noble anciano don Álvaro de Rojas. El
