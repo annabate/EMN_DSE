@@ -57,6 +57,9 @@
         span.setAttribute("wit", el.getAttribute("wit") || "");
         span.setAttribute("data-authorial", el.getAttribute("data-authorial") || "");
         span.innerHTML = el.innerHTML;
+
+        span.dataset.originalHtml = el.innerHTML;
+
         return span;
       }
     }
@@ -171,13 +174,11 @@
                 return;
               }
             }
-
-            rdg.style.display = "inline";
-            if (seqNum === targetSeq) {
-              renderFinalAuthorialRdg(rdg);
-              rdg.classList.add("active-reading");
-              console.log("🔹 Rendering final authorial rdg (seq:", targetSeq, "):", rdg.outerHTML);
-            }
+          
+            rdg.innerHTML = rdg.dataset.originalHtml;
+              if (seqNum === targetSeq) {
+                rdg.classList.add("active-reading");
+              }
 
             matchFound = true;
           } else {
@@ -190,7 +191,10 @@
 
           if (add) {
             rdg.innerHTML = add.outerHTML;
+          } else {
+            rdg.innerHTML = rdg.dataset.originalHtml;
           }
+
 
           rdg.style.display = "inline";
           rdg.classList.add("non-authorial-reading");
@@ -284,6 +288,13 @@
           if (variantSelector) variantSelector.value = String(maxSeq);
           console.log("🟡 Default view: Showing only <add> of latest authorial phase:", maxSeq);
           filterReadings({ wrSeq: maxSeq });
+
+          // After rendering, clean only those at maxSeq
+          document.querySelectorAll(`tei-rdg[data-wr-seq="${maxSeq}"]`).forEach(rdg => {
+            renderFinalAuthorialRdg(rdg);
+            rdg.classList.add("active-reading");
+          });
+
           
         } else {
           if (variantSelector) variantSelector.value = "all";
