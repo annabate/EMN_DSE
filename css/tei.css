@@ -33,41 +33,16 @@ tei-castItem {
 }
 
 
-tei-note[type="comentario"] .note-icon {
-  background-color: #456299;
-}
-
-tei-note[type="aparato"] .note-icon {
-  background-color: #c24040;
-}
-
-tei-note {
-  position: relative;
-}
-
-.note-icon[data-subtype] {
-  position: relative;
-}
-
-/* Stile di base */
 .note-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 17px;
-  height: 17px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  font-size: 0.8em;
-  background-color: #18253e; /* ad esempio per il pallino blu */
-  color: #fff;
-  text-align: center;
-  line-height: 1;
+  background-color: rgb(118, 24, 24);
   vertical-align: middle;
-  margin-left: 0.25em;
-}
-
-.note-icon:empty {
-  background-color: #456299;
+  margin-left: 0.3em;
+  cursor: pointer;
+  vertical-align: super;
 }
 
 tei-note::after {
@@ -481,4 +456,28 @@ tei-pb::before {
 #tei-wrapper.single-view #facsimile-container {
   flex: 1 1 auto;
   max-width: 100%;
+}
+
+#phase-controls {
+  margin: 1em auto;
+  text-align: center;
+  padding: 0.5em;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
+#phase-controls button {
+  margin: 0.25em;
+  padding: 0.4em 1em;
+  font-size: 0.95em;
+  background: #eaeaea;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#phase-controls button:hover {
+  background: #d8d8d8;
 }

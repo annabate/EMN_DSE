@@ -55,64 +55,77 @@
       updateLayoutClasses();
     }
 
-    function decorateNotes(data) {
-      const notes = data.querySelectorAll("tei-note");
-      console.log("NOTE TROVATE:", notes.length);
+      function decorateNotes(data) {
+        const notes = data.querySelectorAll("tei-note");
+        console.log("NOTE TROVATE:", notes.length);
 
-      notes.forEach(originalNote => {
-        const type = originalNote.getAttribute("type");
-        const subtype = originalNote.getAttribute("subtype");
+        notes.forEach(originalNote => {
+          // Remove any CETEIcean-generated content and extract text
+          const content = originalNote.cloneNode(true).textContent.trim();
 
-        // ✂️ Rimuove i contenuti generati da CETEIcean
-        const content = originalNote.cloneNode(true).textContent.trim();
+          // Create a new clean <tei-note> element
+          const cleanNote = document.createElement("tei-note");
+          cleanNote.setAttribute("data-note", content);
 
-        // ✅ Crea un nuovo nodo <tei-note> pulito
-        const cleanNote = document.createElement("tei-note");
-        if (type) cleanNote.setAttribute("type", type);
-        if (subtype) cleanNote.setAttribute("subtype", subtype);
-        cleanNote.setAttribute("data-note", content);
+          // Create the visual icon for the note
+          const span = document.createElement("span");
+          span.className = "note-icon";
+          span.textContent = "●"; // Red dot symbol
+          span.style.color = "red"; // Red color
+          span.style.cursor = "pointer";
 
-        const span = document.createElement("span");
-        span.className = "note-icon";
-        span.textContent = subtype || (type === "aparato" ? "Ap" : ""); // oppure ""
-        if (subtype) span.setAttribute("data-subtype", subtype);
+          cleanNote.appendChild(span);
 
-        cleanNote.appendChild(span);
-
-        // 🔁 Sostituisce l'intero nodo con quello nuovo
-        originalNote.replaceWith(cleanNote);
+          // Replace the original <tei-note> with the new element
+          originalNote.replaceWith(cleanNote);
       });
     }
 
     const CETEIcean = new CETEI();
 
+    CETEIcean.addBehaviors({
+      "tei": {
+        "rdg": function(el) {
+          return CETEIcean.createHTML5Element(el, ["data-wr-seq", "wit"]);
+        }
+      }
+    });
+
     function attachNoteEvents(container = document) {
-      const notes = container.querySelectorAll("tei-note");
-      // Attach click events to each note
-      notes.forEach(note => {
-        const content = note.getAttribute("data-note");
-        note.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const noteContainer = document.getElementById("note-container");
-          noteContainer.classList.remove("hidden");
-          const noteItem = document.createElement("div");
-          noteItem.className = "note-item";
-          noteItem.textContent = content;
-          const closeBtn = document.createElement("span");
-          closeBtn.className = "close-note";
-          closeBtn.textContent = "✖️";
-          closeBtn.addEventListener("click", (event) => {
-            event.stopPropagation();
-            noteItem.remove();
-            if (!noteContainer.querySelector(".note-item")) {
-              noteContainer.classList.add("hidden");
-            }
-          });
-          noteItem.appendChild(closeBtn);
-          noteContainer.appendChild(noteItem);
-        });
+  const notes = container.querySelectorAll("tei-note");
+
+  notes.forEach(note => {
+    const content = note.getAttribute("data-note");
+
+    note.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      const noteContainer = document.getElementById("note-container");
+      noteContainer.classList.remove("hidden");
+
+      const noteItem = document.createElement("div");
+      noteItem.className = "note-item";
+      noteItem.textContent = content;
+
+      const closeBtn = document.createElement("span");
+      closeBtn.className = "close-note";
+      closeBtn.textContent = "✖️";
+
+      closeBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        noteItem.remove();
+
+        if (!noteContainer.querySelector(".note-item")) {
+          noteContainer.classList.add("hidden");
+        }
       });
-    }
+
+      noteItem.appendChild(closeBtn);
+      noteContainer.appendChild(noteItem);
+    });
+  });
+}
+
 
     
     function updateLayoutClasses() {
@@ -178,6 +191,25 @@
           opt.textContent = n;
           opt.dataset.facs = facsName;
           selector.appendChild(opt);
+
+        // === Auto-select highest authorial writing phase on load ===
+        (function selectLatestAuthorialPhase() {
+          const allRdgs = document.querySelectorAll("tei-rdg[data-authorial='true']");
+          let maxSeq = -1;
+
+          allRdgs.forEach(rdg => {
+            const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+            if (!isNaN(seq) && seq > maxSeq) {
+              maxSeq = seq;
+            }
+          });
+
+          if (maxSeq >= 0) {
+            filterReadings({ wrSeq: maxSeq });
+          } else {
+            filterReadings({ showAll: true }); // fallback
+          }
+        })();
         });
 
         selector.addEventListener("change", e => {
@@ -284,6 +316,55 @@
         noteContainer.classList.add("hidden");
       });
     };
+
+    // === WRITING PHASE FILTER FOR TEI APPARATUS ===
+
+    // Utility function to toggle visibility based on wr-seq or wit
+    function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
+      const apps = document.querySelectorAll("tei-app");
+
+      apps.forEach(app => {
+        const rdgs = app.querySelectorAll("tei-rdg");
+        let matchFound = false;
+
+        rdgs.forEach(rdg => {
+          const seq = rdg.getAttribute("data-wr-seq");
+          const who = rdg.getAttribute("wit");
+
+          if (showAll) {
+            rdg.style.display = "inline";
+            matchFound = true;
+          } else if ((wrSeq !== null && seq === String(wrSeq)) || (wit && who === wit)) {
+            rdg.style.display = "inline";
+            matchFound = true;
+          } else {
+            rdg.style.display = "none";
+          }
+        });
+
+        // Optional: hide <app> if no visible readings
+        app.style.display = matchFound ? "inline" : "none";
+      });
+    }
+
+    // Example: create buttons to control the view
+    document.addEventListener("DOMContentLoaded", () => {
+      const controlPanel = document.createElement("div");
+      controlPanel.id = "phase-controls";
+      controlPanel.style.margin = "1em 0";
+      controlPanel.style.textAlign = "center";
+
+      controlPanel.innerHTML = `
+        <button onclick="filterReadings({ showAll: true })">Mostrar todas</button>
+        <button onclick="filterReadings({ wrSeq: 0 })">Fase A0 (original)</button>
+        <button onclick="filterReadings({ wrSeq: 1 })">Fase A1 (correcciones inmediatas)</button>
+        <button onclick="filterReadings({ wrSeq: 2 })">Fase A2 (revisión posterior)</button>
+        <button onclick="filterReadings({ wit: 'B1' })">B1 (intervención externa)</button>
+      `;
+
+      document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
+    });
+
   </script>
 </body>
 </html>
