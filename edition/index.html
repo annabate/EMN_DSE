@@ -19,8 +19,8 @@
 
   <div id="view-selector">
     <button onclick="toggleView('facsimile-container')">Facsímil</button>
-    <button onclick="toggleView('modern-container')">Modernizada</button>
-    <button onclick="toggleView('diplomatic-container')">Diplomática</button>
+    <button onclick="toggleView('modern-container')">Edición crítica</button>
+    <button onclick="toggleView('diplomatic-container')">Transcripción diplomática</button>
   </div>
 
   <div id="page-jump">
@@ -257,7 +257,7 @@
     controlPanel.style.textAlign = "center";
 
     controlPanel.innerHTML = `
-      <label for="variant-selector" style="font-weight: bold; margin-right: 0.5em;">Visualizar intervención:</label>
+      <label for="variant-selector" style="font-weight: bold; margin-right: 0.5em;">Filtrar intervenciones por tipología:</label>
       <select id="variant-selector"
         style="padding: 0.5em 1em; border-radius: 6px; font-size: 1rem; border: 1px solid #aaa;">
         <option value="all">Mostrar todas</option>
