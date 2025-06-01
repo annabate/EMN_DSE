@@ -150,23 +150,22 @@
 
   const phaseHierarchy = {
     "A0": ["A0"],
-    "A1": ["A1"],
+    "A1": ["A1", "A2"],
     "A2": ["A1", "A2"],
-    "B1": ["A1", "A2", "B1"],
-    "B2": ["A1", "A2", "B1", "B2"]
+    "B": ["A1", "A2", "B"]
   };
 
 
   function decorateRdgWithHighlight(rdg) {
-    rdg.innerHTML = rdg.dataset.originalHtml || rdg.innerHTML;
+    // Avoid reapplying if already decorated
+    if (rdg.classList.contains("decorated")) return;
 
     const wit = rdg.getAttribute("wit") || "unknown";
     const seq = rdg.getAttribute("data-wr-seq") || "";
 
-    // Add color class per wit
     rdg.classList.add(`wit-${wit}`);
+    rdg.classList.add("decorated");
 
-    // Add superscript sequence number if not already present
     if (seq && !rdg.querySelector(".rdg-seq")) {
       const sup = document.createElement("sup");
       sup.className = "rdg-seq";
@@ -174,7 +173,6 @@
       rdg.appendChild(sup);
     }
 
-    // Highlight deletions and additions
     const subst = rdg.querySelector("tei-subst");
     if (subst) {
       const del = subst.querySelector("tei-del");
@@ -183,12 +181,12 @@
       if (del) {
         del.outerHTML = `<span class="deletion">${del.innerHTML}</span>`;
       }
-
       if (add) {
         add.outerHTML = `<span class="addition">${add.innerHTML}</span>`;
       }
     }
   }
+
 
   function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     const apps = document.querySelectorAll("tei-app");
@@ -209,28 +207,28 @@
       rdgs.forEach(rdg => {
         rdg.style.display = "none"; // hide all initially
         rdg.classList.remove("active-reading");
-        rdg.innerHTML = rdg.dataset.originalHtml || rdg.innerHTML;
+        if (rdg.dataset.originalHtml) {
+          rdg.innerHTML = rdg.dataset.originalHtml;
+        }
       });
 
-      if (wit) {
-        let found = false;
-        const allowedWits = phaseHierarchy[wit] || [wit];
-        rdgs.forEach(rdg => {
-          if (allowedWits.includes(rdg.getAttribute("wit"))) {
-            rdg.style.display = "inline";
-            rdg.classList.add("active-reading");
+        if (wit) {
+          let found = false;
+          const allowedWits = phaseHierarchy[wit] || [wit];
+          const currentOnly = [wit]; // Used only for highlighting
 
-            // Optional: decorate deletions/additions
-            const subst = rdg.querySelector("tei-subst");
-            if (subst) {
-              const del = subst.querySelector("tei-del");
-              const add = subst.querySelector("tei-add");
-              if (del) {
-                del.outerHTML = `<span class="deletion">${del.innerHTML}</span>`;
-              }
-              if (add) {
-                add.outerHTML = `<span class="addition">${add.innerHTML}</span>`;
-              }
+          rdgs.forEach(rdg => {
+            const rdgWit = rdg.getAttribute("wit");
+            if (allowedWits.includes(rdgWit)) {
+              rdg.style.display = "inline";
+              // Track if the exact wit was found
+            if (rdgWit === wit) {
+              exactMatchFound = true;
+            }
+            // Highlight only if it matches the exact selected phase
+            if (currentOnly.includes(rdgWit)) {
+              decorateRdgWithHighlight(rdg);
+              rdg.classList.add("active-reading");
             }
 
             found = true;
@@ -240,6 +238,7 @@
         app.style.display = found ? "inline" : "none";
         return;
       }
+
 
       if (showAll) {
         rdgs.forEach(rdg => {
@@ -350,10 +349,12 @@
         }
       });
 
-  if (variantSelector && lastWit) {
-    variantSelector.value = "all";
-    filterReadings({ showAll: true });
-  }
+    if (variantSelector && lastWit) {
+      variantSelector.value = "all";
+      handleVariantChange("all");  // ✅ Ensures full decoration logic is applied
+    }
+
+  
 
 
       // Folio selector change
