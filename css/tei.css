@@ -526,3 +526,12 @@ tei-add {
   background-color: #fcb196ec; /* light yellow highlight for B1, B2 */
   font-style: italic;
 }
+
+.addition {
+  background-color: rgb(131, 171, 234);
+}
+.deletion {
+  text-decoration: line-through;
+  color: rgb(228, 60, 60);
+}
+
