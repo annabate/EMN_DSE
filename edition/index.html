@@ -156,6 +156,40 @@
     "B2": ["A1", "A2", "B1", "B2"]
   };
 
+
+  function decorateRdgWithHighlight(rdg) {
+    rdg.innerHTML = rdg.dataset.originalHtml || rdg.innerHTML;
+
+    const wit = rdg.getAttribute("wit") || "unknown";
+    const seq = rdg.getAttribute("data-wr-seq") || "";
+
+    // Add color class per wit
+    rdg.classList.add(`wit-${wit}`);
+
+    // Add superscript sequence number if not already present
+    if (seq && !rdg.querySelector(".rdg-seq")) {
+      const sup = document.createElement("sup");
+      sup.className = "rdg-seq";
+      sup.textContent = seq;
+      rdg.appendChild(sup);
+    }
+
+    // Highlight deletions and additions
+    const subst = rdg.querySelector("tei-subst");
+    if (subst) {
+      const del = subst.querySelector("tei-del");
+      const add = subst.querySelector("tei-add");
+
+      if (del) {
+        del.outerHTML = `<span class="deletion">${del.innerHTML}</span>`;
+      }
+
+      if (add) {
+        add.outerHTML = `<span class="addition">${add.innerHTML}</span>`;
+      }
+    }
+  }
+
   function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     const apps = document.querySelectorAll("tei-app");
 
@@ -178,30 +212,38 @@
         rdg.innerHTML = rdg.dataset.originalHtml || rdg.innerHTML;
       });
 
-      if (!bestRdg) {
-        app.style.display = "none";
+      if (wit) {
+        let found = false;
+        const allowedWits = phaseHierarchy[wit] || [wit];
+        rdgs.forEach(rdg => {
+          if (allowedWits.includes(rdg.getAttribute("wit"))) {
+            rdg.style.display = "inline";
+            rdg.classList.add("active-reading");
+
+            // Optional: decorate deletions/additions
+            const subst = rdg.querySelector("tei-subst");
+            if (subst) {
+              const del = subst.querySelector("tei-del");
+              const add = subst.querySelector("tei-add");
+              if (del) {
+                del.outerHTML = `<span class="deletion">${del.innerHTML}</span>`;
+              }
+              if (add) {
+                add.outerHTML = `<span class="addition">${add.innerHTML}</span>`;
+              }
+            }
+
+            found = true;
+          }
+        });
+
+        app.style.display = found ? "inline" : "none";
         return;
       }
 
-      bestRdg.style.display = "inline";
-
       if (showAll) {
         rdgs.forEach(rdg => {
-          const original = rdg.dataset.originalHtml;
-          if (original) rdg.innerHTML = original;
-
-          const wit = rdg.getAttribute("wit") || "unknown";
-          const seq = rdg.getAttribute("data-wr-seq") || "";
-
-          rdg.classList.add(`wit-${wit}`);
-
-          if (seq && !rdg.querySelector(".rdg-seq")) {
-            const sup = document.createElement("sup");
-            sup.className = "rdg-seq";
-            sup.textContent = seq;
-            rdg.appendChild(sup);
-          }
-
+          decorateRdgWithHighlight(rdg);
           rdg.style.display = "inline";
         });
 
@@ -209,33 +251,17 @@
         return;
       }
 
+
       if (defaultView) {
-        const subst = bestRdg.querySelector("tei-subst");
-        const add = subst?.querySelector("tei-add");
-        if (add) bestRdg.innerHTML = add.innerHTML;
-        bestRdg.classList.add("active-reading");
+        // Treat default view same as showAll
+        rdgs.forEach(rdg => {
+          decorateRdgWithHighlight(rdg);
+          rdg.style.display = "inline";
+        });
+
         app.style.display = "inline";
         return;
       }
-
-      // Phase filtering: show latest, but only highlight if wit matches
-      const currentWit = bestRdg.getAttribute("wit");
-      if (wit && currentWit === wit) {
-        const subst = bestRdg.querySelector("tei-subst");
-        if (subst) {
-          const del = subst.querySelector("tei-del");
-          const add = subst.querySelector("tei-add");
-          if (del) {
-            del.outerHTML = `<span class="deletion" style="text-decoration: line-through; color: red;">${del.innerHTML}</span>`;
-          }
-          if (add) {
-            add.outerHTML = `<span class="addition" style="background-color: yellow;">${add.innerHTML}</span>`;
-          }
-        }
-        bestRdg.classList.add("active-reading");
-      }
-
-      app.style.display = "inline";
     });
   }
 
@@ -324,14 +350,10 @@
         }
       });
 
-if (variantSelector && lastWit) {
-  variantSelector.value = lastWit;
-  console.log("🟡 Default view: Showing only <add> from latest phase:", lastWit);
-  filterReadings({ defaultView: true });
-} else {
-  variantSelector.value = "all";
-  filterReadings({ showAll: true });
-}
+  if (variantSelector && lastWit) {
+    variantSelector.value = "all";
+    filterReadings({ showAll: true });
+  }
 
 
       // Folio selector change
