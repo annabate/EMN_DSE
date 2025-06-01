@@ -535,3 +535,16 @@ tei-add {
   color: rgb(228, 60, 60);
 }
 
+.wit-A0 { background-color: #e0f7fa; } /* Light blue */
+.wit-A1 { background-color: #fff3e0; } /* Light orange */
+.wit-A2 { background-color: #f3e5f5; } /* Light purple */
+.wit-B1 { background-color: #fbe9e7; } /* Light red */
+.wit-B2 { background-color: #f1f8e9; } /* Light green */
+
+.rdg-seq {
+  font-size: 0.6em;
+  vertical-align: super;
+  margin-left: 2px;
+  opacity: 0.8;
+}
+

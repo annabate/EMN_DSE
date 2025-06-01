@@ -160,83 +160,85 @@
     const apps = document.querySelectorAll("tei-app");
 
     apps.forEach(app => {
-      const rdgs = app.querySelectorAll("tei-rdg");
-      let matchFound = false;
-
-      // Determine max wr-seq only once for default view
-      let maxSeq = -1;
-      if (defaultView) {
-        rdgs.forEach(rdg => {
-          if (rdg.getAttribute("data-authorial") === "true") {
-            const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
-            if (!isNaN(seq) && seq > maxSeq) maxSeq = seq;
-          }
-        });
-      }
+      const rdgs = Array.from(app.querySelectorAll("tei-rdg"));
+      let bestRdg = null;
+      let highestSeq = -1;
 
       rdgs.forEach(rdg => {
-        const currentWit = rdg.getAttribute("wit");
-        const isAuthorial = rdg.getAttribute("data-authorial") === "true";
-        const original = rdg.dataset.originalHtml;
-        const wrSeq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
-        if (original) rdg.innerHTML = original;
-        rdg.classList.remove("active-reading");
-
-        // Show all (diplomatic)
-        if (showAll) {
-          rdg.style.display = "inline";
-          matchFound = true;
-          return;
-        }
-
-        // Default view → show only latest <add> from last authorial sequence
-        if (defaultView) {
-          if (isAuthorial && wrSeq === maxSeq) {
-            const subst = rdg.querySelector("tei-subst");
-            const add = subst?.querySelector("tei-add");
-            if (add) {
-              rdg.innerHTML = add.innerHTML;
-            }
-            rdg.classList.add("active-reading");
-            rdg.style.display = "inline";
-            matchFound = true;
-          } else {
-            rdg.style.display = "none";
-          }
-          return;
-        }
-
-        // Phase-based filtering with inheritance
-        if (wit && phaseHierarchy[wit]?.includes(currentWit)) {
-          if (rdg.dataset.originalHtml) {
-            rdg.innerHTML = rdg.dataset.originalHtml;
-          }
-
-          // Highlight the actual changes
-          const subst = rdg.querySelector("tei-subst");
-          if (subst) {
-            const del = subst.querySelector("tei-del");
-            const add = subst.querySelector("tei-add");
-
-            // Wrap <del> and <add> in spans for visibility
-            if (del) {
-              del.outerHTML = `<span class="deletion" style="text-decoration: line-through; color: red;">${del.innerHTML}</span>`;
-            }
-            if (add) {
-              add.outerHTML = `<span class="addition" style="background-color: yellow;">${add.innerHTML}</span>`;
-            }
-          }
-
-          rdg.style.display = "inline";
-          matchFound = true;
-        } else {
-          rdg.style.display = "none";
+        const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+        if (!isNaN(seq) && seq > highestSeq) {
+          highestSeq = seq;
+          bestRdg = rdg;
         }
       });
 
-      app.style.display = matchFound ? "inline" : "none";
+      rdgs.forEach(rdg => {
+        rdg.style.display = "none"; // hide all initially
+        rdg.classList.remove("active-reading");
+        rdg.innerHTML = rdg.dataset.originalHtml || rdg.innerHTML;
+      });
+
+      if (!bestRdg) {
+        app.style.display = "none";
+        return;
+      }
+
+      bestRdg.style.display = "inline";
+
+      if (showAll) {
+        rdgs.forEach(rdg => {
+          const original = rdg.dataset.originalHtml;
+          if (original) rdg.innerHTML = original;
+
+          const wit = rdg.getAttribute("wit") || "unknown";
+          const seq = rdg.getAttribute("data-wr-seq") || "";
+
+          rdg.classList.add(`wit-${wit}`);
+
+          if (seq && !rdg.querySelector(".rdg-seq")) {
+            const sup = document.createElement("sup");
+            sup.className = "rdg-seq";
+            sup.textContent = seq;
+            rdg.appendChild(sup);
+          }
+
+          rdg.style.display = "inline";
+        });
+
+        app.style.display = "inline";
+        return;
+      }
+
+      if (defaultView) {
+        const subst = bestRdg.querySelector("tei-subst");
+        const add = subst?.querySelector("tei-add");
+        if (add) bestRdg.innerHTML = add.innerHTML;
+        bestRdg.classList.add("active-reading");
+        app.style.display = "inline";
+        return;
+      }
+
+      // Phase filtering: show latest, but only highlight if wit matches
+      const currentWit = bestRdg.getAttribute("wit");
+      if (wit && currentWit === wit) {
+        const subst = bestRdg.querySelector("tei-subst");
+        if (subst) {
+          const del = subst.querySelector("tei-del");
+          const add = subst.querySelector("tei-add");
+          if (del) {
+            del.outerHTML = `<span class="deletion" style="text-decoration: line-through; color: red;">${del.innerHTML}</span>`;
+          }
+          if (add) {
+            add.outerHTML = `<span class="addition" style="background-color: yellow;">${add.innerHTML}</span>`;
+          }
+        }
+        bestRdg.classList.add("active-reading");
+      }
+
+      app.style.display = "inline";
     });
   }
+
 
     
   function handleVariantChange(value) {
