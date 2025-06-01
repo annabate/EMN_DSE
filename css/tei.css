@@ -131,7 +131,7 @@ tei-pb::before {
   margin: 0;
   padding: 0.5em 1em;
   background-color: #f9f9f9c2;
-  border-bottom: 1px solid #d6b68c12;
+  border-bottom: 1px solid #bca689;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -147,7 +147,7 @@ tei-pb::before {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
   padding: 0.4em 0.8em;
-  border: 1px solid #8a6949a2;
+  border: 1px solid #bca689;
   border-radius: 6px;
   background-color: #f9f9f9;
   color: #222;
@@ -269,13 +269,13 @@ tei-pb::before {
   letter-spacing: 0.03em;
   color: #262626;
   background-color: #f9f9f9;
-  border: 1px solid #626161a2;
+  border: 1px solid #bca689;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #view-selector button:hover {
-  background-color: #ebd2a8;
+  background-color: #e7d2b5;
 }
 
 #folio-controls {
@@ -292,7 +292,7 @@ tei-pb::before {
   font-weight: 500;
   color: #333;
   background-color: #f9f9f9;
-  border: 1px solid #88827ba2;
+  border: 1px solid #bca689;
   border-radius: 6px;
   padding: 0.4em 0.8em;
   margin: 0 0.3em;
@@ -302,7 +302,7 @@ tei-pb::before {
 
 #folio-controls button:hover,
 .zoom-control button:hover {
-  background-color: #ebd2a8;
+  background-color: #e7d2b5;
 }
 
 
@@ -326,7 +326,7 @@ tei-pb::before {
 }
 
 .close-button:hover {
-  background: #ebd2a8;
+  background: #e7d2b5;
 }
 
 #note-panel {
@@ -466,7 +466,7 @@ tei-pb::before {
 }
 
 #phase-controls button:hover {
-  background: #ebd2a8;
+  background: #e7d2b5;
 }
 
 #variant-controls {
@@ -491,7 +491,7 @@ tei-pb::before {
 }
 
 #variant-selector:hover {
-  border-color: #ebd2a8;
+  border-color: #e7d2b5;
 }
 
 #variant-selector:focus {
