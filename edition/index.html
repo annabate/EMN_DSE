@@ -63,6 +63,15 @@
     }
   });
 
+  function getMaxSeq() {
+    let max = -1;
+    document.querySelectorAll("tei-rdg[data-authorial='true']").forEach(rdg => {
+      const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+      if (!isNaN(seq) && seq > max) max = seq;
+    });
+    return max;
+  }
+
   function toggleView(id) {
     const element = document.getElementById(id);
     element.classList.toggle("hidden");
@@ -139,63 +148,89 @@
     rdg.innerHTML = clone.innerHTML;
   }
 
-  function filterReadings({ wrSeq = null, wit = null, showAll = false }) {
+  const phaseHierarchy = {
+    "A0": ["A0"],
+    "A1": ["A1"],
+    "A2": ["A1", "A2"],
+    "B1": ["A1", "A2", "B1"],
+    "B2": ["A1", "A2", "B1", "B2"]
+  };
+
+  function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     const apps = document.querySelectorAll("tei-app");
 
     apps.forEach(app => {
       const rdgs = app.querySelectorAll("tei-rdg");
       let matchFound = false;
 
-      // Determine the highest authorial sequence for default rendering
-      let maxAuthorialSeq = -1;
-      rdgs.forEach(rdg => {
-        const isAuthorial = rdg.getAttribute("data-authorial") === "true";
-        const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
-        if (isAuthorial && !isNaN(seq) && seq > maxAuthorialSeq) {
-          maxAuthorialSeq = seq;
-        }
-      });
+      // Determine max wr-seq only once for default view
+      let maxSeq = -1;
+      if (defaultView) {
+        rdgs.forEach(rdg => {
+          if (rdg.getAttribute("data-authorial") === "true") {
+            const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+            if (!isNaN(seq) && seq > maxSeq) maxSeq = seq;
+          }
+        });
+      }
 
       rdgs.forEach(rdg => {
-        const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+        const currentWit = rdg.getAttribute("wit");
         const isAuthorial = rdg.getAttribute("data-authorial") === "true";
         const original = rdg.dataset.originalHtml;
-
-        // Reset content
+        const wrSeq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
         if (original) rdg.innerHTML = original;
+        rdg.classList.remove("active-reading");
 
-        rdg.classList.remove("active-reading", "non-authorial-reading");
-
+        // Show all (diplomatic)
         if (showAll) {
           rdg.style.display = "inline";
           matchFound = true;
+          return;
+        }
 
-        } else if (wrSeq !== null) {
-          // Show only readings for that specific phase
-          if (seq === wrSeq) {
-            rdg.style.display = "inline";
-            rdg.classList.add("active-reading");
-            matchFound = true;
-          } else {
-            rdg.style.display = "none";
-          }
-
-        } else {
-          // Default view: Only show latest authorial <add>
-          if (seq === maxAuthorialSeq && isAuthorial) {
+        // Default view → show only latest <add> from last authorial sequence
+        if (defaultView) {
+          if (isAuthorial && wrSeq === maxSeq) {
             const subst = rdg.querySelector("tei-subst");
             const add = subst?.querySelector("tei-add");
-
             if (add) {
               rdg.innerHTML = add.innerHTML;
             }
-
             rdg.classList.add("active-reading");
             rdg.style.display = "inline";
             matchFound = true;
           } else {
             rdg.style.display = "none";
           }
+          return;
+        }
+
+        // Phase-based filtering with inheritance
+        if (wit && phaseHierarchy[wit]?.includes(currentWit)) {
+          if (rdg.dataset.originalHtml) {
+            rdg.innerHTML = rdg.dataset.originalHtml;
+          }
+
+          // Highlight the actual changes
+          const subst = rdg.querySelector("tei-subst");
+          if (subst) {
+            const del = subst.querySelector("tei-del");
+            const add = subst.querySelector("tei-add");
+
+            // Wrap <del> and <add> in spans for visibility
+            if (del) {
+              del.outerHTML = `<span class="deletion" style="text-decoration: line-through; color: red;">${del.innerHTML}</span>`;
+            }
+            if (add) {
+              add.outerHTML = `<span class="addition" style="background-color: yellow;">${add.innerHTML}</span>`;
+            }
+          }
+
+          rdg.style.display = "inline";
+          matchFound = true;
+        } else {
+          rdg.style.display = "none";
         }
       });
 
@@ -203,17 +238,15 @@
     });
   }
 
-
-
+    
   function handleVariantChange(value) {
-            if (value === "all") {
-              filterReadings({ showAll: true });
-            } else if (!isNaN(parseInt(value))) {
-              filterReadings({ wrSeq: parseInt(value) });
-            } else {
-              filterReadings({ wit: value });
-            }
-          }
+    if (value === "all") {
+      filterReadings({ showAll: true });
+    } else if (["A0", "A1", "A2", "B1", "B2"].includes(value)) {
+      filterReadings({ wit: value });
+    }
+  }
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const controlPanel = document.createElement("div");
@@ -226,9 +259,9 @@
       <select id="variant-selector"
         style="padding: 0.5em 1em; border-radius: 6px; font-size: 1rem; border: 1px solid #aaa;">
         <option value="all">Mostrar todas</option>
-        <option value="0">Fase A0 (original)</option>
-        <option value="1">Fase A1 (correcciones inmediatas)</option>
-        <option value="2">Fase A2 (revisión posterior)</option>
+        <option value="A0">Fase A0 (original)</option>
+        <option value="A1">Fase A1 (correcciones inmediatas)</option>
+        <option value="A2">Fase A2 (revisión posterior)</option>
         <option value="B1">B1 (intervención externa)</option>
         <option value="B2">B2 (revisión externa posterior)</option>
       </select>
@@ -277,17 +310,27 @@
           if (!isNaN(seq) && seq > maxSeq) maxSeq = seq;
         });
 
-        const variantSelector = document.getElementById("variant-selector");
-        if (maxSeq >= 0) {
-          if (variantSelector) variantSelector.value = String(maxSeq);
-          console.log("🟡 Default view: Showing only <add> of latest authorial phase:", maxSeq);
-          filterReadings({ wrSeq: maxSeq });
-        } else {
-          if (variantSelector) variantSelector.value = "all";
-          filterReadings({ showAll: true });
-        }
+      const variantSelector = document.getElementById("variant-selector");
+      let lastWit = null;
 
+      // Find the wit corresponding to the maxSeq
+      allRdgs.forEach(rdg => {
+        const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+        const wit = rdg.getAttribute("wit");
+        if (!isNaN(seq) && seq === maxSeq && wit) {
+          lastWit = wit;
+        }
       });
+
+if (variantSelector && lastWit) {
+  variantSelector.value = lastWit;
+  console.log("🟡 Default view: Showing only <add> from latest phase:", lastWit);
+  filterReadings({ defaultView: true });
+} else {
+  variantSelector.value = "all";
+  filterReadings({ showAll: true });
+}
+
 
       // Folio selector change
       pbSelector.addEventListener("change", e => {
@@ -381,7 +424,8 @@
       isDragging = false;
       if (isZoomed) wrapper.style.cursor = "grab";
     });
-  };
+  });
+   }
 </script>
 
 </body>

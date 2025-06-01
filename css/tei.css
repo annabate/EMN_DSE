@@ -516,7 +516,7 @@ tei-add {
 }
 
 .active-reading {
-  background-color: #faf063e8; /* light yellow highlight */
+  background-color: #fcf37bcd; /* light yellow highlight */
   border-radius: 4px;
   padding: 0.1em 0.3em;
   transition: background-color 0.3s ease;
