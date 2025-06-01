@@ -275,7 +275,7 @@ tei-pb::before {
 }
 
 #view-selector button:hover {
-  background-color: #fcdeb7d0;
+  background-color: #ebd2a8;
 }
 
 #folio-controls {
@@ -302,7 +302,7 @@ tei-pb::before {
 
 #folio-controls button:hover,
 .zoom-control button:hover {
-  background-color: #fcdeb7d0;
+  background-color: #ebd2a8;
 }
 
 
@@ -326,7 +326,7 @@ tei-pb::before {
 }
 
 .close-button:hover {
-  background: #fcdeb7d0;
+  background: #ebd2a8;
 }
 
 #note-panel {
@@ -466,7 +466,7 @@ tei-pb::before {
 }
 
 #phase-controls button:hover {
-  background: #fcdeb7d0;
+  background: #ebd2a8;
 }
 
 #variant-controls {
@@ -491,7 +491,7 @@ tei-pb::before {
 }
 
 #variant-selector:hover {
-  border-color: #d8c28e;
+  border-color: #ebd2a8;
 }
 
 #variant-selector:focus {
