@@ -146,46 +146,62 @@
       const rdgs = app.querySelectorAll("tei-rdg");
       let matchFound = false;
 
+      // Determine the highest authorial sequence for default rendering
+      let maxAuthorialSeq = -1;
       rdgs.forEach(rdg => {
-        rdg.classList.remove("active-reading", "non-authorial-reading");
-        const seqAttr = rdg.getAttribute("data-wr-seq");
-        const who = rdg.getAttribute("wit");
         const isAuthorial = rdg.getAttribute("data-authorial") === "true";
-        const seqNum = parseInt(seqAttr, 10);
+        const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+        if (isAuthorial && !isNaN(seq) && seq > maxAuthorialSeq) {
+          maxAuthorialSeq = seq;
+        }
+      });
+
+      rdgs.forEach(rdg => {
+        const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
+        const isAuthorial = rdg.getAttribute("data-authorial") === "true";
         const original = rdg.dataset.originalHtml;
 
-        // Show all readings (full diplomatic)
+        // Reset content
+        if (original) rdg.innerHTML = original;
+
+        rdg.classList.remove("active-reading", "non-authorial-reading");
+
         if (showAll) {
-          if (original) rdg.innerHTML = original;
           rdg.style.display = "inline";
           matchFound = true;
-          return;
-        }
 
-        // Filter by authorial phase
-        if (wrSeq !== null && !isNaN(seqNum)) {
-          const targetSeq = parseInt(wrSeq, 10);
-          if (seqNum === targetSeq && isAuthorial) {
+        } else if (wrSeq !== null) {
+          // Show only readings for that specific phase
+          if (seq === wrSeq) {
+            rdg.style.display = "inline";
+            rdg.classList.add("active-reading");
+            matchFound = true;
+          } else {
+            rdg.style.display = "none";
+          }
+
+        } else {
+          // Default view: Only show latest authorial <add>
+          if (seq === maxAuthorialSeq && isAuthorial) {
             const subst = rdg.querySelector("tei-subst");
             const add = subst?.querySelector("tei-add");
 
-            rdg.innerHTML = add ? add.innerHTML : rdg.textContent;
+            if (add) {
+              rdg.innerHTML = add.innerHTML;
+            }
+
             rdg.classList.add("active-reading");
             rdg.style.display = "inline";
             matchFound = true;
           } else {
-            // Hide older or irrelevant ones
             rdg.style.display = "none";
           }
-        } else {
-          rdg.style.display = "none";
         }
       });
 
       app.style.display = matchFound ? "inline" : "none";
     });
   }
-
 
 
 
