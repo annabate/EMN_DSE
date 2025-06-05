@@ -459,7 +459,7 @@ tei-pb::before {
   margin: 0.25em;
   padding: 0.4em 1em;
   font-size: 0.95em;
-  background: #eaeaea;
+  background: #f4f4f4;
   border: 1px solid #aaa;
   border-radius: 5px;
   cursor: pointer;
@@ -473,10 +473,10 @@ tei-pb::before {
   margin: 1em auto;
   text-align: center;
   padding: 0.5em;
-  background: #f9f9f9;
+  background: #f9f9f9c2;
   border: 1px solid #ccc;
   border-radius: 8px;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 #variant-selector {
@@ -484,7 +484,7 @@ tei-pb::before {
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #aaa;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   color: #333;
   font-family: inherit;
   transition: border-color 0.2s ease;
@@ -523,7 +523,7 @@ tei-add {
 }
 
 .non-authorial-reading {
-  background-color: #fcb196ec; /* light yellow highlight for B1, B2 */
+  background-color: #fcb196ec; /* light red highlight for B1, B2 */
   font-style: italic;
 }
 
@@ -535,11 +535,11 @@ tei-add {
   color: rgb(228, 60, 60);
 }
 
-.wit-A0 { background-color: #e0f7fa; } /* Light blue */
-.wit-A1 { background-color: #fff3e0; } /* Light orange */
-.wit-A2 { background-color: #f3e5f5; } /* Light purple */
-.wit-B1 { background-color: #fbe9e7; } /* Light red */
-.wit-B2 { background-color: #f1f8e9; } /* Light green */
+.wit-A0 { background-color: #bdd6da; } /* Light blue */
+.wit-A1 { background-color: #f0dcb3; } /* Light orange */
+.wit-A2 { background-color: #edd1f1; } /* Light purple */
+.wit-B { background-color: #d0f3bf; } /* Light green */
+
 
 .rdg-seq {
   font-size: 0.6em;

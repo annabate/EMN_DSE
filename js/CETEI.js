@@ -633,6 +633,7 @@ var CETEI = (function () {
         }
         return newElement;
       };
+      
 
       this.dom = convertEl(XML_dom.documentElement);
       this.utilities.dom = this.dom;
