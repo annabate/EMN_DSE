@@ -100,7 +100,7 @@
 
       const span = document.createElement("span");
       span.className = "note-icon";
-      span.textContent = "●";
+      span.textContent = "◉";
       span.style.cursor = "pointer";
       cleanNote.appendChild(span);
       originalNote.replaceWith(cleanNote);
@@ -348,7 +348,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     controlPanel.style.textAlign = "center";
 
     controlPanel.innerHTML = `
-      <label for="variant-selector" style="font-weight: bold; margin-right: 0.5em;">Filtrar intervenciones por tipología:</label>
+      <label for="variant-selector" style="font-weight: bold; font-family: Garamond, serif; font-size: 18px; margin-right: 0.5em;">Filtrar intervenciones por tipología:</label>
       <select id="variant-selector"
         style="padding: 0.5em 1em; border-radius: 6px; font-size: 1rem; border: 1px solid #aaa;">
         <option value="all">Mostrar todas</option>
@@ -357,7 +357,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
         <option value="A2">Tipo A2 (revisión posterior)</option>
         <option value="B">Tipo B (intervención de mano ajena)</option>
       </select>
-      <button id="clean-text-button" style="margin-left: 1em; font-size: 15px;">
+      <button id="clean-text-button" style="margin-left: 1em; font-family: Garamond, serif; font-size: 18px;">
         Mostrar texto limpio
       </button>`;
 

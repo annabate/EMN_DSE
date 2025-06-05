@@ -1,9 +1,8 @@
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 0.9rem;
+    font-family: Garamond, serif;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.2;
     color: #212529;
     text-align: justify;
     background-color: #decfa2e3
@@ -80,7 +79,7 @@ tei-l::before {
   text-align: right;
   margin-right: 0.5em; /* Spazio tra il numero e il testo del verso */
   color: #777; /* Colore del numero */
-  font-size: 0.8em;
+  font-size: 1.1em;
 }
 
 tei-head {
@@ -95,7 +94,7 @@ tei-head {
 tei-stage {
   display: block;
   font-style: italic;
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: center;
   margin: 2em 0;
 }
@@ -133,19 +132,19 @@ tei-pb::before {
   padding: 0.5em 1em;
   background-color: #f9f9f9c2;
   border-bottom: 1px solid #bca689;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Garamond, serif;
 }
 
 #page-jump label {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  font-family: Garamond, serif;
+  font-size: 1.1rem;
   font-weight: 500;
   color: #333;
 }
 
 
 #pb-selector {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -Garamond, serif;
   font-size: 0.95rem;
   padding: 0.4em 0.8em;
   border: 1px solid #bca689;
@@ -264,9 +263,8 @@ tei-pb::before {
 #view-selector button {
   margin: 0 0.5em;
   padding: 0.6em 1.5em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-family: Garamond, serif;
+  font-size: 1.1rem;
   letter-spacing: 0.03em;
   color: #262626;
   background-color: #f9f9f9;
@@ -288,7 +286,7 @@ tei-pb::before {
 
 #folio-controls button,
 .zoom-control button {
-  font-family: "Georgia", sans-serif;
+  font-family: Garamond, serif;
   font-size: 0.95rem;
   font-weight: 500;
   color: #333;
