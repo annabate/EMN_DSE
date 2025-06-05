@@ -51,25 +51,37 @@
 
   CETEIcean.addBehaviors({
     "tei": {
-      "rdg": function (el) {
-        let span = document.createElement("span");
-        span.innerHTML = el.innerHTML;
-        span.setAttribute("data-wr-seq", el.getAttribute("data-wr-seq") || "");
-        span.setAttribute("wit", el.getAttribute("wit") || "");
-        span.setAttribute("data-authorial", el.getAttribute("data-authorial") || "");
-        span.dataset.originalHtml = el.innerHTML; // Store original for resets
-        return span;
-      }
+      "rdg": variantHandler,
+      "lem": variantHandler
     }
   });
 
+  function variantHandler(el) {
+    let span = document.createElement("span");
+    span.innerHTML = el.innerHTML;
+    span.setAttribute("data-wr-seq", el.getAttribute("data-wr-seq") || "");
+    span.setAttribute("wit", el.getAttribute("wit") || "LEM"); // Or keep it empty or "lem"
+    span.setAttribute("data-authorial", el.getAttribute("data-authorial") || "");
+    span.dataset.originalHtml = el.innerHTML;
+    return span;
+  }
+
   function getMaxSeq() {
     let max = -1;
-    document.querySelectorAll("tei-rdg[data-authorial='true']").forEach(rdg => {
+    const allVariants = document.querySelectorAll("tei-rdg[data-authorial='true'], tei-lem[data-authorial='true']");
+    allVariants.forEach(rdg => {
       const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
       if (!isNaN(seq) && seq > max) max = seq;
     });
     return max;
+  }
+
+  const variantSelector = document.getElementById("variant-selector");
+  let lastWit = null;
+
+  if (variantSelector) {
+    variantSelector.value = "all";
+    filterReadings({ showAll: true });
   }
 
   function toggleView(id) {
@@ -187,7 +199,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
   const apps = document.querySelectorAll("tei-app");
 
   apps.forEach(app => {
-    const rdgs = Array.from(app.querySelectorAll("tei-rdg"));
+    const rdgs = Array.from(app.querySelectorAll("tei-rdg, tei-lem"));
     let bestRdg = null;
     let highestSeq = -1;
 
@@ -253,6 +265,50 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     }
   }
 
+  function showCleanLemmasOnly() {
+    const apps = document.querySelectorAll("tei-app");
+
+    apps.forEach(app => {
+      const rdgs = app.querySelectorAll("tei-rdg");
+      const lems = app.querySelectorAll("tei-lem");
+
+      rdgs.forEach(rdg => {
+        rdg.style.display = "none";
+      });
+
+      lems.forEach(lem => {
+        lem.style.display = "inline";
+        lem.classList.remove("decorated", "active-reading");
+        lem.className = "";
+
+        // Remove all wit-* classes
+        Array.from(lem.classList).forEach(cls => {
+          if (cls.startsWith("wit-")) lem.classList.remove(cls);
+        });
+
+        // Remove <sup> if present
+        const sup = lem.querySelector(".rdg-seq");
+        if (sup) sup.remove();
+
+        // ✅ Strip all <del> elements
+        lem.querySelectorAll("tei-del").forEach(del => del.remove());
+
+        // ✅ Replace any <add> with its text content
+        lem.querySelectorAll("tei-add").forEach(add => {
+          const span = document.createElement("span");
+          span.innerHTML = add.innerHTML;
+          add.replaceWith(span);
+        });
+
+        // ✅ Optional: flatten again if you want only text
+        // lem.innerHTML = lem.textContent;
+      });
+
+      app.style.display = "inline";
+    });
+  }
+
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const controlPanel = document.createElement("div");
@@ -270,6 +326,9 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
         <option value="A2">Tipo A2 (revisión posterior)</option>
         <option value="B">Tipo B (intervención de mano ajena)</option>
       </select>
+      <button id="clean-text-button" style="margin-left: 1em;">
+        Mostrar texto limpio
+      </button>
     `;
 
     document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
@@ -364,7 +423,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       attachNoteEvents(data);
 
     requestAnimationFrame(() => {
-        const allRdgs = data.querySelectorAll("tei-rdg[data-authorial='true']");
+        const allRdgs = data.querySelectorAll("tei-rdg[data-authorial='true'], tei-lem[data-authorial='true']");
         let maxSeq = -1;
         allRdgs.forEach(rdg => {
           const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
@@ -394,6 +453,12 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       }, 100); // 100–150ms is usually safe
     
     });
+
+  document.getElementById("clean-text-button").addEventListener("click", () => {
+    showCleanLemmasOnly();
+    document.getElementById("variant-selector").value = ""; // optional: reset dropdown
+  });
+
 
     const img = document.getElementById("facsimile-image");
     const wrapper = document.getElementById("facsimile-wrapper");

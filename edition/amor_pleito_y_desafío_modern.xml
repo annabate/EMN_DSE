@@ -27,7 +27,7 @@
                     <head>Personas del primer acto</head>
                     <castItem><role xml:id="Don_Álvaro_de_Rojas_Maldonado">Don Álvaro de Rojas — Maldonado</role></castItem>
                     <castItem><role xml:id="Don_Juan_de_Padilla_Lorenzo_Hurtado">Don Juan de
-                                <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Castilla</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>Castilla</del><add>Padilla</add></subst></rdg></app> — Lorenzo Hurtado</role></castItem>
+                                <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Castilla</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>Castilla</del><add>Padilla</add></subst></lem></app> — Lorenzo Hurtado</role></castItem>
                     <castItem><role xml:id="Don_Juan_de_Aragón_Pedro_De_Pernia">Don Juan de Aragón — Pedro De Pernia</role></castItem>
                     <castItem><role xml:id="El_Rey_Alfonso_Juan_Bautista">El Rey Alfonso Juan — Bautista</role></castItem>
                     <castItem><role xml:id="Doña_Beatriz_La_señora_Angela">Doña Beatriz La señora — Angela</role></castItem>
@@ -102,12 +102,12 @@
                 <sp>
                     <speaker>Padilla</speaker>
                     <l n="19">A ser vara de justicia,</l>
-                    <l n="20">yo <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">re</rdg><rdg wit="A1" data-wr-seq="1" authorial="true"><subst><del>re</del><add>sé</add></subst></rdg></app> que oyera informada.</l>
+                    <l n="20">yo <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">re</rdg><lem wit="A1" data-wr-seq="1" authorial="true"><subst><del>re</del><add>sé</add></subst></lem></app> que oyera informada.</l>
                     <pb type="folio" n="[Fol. 3v]"/>
                 </sp>
                 <sp>
                     <speaker>Álvaro</speaker>
-                    <l n="21">Yo soy <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Aualos</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>Aualos</del><add>Rojas</add></subst></rdg></app>, y tan bueno<note>21:
+                    <l n="21">Yo soy <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Aualos</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>Aualos</del><add>Rojas</add></subst></lem></app>, y tan bueno<note>21:
                                 <hi rend="italic">Roxas</hi>: la primera lectura, Ávalos, remite a
                             un personaje del segundo acto, se debe supuestamente a un lapsus del
                             autor.</note></l>
@@ -115,27 +115,27 @@
                 </sp>
                 <sp>
                     <speaker>Padilla</speaker>
-                    <l n="23"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Ni estoy de su sangre ageno</rdg><rdg wit="A2" data-wr-seq="2"><subst><del>Ni estoy de su sangre ageno</del><add>Lo mismo defiendo yo.</add></subst></rdg></app><note>23: añadido en la línea
+                    <l n="23"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Ni estoy de su sangre ageno</rdg><lem wit="A2" data-wr-seq="2"><subst><del>Ni estoy de su sangre ageno</del><add>Lo mismo defiendo yo.</add></subst></lem></app><note>23: añadido en la línea
                             siguiente.</note></l>
                 </sp>
                 <sp>
                     <speaker>Álvaro</speaker>
                     <l n="24">Por lo menos ya condeno,</l>
-                    <l n="25">siendo <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">de</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>de</del><add>en</add></subst></rdg></app>de mi casa ajeno,<note>25:
+                    <l n="25">siendo <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">de</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>de</del><add>en</add></subst></lem></app>de mi casa ajeno,<note>25:
                             siendo &lt;-en//de&gt; mi casa ajeno. Verso añadido entre las
                             líneas.</note></l>
                     <l n="26">el hallaros en mi casa.</l>
                 </sp>
                 <sp>
                     <speaker>Padilla</speaker>
-                    <l n="27">¿Qué ley <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">de ese</rdg><rdg wit="A1" data-wr-seq="1"><subst><del>de ese</del><add>el</add></subst></rdg></app> respeto pasa?</l>
+                    <l n="27">¿Qué ley <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">de ese</rdg><lem wit="A1" data-wr-seq="1"><subst><del>de ese</del><add>el</add></subst></lem></app> respeto pasa?</l>
                 </sp>
                 <sp>
                     <speaker>Álvaro</speaker>
-                    <l n="28"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">teniendo hija es necedad</rdg><rdg wit="A2" data-wr-seq="2" data-authorial="true"><subst><del>teniendo hija es necedad</del><del>no es nada tener</del><add>la ley santa de tener</add></subst></rdg></app><note>28:
+                    <l n="28"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">teniendo hija es necedad</rdg><lem wit="A2" data-wr-seq="1" data-authorial="true"><subst><del>teniendo hija es necedad</del><del>no es nada tener</del><add>la ley santa de tener</add></subst></lem></app><note>28:
                             &lt;-Alb. no es nada tener\la ley santa de
                             tener &gt;: verso atribuido a Padilla.</note></l>
-                    <l n="29"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">que por ver mi soledad</rdg><rdg wit="A2" data-wr-seq="2" data-authorial="true"><subst><del>que por ver mi soledad</del><add>hija que puedo temer</add></subst></rdg></app></l>
+                    <l n="29"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">que por ver mi soledad</rdg><lem wit="A2" data-wr-seq="1" data-authorial="true"><subst><del>que por ver mi soledad</del><add>hija que puedo temer</add></subst></lem></app></l>
                     <l n="30">que por su gusto se casa.<note>21-30: En la reformulación
                             de la décima, Lope corrige el apellido del padre de la dama, defecto
                             quizá causado por un lapsus (Ávalos), perfecciona la referencia a la
@@ -158,7 +158,7 @@
                 <sp>
                     <speaker>Álvaro</speaker>
                     <l n="38">¿Reliquias para esos males</l>
-                    <l n="39"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">se buscan en casas tales</rdg><rdg wit="A2" data-wr-seq="1" data-authorial="true"><subst><del>se buscan en casas tales</del><add>en casas tan principales?</add></subst></rdg></app><note>39: Esta
+                    <l n="39"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">se buscan en casas tales</rdg><lem wit="A2" data-wr-seq="1" data-authorial="true"><subst><del>se buscan en casas tales</del><add>en casas tan principales?</add></subst></lem></app><note>39: Esta
                             intervención debe relacionarse con la anterior (vv. 21-30), porque atañe
                             al mismo intento de dar mayor énfasis a la autoridad del lugar de la
                             acción, que es la casa del noble anciano don Álvaro de Rojas. El
@@ -190,16 +190,16 @@
                     <l n="51">Aquí no se ha de venir</l>
                     <l n="52">por reliquias para él,</l>
                     <l n="53">por corazón sí, que en él</l>
-                    <l n="54"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">animo puedo imprimir</rdg><rdg wit="A2" data-wr-seq="2" data-authorial="true"><del>animo</del>puedo<del>imprimir</del><add>valor infundir</add></rdg></app>
+                    <l n="54"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">animo puedo imprimir</rdg><lem wit="A2" data-wr-seq="1" data-authorial="true"><del>animo</del>puedo<del>imprimir</del><add>valor infundir</add></lem></app>
                             <note>54: La corrección autógrafa es coherente con las
                             anteriores (vv. 21-30 y v. 39), y remite al intento de Lope de ensalzar,
                             a través de las palabras del padre, el contexto elevado en el que se
                             encuentran.</note></l>
                     <l n="55">aquí se pueden pedir</l>
-                    <l n="56">lan<app><rdg wit="A0" data-wr-seq="0" data-authorial="true">z</rdg><rdg wit="A1" data-wr-seq="1" data-authorial="true">Z</rdg></app>as<note>56: La
+                    <l n="56">lan<app><rdg wit="A0" data-wr-seq="0" data-authorial="true">z</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true">Z</lem></app>as<note>56: La
                             intervención parece deberse al intento de aclarar gráficamente un
                             carácter de díficil lectura en el manuscrito, la mano puede no ser de
-                            Lope; la tinta está más diluida.</note></l>
+                            Lope; la tinta está más diluida.</note>paveses y espadas</l>
                     <l n="57">de tantas guerras pasadas,</l>
                     <l n="58">q aun las hay, gracias a Dios,</l>
                     <l n="59">para mozos como vos,</l>
@@ -289,7 +289,7 @@
                 <sp>
                     <speaker>Padilla</speaker>
                     <l part="F">El cielo dio</l>
-                    <l n="94"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">fin</rdg><rdg wit="A1" data-wr-seq="1"><subst><del>dulce</del><add>fin dulce</add></subst></rdg></app> a mi cuidado;</l>
+                    <l n="94"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">fin</rdg><lem wit="A1" data-wr-seq="1"><subst><del>dulce</del><add>fin dulce</add></subst></lem></app> a mi cuidado;</l>
                     <l n="95">agora a esos pies echado…</l>
                 </sp>
                 <sp>
