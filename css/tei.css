@@ -16,7 +16,8 @@ tei-div, tei-p {
 tei-p {
   display: block;
   text-align: justify;
-  margin: 0.8em 0;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
 tei-castList {
@@ -32,6 +33,9 @@ tei-castItem {
   margin: 0.2em 0;
 }
 
+tei-milestone {
+  display: none;
+}
 
 tei-note::after {
   max-width: 90vw;
@@ -39,6 +43,7 @@ tei-note::after {
   overflow-wrap: break-word;
   white-space: normal;
 }
+
 
 tei-sp {
   margin-bottom: 0.5em;
