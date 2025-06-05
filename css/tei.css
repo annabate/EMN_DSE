@@ -117,8 +117,7 @@ tei-pb::before {
 }
 
 .metric-shift {
-  padding-left: 0.5em;
-  font-style: italic; /* Optional: helps testing visually */
+  padding-left: 0.8em;
 }
 
 #page-jump {
