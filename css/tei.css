@@ -354,16 +354,18 @@ tei-pb::before {
 }
 
 .note-icon {
-  display: inline-block;
-  color: #102465;
+  content: "💬";
   font-size: 0.9em;
-  font-weight: bold;
-  border-radius: 40%;
-  vertical-align: super;
-  line-height: 1;
+  display: inline-block;
+  background: #f7f49c;
+  border-radius: 50%;
+  padding: 0.2em 0.4em;
+  color: black;
   cursor: pointer;
-  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  margin-right: 0.2em;
 }
+
+
 
 .note-entry {
   background: #fff;
@@ -431,6 +433,31 @@ tei-pb::before {
   cursor: pointer;
   color: #456299;
 }
+
+.floating-note {
+  position: absolute;
+  background-color: #aea47b;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  padding: 0.5em;
+  max-width: 90vw;
+  z-index: 1000;
+  font-family: Garamond, serif;
+  font-size: 16px;
+}
+
+.pin-note {
+  display: block;
+  margin-top: 0.5em;
+  background: #fce07a;
+  border: none;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 0.7em;
+}
+
 
 /* Aggiunta per evitare che la colonna delle note venga sovrapposta */
 #tei-wrapper {
@@ -546,7 +573,7 @@ tei-add {
 }
 
 .wit-A0 { background-color: #bdd6da; } /* Light blue */
-.wit-A1 { background-color: #f0dcb3; } /* Light orange */
+.wit-A1 { background-color: #fee0ab; } /* Light orange */
 .wit-A2 { background-color: #edd1f1; } /* Light purple */
 .wit-B { background-color: #d0f3bf; } /* Light green */
 
@@ -558,6 +585,14 @@ tei-add {
   opacity: 0.8;
 }
 
-body.clean-mode note-icon {
+body.clean-mode .note-icon {
   display: none !important;
 }
+
+@media screen and (max-width: 768px) {
+  .tei-column {
+    width: 100% !important;
+    flex: 1 1 100%;
+  }
+}
+

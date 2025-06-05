@@ -100,39 +100,68 @@
 
       const span = document.createElement("span");
       span.className = "note-icon";
-      span.textContent = "◉";
+      span.textContent = "💬";
       span.style.cursor = "pointer";
       cleanNote.appendChild(span);
       originalNote.replaceWith(cleanNote);
     });
   }
 
-  function attachNoteEvents(container = document) {
+ function attachNoteEvents(container = document) {
     const notes = container.querySelectorAll("tei-note");
     notes.forEach(note => {
       const content = note.getAttribute("data-note");
+
       note.addEventListener("click", (e) => {
         e.stopPropagation();
-        const noteContainer = document.getElementById("note-container");
-        noteContainer.classList.remove("hidden");
-        const noteItem = document.createElement("div");
-        noteItem.className = "note-item";
-        noteItem.textContent = content;
-        const closeBtn = document.createElement("span");
-        closeBtn.className = "close-note";
-        closeBtn.textContent = "✖️";
-        closeBtn.addEventListener("click", (event) => {
-          event.stopPropagation();
-          noteItem.remove();
-          if (!noteContainer.querySelector(".note-item")) {
-            noteContainer.classList.add("hidden");
-          }
+
+        // Remove existing floating notes
+        document.querySelectorAll(".floating-note").forEach(n => n.remove());
+
+        const rect = e.target.getBoundingClientRect();
+        const floating = document.createElement("div");
+        floating.className = "floating-note";
+        floating.innerHTML = `
+          <div>${content}</div>
+          <button class="pin-note">📌 Fijar</button>
+        `;
+
+        document.body.appendChild(floating);
+        floating.style.left = `${rect.right + 10 + window.scrollX}px`;
+        floating.style.top = `${rect.top + window.scrollY}px`;
+
+        floating.querySelector(".pin-note").addEventListener("click", () => {
+          const noteContainer = document.getElementById("note-container");
+          noteContainer.classList.remove("hidden");
+
+          const noteItem = document.createElement("div");
+          noteItem.className = "note-item";
+          noteItem.textContent = content;
+
+          const closeBtn = document.createElement("span");
+          closeBtn.className = "close-note";
+          closeBtn.textContent = "✖️";
+          closeBtn.addEventListener("click", () => {
+            noteItem.remove();
+            if (!noteContainer.querySelector(".note-item")) {
+              noteContainer.classList.add("hidden");
+            }
+          });
+
+          noteItem.appendChild(closeBtn);
+          noteContainer.appendChild(noteItem);
+
+          floating.remove(); // remove the floating version
         });
-        noteItem.appendChild(closeBtn);
-        noteContainer.appendChild(noteItem);
       });
     });
+
+    // Close floating note on click elsewhere
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".floating-note").forEach(n => n.remove());
+    });
   }
+
 
   function updateLayoutClasses() {
     const wrapper = document.getElementById("tei-wrapper");
