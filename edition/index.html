@@ -19,7 +19,7 @@
 
   <div id="view-selector">
     <button onclick="toggleView('facsimile-container')">Facsímil</button>
-    <button onclick="toggleView('modern-container')">Edición crítica</button>
+    <button onclick="toggleView('modern-container')">Edición crítico-genética</button>
     <button onclick="toggleView('diplomatic-container')">Transcripción diplomática</button>
   </div>
 
@@ -96,10 +96,11 @@
       const content = originalNote.cloneNode(true).textContent.trim();
       const cleanNote = document.createElement("tei-note");
       cleanNote.setAttribute("data-note", content);
+      cleanNote.classList.add("note-decorated");
+
       const span = document.createElement("span");
       span.className = "note-icon";
-      span.textContent = "●";
-      span.style.color = "red";
+      span.textContent = "◉";
       span.style.cursor = "pointer";
       cleanNote.appendChild(span);
       originalNote.replaceWith(cleanNote);
@@ -258,67 +259,86 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
 }
     
   function handleVariantChange(value) {
+    document.body.classList.remove("clean-mode");
+    restoreAllReadings(); // ← full restoration
     if (value === "all") {
       filterReadings({ showAll: true });
-    } else if (["A0", "A1", "A2", "B",].includes(value)) {
+    } else if (["A0", "A1", "A2", "B"].includes(value)) {
       filterReadings({ wit: value });
     }
   }
 
- function showCleanLemmasOnly() {
-  const apps = document.querySelectorAll("tei-app");
 
-  apps.forEach(app => {
-    const rdgs = app.querySelectorAll("tei-rdg");
-    const lems = app.querySelectorAll("tei-lem");
+  function showCleanLemmasOnly() {
+    const apps = document.querySelectorAll("tei-app");
 
-    // Hide all readings
-    rdgs.forEach(rdg => {
-      rdg.style.display = "none";
-    });
+    apps.forEach(app => {
+      const rdgs = app.querySelectorAll("tei-rdg");
+      const lems = app.querySelectorAll("tei-lem");
 
-    // Show and clean all lemmas
-    lems.forEach(lem => {
-      lem.style.display = "inline";
-      lem.classList.remove("decorated", "active-reading");
-      lem.className = "";
-
-      // Remove all wit-* classes
-      Array.from(lem.classList).forEach(cls => {
-        if (cls.startsWith("wit-")) lem.classList.remove(cls);
+      // Hide all readings
+      rdgs.forEach(rdg => {
+        rdg.style.display = "none";
       });
 
-      // Remove <sup> if present
-      const sup = lem.querySelector(".rdg-seq");
-      if (sup) sup.remove();
+      // Show and clean all lemmas
+      lems.forEach(lem => {
+        if (!lem.dataset.originalHtml) {
+          lem.dataset.originalHtml = lem.innerHTML;
+        }
+        lem.style.display = "inline";
+        lem.classList.remove("decorated", "active-reading");
+        lem.className = "";
 
-      // ✅ Strip <del> and simplify <add>
-      lem.querySelectorAll("tei-del").forEach(del => del.remove());
-      lem.querySelectorAll("tei-add").forEach(add => {
-        const span = document.createElement("span");
-        span.innerHTML = add.innerHTML;
-        add.replaceWith(span);
+        Array.from(lem.classList).forEach(cls => {
+          if (cls.startsWith("wit-")) lem.classList.remove(cls);
+        });
+
+        const sup = lem.querySelector(".rdg-seq");
+        if (sup) sup.remove();
+
+        // Remove <del> and unwrap <add>
+        lem.querySelectorAll("tei-del").forEach(del => del.remove());
+        lem.querySelectorAll("tei-add").forEach(add => {
+          const span = document.createElement("span");
+          span.innerHTML = add.innerHTML;
+          add.replaceWith(span);
+        });
       });
+
+      // ✅ Hide all note icons (red dots)
+      document.querySelectorAll("tei-note.note-decorated").forEach(note => {
+        note.remove();  // ← Use remove instead of hiding
+      });
+
+      app.style.display = "inline";
     });
 
-    // ✅ Hide all notes within the app (outside the lem loop!)
-    const notes = app.querySelectorAll("tei-note");
-    notes.forEach(note => {
-      note.style.display = "none";
-    });
-
-    app.style.display = "inline";
-  });
-
-  // ✅ Hide the external note container too
-  const noteContainer = document.getElementById("note-container");
-  if (noteContainer) {
-    noteContainer.querySelectorAll(".note-item").forEach(item => item.remove());
-    noteContainer.classList.add("hidden");
+    // ✅ Also hide the floating notes panel
+    const noteContainer = document.getElementById("note-container");
+    if (noteContainer) {
+      noteContainer.querySelectorAll(".note-item").forEach(item => item.remove());
+      noteContainer.classList.add("hidden");
+    }
   }
-}
 
+  function restoreAllReadings() {
+    document.querySelectorAll("tei-rdg, tei-lem").forEach(el => {
+      if (el.dataset.originalHtml) {
+        el.innerHTML = el.dataset.originalHtml;
+      }
+      el.style.display = ""; // reset display
+      el.classList.remove("active-reading", "decorated");
+      Array.from(el.classList).forEach(cls => {
+        if (cls.startsWith("wit-")) el.classList.remove(cls);
+      });
+    });
 
+    // Restore notes (if they were removed)
+    const modern = document.getElementById("modern-container");
+    decorateNotes(modern);
+    attachNoteEvents(modern);
+  }
 
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -337,7 +357,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
         <option value="A2">Tipo A2 (revisión posterior)</option>
         <option value="B">Tipo B (intervención de mano ajena)</option>
       </select>
-      <button id="clean-text-button" style="margin-left: 1em;">
+      <button id="clean-text-button" style="margin-left: 1em; font-size: 15px">
         Mostrar texto limpio
       </button>
     `;
@@ -420,6 +440,30 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
         }
       });
 
+      window.addEventListener("scroll", () => {
+        const pbs = document.querySelectorAll("tei-pb");
+        const pbSelector = document.getElementById("pb-selector");
+
+        let closestPb = null;
+        let closestDistance = Infinity;
+
+        pbs.forEach(pb => {
+          const rect = pb.getBoundingClientRect();
+          const distance = Math.abs(rect.top - 100); // Offset tweakable
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestPb = pb;
+          }
+        });
+
+        if (closestPb) {
+          const matchingOption = Array.from(pbSelector.options).find(opt => opt.value === closestPb.id);
+          if (matchingOption && pbSelector.value !== matchingOption.value) {
+            pbSelector.value = matchingOption.value;
+          }
+        }
+      });
 
       document.getElementById("close-all-notes").addEventListener("click", () => {
         const noteContainer = document.getElementById("note-container");
@@ -466,10 +510,10 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     });
 
   document.getElementById("clean-text-button").addEventListener("click", () => {
+    document.body.classList.add("clean-mode");
     showCleanLemmasOnly();
-    document.getElementById("variant-selector").value = ""; // optional: reset dropdown
+    document.getElementById("variant-selector").value = "";
   });
-
 
     const img = document.getElementById("facsimile-image");
     const wrapper = document.getElementById("facsimile-wrapper");
@@ -506,6 +550,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       isDragging = false;
       if (isZoomed) wrapper.style.cursor = "grab";
     });
+    
   });
    }
 </script>
