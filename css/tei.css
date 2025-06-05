@@ -283,19 +283,18 @@ tei-pb::before {
   margin-bottom: 1em;
 }
 
-#folio-controls button,
-.zoom-control button {
-  font-family: Garamond, serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #333;
-  background-color: #f9f9f9;
-  border: 1px solid #bca689;
-  border-radius: 6px;
-  padding: 0.4em 0.8em;
-  margin: 0 0.3em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+#folio-controls button, .zoom-control button {
+    font-family: Garamond, serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #bca689;
+    border-radius: 6px;
+    padding: 0.2em 0.8em;
+    margin: 0 0.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #folio-controls button:hover,
