@@ -308,7 +308,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
 
       // ✅ Hide all note icons (red dots)
       document.querySelectorAll("tei-note.note-decorated").forEach(note => {
-        note.remove();  // ← Use remove instead of hiding
+        note.style.display="none";  
       });
 
       app.style.display = "inline";
@@ -335,9 +335,9 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     });
 
     // Restore notes (if they were removed)
-    const modern = document.getElementById("modern-container");
-    decorateNotes(modern);
-    attachNoteEvents(modern);
+    document.querySelectorAll("tei-note.note-decorated").forEach(note => {
+      note.style.display = "inline";
+    });
   }
 
 
