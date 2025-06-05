@@ -308,55 +308,6 @@ tei-pb::before {
 }
 
 
-.close-button {
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  background: #641111;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  line-height: 18px;
-  text-align: center;
-  z-index: 10;
-  transition: background 0.3s;
-}
-
-.close-button:hover {
-  background: #e7d2b5;
-}
-
-#note-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 350px;
-  height: 100%;
-  background-color: #f9f9f9;
-  border-left: 2px solid #ccc;
-  overflow-y: auto;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-  padding: 1em;
-  display: none;
-  z-index: 10000;
-}
-
-#close-panel {
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  color: #666;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
 .note-icon {
   content: "💬";
   font-size: 0.9em;
@@ -397,6 +348,7 @@ tei-pb::before {
   top: 0;
   height: 100vh; /* full viewport height */
   overflow-y: auto; /* scorri le note interne */
+  max-width: min-content;
   background: #f9f9f9;
   padding: 1em;
   border-left: 1px solid #ccc;
