@@ -265,48 +265,59 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     }
   }
 
-  function showCleanLemmasOnly() {
-    const apps = document.querySelectorAll("tei-app");
+ function showCleanLemmasOnly() {
+  const apps = document.querySelectorAll("tei-app");
 
-    apps.forEach(app => {
-      const rdgs = app.querySelectorAll("tei-rdg");
-      const lems = app.querySelectorAll("tei-lem");
+  apps.forEach(app => {
+    const rdgs = app.querySelectorAll("tei-rdg");
+    const lems = app.querySelectorAll("tei-lem");
 
-      rdgs.forEach(rdg => {
-        rdg.style.display = "none";
-      });
-
-      lems.forEach(lem => {
-        lem.style.display = "inline";
-        lem.classList.remove("decorated", "active-reading");
-        lem.className = "";
-
-        // Remove all wit-* classes
-        Array.from(lem.classList).forEach(cls => {
-          if (cls.startsWith("wit-")) lem.classList.remove(cls);
-        });
-
-        // Remove <sup> if present
-        const sup = lem.querySelector(".rdg-seq");
-        if (sup) sup.remove();
-
-        // ✅ Strip all <del> elements
-        lem.querySelectorAll("tei-del").forEach(del => del.remove());
-
-        // ✅ Replace any <add> with its text content
-        lem.querySelectorAll("tei-add").forEach(add => {
-          const span = document.createElement("span");
-          span.innerHTML = add.innerHTML;
-          add.replaceWith(span);
-        });
-
-        // ✅ Optional: flatten again if you want only text
-        // lem.innerHTML = lem.textContent;
-      });
-
-      app.style.display = "inline";
+    // Hide all readings
+    rdgs.forEach(rdg => {
+      rdg.style.display = "none";
     });
+
+    // Show and clean all lemmas
+    lems.forEach(lem => {
+      lem.style.display = "inline";
+      lem.classList.remove("decorated", "active-reading");
+      lem.className = "";
+
+      // Remove all wit-* classes
+      Array.from(lem.classList).forEach(cls => {
+        if (cls.startsWith("wit-")) lem.classList.remove(cls);
+      });
+
+      // Remove <sup> if present
+      const sup = lem.querySelector(".rdg-seq");
+      if (sup) sup.remove();
+
+      // ✅ Strip <del> and simplify <add>
+      lem.querySelectorAll("tei-del").forEach(del => del.remove());
+      lem.querySelectorAll("tei-add").forEach(add => {
+        const span = document.createElement("span");
+        span.innerHTML = add.innerHTML;
+        add.replaceWith(span);
+      });
+    });
+
+    // ✅ Hide all notes within the app (outside the lem loop!)
+    const notes = app.querySelectorAll("tei-note");
+    notes.forEach(note => {
+      note.style.display = "none";
+    });
+
+    app.style.display = "inline";
+  });
+
+  // ✅ Hide the external note container too
+  const noteContainer = document.getElementById("note-container");
+  if (noteContainer) {
+    noteContainer.querySelectorAll(".note-item").forEach(item => item.remove());
+    noteContainer.classList.add("hidden");
   }
+}
+
 
 
 
