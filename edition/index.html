@@ -26,6 +26,10 @@
   <div id="page-jump">
     <label for="pb-selector">Ir a folio:</label>
     <select id="pb-selector"></select>
+    <div id="font-size-controls" style="margin-left: 75em;" title="Ajustar fuente de texto">
+        <button onclick="adjustFontSize(-1)" style="font-family:Georgia, 'Times New Roman', Times, serif">A−</button>
+        <button onclick="adjustFontSize(1)" style="font-family: Georgia, 'Times New Roman', Times, serif;">A+</button>
+    </div>
   </div>  
 
   <div id="tei-wrapper" class="synoptic-view">
@@ -39,15 +43,15 @@
 </div>
     <div id="modern-container" class="tei-column">
       <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto">
-        <button onclick="adjustFontSize(-1)">A−</button>
-        <button onclick="adjustFontSize(1)">A+</button>
-    </div>
+        <button onclick="adjustFontSize(-1)" style="font-family:Georgia, 'Times New Roman' Times, serif">A−</button>
+        <button onclick="adjustFontSize(1)" style="font-family: Georgia, 'Times New Roman', Times, serif;">A+</button>
+      </div>
     </div>
     <div id="diplomatic-container" class="tei-column">
       <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto">
-        <button onclick="adjustFontSize(-1)">A−</button>
-        <button onclick="adjustFontSize(1)">A+</button>
-    </div>
+        <button onclick="adjustFontSize(-1)" style="font-family:Georgia, 'Times New Roman', Times, serif">A−</button>
+        <button onclick="adjustFontSize(1)" style="font-family: Georgia, 'Times New Roman', Times, serif;">A+</button>
+      </div>
     </div>
     <div id="note-container" class="tei-column hidden">
       <div id="close-all-notes-container" style="text-align: right;">
