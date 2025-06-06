@@ -555,3 +555,15 @@ body.clean-mode .note-icon {
     flex: 1 1 100%;
   }
 }
+
+.font-size-ctr
+{
+ position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0.5em 1em;
+}
