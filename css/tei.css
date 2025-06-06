@@ -377,7 +377,7 @@ tei-pb::before {
 
 .floating-note {
   position: absolute;
-  background-color: #fafad0;
+  background-color: #fafad0c2;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   padding: 0.5em;
@@ -388,7 +388,7 @@ tei-pb::before {
   font-size: 16px;
   word-wrap: break-word;
   line-height: 1.2;
-  border-radius: 6px;
+  border-radius: 6%;
 }
 
 .pin-note {
