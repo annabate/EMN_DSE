@@ -44,8 +44,8 @@
       </div>
     </div>
     <div id="diplomatic-container" class="tei-column">
-      <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto" class="font-size-ctr">
-        <button onclick="adjustFontSize(-1)" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;" >A−</button>
+      <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto"class="font-size-ctr">
+        <button onclick="adjustFontSize(-1)" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;">A−</button>
         <button onclick="adjustFontSize(1)" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;">A+</button>
       </div>
     </div>
@@ -117,9 +117,14 @@
       cleanNote.classList.add("note-decorated");
 
       const span = document.createElement("span");
+      const svgIcon = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14" fill="#f5d81a" class="note-icon">
+          <path d="M256 32C114.6 32 0 125.1 0 240c0 49.4 24.3 95.2 64.7 130.3C57.8 421 9.4 463.9 8.4 464.7c-3.4 2.9-4.6 7.6-2.9 11.7s5.6 6.8 9.9 6.8c66.3 0 116.8-31.1 146.6-55.6 30.2 9.5 63.2 14.7 97.9 14.7 141.4 0 256-93.1 256-208S397.4 32 256 32z"/>
+        </svg>
+      `;
+
       span.className = "note-icon";
-      span.textContent = "💬";
-      span.style.cursor = "pointer";
+      span.innerHTML = svgIcon;
       cleanNote.appendChild(span);
       originalNote.replaceWith(cleanNote);
     });
