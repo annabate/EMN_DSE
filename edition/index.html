@@ -37,8 +37,18 @@
       <div id="facsimile-wrapper"><img id="facsimile-image" src="" alt="Facsímil" />    
   </div>
 </div>
-    <div id="modern-container" class="tei-column"></div>
-    <div id="diplomatic-container" class="tei-column"></div>
+    <div id="modern-container" class="tei-column">
+      <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto">
+        <button onclick="adjustFontSize(-1)">A−</button>
+        <button onclick="adjustFontSize(1)">A+</button>
+    </div>
+    </div>
+    <div id="diplomatic-container" class="tei-column">
+      <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto">
+        <button onclick="adjustFontSize(-1)">A−</button>
+        <button onclick="adjustFontSize(1)">A+</button>
+    </div>
+    </div>
     <div id="note-container" class="tei-column hidden">
       <div id="close-all-notes-container" style="text-align: right;">
         <span id="close-all-notes" style="cursor: pointer; font-size: 1.2em;">✖️</span>
@@ -55,6 +65,14 @@
       "lem": variantHandler
     }
   });
+
+  let currentFontSize = 100; // % base
+
+  function adjustFontSize(change) {
+    currentFontSize = Math.max(60, Math.min(160, currentFontSize + change * 10)); // limits between 60% and 160%
+    document.documentElement.style.setProperty('--user-font-size', `${currentFontSize}%`);
+  }
+
 
   function variantHandler(el) {
     let span = document.createElement("span");
@@ -388,7 +406,8 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       </select>
       <button id="clean-text-button" style="margin-left: 1em; font-family: Garamond, serif; font-size: 18px;">
         Mostrar texto limpio
-      </button>`;
+      </button>`
+      ;
 
     document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
 

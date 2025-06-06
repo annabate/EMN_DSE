@@ -5,7 +5,8 @@ body {
     line-height: 1.2;
     color: #212529;
     text-align: justify;
-    background-color: #decfa2e3
+    background-color: #decfa2e3;
+    font-size: var(--user-font-size, 100%);
 }
 
 
