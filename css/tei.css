@@ -80,13 +80,26 @@ tei-l[part="F"] {
 /* Stile per i numeri dei versi */
 tei-l::before {
   content: attr(n);
-  display: inline-block;
-  width: 2em; /* Larghezza fissa per l'allineamento */
-  text-align: right;
-  margin-right: 0.5em; /* Spazio tra il numero e il testo del verso */
-  color: #777; /* Colore del numero */
-  font-size: 1.1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 0.8em;
+  font-weight: normal;
+  border-radius: 50%;
+  background-color: #d9c9a5;
+  color: #3b2b13;
+  margin-right: 0.6em;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* Show only every 5th line number */
+tei-l:not([n$="0"]):not([n$="5"])::before {
+  content: "";
+  background: none;
+}
+
 
 tei-head {
   display: block;
@@ -126,56 +139,70 @@ tei-pb::before {
   padding-left: 0.8em;
 }
 
-#page-jump {
+#main-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1em 1em;
+}
+
+.header-title {
+  padding: 1.2em 2em 0.3em;
+  text-align: center;
+}
+
+.header-title h1 {
+  font-family: Garamond, serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #4a3c27;
+  margin: 0;
+}
+
+#toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 2em 1em;
+  gap: 1em;
+}
+
+.toolbar-group {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  margin: 0;
-  padding: 0.5em 1em;
-  background-color: #f9f9f9c2;
-  border-bottom: 1px solid #bca689;
-  font-family: Garamond, serif;
+  flex-wrap: wrap;
 }
 
-#page-jump label {
+#toolbar select,
+#toolbar button {
   font-family: Garamond, serif;
   font-size: 1.1rem;
-  font-weight: 500;
-  color: #333;
-}
-
-
-#pb-selector {
-  font-family: -Garamond, serif;
-  font-size: 0.95rem;
-  padding: 0.4em 0.8em;
+  padding: 0.3em 0.7em;
   border: 1px solid #bca689;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-  color: #222;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: all 0.2s ease;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-#pb-selector:focus {
-  border-color: #999;
-  outline: none;
-  background-color: #f9f9f9;
+#toolbar button:hover,
+#toolbar select:hover {
+  background-color: #e7d2b5;
 }
 
-/* === VISTA SINOTTICA === */
-/* Per affiancare anche il facsimile */
+/* === SYNOPTIC VIEW === */
 #tei-wrapper {
   display: flex;
   flex-wrap: nowrap;
   gap: 1em;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
-  max-width: 1400px;  /* ✅ non oltrepassa la larghezza leggibile */
+  max-width: none;  /* ✅ non oltrepassa la larghezza leggibile */
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
@@ -209,15 +236,27 @@ tei-pb::before {
   margin: 0 auto;
 }
 
+.header-title h1 {
+  font-size: 1.6rem;
+  font-weight:bolder;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  color: #b49970;
+}
+
 .tei-column {
-  flex: 1;
+  position: sticky;
+  top: 5rem;
+  height: calc(100vh - 5rem);
   background-color: #f9f9f9;
   padding: 1.2em;
   border-radius: 10px;
   overflow-x: auto;
   min-width: 0; /* ✅ per evitare overflow */
   box-sizing: border-box;
+  padding-bottom:  3rem;
 }
+
 .tei-column h1, .tei-column head {
   font-size: 1.4em;
   font-weight: bold;
@@ -226,6 +265,12 @@ tei-pb::before {
   text-transform: uppercase;
   border-bottom: 2px solid #ccc;
   padding-bottom: 0.5em;
+}
+
+.tei-column-scroll {
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  padding: 1rem;
 }
 
 #facsimile-container img {
@@ -257,7 +302,9 @@ tei-pb::before {
 }
 
 #tei-wrapper.synoptic-view .tei-column {
-  width: 30%;
+  flex: 1 1 33.33%;
+  width: 33.33%;
+  max-width: 33.33%;
 }
 
 #view-selector {
@@ -302,8 +349,8 @@ tei-pb::before {
 .note-icon {
   display: inline-block;
   cursor: pointer;
-  line-height: 1.1em;
-  vertical-align: super;
+  line-height: 0.5em;
+  vertical-align:baseline;
 }
 
 
@@ -377,7 +424,7 @@ tei-pb::before {
 
 .floating-note {
   position: absolute;
-  background-color: #fafad0c2;
+  background-color: #d0edfac2;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   padding: 0.5em;
@@ -394,8 +441,8 @@ tei-pb::before {
 .pin-note {
   display: block;
   margin-top: 0.5em;
-  background: #f5ff70;
-  border:#ebe127;
+  background: #6681a2;
+  border:#303e7d;
   border-radius: 10%;
   padding: 0.3em 0.5em;
   cursor: pointer;
@@ -519,7 +566,7 @@ tei-add {
   color: rgb(228, 60, 60);
 }
 
-.wit-A0 { background-color: #d8e2fb; } /* Light blue */
+.wit-A0 { background-color: #d7edf3; } /* Light blue */
 .wit-A1 { background-color: #fee0ab; } /* Light orange */
 .wit-A2 { background-color: #edd1f1; } /* Light purple */
 .wit-B { background-color: #d0f3bf; } /* Light green */
@@ -536,10 +583,19 @@ body.clean-mode .note-icon {
   display: none !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  #tei-wrapper {
+    flex-direction: column;
+  }
+
   .tei-column {
     width: 100% !important;
-    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+
+  #facsimile-container {
+    order: 0; /* show it first */
   }
 }
 
@@ -554,3 +610,34 @@ body.clean-mode .note-icon {
   margin: 0;
   padding: 0.5em 1em;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* 🔧 Prevent double scroll */
+}
+
+#tei-wrapper {
+  height: calc(100vh - 1rem); /* Adjust based on your header height */
+  overflow: hidden;
+}
+
+.tei-column {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tei-column-scroll {
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.tei-column-scroll::after {
+  content: "";
+  display: block;
+  height: 3rem; /* ⬅️ ensures bottom spacing */
+}
+

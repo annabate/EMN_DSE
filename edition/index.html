@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>El marqués de las Navas - edición genética digital</title>
-  <link rel="stylesheet" href="../css/tei.css">
+  <link rel="stylesheet" href="../css/tei.css" />
   <script src="../js/CETEI.js"></script>
   <style>
     .hidden { display: none; }
     .zoomed { transform: scale(2); z-index: 1000; position: relative; }
-    /* Added styles for notes panel */
     .note-item { position: relative; border: 1px solid #ccc; margin: 0.5em 0; padding: 0.5em; padding-right: 2em; background: #fff; }
     .close-note { position: absolute; top: 5px; right: 5px; cursor: pointer; font-weight: bold; }
     #close-all-notes { cursor: pointer; font-size: 1.2em; }
@@ -17,44 +16,73 @@
 </head>
 <body>
 
-  <div id="view-selector">
-    <button onclick="toggleView('facsimile-container')">Facsímil</button>
-    <button onclick="toggleView('modern-container')">Edición crítico-genética</button>
-    <button onclick="toggleView('diplomatic-container')">Transcripción diplomática</button>
+  <!-- ✅ CLEAN HEADER -->
+  <header id="main-header">
+  <div class="header-title">
+    <h1><i>El marqués de las Navas</i> – Edición Genética Digital</h1>
   </div>
 
-  <div id="page-jump">
-    <label for="pb-selector">Ir a folio:</label>
-    <select id="pb-selector"></select>
-  </div>  
-
-  <div id="tei-wrapper" class="synoptic-view">
-    <div id="facsimile-container" class="tei-column sticky"> 
-    <div id="folio-controls">
+  <div id="toolbar">
+    <div class="toolbar-group">
+      <label for="pb-selector" style="font-size: 1.1rem; font-weight: bold;">Folio:</label>
+      <select id="pb-selector"></select>
       <button id="prev-folio">🢦</button>
       <button id="next-folio">🢧</button>
-    </div> 
-      <div id="facsimile-wrapper"><img id="facsimile-image" src="" alt="Facsímil" />    
+    </div>
+
+    <div class="toolbar-group">
+      <button onclick="toggleView('facsimile-container')" style="font-size: 1.1rem;">Facsímil</button>
+      <button onclick="toggleView('modern-container')" style="font-size: 1.1rem;">Edición genética</button>
+      <button onclick="toggleView('diplomatic-container')" style="font-size: 1.1rem;">Transcripción</button>
+    </div>
+
+    <div class="toolbar-group" title="Ajustar fuente de texto">
+      <button onclick="adjustFontSize(-1)" title="Reducir fuente">A−</button>
+      <button onclick="adjustFontSize(1)" title="Aumentar fuente">A+</button>
+    </div>
+
+    <div class="toolbar-group">
+      <label for="variant-selector" style="font-size: 1.1rem; font-weight: bold;">Filtrar intervenciones por tipología:</label>
+      <select id="variant-selector">
+        <option value="all">Mostrar todas</option>
+        <option value="A0">A0 (original)</option>
+        <option value="A1">A1 (correcciones inmediatas)</option>
+        <option value="A2">A2 (revisión posterior)</option>
+        <option value="B">B (mano ajena)</option>
+      </select>
+      <button id="clean-text-button">Texto limpio</button>
+    </div>
   </div>
-</div>
+</header>
+
+  <!-- ✅ CORRECT WRAPPER -->
+  <div id="tei-wrapper" class="synoptic-view">
+    <div id="facsimile-container" class="tei-column sticky">
+      <div id="facsimile-wrapper">
+        <img id="facsimile-image" src="" alt="Facsímil" />
+      </div>
+    </div>
+
     <div id="modern-container" class="tei-column">
-      <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto" class="font-size-ctr">
-        <button onclick="adjustFontSize(-1)" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;">A−</button>
-        <button onclick="adjustFontSize(1)" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;">A+</button>
+      <!-- TEI Modern XML will be appended here -->
+      <div class="tei-column-scroll">
+       <!-- Content inserted here -->
       </div>
     </div>
+
     <div id="diplomatic-container" class="tei-column">
-      <div id="font-size-controls" style="margin-bottom: 1em;" title="Ajustar fuente de texto"class="font-size-ctr">
-        <button onclick="adjustFontSize(-1)" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;">A−</button>
-        <button onclick="adjustFontSize(1)" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px;">A+</button>
+      <!-- TEI Diplomatic XML will be appended here -->  
+      <div class="tei-column-scroll">
+        <!-- Content inserted here -->
       </div>
     </div>
+
     <div id="note-container" class="tei-column hidden">
       <div id="close-all-notes-container" style="text-align: right;">
         <span id="close-all-notes" style="cursor: pointer; font-size: 1.2em;">✖️</span>
-      </div>
+      </div> 
     </div>
-  </div>  
+  </div>
  
 <script>
   const CETEIcean = new CETEI();
@@ -118,9 +146,10 @@
 
       const span = document.createElement("span");
       const svgIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14" fill="#f5d81a" class="note-icon">
-          <path d="M256 32C114.6 32 0 125.1 0 240c0 49.4 24.3 95.2 64.7 130.3C57.8 421 9.4 463.9 8.4 464.7c-3.4 2.9-4.6 7.6-2.9 11.7s5.6 6.8 9.9 6.8c66.3 0 116.8-31.1 146.6-55.6 30.2 9.5 63.2 14.7 97.9 14.7 141.4 0 256-93.1 256-208S397.4 32 256 32z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#6681a2" viewBox="0 0 24 24" width="16" height="16" class="note-icon">
+          <path d="M2 3v18l4-4h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H2z"/>
         </svg>
+
       `;
 
       span.className = "note-icon";
@@ -392,181 +421,142 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     });
   }
 
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const controlPanel = document.createElement("div");
-    controlPanel.id = "variant-controls";
-    controlPanel.style.margin = "1em 0";
-    controlPanel.style.textAlign = "center";
-
-    controlPanel.innerHTML = `
-      <label for="variant-selector" style="font-weight: bold; font-family: Garamond, serif; font-size: 18px; margin-right: 0.5em;">Filtrar intervenciones por tipología:</label>
-      <select id="variant-selector"
-        style="padding: 0.5em 1em; border-radius: 6px; font-size: 1rem; border: 1px solid #aaa;">
-        <option value="all">Mostrar todas</option>
-        <option value="A0">Tipo A0 (original)</option>
-        <option value="A1">Tipo A1 (correcciones inmediatas)</option>
-        <option value="A2">Tipo A2 (revisión posterior)</option>
-        <option value="B">Tipo B (intervención de mano ajena)</option>
-      </select>
-      <button id="clean-text-button" style="margin-left: 1em; font-family: Garamond, serif; font-size: 18px;">
-        Mostrar texto limpio
-      </button>`
-      ;
-
-    document.body.insertBefore(controlPanel, document.getElementById("view-selector"));
-
-    // ✅ Add the JS event listener
-    document.getElementById("variant-selector").addEventListener("change", function () {
-      handleVariantChange(this.value);
-    });
-
-    updateLayoutClasses();
-  });
-
   window.onload = function () {
-    CETEIcean.getHTML5("amor_pleyto_y_desafio_diplomatic.xml", function (data) {
-      decorateNotes(data);
-      attachNoteEvents(data);
-      data.querySelectorAll("tei-l").forEach(verse => {
-        const prev = verse.previousElementSibling;
-        if (prev && prev.tagName === "TEI-PB") verse.parentNode.insertBefore(prev, verse);
-      });
+    const pbSelector = document.getElementById("pb-selector");
+    let diplomaticLoaded = false;
+    let modernLoaded = false;
 
-      const pbSelector = document.getElementById("pb-selector");
-      const pbElements = data.querySelectorAll("tei-pb");
-      pbElements.forEach((pb, i) => {
-        const id = pb.getAttribute("xml:id") || `pb-${i + 1}`;
-        const n = pb.getAttribute("n") || `Pagina ${i + 1}`;
-        const facsName = n.replace(/\[|\]/g, "").replace(/Fol\.?\s*/i, "fol").replace(/\s/g, "").toLowerCase();
-        pb.setAttribute("id", id);
-        const opt = document.createElement("option");
-        opt.value = id;
-        opt.textContent = n;
-        opt.dataset.facs = facsName;
-        pbSelector.appendChild(opt);
-      });
+    function scrollToPb(id) {
+      const containers = [
+        document.querySelector("#modern-container .tei-column-scroll"),
+        document.querySelector("#diplomatic-container .tei-column-scroll")
+      ];
 
-      document.getElementById("diplomatic-container").appendChild(data);
-
-      // Folio selector change
-      pbSelector.addEventListener("change", e => {
-        const option = e.target.selectedOptions[0];
-        const facs = option.dataset.facs;
-        const id = option.value;
-        const target = document.getElementById(id);
-        if (target) {
-          const yOffset = -60;
-          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
+      containers.forEach(container => {
+        const target = container?.querySelector(`#${id}`);
+        if (target && container) {
+          // Scroll so that the target is aligned at the same height
+          const scrollY = target.offsetTop - 40;
+          container.scrollTo({
+            top: scrollY,
+            behavior: "smooth"
+          });
         }
-        const img = document.getElementById("facsimile-image");
-        img.src = "../facs/" + facs + ".jpg";
-        img.onerror = () => {
-          img.src = "../facs/placeholder.jpg";
-        };
       });
 
-      // Folio init
-      const firstOption = pbSelector.options[0];
-      if (firstOption) {
-        const facs = firstOption.dataset.facs;
+      // Update facsimile
+      const option = pbSelector.querySelector(`option[value="${id}"]`);
+      if (option) {
+        const facs = option.dataset.facs;
         const img = document.getElementById("facsimile-image");
-        img.src = "../facs/" + facs + ".jpg";
+        img.src = `../facs/${facs}.jpg`;
         img.onerror = () => {
           img.src = "../facs/placeholder.jpg";
         };
       }
+    }
 
-      // Folio navigation
-      document.getElementById("prev-folio").addEventListener("click", () => {
-        if (pbSelector.selectedIndex > 0) {
-          pbSelector.selectedIndex--;
-          pbSelector.dispatchEvent(new Event("change"));
-        }
-      });
-      document.getElementById("next-folio").addEventListener("click", () => {
-        if (pbSelector.selectedIndex < pbSelector.options.length - 1) {
-          pbSelector.selectedIndex++;
-          pbSelector.dispatchEvent(new Event("change"));
-        }
-      });
 
-      window.addEventListener("scroll", () => {
-        const pbs = document.querySelectorAll("tei-pb");
-        const pbSelector = document.getElementById("pb-selector");
-
-        let closestPb = null;
-        let closestDistance = Infinity;
-
-        pbs.forEach(pb => {
-          const rect = pb.getBoundingClientRect();
-          const distance = Math.abs(rect.top - 100); // Offset tweakable
-
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestPb = pb;
-          }
+    function checkReadyAndInit() {
+      if (diplomaticLoaded && modernLoaded) {
+        // Attach change listener only after both are loaded
+        pbSelector.addEventListener("change", (e) => {
+          const id = e.target.value;
+          scrollToPb(id);
         });
 
-        if (closestPb) {
-          const matchingOption = Array.from(pbSelector.options).find(opt => opt.value === closestPb.id);
-          if (matchingOption && pbSelector.value !== matchingOption.value) {
-            pbSelector.value = matchingOption.value;
-          }
+        // Scroll to first option once
+        const firstOption = pbSelector.options[0];
+        if (firstOption) {
+          pbSelector.value = firstOption.value;
+          scrollToPb(firstOption.value);
         }
-      });
+      }
+    }
 
-      document.getElementById("close-all-notes").addEventListener("click", () => {
-        const noteContainer = document.getElementById("note-container");
-        noteContainer.querySelectorAll(".note-item").forEach(item => item.remove());
-        noteContainer.classList.add("hidden");
-      });
-    });
 
-    CETEIcean.getHTML5("amor_pleito_y_desafío_modern.xml", function (data) {
-      document.getElementById("modern-container").appendChild(data);
+   function loadTEI(filename, containerId, prefix, onComplete) {
+    CETEIcean.getHTML5(filename, data => {
+      // 🔧 Restore notes decoration and events
       decorateNotes(data);
       attachNoteEvents(data);
 
-    requestAnimationFrame(() => {
-        const allRdgs = data.querySelectorAll("tei-rdg[data-authorial='true'], tei-lem[data-authorial='true']");
-        let maxSeq = -1;
-        allRdgs.forEach(rdg => {
-          const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
-          if (!isNaN(seq) && seq > maxSeq) maxSeq = seq;
-        });
+      const container = document.querySelector(`#${containerId} .tei-column-scroll`);
+      container.appendChild(data);
 
-      const variantSelector = document.getElementById("variant-selector");
-      let lastWit = null;
+      const pbs = data.querySelectorAll("tei-pb");
+      pbs.forEach((pb, i) => {
+        const id = pb.getAttribute("xml:id") || `pb-${i + 1}`;
+        const n = pb.getAttribute("n") || `Página ${i + 1}`;
+        const facsName = n.replace(/\[|\]/g, "").replace(/Fol\.?\s*/i, "fol").replace(/\s/g, "").toLowerCase();
+        pb.setAttribute("id", id);
 
-      // Find the wit corresponding to the maxSeq
-      allRdgs.forEach(rdg => {
-        const seq = parseInt(rdg.getAttribute("data-wr-seq"), 10);
-        const wit = rdg.getAttribute("wit");
-        if (!isNaN(seq) && seq === maxSeq && wit) {
-          lastWit = wit;
+        if (!Array.from(pbSelector.options).some(o => o.value === id)) {
+          const opt = document.createElement("option");
+          opt.value = id;
+          opt.textContent = n;
+          opt.dataset.facs = facsName;
+          pbSelector.appendChild(opt);
         }
       });
 
-    if (variantSelector) {
-      variantSelector.value = "all";
-      filterReadings({ showAll: true });  // ✅ Ensures full decoration logic is applied
-    }
+      onComplete(); // Only call this after decoration + insertion
+    });
+  }
 
-    setTimeout(() => {
-        filterReadings({ showAll: true });
-        document.getElementById("variant-selector").value = "all";
-      }, 100); // 100–150ms is usually safe
-    
+
+    // Load both TEI files
+    loadTEI("amor_pleyto_y_desafio_diplomatic.xml", "diplomatic-container", "pb-d", () => {
+      diplomaticLoaded = true;
+      checkReadyAndInit();
     });
 
-  document.getElementById("clean-text-button").addEventListener("click", () => {
-    document.body.classList.add("clean-mode");
-    showCleanLemmasOnly();
-    document.getElementById("variant-selector").value = "";
-  });
+    loadTEI("amor_pleito_y_desafío_modern.xml", "modern-container", "pb-m", () => {
+      modernLoaded = true;
+      checkReadyAndInit();
 
+      // Decorate readings after modern loads
+      setTimeout(() => {
+        filterReadings({ showAll: true });
+        document.getElementById("variant-selector").value = "all";
+      }, 100);
+    });
+
+    // Navigation buttons
+    document.getElementById("prev-folio").addEventListener("click", () => {
+      if (pbSelector.selectedIndex > 0) {
+        pbSelector.selectedIndex--;
+        pbSelector.dispatchEvent(new Event("change"));
+      }
+    });
+
+    document.getElementById("next-folio").addEventListener("click", () => {
+      if (pbSelector.selectedIndex < pbSelector.options.length - 1) {
+        pbSelector.selectedIndex++;
+        pbSelector.dispatchEvent(new Event("change"));
+      }
+    });
+
+    // Variant selector
+    document.getElementById("variant-selector").addEventListener("change", function () {
+      handleVariantChange(this.value);
+    });
+
+    // Clean text button
+    document.getElementById("clean-text-button").addEventListener("click", () => {
+      document.body.classList.add("clean-mode");
+      showCleanLemmasOnly();
+      document.getElementById("variant-selector").value = "";
+    });
+
+    // Close all pinned notes
+    document.getElementById("close-all-notes").addEventListener("click", () => {
+      const noteContainer = document.getElementById("note-container");
+      noteContainer.querySelectorAll(".note-item").forEach(item => item.remove());
+      noteContainer.classList.add("hidden");
+    });
+
+    // Facsimile zoom + drag
     const img = document.getElementById("facsimile-image");
     const wrapper = document.getElementById("facsimile-wrapper");
     let isZoomed = false, isDragging = false, startX, startY, currentX = 0, currentY = 0;
@@ -602,9 +592,9 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       isDragging = false;
       if (isZoomed) wrapper.style.cursor = "grab";
     });
-    
-  });
-   }
+  };
+
+
 </script>
 
 </body>
