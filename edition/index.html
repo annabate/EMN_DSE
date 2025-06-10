@@ -31,8 +31,8 @@
     </div>
 
     <div class="toolbar-group">
-      <button onclick="toggleView('facsimile-container')" style="font-size: 1.1rem;">Facsímil</button>
-      <button onclick="toggleView('modern-container')" style="font-size: 1.1rem;">Edición genética</button>
+      <button onclick="toggleView('facsimile-container')" style="font-size: 1.1rem;" title="Abrir/Cerrar">Facsímil</button>
+      <button onclick="toggleView('modern-container')" style="font-size: 1.1rem;" title="Abrir/Cerrar">Edición genética</button>
       <button onclick="toggleView('diplomatic-container')" style="font-size: 1.1rem;">Transcripción</button>
     </div>
 
@@ -53,6 +53,10 @@
       <button id="clean-text-button">Texto limpio</button>
     </div>
   </div>
+  <div class="toolbar-group">
+  <input type="text" id="search-input"/>
+  <button id="search-button" title="Buscar en el texto...">🔍</button>
+</div>
 </header>
 
   <!-- ✅ CORRECT WRAPPER -->
@@ -592,9 +596,65 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       isDragging = false;
       if (isZoomed) wrapper.style.cursor = "grab";
     });
+
+    function clearHighlights(container) {
+      const highlights = container.querySelectorAll(".search-highlight");
+      highlights.forEach(span => {
+        const parent = span.parentNode;
+        parent.replaceChild(document.createTextNode(span.textContent), span);
+        parent.normalize(); // Merge adjacent text nodes
+      });
+    }
+
+    function highlightText(container, query) {
+      clearHighlights(container);
+      if (!query) return;
+
+      const regex = new RegExp(query, "gi");
+
+      container.querySelectorAll("*:not(script):not(style)").forEach(node => {
+        node.childNodes.forEach(child => {
+          if (child.nodeType === 3 && regex.test(child.textContent)) {
+            const span = document.createElement("span");
+            span.className = "search-highlight";
+            span.textContent = child.textContent.match(regex)[0];
+
+            const split = child.textContent.split(regex);
+            const fragments = [];
+
+            for (let i = 0; i < split.length; i++) {
+              fragments.push(document.createTextNode(split[i]));
+              if (i < split.length - 1) fragments.push(span.cloneNode(true));
+            }
+
+            const parent = child.parentNode;
+            fragments.forEach(f => parent.insertBefore(f, child));
+            parent.removeChild(child);
+          }
+        });
+      });
+    }
+
+    document.getElementById("search-button").addEventListener("click", () => {
+      const query = document.getElementById("search-input").value.trim();
+      const modern = document.querySelector("#modern-container .tei-column-scroll");
+      const diplomatic = document.querySelector("#diplomatic-container .tei-column-scroll");
+
+      highlightText(modern, query);
+      highlightText(diplomatic, query);
+
+      // Scroll to first match
+      const firstMatch = document.querySelector(".search-highlight");
+      if (firstMatch) {
+        const container = firstMatch.closest(".tei-column-scroll");
+        container.scrollTo({
+          top: firstMatch.offsetTop - 50,
+          behavior: "smooth"
+        });
+      }
+    });
   };
-
-
+  
 </script>
 
 </body>
