@@ -499,12 +499,12 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
 
 
     // Load both TEI files
-    loadTEI("amor_pleyto_y_desafio_diplomatic.xml", "diplomatic-container", "pb-d", () => {
+    loadTEI("EMN_dip.xml", "diplomatic-container", "pb-d", () => {
       diplomaticLoaded = true;
       checkReadyAndInit();
     });
 
-    loadTEI("amor_pleito_y_desafío_modern.xml", "modern-container", "pb-m", () => {
+    loadTEI("EMN_mod.xml", "modern-container", "pb-m", () => {
       modernLoaded = true;
       checkReadyAndInit();
 
