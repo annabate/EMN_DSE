@@ -24,47 +24,47 @@
 <front/>
 <body>
 <pb type="folio" n="[Fol. 1r]"/>
-    <head>El marqués de las Navas</head>
+    <head><app><rdg wit="B" varSeq="3" hand="non-authorial">El marqués de las Navas</rdg></app></head>
     <castList>
-          <l>de Lope</l>
-          <l>De Fadrique Doristán</l>
-          <l>don Felipe de Cardona</l>
-          <l>don Diego de Cardona</l>
-          <l>el conde don Felis</l>
-          <l>Frutos Bravo</l>
-          <l>Bernardo - el marqués</l>
-          <l>don Felipe</l>
-          <l>Leonardo</l>
-          <l>Mendozilla</l>
-          <l>Gerarda</l>
-          <l>Laurencia</l>
-          <l>Clara</l>
-          <l>Bernardo</l>
-          <l>Fadrique</l>
-          <l>Antonio</l>
-          <l>Ludovico</l><note>Este reparto y el contenido de este folio no son autógrafos. Parecen intervenir dos manos distintas; con toda probabilidad, se trata de los autores de las compañías responsables de la puesta en escena de la pieza.</note>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">de Lope</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">De Fadrique Doristán</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Felipe de Cardona</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Diego de Cardona</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">el conde don Felis</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Frutos Bravo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Bernardo - el marqués</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Felipe</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Leonardo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Mendozilla</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Gerarda</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Laurencia</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Clara</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Bernardo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Fadrique</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Antonio</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Ludovico</rdg><note>Este reparto y el contenido de este folio no son autógrafos. Parecen intervenir dos manos distintas; con toda probabilidad, se trata de los autores de las compañías responsables de la puesta en escena de la pieza.</note></app></castItem>
         </castList>
           <pb type="folio" n="[Fol. 1v]"/>
-          <l>don Juan - Jordán</l>
-          <l>músico - Cuadrado</l>
-          <l>don Luis - Vicente</l>
-          <l>Gerarda - señora Catarina</l>
-          <l>Antonio - Jordán</l>
-          <l>Ludovico - Escorigüela</l>
-          <l>Clara - señora Germana</l>
-          <l>lacayo - Vicente</l>
-          <l>don Enrique - Mateo </l>
-          <l>Bernardo - Jerónimo</l>
-          <l>Laurencia - señora María Vitoria</l><note>Tampoco este reparto es autógrafo. Junto a los nombres de los personajes, aparecen a la derecha nombres de actores. Parece tratarse de los actores que formaban parte de la compañía de Antonio de Prado, según señala M. de los Reyes Peña.</note>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Juan - Jordán</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">músico - Cuadrado</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Luis - Vicente</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Gerarda - señora Catarina</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Antonio - Jordán</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Ludovico - Escorigüela</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Clara - señora Germana</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">lacayo - Vicente</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Enrique - Mateo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Bernardo - Jerónimo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Laurencia - señora María Vitoria</rdg><note>Tampoco este reparto es autógrafo. Junto a los nombres de los personajes, aparecen a la derecha nombres de actores. Parece tratarse de los actores que formaban parte de la compañía de Antonio de Prado, según señala M. de los Reyes Peña.</note></app></castItem>
 <div type="act" n="1">
 <pb type="folio" n="[Fol. 2r]"/>
 <head>Acto primero</head>
 <stage>Leonardo y Feliciana</stage>
 <sp>
-<speaker><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Leo</rdg><lem wit="A2" data-wr-seq="1" data-authorial="true"><subst><del>Leo</del><add>Feli</add></subst></lem></app></speaker>
+<speaker><app><rdg wit="A0" varSeq="0" hand="authorial">Leo</rdg><lem wit="A2" varSeq="1" hand="authorial"><subst><del>Leo</del><add>Feli</add></subst></lem></app></speaker>
 <milestone unit="stanza" type="décimas"/>
 <lg>
-<l>Al mismo Nerón te igualas.</l>
+<l met="stanza">Al mismo Nerón te igualas.</l>
 </lg>
 </sp>
 <sp>
@@ -77,25 +77,30 @@
 </sp>
 <sp>
 <speaker>Feli</speaker>
-<l n="5">Tus obras siempre tan <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">m</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><del>m</del></lem></app> malas</l>
-<l><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">para mi</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><del>para mi</del></lem></app>a quien las debes tan buenas.</l>
+<lg>
+<l n="5">Tus obras siempre tan <app><rdg wit="A0" varSeq="0" hand="authorial">m</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>m</del></lem></app> malas</l>
+<l><app><rdg wit="A0" varSeq="0" hand="authorial">para mi</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>para mi</del></lem></app>a quien las debes tan buenas.</l>
 <l>Leonardo, a mi fin ordenas</l>
 <l>de que te vengo a deber</l>
 <l>quererle agora poner</l>
 <l n="10">a tantas injustas penas.</l>
+</lg>
 </sp>
 <sp>
-<speaker><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">Feli</rdg><lem wit="A2" data-wr-seq="1" data-authorial="true">Leo</lem></app></speaker>
- <note><hi rend="italic">Leonardo</hi>: tal vez por un descuido, Lope pone estos versos en boca de Feliciana. El manuscrito está enmendado al parecer de otra letra.</note>
-<l met="stanza">¡Suéltame la capa! ¡Suelta!</l>
+<speaker><app><rdg wit="B" varSeq="0" hand="authorial">Feli</rdg><lem wit="A2" varSeq="1" hand="authorial">Leo</lem></app></speaker>
+<lg met="stanza">
+<l>¡Suéltame la capa! ¡Suelta!</l>
 <l>Suelta en paz, que una porfía</l>
 <l>convierte en descortesía</l>
-<l>determinación resuelta.</l>
+<l>determinación resuelta<note>Tal vez por un descuido, Lope pone estos versos en boca de Feliciana. El manuscrito está enmendado al parecer de otra letra.</note></l>
+</lg>
 </sp>
 <sp>
 <speaker>Feli</speaker>
-<l n="15">Y ¿cuándo <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">ser</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><del>ser</del></lem></app>darás la vuelta? </l>
-</sp>
+<lg>
+<l n="15">Y ¿cuándo <app><rdg wit="A0" varSeq="0" hand="authorial">ser</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>ser</del></lem></app>darás la vuelta? </l>
+</lg
+></sp>
 <sp>
 <speaker>Leo</speaker>
 <lg>
@@ -117,7 +122,7 @@
 <speaker>Feli</speaker>
 <lg>
 <l>Ya ¿de qué sirven cautelas?</l>
-<l><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">si ha hecho</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><del>si ha hecho</del></lem></app>Cuando mi desconfianza</l>
+<l><app><rdg wit="A0" varSeq="0" hand="authorial">si ha hecho</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>si ha hecho</del></lem></app>Cuando mi desconfianza</l>
 <l>llega a mirar tu mudanza</l>
 <l n="30">con alas y con espuelas.</l>
 <l met="stanza"> A pleitos dices que vas,</l>
@@ -125,7 +130,7 @@
 <l>pues vas, Leonardo, a casarte</l>
 <l>o por ventura lo estás.</l>
 <l n="35">No hay otro pleito que más</l>
-<l><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">que aun</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><del>que aun</del></lem></app>procure un hombre vencer.</l>
+<l><app><rdg wit="A0" varSeq="0" hand="authorial">que aun</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>que aun</del></lem></app>procure un hombre vencer.</l>
 <l>Muchos buenos suele haber</l>
 <l>mas ninguno oí decir</l>
 <l>que desease morir</l>
@@ -156,7 +161,7 @@
 <l>o has de ser tan desdichado</l>
 <l>que aun honra no has de tener;</l>
 <l n="65">que si os llegan a ofender</l>
-<l>las propia — <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">a los más sabios</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>a los más sabios</del><add>como lo esperes</add></subst></lem></app></l>
+<l>las propia — <app><rdg wit="A0" varSeq="0" hand="authorial">a los más sabios</rdg><lem wit="A1" varSeq="1" hand="authorial"><subst><del>a los más sabios</del><add>como lo esperes</add></subst></lem></app></l>
 <l>aunque tan honrado eres―</l>
 <l>y a los más nobles y sabios,</l>
 <l>es por vengar los agravios</l>
@@ -187,7 +192,7 @@
 <l met="stanza"> ¡Plega al cielo —pues el cielo</l>
 <l>fue de tu maldad testigo―</l>
 <l>que a sus puertas, enemigo,</l>
-<l>bañes <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">d</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><del>d</del></lem></app>con tu sangre el suelo!</l>
+<l>bañes <app><rdg wit="A0" varSeq="0" hand="authorial">d</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>d</del></lem></app>con tu sangre el suelo!</l>
 </lg>
 </sp>
 <stage>Bernardo entre.</stage>
@@ -260,7 +265,7 @@
 <l>por muchas cartas Leonora.</l>
 <l n="110">¡Cuánta riqueza atesora, </l>
 <l>lustre, gala y valentía!</l>
-<l>Dicen que <app><rdg wit="A0" data-wr-seq="0" data-authorial="true">sale aquel día</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><subst><del>sale aquel día</del><add>salir porfía</add></subst></lem></app>salir porfía</l>
+<l>Dicen que <app><rdg wit="A0" varSeq="0" hand="authorial">sale aquel día</rdg><lem wit="A1" varSeq="1" hand="authorial"><subst><del>sale aquel día</del><add>salir porfía</add></subst></lem></app>salir porfía</l>
 <l>y que ha de ser el espacio</l>
 <l>de la plaza de palacio,</l>
 <l n="115">cielo de Marte aquel día. </l>
@@ -299,7 +304,7 @@
 <speaker>Fel</speaker>
 <lg>
 <l>No lo seré yo pequeño;</l>
-<l n="135"><app><rdg wit="A0" data-wr-seq="0" data-authorial="true">llévame</rdg><lem wit="A1" data-wr-seq="1" data-authorial="true"><del>llévame</del></lem></app>si quieres, contigo iré, </l>
+<l n="135"><app><rdg wit="A0" varSeq="0" hand="authorial">llévame</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>llévame</del></lem></app>si quieres, contigo iré, </l>
 <l>donde hasta el fin no tendré</l>
 <l>gusto, descanso, ni sueño.</l>
 <l met="stanza"> Haz esto, primo, por mí,</l>
