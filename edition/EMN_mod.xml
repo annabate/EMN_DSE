@@ -2275,6 +2275,7 @@
 <l>mejor aquello dos versos.</l>
 </lg>
 </sp>
+<pb type="folio" n="[Fol. 17r]"/>
 <sp>
 <speaker>Filipe</speaker>
 <lg>
@@ -2311,7 +2312,7 @@
 <l>seréis dichoso, y muy presto,</l>
 <l>porque está desde que os vio</l>
 <l>Laurencia con mil deseos,</l>
-<l n="810">con mil ansias, con mil penas, </l>
+<l n="810">con mil ansias, con mil penas,</l>
 <l>todo por volver a veros.</l>
 <l>Pero advertid que os lo digo</l>
 <l>debajo de aquel secreto</l>
@@ -2332,11 +2333,12 @@
 <l>que la podais ver y hablar.</l>
 </lg>
 </sp>
+<pb type="folio" n="[Fol. 17v]"/>
 <sp>
 <speaker>Filipe</speaker>
 <lg>
 <l>Con esta sortija puedo</l>
-<l n="820">sólo serviros agora. </l>
+<l n="820">sólo serviros agora.</l>
 </lg>
 </sp>
 <sp>
@@ -2388,7 +2390,7 @@
 </lg>
 </sp>
 <sp>
-<speaker><app><lem wit="A0" varSeq="0" hand="authorial">Hen</lem><rdg wit="B" varSeq="1" hand="non-authorial">fad</rdg></app></speaker>
+<speaker><app><lem wit="A0" varSeq="0" hand="authorial">Hen</lem><rdg wit="B" varSeq="1" hand="non-authorial"><subst><del>Hen</del></subst></rdg></app></speaker>
 <lg>
 <l part="I">¿Tengo mi parte?</l>
 </lg>
@@ -2435,7 +2437,7 @@
 <lg>
 <l>Muy aprisa, soy dichoso,</l>
 <l>perderé si amor es juego,</l>
-<l n="840"><app><lem wit="A1" varSeq="1" hand="authorial">que los que empiezan</lem><rdg wit="A0" varSeq="0" hand="authorial">que quien comienza</rdg></app>ganando</l>
+<l n="840"><app><lem wit="A1" varSeq="1" hand="authorial"><subst><del>que quien comienza</del><add>que los que empiezan</add></subst></lem><rdg wit="A0" varSeq="0" hand="authorial">que quien comienza</rdg></app>ganando</l>
 <l>suelen acabar perdiendo.</l>
 </lg>
 </sp>
