@@ -9019,21 +9019,18 @@ h5 {
     font-size: 22px;
     font-style: normal
 }
-.dse {
-    font-optical-sizing: initial;
-    text-align: center;
-    background: #ffffffad;
-    width: 100%;
-    /* padding-right: 10px; */
-    font-family: "Georgia", Times, serif;
-    font-size: 34px;
-    font-style: italic;
-    font-weight: 400;
-    position: fixed;
-    left: 0;
+.header {
+    position: sticky;
     top: 0;
-    z-index: 1029;
-    color: #927b6d;
+    z-index: 1000;
+    background: white;
+    border-bottom: 3px solid #75603b98;
+    padding: 0.1em 1em;
+    font-family: Garamond, serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #4a3c27;
+    margin: 0;
 }
 .offcanvas {
     padding: 10px
