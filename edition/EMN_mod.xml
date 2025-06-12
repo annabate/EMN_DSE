@@ -265,7 +265,7 @@
 <l>por muchas cartas Leonora.</l>
 <l n="110">¡Cuánta riqueza atesora, </l>
 <l>lustre, gala y valentía!</l>
-<l>Dicen que <app><rdg wit="A0" varSeq="0" hand="authorial">sale aquel día</rdg><lem wit="A1" varSeq="1" hand="authorial"><subst><del>sale aquel día</del><add>salir porfía</add></subst></lem></app>salir porfía</l>
+<l>Dicen que <app><rdg wit="A0" varSeq="0" hand="authorial">sale aquel día</rdg><lem wit="A1" varSeq="1" hand="authorial"><subst><del>sale aquel día</del><add></add></subst></lem></app>salir porfía</l>
 <l>y que ha de ser el espacio</l>
 <l>de la plaza de palacio,</l>
 <l n="115">cielo de Marte aquel día. </l>
@@ -1070,7 +1070,7 @@
 <speaker>Me</speaker>
 <lg>
 <l>Te admiras como si fuese</l>
-<l><app><lem wit="A0" varSeq="0" hand="authorial">de las Navas de Tolosa</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>de las Navas de Tolosa</del><add>el conde Partinuplés</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>el conde Partinuplés</subst><add>de las Navas de Tolosa</add></rdg></app></l>
+<l><app><lem wit="A0" varSeq="0" hand="authorial">de las Navas de Tolosa</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>de las Navas de Tolosa</del><add>el conde Partinuplés</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>el conde Partinuplés</del> <add>de las Navas de Tolosa</add></subst></rdg></app></l>
 </lg>
 </sp>
 <sp>
@@ -1084,8 +1084,8 @@
 <sp>
 <speaker>Me</speaker>
 <lg>
-<l>Es su hermano <app><lem wit="A0" varSeq="0" hand="authorial">don Henrique</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>don Henrique</del><add>don Fadrique</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>don Fadrique</subst><add>don Henrique</add></rdg></app></l>
-<l>de <app><lem wit="A0" varSeq="0" hand="authorial">Guzmán</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>Guzmán</del> <add>Oristán</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>Oristán</subst> <add>Guzmán</add></rdg></app>, el que entretiene</l>
+<l>Es su hermano <app><lem wit="A0" varSeq="0" hand="authorial">don Henrique</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>don Henrique</del><add>don Fadrique</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>don Fadrique</del> <add>don Henrique</add></subst></rdg></app></l>
+<l>de <app><lem wit="A0" varSeq="0" hand="authorial">Guzmán</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>Guzmán</del> <add>Oristán</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>Oristán</del> <add>Guzmán</add></subst></rdg></app>, el que entretiene</l>
 <l>esa tu menor señora.</l>
 </lg>
 </sp>
