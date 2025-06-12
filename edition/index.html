@@ -56,6 +56,11 @@
   <button id="search-button" title="Buscar">🔍</button>
   <button id="prev-match" title="Coincidencia anterior">⬆</button>
   <button id="next-match" title="Coincidencia siguiente">⬇</button>
+  <select id="search-scope">
+  <option value="both">Ambos</option>
+  <option value="modern">Edición genética</option>
+  <option value="diplomatic">Transcripción</option>
+  </select>
 </div>
 </header>
 
@@ -306,27 +311,38 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     }
 
     if (wit) {
-      let found = false;
-      let exactMatchFound = false;
-      const allowedWits = phaseHierarchy[wit] || [wit];
+    let found = false;
+    let exactMatchFound = false;
+    const allowedWits = phaseHierarchy[wit] || [wit];
 
-      rdgs.forEach(rdg => {
-        const rdgWit = rdg.getAttribute("wit");
-        if (allowedWits.includes(rdgWit)) {
-          rdg.style.display = "inline";
-          found = true;
-        }
+    rdgs.forEach(rdg => {
+      const rdgWit = rdg.getAttribute("wit");
+      if (allowedWits.includes(rdgWit)) {
+        rdg.style.display = "inline";
+        found = true;
+      }
 
-        if (rdgWit === wit) {
-          decorateRdgWithHighlight(rdg);
-          rdg.classList.add("active-reading");
-          exactMatchFound = true;
-        }
-      });
+      if (rdgWit === wit) {
+        decorateRdgWithHighlight(rdg);
+        rdg.classList.add("active-reading");
+        exactMatchFound = true;
+      }
+    });
 
-      app.style.display = found ? "inline" : "none";
-      return;
+    // Fallback: show A0 if no exact match found for A1/A2
+    if (!exactMatchFound && (wit === "A1" || wit === "A2")) {
+      const a0 = rdgs.find(rdg => rdg.getAttribute("wit") === "A0");
+      if (a0) {
+        a0.style.display = "inline";
+        // DO NOT decorate or add 'active-reading' for fallback
+        found = true;
+      }
     }
+
+
+    app.style.display = found ? "inline" : "none";
+    return;
+  }
 
     if (showAll || defaultView) {
       rdgs.forEach(rdg => {
@@ -591,7 +607,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       });
     }
 
-    function highlightText(container, query, results = []) {
+   function highlightText(container, query, results = []) {
       clearHighlights(container);
       if (!query) return [];
 
@@ -599,7 +615,11 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
 
       container.querySelectorAll("*:not(script):not(style)").forEach(node => {
         node.childNodes.forEach(child => {
-          if (child.nodeType === 3 && regex.test(child.textContent)) {
+          if (
+            child.nodeType === 3 &&                 // Text node
+            regex.test(child.textContent) &&       // Match found
+            !node.closest(".search-highlight")     // ⚠ Prevent nesting
+          ) {
             const span = document.createElement("span");
             span.className = "search-highlight";
             span.textContent = child.textContent.match(regex)[0];
@@ -612,7 +632,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
               if (i < split.length - 1) {
                 const newSpan = span.cloneNode(true);
                 fragments.push(newSpan);
-                results.push(newSpan); // Track match
+                results.push(newSpan);
               }
             }
 
@@ -627,19 +647,31 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     }
 
 
+    let lastSearchQuery = "";
+
     document.getElementById("search-button").addEventListener("click", () => {
       const query = document.getElementById("search-input").value.trim();
+      const scope = document.getElementById("search-scope").value;
+
       const modern = document.querySelector("#modern-container .tei-column-scroll");
       const diplomatic = document.querySelector("#diplomatic-container .tei-column-scroll");
 
-      searchResults = [
-        ...highlightText(modern, query),
-        ...highlightText(diplomatic, query)
-      ];
-      currentResultIndex = 0;
+      // Clear highlights where needed
+      if (scope === "modern" || scope === "both") clearHighlights(modern);
+      if (scope === "diplomatic" || scope === "both") clearHighlights(diplomatic);
 
+      // Perform scoped highlighting
+      searchResults = [];
+      if (scope === "modern" || scope === "both") {
+        searchResults.push(...highlightText(modern, query));
+      }
+      if (scope === "diplomatic" || scope === "both") {
+        searchResults.push(...highlightText(diplomatic, query));
+      }
+      
       scrollToMatch(currentResultIndex);
     });
+
 
     function scrollToMatch(index) {
       if (!searchResults.length) return;
@@ -668,6 +700,15 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       }
     }
 
+    document.getElementById("search-input").addEventListener("input", () => {
+      if (document.getElementById("search-input").value.trim() === "") {
+        clearHighlights(document.querySelector("#modern-container .tei-column-scroll"));
+        clearHighlights(document.querySelector("#diplomatic-container .tei-column-scroll"));
+        searchResults = [];
+        currentResultIndex = 0;
+        lastSearchQuery = "";
+      }
+    });
 
     document.getElementById("next-match").addEventListener("click", () => {
       if (searchResults.length === 0) return;

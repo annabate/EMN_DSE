@@ -477,7 +477,7 @@
 <l>De maestresala le sirve.</l>
 </lg>
 </sp>
-<stage>Entren galanes de noche, el <app><lem wit="A0" varSeq="0" hand="authorial">marqués</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>marqués</del><add>conde</add></susbt></rdg><rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>conde</del><add>marqués</add></subst></rdg></app>, don Filipe <app><lem wit="A0" varSeq="0" hand="authorial">de Córdoba</lem><rdg wit="B" varSeq="1" hand="non-authorial"><del>de Córdoba</del></rdg></app>y don <app><lem wit="A0" varSeq="0" hand="authorial">Henrique</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>Henrique</del><add>Fadrique</add></susbt></rdg><rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>Fadrique</del><add>Enrique</add></subst></rdg></app> y Mendoza, paje de espada</stage>
+<stage>Entren galanes de noche, el <app><lem wit="A0" varSeq="0" hand="authorial">marqués</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>marqués</del><add>conde</add></susbt></rdg><rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>conde</del><add>marqués</add></subst></rdg></app>, don Filipe <app><lem wit="A0" varSeq="0" hand="authorial">de Córdoba</lem><rdg wit="B" varSeq="1" hand="non-authorial"><del>de Córdoba</del></rdg></app> y don <app><lem wit="A0" varSeq="0" hand="authorial">Henrique</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>Henrique</del><add>Fadrique</add></susbt></rdg><rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>Fadrique</del><add>Enrique</add></subst></rdg></app> y Mendoza, paje de espada</stage>
 <sp>
 <speaker>Fili</speaker>
 <lg>
@@ -534,7 +534,7 @@
 <sp>
 <speaker>Fili</speaker>
 <lg>    
-<l>La disposición del <app><rdg wit="A0" varSeq="0" hand="authorial">j</rdg> <lem wit="A1" varSeq="1" hand="authorial">c</lem></app>uerpo</l>
+<l>La disposición del <app><rdg wit="A0" varSeq="0" hand="authorial">j</rdg><lem wit="A1" varSeq="1" hand="authorial">c</lem></app>uerpo</l>
 <l>muestra que el alma contiene</l>
 <l>todas las partes iguales;</l>
 <l>no el rostro, que el rostro puede</l>
@@ -548,9 +548,9 @@
 <speaker>Me</speaker>
 <lg>    
 <l>¿Y qué importa que una dama</l>
-<l n="195">tenga el cuerpo <app><rdg wit="A0" varSeq="0" hand="authorial">de Olofernes</rdg> <lem wit="A1" varSeq="1" hand="authorial">diligente</lem></app>,</l>
+<l n="195">tenga el cuerpo <app><rdg wit="A0" varSeq="0" hand="authorial">de Olofernes</rdg> <lem wit="A1" varSeq="1" hand="authorial"><subst><del>de Olofernes</del> <add>diligente</add></subst></lem></app>,</l>
 <l>derecho como una lanza,</l>
-<l><app><rdg wit="A0" varSeq="0" hand="authorial">en la entrada de un ginete</rdg> <lem wit="A1" varSeq="1" hand="authorial">bizarro como un alférez</lem></app>,</l>
+<l><app><rdg wit="A0" varSeq="0" hand="authorial">en la entrada de un ginete</rdg> <lem wit="A1" varSeq="1" hand="authorial"><subst><del>en la entrada de un ginete</del> <add>bizarro como un alférez</add></subst></lem></app>,</l>
 <l>la cintura que en un puño</l>
 <l>puede apretarse y cogerse,</l>
 <l n="200">las caderas como en Flandes,</l>
@@ -584,8 +584,8 @@
 <l>Mendoza, para que alegues</l>
 <l>aforismos por la cara,</l>
 <l>mas porque estas damas vienen</l>
-<l>de noche al Prado y <app><rdg wit="0" varSeq="0" hand="authorial">las caras</rdg> <lem wit="A2" varSeq="1" hand="authorial">de noche</lem></app></l>
-<l n="225"><app><rdg wit="A0" varSeq="0" hand="authorial">de noche</rdg> <lem wit="A2" varSeq="1" hand="authorial">las caras</lem></app> no pueden verse;</l>
+<l>de noche al Prado y <app><rdg wit="A0" varSeq="0" hand="authorial">las caras</rdg> <lem wit="A2" varSeq="1" hand="authorial"><subst><del>las caras</del> <add>de noche</add></subst></lem></app></l>
+<l n="225"><app><rdg wit="A0" varSeq="0" hand="authorial">de noche</rdg> <lem wit="A2" varSeq="1" hand="authorial"><subst><del>de noche</del> <add>las caras</add></subst></lem></app> no pueden verse;</l>
 <l>por eso habló de los talles.</l>
 </lg>
 </sp>
@@ -1056,14 +1056,14 @@
 <speaker>Me</speaker>
 <lg>
 <l part="F">Pues advierte:</l>
-<l><app><rdg wit="A0" varSeq="0" hand="authorial">los que están a esta parte</rdg><lem wit="A1" varSeq="1" hand="authorial"><subst><del>los que están a esta parte</del><add>este es marqués de las Navas</add></subst></lem><rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>este es marqués de las Navas</del><add>este es el conde don Felis</add></subst></rdg><rdg wit="B" varSeq="3" hand="non-authorial"><subst><del>este es el conde don Felis</del><add>este es marqués de las Navas</add></subst></rdg></app></l>
+<l><app><rdg wit="A0" varSeq="0" hand="authorial">los que están a esta parte</rdg><lem wit="A1" varSeq="1" hand="authorial"><subst><del>los que están a esta parte</del><add>este es marqués de las Navas</add></subst></lem><rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>este es marqués de las Navas</del><add>este es el conde don Felis</add></subst></rdg><rdg wit="B" varSeq="3" hand="non-authorial"><subst><del>este es el conde don Felis</del> <add>este es marqués de las Navas</add></subst></rdg></app>.</l>
 </lg>
 </sp>
 <sp>
 <speaker>Cla</speaker>
 <lg>
-<l>¿El <app><lem wit="A0" varSeq="0" hand="authorial">de las Navas</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>de las Navas</del><add>conde Felis</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>conde Felis</subst><add>de las Navas</add></rdg></app> es este?</l>
-<l n="400">¿Que este <app><lem wit="A0" varSeq="0" hand="authorial">el de las Navas es</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>el de las Navas</del><add>es don Felis el conde</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>es don Felis el conde</subst><add>el de las Navas es</add></rdg></app>?</l>
+<l>¿El <app><lem wit="A0" varSeq="0" hand="authorial">de las Navas</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>de las Navas</del> <add>conde Felis</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>conde Felis</del> <add>de las Navas</add></subst></rdg></app> es este?</l>
+<l n="400">¿Que este <app><lem wit="A0" varSeq="0" hand="authorial">el de las Navas es</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>el de las Navas</del><add>es don Felis el conde</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst><del>es don Felis el conde</del> <add>el de las Navas es</add></subst></rdg></app>?</l>
 </lg>
 </sp>
 <sp>
@@ -1085,7 +1085,7 @@
 <speaker>Me</speaker>
 <lg>
 <l>Es su hermano <app><lem wit="A0" varSeq="0" hand="authorial">don Henrique</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>don Henrique</del><add>don Fadrique</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>don Fadrique</subst><add>don Henrique</add></rdg></app></l>
-<l>de <app><lem wit="A0" varSeq="0" hand="authorial">de Guzmán</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>de Guzmán</del><add>de Oristán</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>de Oristán</subst><add>de Guzmán</add></rdg></app>, el que entretiene</l>
+<l>de <app><lem wit="A0" varSeq="0" hand="authorial">Guzmán</lem><rdg wit="B" varSeq="1" hand="non-authorial"><susbt><del>Guzmán</del> <add>Oristán</add></susbt></rdg> <rdg wit="B" varSeq="2" hand="non-authorial"><subst>Oristán</subst> <add>Guzmán</add></rdg></app>, el que entretiene</l>
 <l>esa tu menor señora.</l>
 </lg>
 </sp>
@@ -1116,16 +1116,66 @@
 <l>la corte en esta ocasión</l>
 <l>con gentileza eminente</l>
 <l>a cuantas celebra España.</l>
-<app><rdg wit="B" varSeq="1" hand="non-authorial">
-<delSpan>
-<l n="415">Ya habrás oído mil veces</l>
-<l>que es hijo del gran don Diego</l>
-<l>de Córdoba, nuevo Orestes,</l>
-<l>nuevo Acates de Filipe</l>
-<l>Segundo, mas tú no entiendes</l>
-<l n="420">antigüedades ni historia.</l>
-</delSpan>
-</rdg></app>
+<l n="415">
+  <app>
+  <lem wit="A0" varSeq="0" hand="authorial">
+    Ya habrás oído mil veces
+  </lem>
+  <rdg wit="B" varSeq="1" hand="non-authorial">
+    <del>Ya habrás oído mil veces</del>
+  </rdg>
+</app>
+</l>
+<l>
+  <app>
+  <lem wit="A0" varSeq="0" hand="authorial">
+      que es hijo del gran don Diego
+  </lem>
+  <rdg wit="B" varSeq="1" hand="non-authorial">
+    <del>que es hijo del gran don Diego</del>
+  </rdg>
+</app>
+</l>
+<l>
+  <app>
+  <lem wit="A0" varSeq="0" hand="authorial">
+    de Córdoba, nuevo Orestes,
+  </lem>
+  <rdg wit="B" varSeq="1" hand="non-authorial">
+    <del>de Córdoba, nuevo Orestes,</del>
+  </rdg>
+</app>
+</l>
+<l>
+  <app>
+  <lem wit="A0" varSeq="0" hand="authorial">
+    nuevo Acates de Filipe
+  </lem>
+  <rdg wit="B" varSeq="1" hand="non-authorial">
+    <del>nuevo Acates de Filipe</del>
+  </rdg>
+</app>
+</l>
+<l>
+  <app>
+  <lem wit="A0" varSeq="0" hand="authorial">
+    Segundo, mas tú no entiendes
+  </lem>
+  <rdg wit="B" varSeq="1" hand="non-authorial">
+    <del>Segundo, mas tú no entiendes</del>
+  </rdg>
+</app>
+</l>
+<l>
+  <app>
+  <lem wit="A0" varSeq="0" hand="authorial">
+      antigüedades ni historia.
+  </lem>
+  <rdg wit="B" varSeq="1" hand="non-authorial">
+    <del>antigüedades ni historia.</del>
+  </rdg>
+</app>
+</l>
 </lg>
 </sp>
 <sp>
@@ -1336,7 +1386,7 @@
 <sp>
 <speaker>Cla</speaker>
 <lg>    
-<l part="I">¡Qué alcagüete!</l>
+<l part="F">¡Qué alcagüete!</l>
 </lg>
 </sp>
 <stage>Entren don Antonio y don Leonardo</stage>
