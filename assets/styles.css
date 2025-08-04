@@ -61,6 +61,55 @@ section {
     display: block
 }
 
+/* Landing Page Styles */
+body.landing {
+  background-color: #fefbf7;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.landing-card {
+  background-color: white;
+  padding: 3rem;
+  max-width: 750px;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.landing-card h1 {
+  font-size: 2.4rem;
+  font-style: italic;
+  color: #2a2a2a;
+  margin-bottom: 1.2rem;
+}
+
+.landing-card p {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.landing-btn {
+  background-color: #800000;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.landing-btn:hover {
+  background-color: #a00000;
+}
+
+
 /* START: Addition by SAT for the Homepage  */
 .section-grid {
     display: grid;

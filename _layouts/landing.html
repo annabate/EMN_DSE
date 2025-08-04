@@ -1,51 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css" rel="stylesheet" />
-  <style>
-    body {
-      font-family: Georgia, serif;
-      background-color: #fdfaf6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
 
-    .welcome-box {
-      text-align: center;
-      padding: 2rem 3rem;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+  {% include head.html %}
 
-    .welcome-box h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+  <body class="landing">
+    <div class="landing-card">
+      <h1>Edición digital de <em>El marqués de las Navas</em></h1>
+      <p>Bienvenidos al entorno digital de la obra de Lope de Vega.</p>
+      <a href="{{ site.baseurl }}/home" class="landing-btn">Entrar</a>
+    </div>
+  </body>
 
-    .welcome-box a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.5rem;
-      background-color: #8B0000;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    .welcome-box a:hover {
-      background-color: #a00000;
-    }
-  </style>
-</head>
-<body>
-  <div class="welcome-box">
-    {{ content }}
-  </div>
-</body>
 </html>
