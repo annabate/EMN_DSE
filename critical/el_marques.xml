@@ -1,0 +1,3854 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0" xmlns:svg="http://www.w3.org/2000/svg">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>El marqués de las Navas</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <listWit>
+        <witness xml:id="O">Manuscrito Melbury House contenido en tom. I Mss</witness>
+        <witness xml:id="S1">Suelta Institut del Teatre, Signatura 57087</witness>
+        <witness xml:id="P">Copia Biblioteca Palatina, Signatura CC.* V. 28032/ XLVI</witness>
+        <witness xml:id="E">Parte VIII de Escogidas</witness>
+      </listWit>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <head>El marqués de las Navas</head>
+      <div type="castList">
+        <castList>
+          <head type="subtitle">Las personas que hablan:</head>
+          <castItem>
+            <role xml:id="Feliciana">Feliciana</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Leonardo">Leonardo</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Bernardo">Bernardo</role>
+          </castItem>
+          <castItem>
+            <role xml:id="El_marqués">El marqués</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Filipe">Filipe</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Enrique">Enrique</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Laurencia">Laurencia</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Gerarda">Gerarda</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Antonio">Antonio</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Ludovico">Ludovico</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Mendoza">Mendoza</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Clara">Clara</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Juan">Juan</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Luis">Luis</role>
+          </castItem>
+          <castItem>
+            <role xml:id="Asián">Asián</role>
+          </castItem>
+        </castList>
+      </div>
+      <div type="act" n="1">
+        <head type="subtitle1">Acto primero</head>
+        <stage><app><lem wit="#O">Leonardo y Feliciana</lem><rdg wit="#S1 #P #E">Salen Leonardo y Feliciana</rdg></app></stage>
+        <sp who="#Feliciana">
+          <speaker><app><lem>Feliciana</lem><rdg wit="#P #S1">Leonardo</rdg></app></speaker>
+          <l n="1">Al mismo Nerón te igualas.</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l n="2">Mira que es gran necedad</l>
+          <l n="3">detener la voluntad,</l>
+          <l n="4">porque la pintan con alas.</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="5">Tus obras siempre tan malas</l>
+          <l n="6">a quien las debes tan buenas.</l>
+          <l n="7">Leonardo, <app><lem wit="#O">a mi fin ordenas</lem><rdg wit="#S1 #E">mi fin ordenas</rdg></app></l>
+          <l n="8"><app><lem wit="#O">de que te vengo a deber</lem><rdg wit="#S1 #E">di que te llego a deber</rdg></app></l>
+          <l n="9"><app><lem wit="#O">quererte agora poner</lem><rdg wit="#S1 #E">si ahora me haces poner</rdg></app></l>
+          <l n="10">a tantas <app><lem wit="#O">injustas</lem><rdg wit="#S1">inciertas</rdg><rdg wit="#P #E">y inciertas</rdg></app> penas.</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l n="11">¡Suéltame la capa! ¡Suelta!</l>
+          <l n="12">Suelta en paz, que <app><lem wit="#O">una</lem><rdg wit="#S1 #P #E">no</rdg></app> porfía<note>Prova di nota</note></l>
+          <l n="13">convierte en <app><lem wit="#O">descortesía</lem><rdg wit="#S1">descorresía</rdg></app><note>Altra prova di nota</note></l>
+          <l n="14"><app><lem wit="#O">determinación</lem><rdg wit="#S1 #P #E">imaginación</rdg></app> resuelta.</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="15">Y ¿Cuándo darás la vuelta?</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l n="16">Luego que este pleito acabe,</l>
+          <l n="17"><app><lem wit="#O">que en pleitos —y más, tan grave—</lem><rdg wit="#S1 #P #E">que pleitos, y en un mal grave</rdg></app></l>
+          <l n="18">por más que abreviarle importe,</l>
+          <l n="19">el almanac de la corte</l>
+          <l n="20">ningún pronóstico sabe.</l>
+          <l n="21">A Madrid voy; que no voy</l>
+          <l n="22"><app><lem wit="#O">a Manila</lem><rdg wit="#S1 #P #E">a las Indias</rdg></app>, o a la China,</l>
+          <l n="23">en cuya mar <app><lem wit="#O">filipina</lem><rdg wit="#S1">felipina</rdg></app></l>
+          <l n="24">nuevo navegante soy.</l>
+          <l n="25">Presto sabrás que allí estoy,</l>
+          <l n="26">si otra jornada recelas.</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="27">Ya ¿de qué sirven cautelas,</l>
+          <l n="28">cuando mi desconfianza</l>
+          <l n="29">llega a mirar tu mudanza</l>
+          <l n="30">con alas y con espuelas?</l>
+          <l n="31">A pleitos dices que vas;</l>
+          <l n="32">bien dices, quiero ayudarte,</l>
+          <l n="33">pues vas, Leonardo, a casarte</l>
+          <l n="34">o, por ventura, lo estás.</l>
+          <l n="35">No hay otro pleito que más</l>
+          <l n="36">procure un hombre vencer.</l>
+          <l n="37">Muchos buenos suele haber,</l>
+          <l n="38">mas ninguno oí decir</l>
+          <l n="39">que <app><lem wit="#O">desease</lem><rdg wit="#S1 #P #E">se dejase</rdg></app> morir</l>
+          <l n="40">primero que su mujer.</l>
+          <l n="41">Buen pleito llevas: procura</l>
+          <l n="42">vencer tan gran diferencia,</l>
+          <l n="43">que ha de tener la sentencia</l>
+          <l n="44">en la misma sepultura;</l>
+          <l n="45">pero yo quedo segura</l>
+          <l n="46">que la palabra que aquí</l>
+          <l n="47">me quiebra, Leonardo, ansí</l>
+          <l n="48">—sin que el <app><lem wit="#O">ser noble me</lem><rdg wit="#S1 #P #E">renombre te</rdg></app> valga—</l>
+          <l n="49">hará que muy presto salga</l>
+          <l n="50">la sentencia contra ti.</l>
+          <l n="51">Engañásteme, villano,</l>
+          <l n="52">siendo tú, para mi mal,</l>
+          <l n="53">el primero desleal</l>
+          <l n="54">que ha nacido toledano.</l>
+          <l n="55">El juramento y la mano</l>
+          <l n="56">que de Dios en la presencia</l>
+          <l n="57">me diste, me da paciencia,</l>
+          <l n="58">porque es razón que presuma</l>
+          <l n="59">que le estás dando la pluma</l>
+          <l n="60">para firmar la sentencia.</l>
+          <l n="61">No <app><lem wit="#O">lograrás</lem><rdg wit="#S1 #P #E">gozarás</rdg></app> la mujer</l>
+          <l n="62"><app><lem wit="#O">de quien vas</lem><rdg wit="#S1 #P #E">de que estás</rdg></app> enamorado,</l>
+          <l n="63"><app><lem wit="#O">o</lem><rdg wit="#S1 #P #E">y</rdg></app> has de ser tan desdichado</l>
+          <l n="64">que aun honra no has de tener;</l>
+          <l n="65">que si os llegan a ofender</l>
+          <l n="66">las propias —como lo <app><lem wit="#O">esperes</lem><rdg wit="#S1 #P #E">infieres</rdg></app>,</l>
+          <l n="67">aunque tan honrado eres—</l>
+          <l n="68"><app><lem wit="#O">y</lem><rdg wit="#S1 #P #E"/></app> a los más nobles y sabios,</l>
+          <l n="69">es por vengar los agravios</l>
+          <l n="70">que habéis hecho a <app><lem wit="#O">otras</lem><rdg wit="#S1 #P #E">las</rdg></app> mujeres.</l>
+          <l n="71"><app><lem wit="#O">Yo te he servido, y de ti</lem><rdg wit="#S1 #P">yo que te he querido así</rdg><rdg wit="#E">yo que te he creído</rdg></app></l>
+          <l n="72">llevo tan <app><lem wit="#O">buen</lem><rdg wit="#S1 #P #E">mal</rdg></app> galardón</l>
+          <l n="73">que espero que una traición</l>
+          <l n="74">te infame, y me vengue a mí.</l>
+          <l n="75">Vete, pues ya te perdí,</l>
+          <l n="76">y tan ingrato conoces</l>
+          <l part="I" n="77">mi verdad.</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l part="F">No me des voces</l>
+          <l n="78">que aun sola tu voz me enfada.</l>
+        </sp>
+        <stage>Vase</stage>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="79">¡Mueras de mala estocada</l>
+          <l n="80">antes que sus brazos goces!</l>
+          <l n="81">¡Plega al cielo —pues el cielo</l>
+          <l n="82">fue de tu maldad testigo—</l>
+          <l n="83">que a sus puertas, enemigo,</l>
+          <l n="84">bañes con tu sangre el suelo!</l>
+        </sp>
+        <stage>Bernardo entre</stage>
+        <sp who="#Bernardo">
+          <speaker>Bernardo</speaker>
+          <l part="I" n="85">¿Qué <app><lem wit="#O">es</lem><rdg wit="#E"/></app> esto, prima?</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l part="F">Que apelo</l>
+          <l n="86"><app><lem wit="#O">de un casamiento traidor</lem><rdg wit="#S1 #P #E">en tan notable dolor</rdg></app></l>
+          <l n="87">al cielo, alcalde mayor.</l>
+        </sp>
+        <sp who="#Bernardo">
+          <speaker>Bernardo</speaker>
+          <l n="88">¿Has reñido con Leonardo?</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="89">Nací con honra, Bernardo,</l>
+          <l n="90">que <app><lem wit="#O">ya</lem><rdg wit="#S1 #P #E">yo</rdg></app> no trato de amor.</l>
+          <l n="91">De aquí se parte a casar</l>
+          <l part="I" n="92">a Madrid.</l>
+        </sp>
+        <sp who="#Bernardo">
+          <speaker>Bernardo</speaker>
+          <l part="M">¿Qué dices?</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l part="F">Digo</l>
+          <l n="93">que me lo ha dicho el amigo</l>
+          <l n="94">de quien más suele fiar.</l>
+        </sp>
+        <sp who="#Bernardo">
+          <speaker>
+            <app>
+              <lem wit="#O #P #E">Bernardo</lem>
+              <rdg wit="#S1">Feliciana</rdg>
+            </app>
+          </speaker>
+          <l n="95">¡Buen pago te viene a dar</l>
+          <l n="96">tras tantas obligaciones!</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="97">En llegando a sin razones</l>
+          <l n="98">se pierde todo el amor;</l>
+          <l n="99">tu verás como al traidor</l>
+          <l n="100">le alcanzan <app><lem wit="#O">mis</lem><rdg wit="#S1 #P #E">mil</rdg></app> maldiciones.</l>
+        </sp> 
+        <anchor xml:id="start101"/>
+        <sp who="#Bernardo"> 
+          <speaker>Bernardo</speaker>  
+          <l n="101">Yo estoy, Feliciana, agora</l>
+          <l n="102">para Madrid de camino,</l>
+          <l n="103">que a sus fiestas me previno</l>
+          <l n="104">por muchas cartas Leonora.</l>
+          <l n="105">¡Cuánta riqueza atesora,</l>
+          <l n="106">lustre, gala y valentía!</l>
+          <l n="107">Dicen que salir porfía,</l>
+          <l n="108">y que ha de ser el espacio</l>
+          <l n="109">de la plaza de palacio,</l>
+          <l n="110">cielo de Marte aquel día.</l>
+          <l n="111">Esta sola ocupación</l>
+          <l n="112">poco me puede impedir</l>
+          <l n="113">que no te pueda servir,</l>
+          <l n="114">prima, en aquesta ocasión.</l>
+          <l n="115">Si suele la dilación</l>
+          <l n="116">deshacer los casamientos,</l>
+          <l n="117">ponle pleito, y sus intentos</l>
+          <l n="118">no lleguen a ejecutarse.</l>
+        </sp><anchor xml:id="end120"/>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="119">Bien sé yo que es dilatarse</l>
+          <l n="120">malograr los pensamientos; </l>
+          <l n="121">pero tú solo te pones</l>
+          <l n="122">a peligro de tener</l>
+          <l n="123">disgustos, y una mujer,</l>
+          <l n="124">con lágrimas y razones</l>
+          <l n="125">ablanda los corazones</l>
+          <l n="126">de los jueces mejor.</l>
+        </sp><app from="#start101" to="#end120">
+            <rdg wit="#P"/>
+        </app>
+        <sp who="#Bernardo">
+          <speaker>Bernardo</speaker>
+          <l n="127">El mejor procurador</l>
+          <l n="128">de un pleito es el mismo dueño.</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="129">No lo seré yo pequeño;</l>
+          <l n="130">si quieres, contigo iré,</l>
+          <l n="131">donde hasta el fin no tendré</l>
+          <l n="132">gusto, descanso, ni sueño.</l>
+          <l n="133">Haz esto, primo, por mí,</l>
+          <l n="134">por mi inocencia, por ser</l>
+          <l part="I" n="135">mujer.</l>
+        </sp>
+        <sp who="#Bernardo">
+          <speaker>Bernardo</speaker>
+          <l part="F">Cuanto pueda hacer</l>
+          <l n="136">haré, señora, por ti.</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l part="I" n="137">Luego ¿voy contigo?</l>
+        </sp>
+        <sp who="#Bernardo">
+          <speaker>Bernardo</speaker>
+          <l part="F">Sí.</l>
+        </sp>
+        <sp who="#Feliciana">
+          <speaker>Feliciana</speaker>
+          <l n="138"><app><lem>Ya, Leonardo, tu mudanza</lem><rdg wit="#P"/></app></l>
+          <l n="139">jüez riguroso alcanza.</l>
+          <l n="140">Mira que ofendida estoy,</l>
+          <l n="141">y mira que mujer soy,</l>
+          <l n="142">donde es mayor la venganza.</l>
+        </sp>
+        <stage>Don Luis y don Juan de noche</stage>
+        <!-- BEGIN ANCHOR marking the start of the added block -->
+        <anchor xml:id="add-start101"/>
+        <!-- Full speech that appears only in witness #P -->
+        <sp who="#Bernardo">
+          <speaker>Bernardo</speaker>
+          <l>Yo estoy, Feliciana, agora</l>
+          <l>para Madrid de camino,</l>
+          <l>que a sus fiestas me previno</l>
+          <l >por muchas cartas Leonora.</l>
+          <l>¡Cuánta riqueza atesora,</l>
+          <l>lustre, gala y valentía!</l>
+          <l>Dicen que salir porfía,</l>
+          <l>y que ha de ser el espacio</l>
+          <l>de la plaza de palacio,</l>
+          <l>cielo de Marte aquel día.</l>
+        </sp>
+        <!-- END ANCHOR marking the end of the added block -->
+        <anchor xml:id="add-end118"/>
+        <!-- Apparatus entry declaring this block as an addition present only in #P -->
+        <app from="#add-start101" to="#add-end118" type="addition">
+          <rdg wit="#P">
+            <add type="interpolated" xml:id="add101">add.</add>
+          </rdg>
+        </app>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l part="I" n="143">Bueno está el prado.</l>
+        </sp>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l part="F">¡Famoso!</l>
+          <l n="144">Aunque menos gente viene</l>
+          <l n="145">como ya va refrescando.</l>
+        </sp>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l part="I" n="146">¿Qué hay de Fénis?</l>
+        </sp>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l part="F">Voló Fénis.</l>
+        </sp>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l part="I" n="147">¿Qué me decís?</l>
+        </sp>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l part="F">A otro nido,</l>
+          <l n="148">donde se dice que miente</l>
+          <l n="149">la fama en llamarla sola,</l>
+          <l n="150">pues otro pájaro tiene.</l>
+        </sp>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l n="151">No hay seguridad de brazos,</l>
+          <l n="152">ni aun de las almas a veces,</l>
+          <l n="153">sin contradicción del oro.</l>
+        </sp>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l n="154">Oro come y oro bebe.</l>
+        </sp>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l n="155">Alas le saldrán doradas.</l>
+        </sp>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l n="156">Los manteos lo parecen.</l>
+        </sp>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l n="157">Músicos vienen al Prado.</l>
+        </sp>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l n="158">No puede ser que me alegren.</l>
+        </sp>
+        <stage>Asián, músico, y detrás Clara, criada, Laurencia y Gerarda de sombreros y rebociños.</stage>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="159">Suspensa me lleva el alma.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="160">¿No ves que Asián es este?</l>
+          <l n="161">Un hidalgo de Navarra</l>
+          <l n="162">que canta celestialmente.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="I" n="163">¿Vive en Madrid?</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l part="F">Aquí vive,</l>
+          <l n="164">que sirviendo se entretiene</l>
+          <l n="165">al gran cardenal Quiroga.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="I" n="166">¿De qué le sirve?</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l part="F">Parece</l>
+          <l n="167">que preguntas con cuidado.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="168">Ninguno pudo moverme.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="169">De maestresala le sirve.</l>
+        </sp>
+        <stage>Entren galanes de noche, el marqués, don Filipe y don Enrique y Mendoza, paje de espada.</stage>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="170">Gallardas son las mujeres.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="171">Siempre juzgáis por los talles.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Felipe</speaker>
+          <l n="172">La bizarría procede</l>
+          <l part="I" n="173">del talle.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l part="F">Y ¿no de la cara?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="174">Cara que no se apetece</l>
+          <l n="175">¿qué ha de llamar con el talle?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="176">Es Mendozilla excelente</l>
+          <l n="177">filósofo de estas cosas.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="178">No, es el que menos entiende.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="179">Siempre vuestras señorías</l>
+          <l n="180">por lo singular se pierden.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="181">La disposición  del cuerpo</l>
+          <l n="182">muestra que el alma contiene</l>
+          <l n="183">todas las partes iguales,</l>
+          <l n="184">no el rostro, que el rostro puede</l>
+          <l n="185">ser hermoso y no tener</l>
+          <l n="186">la proporción que se debe</l>
+          <l n="187">a sí mismo en las demás</l>
+          <l n="188">partes que el cuerpo ennoblecen.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="189">¿Y qué importa que una dama</l>
+          <l n="190">tenga el cuerpo diligente,</l>
+          <l n="191">derecho como una lanza,</l>
+          <l n="192">bizarro como un alférez,</l>
+          <l n="193">la cintura que en un puño</l>
+          <l n="194">puede apretarse y cogerse,</l>
+          <l n="195">las caderas como en Flandes,</l>
+          <l n="196">las piernas como un jinete,</l>
+          <l n="197">si el rostro puede ser molde</l>
+          <l n="198">de hacer diablos para el jueves</l>
+          <l n="199">en que al despensero cuelgan</l>
+          <l n="200">que afrenta los calabreses?</l>
+          <l n="201">Mayormente si es tan Roma</l>
+          <l n="202">que parece que Holofernes</l>
+          <l n="203">de dos mamonas la hizo</l>
+          <l n="204">sepulturas y juanetes.</l>
+          <l n="205">¡Vive Dios, que es de mal gusto</l>
+          <l n="206">quien tal opinión tuviere!</l>
+          <l n="207">Que no puede enamorar</l>
+          <l n="208">la boca donde los dientes</l>
+          <l n="209">sobre los asientos riñen</l>
+          <l n="210">como hidalgos montañeses.</l>
+          <l n="211">La cara es mayor indicio</l>
+          <l n="212">del alma, que en ella vense</l>
+          <l n="213">las costumbres como en mapa;</l>
+          <l n="214">luego, ¿a los cuerpos prefieren?</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="215">No lo dice don Filipe,</l>
+          <l n="216">Mendoza, para que alegues</l>
+          <l n="217">aforismos por la cara,</l>
+          <l n="218">mas porque estas damas vienen</l>
+          <l n="219">de noche al Prado y de noche</l>
+          <l n="220">las caras no pueden verse:</l>
+          <l n="221">por eso habló de los talles.</l>
+        </sp>
+        <stage>Siéntanse</stage>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="222">Ellas se sientan en frente</l>
+          <l n="223">de este cristal, cuyas venas</l>
+          <l n="224">sangran seis puntas o siete</l>
+          <l n="225">para escuchar al que canta.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="226">¡Quiera el cielo que no tiemple!</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="227">Si él templare, yo me acojo</l>
+          <l n="228">por estos álamos verdes,</l>
+          <l n="229">donde él y el aire se escuchen.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="230">Harás que te oiga y lo deje.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="231">Templar mucho y mala voz</l>
+          <l n="232">es lo mismo que sucede</l>
+          <l n="233">a un largo brujulear,</l>
+          <l n="234">salir sota y hacer veinte.</l>
+          <l n="235">Con la criada me acojo.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="236">Pues las Juanas o Isabeles</l>
+          <l n="237">a don Felipe y mi hermano</l>
+          <l n="238">alargo liberalmente,</l>
+          <l n="239">que un preso no ha de tratar</l>
+          <l n="240">de amor, pues no le consienten</l>
+          <l n="241">libertad que le ofrecen</l>
+          <l n="242">a la dama que tuviere.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="243">¿Daisme licencia que aquí</l>
+          <l n="244">a vuestro lado me asiente?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="245">Vuestro buen talle y olor</l>
+          <l n="246">de mi lado os favorece.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="247">¿Y yo podré merecer</l>
+          <l n="248">lo que a este galán conceden?</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="249">Podréis al ejemplo suyo</l>
+          <l n="250">sentaros seguramente,</l>
+          <l n="251">que soy la menor en casa</l>
+          <l n="252">y nunca los grandes suelen</l>
+          <l n="253">reñir por lo que ellas hacen.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="254">Si Vuesa merced no huele,</l>
+          <l n="255">―que tal vez, húmido, el Prado</l>
+          <l n="256">el mejor olfato ofende―</l>
+          <l n="257">deme lugar junto a sí</l>
+          <l n="258">y, por Dios, que no le pese</l>
+          <l n="259">de un asocarrado gusto.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="260">¡Arre allá! ¡Cómo se tiende!</l>
+          <l n="261">¿Hiciera más un borrico?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="262">En viendo los alcaceres,</l>
+          <l n="263">no hay seso que no rebuzne.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="264">Pues vaya a tomar el verde</l>
+          <l n="265">con el rocín de su amo.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="266">Por tus palabras crueles</l>
+          <l n="267">conozco que eres hermosa,</l>
+          <l n="268">que las feas no defienden</l>
+          <l n="269">con tanto rigor sus caras,</l>
+          <l n="270">y esta es la causa que siempre</l>
+          <l n="271">casan las hermosas tarde,</l>
+          <l n="272">juzgando que más merecen.</l>
+          <l n="273">No han dicho a una fea envido</l>
+          <l n="274">cuando con el resto quiere,</l>
+          <l n="275">que piensa que no ha de haber</l>
+          <l n="276">hombre que a la tienda llegue.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="277">Óigase y mire que cantan,</l>
+          <l part="I" n="278">y téngase en sí.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Tendréme</l>
+          <l n="279">por tenerla por hermosa,</l>
+          <l n="280">que no porque me sustente.</l>
+        </sp>
+        <stage>Cante</stage>
+        <sp who="#Asián">
+          <speaker>Asián</speaker>
+          <l n="281">Por la plaza de San Lucar</l>
+          <l n="282">galán paseando viene,</l>
+          <l n="283">el valeroso Gazul,</l>
+          <l n="284">de blanco, morado y verde.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="285">¿De verde, blanco y morado?</l>
+          <l n="286">Aunque el poeta se queje,</l>
+          <l n="287">¿era rábano ese moro?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="288">¿Quieres callar, insolente?</l>
+        </sp>
+        <stage>Cante</stage>
+        <sp who="#Asián">
+          <speaker>Asián</speaker>
+          <l n="289">Quiérese el moro partir</l>
+          <l n="290">a jugar cañas a Gelves.</l>
+        </sp>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l n="291">No se parta agora el moro,</l>
+          <l n="292">que hace calor y le puede</l>
+          <l n="293">dar alguna calentura.</l>
+        </sp>
+        <sp who="#Asián">
+          <speaker>Asián</speaker>
+          <l n="294">No se parta, si no quieren,</l>
+          <l n="295">que yo cantaré otra cosa.</l>
+        </sp>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l n="296">Canta alguna cosa alegre.</l>
+        </sp>
+        <sp who="#Asián">
+          <speaker>Asián</speaker>
+          <l n="297">En haciéndolo chacota,</l>
+          <l n="298">perdonen vuesas mercedes.</l>
+        </sp>
+        <stage>Vaya</stage>
+        <sp who="#Juan">
+          <speaker>Juan</speaker>
+          <l n="299">Mal hicistes, vive Dios,</l>
+          <l n="300">que sus palabras corteses</l>
+          <l n="301">más término merecían.</l>
+        </sp>
+        <sp who="#Luis">
+          <speaker>Luis</speaker>
+          <l n="302">Pues yo parto a conocerle</l>
+          <l n="303">y darle satisfacción.</l>
+        </sp>
+        <stage>Váyanse don Juan y don Luis</stage>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="304">Mujer celestial, ¿quién eres</l>
+          <l n="305">con ingenio tan divino,</l>
+          <l n="306">con talle tan excelente</l>
+          <l n="307">y con tan hermosa cara?</l>
+          <l n="308">Que, aunque la noche escurece</l>
+          <l n="309">el cielo en que le retratas,</l>
+          <l n="310">sus estrellas resplandecen.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="311">Suplico a vuesa merced</l>
+          <l n="312">no trate de conocerme,</l>
+          <l n="313">que no soy lo que parezco,</l>
+          <l n="314">porque sólo un padre ausente</l>
+          <l n="315">que mañana ha de venir</l>
+          <l n="316">causa me dio de atreverme</l>
+          <l n="317">a ver el Prado, que somos</l>
+          <l n="318">codiciosas las mujeres</l>
+          <l n="319">de ver lo que nos alaban,</l>
+          <l n="320">y mucho más las que tienen</l>
+          <l n="321">una madre que las riña</l>
+          <l n="322">y un padre que las encierre.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="323">Quien sois dice vuestro estilo</l>
+          <l n="324">y me obliga a que os respete,</l>
+          <l n="325">pero, por Dios, que estoy loco</l>
+          <l n="326">de ver entre dos claveles</l>
+          <l n="327">la armonía de esa voz</l>
+          <l n="328">que me desmaya y suspende.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="329">¿Sois acaso portugués?</l>
+          <l n="330">Que sólo a los portugueses</l>
+          <l n="331">para enamorarse amor</l>
+          <l n="332">les dio término tan breve.</l>
+          <l n="333">¿Cómo os derretís ansí?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="334">Pues ¿quién habrá que se acerque</l>
+          <l n="335">al sol que no se derrita,</l>
+          <l n="336">y más, con alma de nieve?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="337">¿Que tenéis tan fría el alma?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="338">Antes, señora, que os viese;</l>
+          <l n="339">ya fuego después que os vi.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="340">¿Que haya un hombre que requiebre</l>
+          <l n="341">a scuras una mujer?</l>
+          <l n="342">Debéis de haber sido duende.</l>
+          <l n="343">¡Oh libertad de los hombres,</l>
+          <l n="344">cuanto miran, apetecen,</l>
+          <l n="345">cuanto hablan, tanto engañan,</l>
+          <l n="346">cuanto encuentran, tanto quieren!</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="347">Pues yo os prometo que he sido</l>
+          <l n="348">tan diamante algunas veces</l>
+          <l n="349">que no han podido unos ojos</l>
+          <l n="350">con sus lágrimas moverme.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="351">¿Y yo a oscuras pude tanto</l>
+          <l n="352">con un pecho tan rebelde?</l>
+          <l n="353">¡Oh gran milagro de amor!</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="354">Muchas veces acontece</l>
+          <l n="355">que un vidrio que sirvió un año</l>
+          <l n="356">por irse a sacar se quiebre.</l>
+          <l n="357">Sin estrellas no hay amor,</l>
+          <l n="358">y como ellas le concierten</l>
+          <l n="359">basta el ver, basta el oír.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="360">¿Voluntades diferentes</l>
+          <l part="I" n="361">conciertan estrellas?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Sí.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="362">¡Qué lucidos alcahuetes!</l>
+          <l part="I" n="363">¿Quién sois?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Mañana en la plaza,</l>
+          <l n="364">si gustáis de conocerme,</l>
+          <l n="365">me veréis con un rejón.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="366">¿Que sois tan noble y valiente?</l>
+          <l n="367">¡Oh quién tuviera ventanas!</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="368">Por las ventanas no quede;</l>
+          <l n="369">coche y ventanas tendréis.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="370">No querrán que las acete.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="371">¿Tenéis dueño?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">No le he visto,</l>
+          <l n="372">y tengo dueño sin verle,</l>
+          <l n="373">que ha de venir de Toledo.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="374">A mí solo, solamente,</l>
+          <l n="375">sucediera tal desdicha.</l>
+          <l n="376">¡Vive Dios, que me atraviese</l>
+          <l part="I" n="377">esta daga!</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">Quedo, quedo,</l>
+          <l n="378">que no soy de las que creen</l>
+          <l n="379">en madalenas de amor.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="380">Si yo de vos mereciese</l>
+          <l part="I" n="381">una mano...</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">Hablad sin mano.</l>
+          <l n="382">¿Que sois galán de repente?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="383">Yo os daré treinta diamantes</l>
+          <l n="384">que aquesta joya enriquecen</l>
+          <l part="I" n="385">por esa mano.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l part="F">Ya es tarde,</l>
+          <l n="386">no sé cómo se entretiene</l>
+          <l n="387">con ese hidalgo mi hermana.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="388">Es hombre que lo merece.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="389">Si tú me dices quién son,</l>
+          <l n="390">yo te diré libremente</l>
+          <l n="391">calidad, nombres y casa</l>
+          <l part="I" n="392">de estas damas.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Pues advierte:</l>
+          <l n="393">este es marqués de las Navas.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="394">¿El de las Navas es este?</l>
+          <l n="395">¿Que este el de las Navas es?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="396">Te admiras como si fuese</l>
+          <l n="397">de las Navas de Tolosa.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="398">Es por el nombre que tiene</l>
+          <l n="399">de bizarro y liberal,</l>
+          <l n="400">galán discreto y valiente.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="401">Es su hermano don Enrique</l>
+          <l n="402">de Guzmán, el que entretiene</l>
+          <l n="403">esa tu menor señora.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="I" n="404">¡Gallardo talle!</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Excelente.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="I" n="405">Y aquel ¿quién es?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Don Filipe</l>
+          <l n="406">de Córdoba, que suspende</l>
+          <l n="407">la corte en esta ocasión</l>
+          <l n="408">con gentileza eminente</l>
+          <l n="409">a cuantas celebra España.</l>
+          <l n="410">Ya habrás oído mil veces</l>
+          <l n="411">que es hijo del gran don Diego</l>
+          <l n="412">de Córdoba, nuevo Orestes,</l>
+          <l n="413">nuevo Acates de Filipe</l>
+          <l n="414">Segundo, mas tú no entiendes</l>
+          <l n="415">antigüedades ni historia.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="I" n="416">Ya se van, perdona.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Tenme</l>
+          <l n="417">por tuyo. ¿Dónde vivís,</l>
+          <l n="418">que quiero servirte y verte?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="419">Al Lavapiés, en la calle</l>
+          <l part="I" n="420">de la Cabeza.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">Ofendéisme</l>
+          <l n="421">en querer pasar de aquí.</l>
+          <l part="I" n="422">Vamos, hermana.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">¡Que lleguen</l>
+          <l n="423">para no cesar los males,</l>
+          <l n="424">para no durar los bienes!</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="425">¿No iremos acompañarlas,</l>
+          <l part="I" n="426">Filipe?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Marqués, no quieren.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="I" n="427">Pues adios.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Mendoza, escucha…</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="428">Tarde, señor, me previenes.</l>
+          <l n="429">¡Hola, Inés, si eres Inés,</l>
+          <l n="430">Juana, o como tú quisieres,</l>
+          <l n="431">los nombres me has de decir!</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="432">Aunque imposibles emprenden,</l>
+          <l n="433">la mayor de ellas se llama</l>
+          <l part="I" n="434">Laurencia.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Dos mil laureles</l>
+          <l n="435">merece su hermoso talle.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="436">Justamente la encareces.</l>
+          <l n="437">La menor llaman Gerarda.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="438">Y jerarquía celeste</l>
+          <l n="439">se puede llamar, por Dios.</l>
+          <l part="I" n="440">¿Qué estado?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="M">Doncellas.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">¡Fuerte!</l>
+          <l n="441">Por discretas las tenía.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="I" n="442">¿Por eso pierden?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">No pierden,</l>
+          <l n="443">pero es mucha cobardía</l>
+          <l n="444">irse guardando siempre.</l>
+          <l part="I" n="445">¿Tú cómo te llamas?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">Clara.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="446">¡Oh Clara hermosa, pues eres</l>
+          <l n="447">Clara, herido estoy de amor.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="I" n="448">¿Tu nombre?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="M">Mendoza.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">Vete,</l>
+          <l n="449">que se alejan nuestros amos.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="450">Pues ¿qué importa que se alejen?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="I" n="451">A Dios, Mendoza.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">A Dios, Clara.</l>
+          <l part="I" n="452">¡Qué platera!</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">¡Qué insolente!</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="I" n="453">¡Qué fregatriz!</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">¡Qué pajazo!</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="I" n="454">¡Qué socarra!</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">¡Qué alcahuete!</l>
+        </sp>
+        <stage>Entren don Antonio y Leonardo</stage>
+        <sp who="#Antonio">
+          <speaker>Antonio</speaker>
+          <l n="455">Traéis, Leonardo, una valiente empresa.</l>
+          <l part="I" n="456">¿A casaros venís?</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l part="F">Vengo a casarme,</l>
+          <l n="457">y aunque vengo a casarme, no me pesa,</l>
+          <l n="458">qué sólo lo intenté por apartarme</l>
+          <l n="459">de aquella necedad que habéis oído,</l>
+          <l n="460">que no quiere cansarse de cansarme.</l>
+        </sp>
+        <sp who="#Antonio">
+          <speaker>Antonio</speaker>
+          <l n="461">Mucho será poner en tanto olvido</l>
+          <l part="I" n="462">tantas obligaciones.</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l part="F">Feliciana</l>
+          <l n="463">con lágrimas y quejas lo ha sentido,</l>
+          <l n="464">mas yo, burlando su esperanza vana,</l>
+          <l n="465">vengo a Madrid a verme con mi suegro,</l>
+          <l n="466">y a ver esta divina cortesana.</l>
+        </sp>
+        <sp who="#Antonio">
+          <speaker>Antonio</speaker>
+          <l n="467">De vuestro bien, si lo ha de ser, me alegro.</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l n="468">Aquí querría hacer alguna gala</l>
+          <l n="469">y entrar a vistas con vestido negro,</l>
+          <l n="470">que, aunque Toledo a lo mejor se iguala,</l>
+          <l n="471">la corte no permite competencia.</l>
+          <l n="472">Sin esto, aunque la buena fama exhala</l>
+          <l n="473">divino olor en la mayor presencia,</l>
+          <l n="474">antes de ejecutar el casamiento,</l>
+          <l n="475">―la calidad dejando de Laurencia―</l>
+          <l n="476">fuera informarme justo pensamiento</l>
+          <l part="I" n="477">de su virtud y partes.</l>
+        </sp>
+        <sp who="#Antonio">
+          <speaker>Antonio</speaker>
+          <l part="F">Cuerdamente</l>
+          <l n="478">procede vuestro honor y entendimiento.</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l n="479">Celosa condición no me consiente,</l>
+          <l n="480">aún en cosas muy viles, arrojarme,</l>
+          <l n="481">lo que al amor perdonan fácilmente.</l>
+          <l n="482">Mas yo, que sin amor vengo a casarme,</l>
+          <l n="483">¿qué disculpa tendré de un desacierto?</l>
+          <l n="484">Luego, mejor acierto en informarme;</l>
+          <l n="485">primero que firmemos el concierto</l>
+          <l n="486">tengo de andar su calle noche y día,</l>
+          <l n="487">como nave en la mar mirando el puerto,</l>
+          <l n="488">y así ella fuere para prenda mía,</l>
+          <l n="489">después sólo de mí tendré la queja.</l>
+          <l n="490">Preguntaré su misma celosía,</l>
+          <l n="491">consultaré los hierros de su reja,</l>
+          <l n="492">hablaré con sus puertas y ventanas</l>
+          <l n="493">mientras el alba las estrellas deja.</l>
+        </sp>
+        <sp who="#Antonio">
+          <speaker>Antonio</speaker>
+          <l n="494">Celosas prevenciones no son vanas,</l>
+          <l n="495">Leonardo, adonde no hay conocimiento,</l>
+          <l n="496">y más en opiniones cortesanas.</l>
+          <l n="497">Hoy hay cañas y toros: un asiento</l>
+          <l n="498">en la plaza tendréis, que es en palacio,</l>
+          <l n="499">y les falta a los grandes aposento,</l>
+          <l n="500">veréis cifrado el mundo en breve espacio,</l>
+          <l n="501">como en sortija suele generosas</l>
+          <l n="502">armas, el amatiste o el topacio.</l>
+          <l n="503">Veréis mil caballeros, mil hermosas</l>
+          <l n="504">damas, y que por ellas los rejones</l>
+          <l n="505">ya emprenden suerte diestra, ya dichosas;</l>
+          <l n="506">veréis aquel gran Rey, que mil naciones</l>
+          <l n="507">tiemblan, respetan, aman y obedecen</l>
+          <l n="508">políticas y bárbaras regiones,</l>
+          <l n="509">y por dicha veréis, si lo merecen</l>
+          <l n="510">vuestros ojos, la dama vuestra esposa.</l>
+        </sp>
+        <sp who="#Leonardo">
+          <speaker>Leonardo</speaker>
+          <l n="511">Cobardes los recelos me parecen,</l>
+          <l n="512">pero yo tengo condición celosa.</l>
+        </sp>
+        <stage>Entren Laurencia y Gerarda</stage>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="513">Gerarda, déjame aquí,</l>
+          <l n="514">que aún no te sé responder.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="515">¿Qué mal puedes tú tener</l>
+          <l n="516">para guardarle de mí?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="517">No sé, alguna cosa vi</l>
+          <l n="518">que me ha quitado el sosiego,</l>
+          <l n="519">pues cuando a pensarla llego</l>
+          <l n="520">me corro en ver que se atreve</l>
+          <l n="521">a todo un mundo de nieve</l>
+          <l n="522">tan poca parte de fuego.</l>
+          <l n="523">Yo no debo de ser yo,</l>
+          <l n="524">hablemos en otra cosa,</l>
+          <l n="525">pero no que es tan gustosa</l>
+          <l n="526">que agradecer me mandó</l>
+          <l n="527">el veneno que me dio,</l>
+          <l n="528">pero ¿de qué ha de servir</l>
+          <l n="529">el hablar y repetir</l>
+          <l n="530">lo que ya no se ha de ver?</l>
+          <l n="531">Mas tampoco puede ser</l>
+          <l n="532">pensar, callar y vivir.</l>
+          <l n="533">Pienso en lo que estoy callando,</l>
+          <l n="534">callo lo que estoy sintiendo,</l>
+          <l n="535">siento lo que estoy sufriendo,</l>
+          <l n="536">sufro lo que estoy pensando;</l>
+          <l n="537">y con pensar que dejando</l>
+          <l n="538">de pensar podré callar,</l>
+          <l n="539">me dan más ansias de hablar,</l>
+          <l n="540">y es el rigor tan intenso</l>
+          <l n="541">que, pensando en que no pienso,</l>
+          <l n="542">nunca acabo de pensar.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="543">No me ha parecido a mí</l>
+          <l n="544">enfermedad de mujer</l>
+          <l n="545">la que debes de tener.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="546">Antes yo pienso que sí.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="547">Tal desasosiego en ti</l>
+          <l n="548">yo jurara que era amor,</l>
+          <l n="549">pero ¿en tan breve rigor</l>
+          <l part="I" n="550">tanto mal?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">Por eso ha sido.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l part="I" n="551">¿Luego quieres?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">No he querido</l>
+          <l n="552">querer, por querer mejor.</l>
+          <l n="553">Maldiga Dios —¡ay, Gerarda! —</l>
+          <l n="554">quien la pólvora inventó</l>
+          <l n="555">que al plomo tal fuerza dio,</l>
+          <l n="556">al cañón y a la bombarda,</l>
+          <l n="557">antes con mano gallarda</l>
+          <l n="558">una flecha, un pasador</l>
+          <l n="559">tiraba amor, que rigor</l>
+          <l n="560">ya con arcabuces tira,</l>
+          <l n="561">que apenas pone la mira</l>
+          <l n="562">cuando ya mata de amor.</l>
+          <l n="563">¡Qué traidor, Gerarda, fue</l>
+          <l n="564">para mí! De noche vino.</l>
+          <l n="565">¿Qué salteador en camino</l>
+          <l n="566">hay que tan oculto esté?</l>
+          <l n="567">Al principio me burlé</l>
+          <l n="568">de un hombre que a penas vía,</l>
+          <l n="569">pero no sé qué tenía,</l>
+          <l n="570">que tal blandura y donaire</l>
+          <l n="571">me mataron con el aire</l>
+          <l n="572">que el mismo fuego encendía.</l>
+          <l n="573">Don Filipe (que ya vengo</l>
+          <l n="574">a hablar claro y no fingir,</l>
+          <l n="575">pues no le puede sufrir</l>
+          <l n="576">el alma donde le tengo;</l>
+          <l n="577">pues te agravio si detengo</l>
+          <l n="578">su nombre y también le agravio</l>
+          <l n="579">porque desde el alma al labio</l>
+          <l n="580">sale como todo es fuego)</l>
+          <l n="581">causó mi desasosiego,</l>
+          <l n="582">galán gentilhombre y sabio.</l>
+          <l n="583">Hame venido muy bien</l>
+          <l n="584">para tratar de casarme</l>
+          <l n="585">nuestro padre, que es matarme</l>
+          <l n="586">sin haber visto con quien.</l>
+          <l n="587">No hay remedio que me den</l>
+          <l n="588">mis males, si no es morir.</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="589">Si piensas de resistir</l>
+          <l n="590">verte en tanto mal, no seas</l>
+          <l n="591">necia en el bien que deseas,</l>
+          <l n="592">sino procura vivir.</l>
+          <l n="593">Hasta agora no has ligado</l>
+          <l n="594">al matrimonio la fe;</l>
+          <l part="I" n="595">háblale.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">¿Cómo podré?</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="596">El tiempo ocasión te ha dado:</l>
+          <l n="597">escríbele que has pensado</l>
+          <l n="598">ir con secreto a la fiesta,</l>
+          <l n="599">que te envíe un coche, que esta</l>
+          <l n="600">es la mejor invención</l>
+          <l n="601">para que tome ocasión</l>
+          <l n="602">y te la de su respuesta.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="603">Es notable atrevimiento</l>
+          <l n="604">para una mujer que está</l>
+          <l n="605">como en las vísperas ya</l>
+          <l n="606">de este necio casamiento;</l>
+          <l n="607">y bien sé yo que tu intento</l>
+          <l n="608">de ver la fiesta ha nacido...</l>
+        </sp>
+        <sp who="#Gerarda">
+          <speaker>Gerarda</speaker>
+          <l n="609">Engáñaste, que no ha sido</l>
+          <l n="610">más que la pena de verte.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="611">Ahora bien, yo estoy de suerte</l>
+          <l n="612">que de cuanto soy me olvido.</l>
+          <l part="I" n="613">Clara...</l>
+        </sp>
+        <stage>Clara entre</stage>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="M">Señora...</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">¿Sabrás</l>
+          <l part="I" n="614">llevar un papel?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">¿A quién?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="615">Tú respondiste más bien.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="616">Deseo servirte en más.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="617">A buscar un coche vas</l>
+          <l part="I" n="618">para ver las fiestas.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">Creo</l>
+          <l n="619">que me has hurtado el deseo.</l>
+          <l part="I" n="620">¿Es a don Filipe?</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">Sí.</l>
+          <l n="621">Pon papel y pluma allí.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="622">Alegre de ojos te veo.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="623">Pero pienso que es locura;</l>
+          <l part="I" n="624">no le pongas.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">¿Cómo no?</l>
+          <l part="I" n="625">Ya está puesto.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l part="F">Pienso yo</l>
+          <l n="626">que es mucha descompostura.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="627">Un coche es cosa segura,</l>
+          <l n="628">todas le piden por ver.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="629">Yo le pido por querer.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="630">Que tú le puedes honrar</l>
+          <l n="631">y el sol se le puede dar</l>
+          <l n="632">a una principal mujer.</l>
+        </sp>
+        <sp who="#Laurencia">
+          <speaker>Laurencia</speaker>
+          <l n="633">¡Ay, don Filipe, que creo</l>
+          <l n="634">que me has tener en poco!</l>
+          <l n="635">Mira, pensamiento loco,</l>
+          <l n="636">que te vas tras el deseo.</l>
+          <l n="637">Pero tan dichoso empleo</l>
+          <l n="638">hace el error en que he dado</l>
+          <l n="639">disculpado, y aun honrado,</l>
+          <l n="640">que no puede haber error</l>
+          <l n="641">en las locuras de amor,</l>
+          <l n="642">si es amor bien empleado.</l>
+        </sp>
+        <stage>Don Enrique y don Filipe con borceguíes y acicates, y el Marqués</stage>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="643">¿Con qué caballo entraréis?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Felipe</speaker>
+          <l n="644">Yo he escogido a Pensamiento.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="645">Bravo de entrada es el viento,</l>
+          <l n="646">entre sus alas iréis.</l>
+          <l part="I" n="647">¿Tú, Enrique?</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l part="F">El overo tengo</l>
+          <l n="648">por mejor para la entrada.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="I" n="649">¿Y agora?</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l part="F">El bayo me agrada.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="650">Braveza, a envidiaros vengo.</l>
+          <l n="651">Y agora, para el rejón,</l>
+          <l part="I" n="652">¿qué lleva Filipe?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Llevo</l>
+          <l part="I" n="653">el castaño.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="F">No lo apruebo.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="654">¿Por qué razón?</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="F">Gustos son.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="655">Llégase mejor al toro,</l>
+          <l n="656">y luce mucho adornado</l>
+          <l n="657">de aquel jaez encarnado,</l>
+          <l n="658">nielado de plata y oro.</l>
+          <l n="659">No dejó en Andalucía</l>
+          <l n="660">caballos el del Algaba.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="661">El de Palma tiene brava</l>
+          <l part="I" n="662">cuadirilla.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Buena es la mía.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="663">Salen Ásculi y Pastrana,</l>
+          <l n="664">que se va el mundo tras ellos.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="665">¿Quién competirá con ellos?</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="666">Eso se sabrá mañana,</l>
+          <l n="667">pues —por Dios— que Castañeda</l>
+          <l n="668">no sufre ventaja al sol.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="669">Es un bizarro español.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="670">Pero ¿dónde se nos queda</l>
+          <l n="671">aquel Alba que amanece</l>
+          <l n="672">con tan estendidos rayos</l>
+          <l n="673">que al mismo sol dan desmayos?</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="674">Donde él mismo resplandece.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="675">Pienso que sale con él</l>
+          <l n="676">el duque de Franca Vila.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="677">¿Qué hay de Peñafiel?</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="F">Que afila</l>
+          <l n="678">rayos de Marte por él.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="679">Es don Juan el mismo Marte.</l>
+          <l part="I" n="680">¿Sale el de Pradas?</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="F">Saldrá</l>
+          <l n="681">con que ninguno tendrá</l>
+          <l n="682">en las galas mayor parte.</l>
+          <l n="683">Tiene el conde de Melgar,</l>
+          <l n="684">como hijo del almirante,</l>
+          <l n="685">el mundo en hombros, Atlante,</l>
+          <l n="686">que le podrá sustentar.</l>
+          <l n="687">¡Qué bizarro caballero!</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="688">La fiesta ha de ser famosa.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="689">Si aquella ninfa amorosa</l>
+          <l n="690">por quien desde anoche muero</l>
+          <l n="691">me prestara algún favor,</l>
+          <l n="692">yo sé, Marqués, lo que hiciera.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="I" n="693">¿Que es tan hermosa?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Pudiera</l>
+          <l n="694">matar al amor de amor.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="695">¿Queréis que vaya por él?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="696">Estáis preso.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="F">Pues ¿qué importa?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="697">No es la jornada tan corta,</l>
+          <l n="698">que es muy noble y muy crüel.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="I" n="699">¿Crüel y en el Prado?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">Sí,</l>
+          <l n="700">que hay mucho, de ver y hablar,</l>
+          <l n="701">a querer y desear.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l n="702">Mendozilla viene aquí.</l>
+        </sp>
+        <stage>Mendoza con un lacayo vestido de livrea de juego de cañas con cuatro rejones</stage>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="703">Aquí están ya los rejones</l>
+          <l n="704">que no ha de quedar por ellos</l>
+          <l n="705">todos vienen amarillos,</l>
+          <l n="706">que a los toros tienen miedo.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="707">Como no le haya en los brazos,</l>
+          <l n="708">no le habrá, Mendoza, en ellos.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="709">Por los brazos yo lo juro,</l>
+          <l n="710">porque son de Aquiles y Hétor.</l>
+          <l n="711">Llegad, Pedro, esos rejones.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="712">Muestra, Mendoza, ¿son buenos?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="713">Tú lo has de hacer, señor,</l>
+          <l n="714">que ellos son de pino y fresno.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="715">Pedro, ¿salís vos conmigo?</l>
+        </sp>
+        <sp>
+          <speaker>Pedro</speaker>
+          <l n="716">Yo salgo, y vos estad cierto</l>
+          <l n="717">que no habrá dado en la plaza,</l>
+          <l n="718">de vuestro rejón, el eco,</l>
+          <l n="719">cuando las piernas del toro</l>
+          <l n="720">midan a palmos el suelo.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l part="I" n="721">¿Cortáis bien?</l>
+        </sp>
+        <sp>
+          <speaker>Pedro</speaker>
+          <l part="F">Cuerpo de tal.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="722">Es Pedro un hombre muy diestro,</l>
+          <l n="723">aunque en las fiestas pasadas</l>
+          <l n="724">un torillo jarameño</l>
+          <l n="725">le asió de unas calzas verdes</l>
+          <l n="726">hasta el aforro de lienzo.</l>
+          <l n="727">Y dicen que por alzar</l>
+          <l n="728">las cuchilladas más presto,</l>
+          <l n="729">alzó la misma camisa</l>
+          <l n="730">y en las ventanas dijeron</l>
+          <l n="731">que era muy hombre, y que había</l>
+          <l n="732">todo su honor satisfecho.</l>
+          <l n="733">Verdad es que algunas damas</l>
+          <l n="734">que se tardó previnieron</l>
+          <l n="735">en componer su negocio,</l>
+          <l n="736">así estaba descompuesto.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="737">Pedro es valiente y lo hará</l>
+          <l n="738">como de un hombre manchego</l>
+          <l n="739">se puede esperar, Mendoza.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="740">Aquí dama, aquí ceceo.</l>
+        </sp>
+        <stage>Clara ente</stage>
+        <sp who="#Mendoza">
+          <speaker>mendoza</speaker>
+          <l n="741">Vuesa merced sea servida,</l>
+          <l n="742">pues ya está en el aposento</l>
+          <l n="743">de aliviar la sobrevaina</l>
+          <l n="744">a los azules o negros;</l>
+          <l n="745">saque de la nube el sol</l>
+          <l part="I" n="746">y diga qué quiere.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">Vengo</l>
+          <l n="747">a buscar a don Filipe.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="748">Llamo a don Filipo luego,</l>
+          <l n="749">pero dígame quién es</l>
+          <l n="750">que sin saberlo primero</l>
+          <l n="751">no me atreveré a llamarle.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="I" n="752">¡Buena memoria!</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">No tengo</l>
+          <l n="753">buena vista, que memoria</l>
+          <l n="754">no me falta, si la debo.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="755">¿Con quién hablabas anoche</l>
+          <l n="756">en el Prado, majadero?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="757">¡Válate Dios por borrica!</l>
+          <l n="758">¿Tú en San Martín? ¿Qué hay de nuevo?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="759">Hermano rocín, mi ama,</l>
+          <l n="760">por ausencia de su dueño,</l>
+          <l n="761">quiere ver aquestas fiestas.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="762">Voy como un uso derecho</l>
+          <l n="763">a decirlo a don Filipe.</l>
+          <l n="764">Señor, escucha, que pienso</l>
+          <l n="765">que dio la sopa en la miel</l>
+          <l n="766">por hüir de los buñuelos.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="767">¿Cómo?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Clarilla está aquí.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="768">¿Qué Clara?</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">La de aquel güevo</l>
+          <l n="769">que te sorbías anoche.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="770">Quedo, no más, ya te entiendo.</l>
+          <l part="I" n="771">Clara hermosa...</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">Señor mío...</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="772">Vos a buscarme, ¿qué es esto?</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="773">Este papel lo dirá.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="774">De cualquier suerte, agradezco</l>
+          <l n="775">aquel ángel la memoria.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="776">No sé yo si es ángel bueno,</l>
+          <l n="777">que ángel que viene de noche</l>
+          <l n="778">no debe de ser del cielo.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+        </sp>
+        <stage>Lea</stage>
+        <p>Oy no viene mi padre y habemos determinado mi hermana y yo ver a V. S. tan valiente en la plaza como galán en el Prado. Si tenemos ventanas y coche, que las de nuestra casa caen en Lavapies y en los nuestros no podemos ir donde quisiera el deseo.</p>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="779">Basta, ¡qué letra tan linda!</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="780">Tales manos la escribieron.</l>
+          <l n="781">Prometo a vuseñoría</l>
+          <l n="782">que son de cristal los dedos.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="783">¡Qué bien que sabe la Clara</l>
+          <l n="784">socorrer con agua al fuego.</l>
+          <l n="785">No encajara Celestina</l>
+          <l n="786">mejor aquellos dos versos.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="787">Marqués, dadme vuestro coche,</l>
+          <l n="788">que desde agora os advierto</l>
+          <l n="789">que tenéis dos convidados.</l>
+        </sp>
+        <sp who="#El_marqués">
+          <speaker>Marqués</speaker>
+          <l n="790">Pedro, avisad al cochero,</l>
+          <l n="791">que yo las pondré en mis ojos.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="792">Clara, decid que yo quedo</l>
+          <l n="793">de tal manera ocupado</l>
+          <l n="794">con galas y caballeros</l>
+          <l n="795">que no puedo responderla</l>
+          <l n="796">por papel, mas que le ruego</l>
+          <l n="797">que alguna prenda me envíe,</l>
+          <l n="798">de amor digo, no de precio,</l>
+          <l n="799">para que saque esta tarde.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="800">Yo os la traeré, y estad cierto</l>
+          <l n="801">que si proseguís la empresa</l>
+          <l n="802">seréis dichoso, y muy presto,</l>
+          <l n="803">porque está desde que os vio</l>
+          <l n="804">Laurencia con mil deseos,</l>
+          <l n="805">con mil ansias, con mil penas,</l>
+          <l n="806">todo por volver a veros.</l>
+          <l n="807">Pero advertid que os lo digo</l>
+          <l n="808">debajo de aquel secreto</l>
+          <l n="809">que debeis a ser quien sois.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="810">Aunque soy mozo, soy cuerdo.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="811">Si de noche vais allá,</l>
+          <l n="812">hacer de suerte os prometo</l>
+          <l n="813">que la podáis ver y hablar.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="814">Con esta sortija puedo</l>
+          <l n="815">sólo serviros agora.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="816">Que no, no; no me gobierno</l>
+          <l part="I" n="817">por interés.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Y agarrola.</l>
+          <l n="818">No trae muy mal los dedos</l>
+          <l n="819">para organista, la dama.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l n="820">Si vais, como ya os espero,</l>
+          <l n="821">llevaos con vos a Mendoza.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="822">Encajome, ya lo entiendo.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="823">Adios, Clara.</l>
+        </sp>
+        <sp who="#Clara">
+          <speaker>Clara</speaker>
+          <l part="F">Adios, señor.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="824">Vamos, marqués, que hoy tenemos</l>
+          <l n="825">Enrique y yo brava causa</l>
+          <l n="826">de dar rejones al viento.</l>
+        </sp>
+        <sp who="#Enrique">
+          <speaker>Enrique</speaker>
+          <l part="I" n="827">¿Tengo mi parte?</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="F">¿Pues no?</l>
+          <l n="828">Y aun Mendoza, a lo que creo.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="829">Más quisiera la sortija.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l part="I" n="830">Envidioso estás.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l part="F">Soy necio.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="831">Un vestido tendrás hoy.</l>
+        </sp>
+        <sp who="#Mendoza">
+          <speaker>Mendoza</speaker>
+          <l n="832">Pues con eso me consuelo.</l>
+        </sp>
+        <sp who="#Filipe">
+          <speaker>Filipe</speaker>
+          <l n="833">Muy aprisa, soy dichoso,</l>
+          <l n="834">perderé si amor es juego,</l>
+          <l n="835">que los que empiezan ganando</l>
+          <l n="836">suelen acabar perdiendo.</l>
+          <l n="837"/>
+          <l n="838"/>
+          <l n="839">Acto segundo</l>
+          <l n="840"/>
+          <l n="841"/>
+          <l n="842">
+            <hi rend="italic">Don Enrique y don Filipe con </hi>
+            <hi rend="italic">livreas</hi>
+            <hi rend="italic"> de las cañas y tocados de plumas</hi>
+          </l>
+          <l n="843">Enrique	Estremada fiesta ha sido.</l>
+          <l n="844">Filipe		Yo no la he visto mejor.</l>
+          <l n="845">Enrique	Cuanto ha querido el valor,</l>
+          <l n="846">la esperanza se ha lucido.					840</l>
+          <l n="847">Filipe	Notable ha estado la plaza.</l>
+          <l n="848">Enrique	No la vio con más decoro</l>
+          <l n="849">cuanto el sol, con brazos de oro,</l>
+          <l n="850">por los dos polos abraza.</l>
+          <l n="851">Filipe	Toda su gala y riqueza					845</l>
+          <l n="852">parece que en ella estaba.</l>
+          <l n="853">Enrique	Mucho dicen que la alaba</l>
+          <l n="854">su Magestad a su Alteza.</l>
+          <l n="855">Filipe	Puede con mucha razón.</l>
+          <l n="856">Enrique	El Marqués pienso que viene.					850</l>
+          <l n="857">
+            <hi rend="italic">El marqués y Mendoza</hi>
+          </l>
+          <l n="858">Marqués	¡Brava fiesta!</l>
+          <l n="859">Mendoza	Fama tiene.</l>
+          <l n="860">Marqués	Toros y cañas lo son.</l>
+          <l n="861">Dadme los brazos mil veces.</l>
+          <l n="862">Filipe		¿Habemos andado bien?</l>
+          <l n="863">Marqués	Ojos de quien quiere bien					855</l>
+          <l n="864">nunca son buenos jueces;</l>
+          <l n="865">mas —por Dios— que para mí,</l>
+          <l n="866">y aun para todos, sospecho,</l>
+          <l n="867">maravillas habéis hecho.</l>
+          <l n="868">Filipe		¡Qué cuchillada que di					860</l>
+          <l n="869">al que sacó de la silla</l>
+          <l n="870">a don Juan!</l>
+          <l n="871">Marqués	No hay que alabar,</l>
+          <l n="872">los dos os podéis alzar</l>
+          <l n="873">con palacio y con la villa.</l>
+          <l n="874">Filipe	¿Qué te parece, Mendoza?					865</l>
+          <l n="875">Mendoza	Que en esta ocasión, señor,</l>
+          <l n="876">como en todas, tu valor</l>
+          <l n="877">el nombre que tienes goza.</l>
+          <l n="878">Igualó la valentía</l>
+          <l n="879">a la fortuna, de modo						870</l>
+          <l n="880">que la tuvistes en todo.</l>
+          <l n="881">¡Brava gala y bizarría!</l>
+          <l n="882">Cuantos os han visto van</l>
+          <l n="883">sin ojos y sin enojos,</l>
+          <l n="884">que les llevastes los ojos,					875</l>
+          <l n="885">y así, sin ojos están.</l>
+          <l n="886">Córdoba y Águila han sido</l>
+          <l n="887">los que hoy la plaza laurea.</l>
+          <l n="888">Filipe		¿Cómo lució la librea?</l>
+          <l n="889">Mendoza	Como su dueño ha lucido,					880</l>
+          <l n="890">y lució tanto su dueño</l>
+          <l n="891">méritos más que ventura,</l>
+          <l n="892">que a más de alguna hermosura</l>
+          <l n="893">quitará esta noche el sueño.</l>
+          <l n="894">Filipe	¿Los toros?</l>
+          <l n="895">Mendoza	Bravos y fieros,				885</l>
+          <l n="896">pero con dos mil razones</l>
+          <l n="897">trujeron toros, leones,</l>
+          <l n="898">para Hércules, caballeros;</l>
+          <l n="899">y el buen Pedro anduvo bien,</l>
+          <l n="900">aunque en calzas desgraciado,				890</l>
+          <l n="901">pues descubrió lo encarnado</l>
+          <l n="902">de los aforros también.</l>
+          <l n="903">No valieron resistencia,</l>
+          <l n="904">porque le asió por detrás,</l>
+          <l n="905">y así le disculpan más						895</l>
+          <l n="906">los que vieron sus ausencias.</l>
+          <l n="907">Las dos manos, se me acuerda,</l>
+          <l n="908">llevó con gracia estremada:</l>
+          <l n="909">en la derecha la espada</l>
+          <l n="910">y las calzas en la izquierda.					900</l>
+          <l n="911">Así discurrió la plaza,</l>
+          <l n="912">volvió el toro la tramoya,</l>
+          <l n="913">sóltolas, y aquí fue Troya,</l>
+          <l n="914">otra vez la plaza en plaza.</l>
+          <l n="915">Enrique	¿No preguntáis al Marqués					905</l>
+          <l n="916">por las güespedas que tuvo?</l>
+          <l n="917">Filipe		Ya vi cuán galán estuvo,</l>
+          <l n="918">puesto que siempre lo es.</l>
+          <l n="919">Dadnos algo a mí y a Enrique</l>
+          <l n="920">de lo que habéis gozado.					910</l>
+          <l n="921">Marqués	¿Tanto me habéis envidiado?</l>
+          <l n="922">Filipe		No sé cómo signifique</l>
+          <l n="923">la que os tuve cuando os vi</l>
+          <l n="924">tan ocupado en Laurencia.</l>
+          <l n="925">Marqués	Los dos tenéis experiencia					915</l>
+          <l n="926">de mi lealtad y de mí,</l>
+          <l n="927">pero aseguraros puedo</l>
+          <l n="928">que es Laurencia un serafín,</l>
+          <l n="929">y que esta tarde hasta el fin</l>
+          <l n="930">tuve a mis antojos miedo,					920</l>
+          <l n="931">que es mujer que darlos puede.</l>
+          <l n="932">¡Lindo ingenio, linda traza!</l>
+          <l n="933">Vi lo bueno de la plaza,</l>
+          <l n="934">y todo lo bueno excede.</l>
+          <l n="935">Habla bien en don Filipe, 					925</l>
+          <l n="936">y pienso que habla tan bien</l>
+          <l n="937">que no hay bien de que más bien</l>
+          <l n="938">su voluntad participe.</l>
+          <l n="939">Debéisle notable amor.</l>
+          <l n="940">Filipe		Harto mayor me le debe, 					930</l>
+          <l n="941">pues en término tan breve</l>
+          <l n="942">me trata con tal rigor.</l>
+          <l n="943">Marqués	Gerarda no sabe tanto,</l>
+          <l n="944">pero es gallarda mujer,</l>
+          <l n="945">y que debe de querer, 						935</l>
+          <l n="946">—si no es que se lo levanto—</l>
+          <l n="947">a Enrique notablemente.</l>
+          <l n="948">Enrique	Para el tiempo que ha costado,</l>
+          <l n="949">yo me doy por bien pagado</l>
+          <l n="950">cuando no quererme intente.					940</l>
+          <l n="951">Marqués	Inquietas están las dos.</l>
+          <l n="952">Seguid la empresa, que creo</l>
+          <l n="953">que tendrá dicha el deseo.</l>
+          <l n="954">Filipe		¿Es burla?</l>
+          <l n="955">Marqués	Es verdad, por Dios.</l>
+          <l n="956">No me han dejado alabar					945</l>
+          <l n="957">a caballero que hiciese</l>
+          <l n="958">suerte, aunque lo mereciese;</l>
+          <l n="959">sólo se había de hablar</l>
+          <l n="960">de vuestras y del talle.</l>
+          <l n="961">Filipe		Hachas tomo, vive Dios,					950</l>
+          <l n="962">con que esta noche los dos</l>
+          <l n="963">hacemos fiesta en su calle.</l>
+          <l n="964">Enrique, ¿no irás conmigo?</l>
+          <l n="965">Enrique	No estoy tan enamorado.</l>
+          <l n="966">Seguiré vuestro cuidado,					955</l>
+          <l n="967">si mi esperanza no sigo,</l>
+          <l n="968">y serviré por lo menos</l>
+          <l n="969">de platicante con vos.</l>
+          <l n="970">Marqués	Yo tengo de ir con los dos.</l>
+          <l n="971">Mendoza, haz poner dos frenos				960</l>
+          <l n="972">a los rocines de caza,</l>
+          <l n="973">porque a lo catarribera</l>
+          <l n="974">veamos esta carrera</l>
+          <l n="975">mejor que las de la plaza,</l>
+          <l n="976">que tú, con Clara ocupado,					965</l>
+          <l n="977">no estuviste muy atento.</l>
+          <l n="978">Mendoza	Socarrón entendimiento,</l>
+          <l n="979">desenvuelto y despejado</l>
+          <l n="980">tiene la tal mantellina</l>
+          <l n="981">y, a ser mujer principal,					970</l>
+          <l n="982">pudiera ser celestial,</l>
+          <l n="983">y quédose en Celestina.</l>
+          <l n="984">Muchas cosas me contó</l>
+          <l n="985">de sus amas, buenas todas,</l>
+          <l n="986">pero aquesto de las bodas					975</l>
+          <l n="987">gran pesadumbre me dio.</l>
+          <l n="988">Filipe	De nada me maravillo,</l>
+          <l n="989">una vez determinado.</l>
+          <l n="990">Mendoza	Díjome que el desposado</l>
+          <l n="991">viene a ser novio o novillo,					980</l>
+          <l n="992">si bien a vuseñoría</l>
+          <l n="993">le estará mucho mejor</l>
+          <l n="994">que delante un gastador</l>
+          <l n="995">le allane la incierta vía.</l>
+          <l n="996">Filipe	No lo nombres, que no puedo				985</l>
+          <l n="997">sufrir la imaginación.</l>
+          <l n="998">Mendoza	Él viene a buena ocasión</l>
+          <l n="999">para que la quite el miedo.</l>
+          <l n="1000">Filipe	No se puede enamorar</l>
+          <l n="1001">y descuidarse de mí.						990</l>
+          <l n="1002">Mendoza	Las hachas están aquí.</l>
+          <l n="1003">Filipe		Hasme dado un gran pesar.</l>
+          <l n="1004">Mendoza	¿Yo qué he dicho?</l>
+          <l n="1005">Enrique	Ahora bien, vamos,</l>
+          <l n="1006">que este novio no vendrá</l>
+          <l n="1007">tan presto.</l>
+          <l n="1008">Filipe	Pena me da.					995</l>
+          <l n="1009">Enrique	Hoy sus bodas celebramos.</l>
+          <l n="1010">Mendoza	Pues ha dado vuelta el coche,</l>
+          <l n="1011">ya está en casa el serafín.</l>
+          <l n="1012">Marqués	Haz que me den el rocín</l>
+          <l n="1013">y un herreruelo de noche.					1000</l>
+          <l n="1014">
+            <hi rend="italic">Entrense</hi>
+            <hi rend="italic"> y salgan Laurencia y Gerarda</hi>
+          </l>
+          <l n="1015">Laurencia	No hay pasión que se anticipe</l>
+          <l n="1016">a todas como el querer.</l>
+          <l n="1017">Gerarda	La vida te ha dado el ver</l>
+          <l n="1018">las gracias de don Filipe.</l>
+          <l n="1019">Laurencia	Cuando yo no le adorara,					1005</l>
+          <l n="1020">si hoy en la plaza le viera,</l>
+          <l n="1021">presumo que no tuviera</l>
+          <l n="1022">voluntad que le negara.</l>
+          <l n="1023">¿Hase visto caballero</l>
+          <l n="1024">de más alma, de más brío?					1010</l>
+          <l n="1025">Justamente, dueño mío,</l>
+          <l n="1026">como a mis ojos te quiero.</l>
+          <l n="1027">Y no es poco encarecerte,</l>
+          <l n="1028">puesto que me has dado enojos,</l>
+          <l n="1029">que quiero bien a mis ojos					1015</l>
+          <l n="1030">después que supieron verte.</l>
+          <l n="1031">No digan que es menester</l>
+          <l n="1032">mucho tiempo para amar,</l>
+          <l n="1033">que el amor que ha de matar</l>
+          <l n="1034">del primer golpe ha de ser.					1020</l>
+          <l n="1035">Amor que comienza ingrato</l>
+          <l n="1036">y el trato le da valor,</l>
+          <l n="1037">no se ha de llamar amor,</l>
+          <l n="1038">sino costumbre del trato.</l>
+          <l n="1039">El que vio, quiso y mató,					1025</l>
+          <l n="1040">ese es amor verdadero,</l>
+          <l n="1041">y más cuando fue el primero,</l>
+          <l n="1042">como el que tengo yo.</l>
+          <l n="1043">Mirar, escribir, hablar</l>
+          <l n="1044">años un galán y dama						1030</l>
+          <l n="1045">es tener amor con ama,</l>
+          <l n="1046">que se le han dado a criar.</l>
+          <l n="1047">Hombre ha de nacer amor,</l>
+          <l n="1048">luego andar y ser galán,</l>
+          <l n="1049">que el amor que no es Adán,					1035</l>
+          <l n="1050">no puede tener valor.</l>
+          <l n="1051">Gerarda	Si tan hombre ha de nacer,</l>
+          <l n="1052">menos tendrá que gozar.</l>
+          <l n="1053">Laurencia	¿Sabes tú cómo han de amar</l>
+          <l n="1054">dos que se llegan a ver?					1040</l>
+          <l n="1055">Gerarda	¿Cómo?</l>
+          <l n="1056">Laurencia	¿A una vela encendida</l>
+          <l n="1057">no llega una muerta?</l>
+          <l n="1058">Gerarda	Sí.</l>
+          <l n="1059">Laurencia	¿No le comunica allí</l>
+          <l n="1060">en un punto luz y vida?</l>
+          <l n="1061">Pues las almas, en partiendo				1045</l>
+          <l n="1062">a encenderse y a querer,</l>
+          <l n="1063">aun apenas se han de ver</l>
+          <l n="1064">cuando han de quedar ardiendo.</l>
+          <l n="1065">Gerarda	¡Qué bien disculpas tu error!</l>
+          <l n="1066">Laurencia	Luego, ¿tú a Enrique no quieres?				1050</l>
+          <l n="1067">Gerarda	Como las demás mujeres,</l>
+          <l n="1068">quiero con principio amor.</l>
+          <l n="1069">No le quiero ver tan hombre</l>
+          <l n="1070">que me espante de miralle.</l>
+          <l n="1071">
+            <hi rend="italic">Clara entre</hi>
+          </l>
+          <l n="1072">Clara		Ya está la plaza en la calle,					1055</l>
+          <l n="1073">si se le debe este nombre.</l>
+          <l n="1074">Laurencia	¿Cómo, Clara?</l>
+          <l n="1075">Clara	¿No sentís</l>
+          <l n="1076">los caballos de las cañas?</l>
+          <l n="1077">Laurencia	¡Bravas finezas!</l>
+          <l n="1078">Gerarda	Estrañas.</l>
+          <l n="1079">Clara		Si a la ventana salís,						1060</l>
+          <l n="1080">veréis los dos matadores</l>
+          <l n="1081">de los toros y las damas,</l>
+          <l n="1082">con hachas que arrojan llamas</l>
+          <l n="1083">de amor, encendiendo amores.</l>
+          <l n="1084">Laurencia	Vamos, Gerarda, al balcón.					1065</l>
+          <l n="1085">¡Ay Dios! ¿Qué gente es aquesta?</l>
+          <l n="1086">Clara		Desconcertose la fiesta:</l>
+          <l n="1087">tu padre y Leonardo son.</l>
+          <l n="1088">
+            <hi rend="italic">Ludovico, Leonardo y Antonio</hi>
+          </l>
+          <l n="1089">Leonardo	Por tu casa preguntaba,</l>
+          <l n="1090">que aun apenas sé la calle.					1070</l>
+          <l n="1091">Ludovico	Luego que a la puerta os vi</l>
+          <l n="1092">en la persona y el traje</l>
+          <l n="1093">conocí que erades vos,</l>
+          <l n="1094">sin acabar de apearme.</l>
+          <l n="1095">Leonardo	(Siguiendo vine a Laurencia,					1075</l>
+          <l n="1096">no pude escusar de hablarle.</l>
+          <l n="1097">Antonio	Vos os disculpaste bien.</l>
+          <l n="1098">Leonardo	Ya estoy en el mar.</l>
+          <l n="1099">Antonio	Pasadle.)</l>
+          <l n="1100">Ludovico	Mis hijas están aquí,</l>
+          <l n="1101">licencia doy que os abrazen.					1080</l>
+          <l n="1102">El señor Leonardo es,</l>
+          <l n="1103">ya no hay de que te recates.</l>
+          <l n="1104">Leonardo	Dadme, señora, las manos.</l>
+          <l n="1105">Antonio	Y a mí, por su amigo, dadme</l>
+          <l n="1106">licencia de que os las bese.					1085</l>
+          <l n="1107">Laurencia	Vuesa merced no se espante</l>
+          <l n="1108">de que su presta venida</l>
+          <l n="1109">me turbe y vergüenza cause.</l>
+          <l n="1110">(Nunca, Gerarda, viniera;</l>
+          <l n="1111">temblando estoy.)</l>
+          <l n="1112">Leonardo	Escusarme					1090</l>
+          <l n="1113">quisiera de daros pena.</l>
+          <l n="1114">Laurencia	(Ay Dios, ya no hay mal que aguarde.</l>
+          <l n="1115">Sin duda será mi novio,</l>
+          <l n="1116">que ha dicho dos necedades.)</l>
+          <l n="1117">Ludovico	Sillas, Clara.</l>
+          <l n="1118">Clara	(¡No le hundiera				1095</l>
+          <l n="1119">en la calle de Jetafe</l>
+          <l n="1120">algún lodo!)</l>
+          <l n="1121">Ludovico	¡Hola, criados!</l>
+          <l n="1122">Laurencia	Señor, no está en casa nadie</l>
+          <l n="1123">que es día de toros.</l>
+          <l n="1124">Ludovico	Pues ¿hasta cuándo han de olgarse?				1100</l>
+          <l n="1125">¿Ya no son los toros muertos?</l>
+          <l n="1126">¿Qué puede haber que les falte</l>
+          <l n="1127">si no es hallarse en su entierro?</l>
+          <l n="1128">
+            <hi rend="italic">Todos se sienten</hi>
+          </l>
+          <l n="1129">Leonardo	(¡Que venga un hombre a casarse,</l>
+          <l n="1130">Antonio, en día de toros!					1105</l>
+          <l n="1131">Antonio	Bravos celos os combaten.</l>
+          <l n="1132">¡Por Dios, que la novia es bella!</l>
+          <l n="1133">Leonardo	Confieso que tiene partes</l>
+          <l n="1134">para un título, y las mías</l>
+          <l n="1135">no las merecen tan grandes.)					1110</l>
+          <l n="1136">
+            <hi rend="italic">Suenan cascabeles de carrera dentro</hi>
+          </l>
+          <l n="1137">[Dentro]	¡Aparta, aparta, aparta!</l>
+          <l n="1138">Marqués	Más que en la tierra, en el aire</l>
+          <l n="1139">pone los pies Pensamiento.</l>
+          <l n="1140">Mendoza	¿Quién ha de haber que le alcance?</l>
+          <l n="1141">Laurencia	(El Marqués y Mendozilla					1115</l>
+          <l n="1142">hablan, Gerarda, en la calle.)</l>
+          <l n="1143">Leonardo	(Qué inquietas que están las dos.)</l>
+          <l n="1144">Antonio	Mujeres, no hay que espantarse.</l>
+          <l n="1145">Leonardo	(Más quisieran a las ventanas</l>
+          <l n="1146">que al novio.)</l>
+          <l n="1147">Laurencia	(¡Que éste llegase				1120</l>
+          <l n="1148">a quitarnos este bien!</l>
+          <l n="1149">Gerarda	Paciencia.</l>
+          <l n="1150">Laurencia	Estoy por matarme.)</l>
+          <l n="1151">Dentro	¡Aparta, aparta, aparta!</l>
+          <l n="1152">Ludovico	¡Plega el cielo que te aparte</l>
+          <l n="1153">de esta calle treinta leguas!					1125</l>
+          <l n="1154">Leonardo	No hayáis miedo que se canse,</l>
+          <l n="1155">si él tiene por quien correr,</l>
+          <l n="1156">hasta que el rocín le hable,</l>
+          <l n="1157">como su burra a Balán.</l>
+          <l n="1158">Gerarda	(¡Bravo novio!</l>
+          <l n="1159">Laurencia	Dios le amanse.)				1130</l>
+          <l n="1160">Gerarda	¿Burra aquí?</l>
+          <l n="1161">Laurencia	¿De qué te espantas,</l>
+          <l n="1162">si hay caballos en la calle?</l>
+          <l n="1163">Gerarda	Discreto debe de ser.</l>
+          <l n="1164">Laurencia	Mandaríanle sus padres</l>
+          <l n="1165">que lo tuviese secreto						1135</l>
+          <l n="1166">por que no se lo quitasen.</l>
+          <l n="1167">Gerarda	¿No escuchaste a don Filipe?</l>
+          <l n="1168">Laurencia	Inquieta estoy de escuchalle.</l>
+          <l n="1169">Esta no es silla, que es potro</l>
+          <l n="1170">donde viene a tormentarme					1140</l>
+          <l n="1171">este verdugo cruel.</l>
+          <l n="1172">Leonardo	(¿Cascabeles y pretales</l>
+          <l n="1173">a la puerta de una novia?</l>
+          <l n="1174">Antonio, malas señales.</l>
+          <l n="1175">Si antes de casarme corren,					1145</l>
+          <l n="1176">¿qué harán después que me case?</l>
+          <l n="1177">Pero, pues «aparta» dicen,</l>
+          <l n="1178">no será yerro apartarme.</l>
+          <l n="1179">Antonio	Reliquias son de las fiestas.</l>
+          <l n="1180">Nunca en la corte repares					1150</l>
+          <l n="1181">más que en seguir como todos</l>
+          <l n="1182">vaiedad y novedades.)</l>
+          <l n="1183">Gerarda	(Habla con él, no seas necia.</l>
+          <l n="1184">Laurencia	¿Qué cordura habrá que baste,</l>
+          <l n="1185">si pienso que está diciendo					1155</l>
+          <l n="1186">don Filipe: «no le hables»?</l>
+          <l n="1187">Más obligación le corre</l>
+          <l n="1188">a él, que no a mí de hablarme.)</l>
+          <l n="1189">
+            <hi rend="italic">Mendoza entre</hi>
+          </l>
+          <l n="1190">Mendoza	Perdonad que sin licencia</l>
+          <l n="1191">a entrar, señores, me alargue;					1160</l>
+          <l n="1192">la necesidad me obliga.</l>
+          <l n="1193">Ludovico	Mira qué quiere ese paje.</l>
+          <l n="1194">Mendoza	Dos caballeros que han sido</l>
+          <l n="1195">de las cañas de esta tarde</l>
+          <l n="1196">os piden un jarro de agua.					1165</l>
+          <l n="1197">Laurencia	Y aun habrá donde descansen,</l>
+          <l n="1198">si quieren entrar.</l>
+          <l n="1199">Ludovico	No habrá.</l>
+          <l n="1200">Diles que adelante pasen;</l>
+          <l n="1201">y tú, Clara, dales agua.</l>
+          <l n="1202">Clara		Dame, señora, las llaves,					1170</l>
+          <l n="1203">sacaré del camarín</l>
+          <l n="1204">algún búcaro.</l>
+          <l n="1205">Laurencia	Que saques</l>
+          <l n="1206">el mejor te doy licencia,</l>
+          <l n="1207">por ser para gente grave,</l>
+          <l n="1208">y lleva aquella toalla						1175</l>
+          <l n="1209">que tiene puntas de Flandes.</l>
+          <l n="1210">Clara		Venga, hidalgo.</l>
+          <l n="1211">Mendoza	(Clara, escucha:</l>
+          <l n="1212">los dos ginetes amantes</l>
+          <l n="1213">dicen que quieren venir</l>
+          <l n="1214">a hablar esta noche y darse					1180</l>
+          <l n="1215">un verde con dos azules.</l>
+          <l n="1216">Clara		Hermano, pues que no salen</l>
+          <l n="1217">a la reja cuando corren,</l>
+          <l n="1218">ya debieran acordarse</l>
+          <l n="1219">de aquel esperado novio.					1185</l>
+          <l n="1220">Mendoza	¿Vino?</l>
+          <l n="1221">Clara		Vino mal y tarde.</l>
+          <l n="1222">Mendoza	¿Es aquel descolorido?</l>
+          <l n="1223">Clara		Él mismo.</l>
+          <l n="1224">Mendoza	Mucho agrio trae</l>
+          <l n="1225">para novio; aquel color</l>
+          <l n="1226">no muestra dulce la sangre.					1190</l>
+          <l n="1227">Viven los cielos, que tiene</l>
+          <l n="1228">talle el vellacón de darte</l>
+          <l n="1229">en casándose mil coces.</l>
+          <l n="1230">Clara		Nunca los diablos le casen.</l>
+          <l n="1231">Mendoza	Güebo de avestruz parece.					1195</l>
+          <l n="1232">Di a tu ama que se guarde</l>
+          <l n="1233">de mojicones en celos</l>
+          <l n="1234">y de lisonjas en paces.)</l>
+          <l n="1235">Ludovico	¿Qué conversación es esa,</l>
+          <l n="1236">Clarilla, con ese paje?						1200</l>
+          <l n="1237">Clara		Pídeme agua de canela</l>
+          <l n="1238">y de jazmines.</l>
+          <l n="1239">Ludovico	Pues dale</l>
+          <l n="1240">agua de aquel canelón</l>
+          <l n="1241">que de los tejados cae</l>
+          <l n="1242">entanto que yo a Valencia					1205</l>
+          <l n="1243">por los jazmines despache.</l>
+          <l n="1244">Mendoza	(¡Buen suegro lleva el buen yerno!</l>
+          <l n="1245">Caso, vive Dios, notable,</l>
+          <l n="1246">que de un braguero como este</l>
+          <l n="1247">saliese el rostro de un ángel.)					1210</l>
+          <l n="1248">Leonardo	(¿Agua y búcaro y toalla,</l>
+          <l n="1249">canela, jazmines, paje?</l>
+          <l n="1250">O éstos hablan en latín,</l>
+          <l n="1251">o yo no entiendo romance.</l>
+          <l n="1252">Antonio	Callad, que es trato de corte.					1215</l>
+          <l n="1253">Leonardo	Pues, Antonio, en ella trate</l>
+          <l n="1254">el que hiciere a España puente</l>
+          <l n="1255">por donde la plata pase</l>
+          <l n="1256">que viniere de las Indias.)</l>
+          <l n="1257">Ludovico	¿Cuándo, Leonardo, llegastes					1220</l>
+          <l n="1258">a Madrid?</l>
+          <l n="1259">Leonardo	Ayer llegué,</l>
+          <l n="1260">cansado, quise alojarme,</l>
+          <l n="1261">y hoy me llevaron a ver</l>
+          <l n="1262">las fiestas.</l>
+          <l n="1263">Ludovico	Fueron notables</l>
+          <l n="1264">según me han dicho.</l>
+          <l n="1265">Leonardo	Famosas,				1225</l>
+          <l n="1266">de mil títulos y grandes.</l>
+          <l n="1267">Bien anduvo el duque de Alba.</l>
+          <l n="1268">Laurencia	De tan altos cielos nace</l>
+          <l n="1269">para ser sol de su casa.</l>
+          <l n="1270">Leonardo	Y con suertes admirables					1230</l>
+          <l n="1271">el gran conde de Melgar,</l>
+          <l n="1272">sucesor del almirante.</l>
+          <l n="1273">Pastrana es príncipe insigne.</l>
+          <l n="1274">Ludovico	Dicen que a Flandes se parte.</l>
+          <l n="1275">Leonardo	Volverase en Marte Adonis.					1235</l>
+          <l n="1276">Laurencia	Bien pueden sus generales</l>
+          <l n="1277">hacer lugar al mayor.</l>
+          <l n="1278">Antonio	¡Qué bien honró los Guzmanes</l>
+          <l n="1279">el del Algaba!</l>
+          <l n="1280">Leonardo	No hay hombre</l>
+          <l n="1281">que con el rejón le iguale.					1240</l>
+          <l n="1282">Salió un toro y la cerviz</l>
+          <l n="1283">le pasó de parte a parte,</l>
+          <l n="1284">dobló los pies y el hocico,</l>
+          <l n="1285">sangre bebe y tierra pace.</l>
+          <l n="1286">Laurencia	(¡Qué conversación de novio!)				1245</l>
+          <l n="1287">Leonardo	Olgárame que esta tarde</l>
+          <l n="1288">hubiera visto mi esposa</l>
+          <l n="1289">tales fiestas, suertes tales.</l>
+          <l n="1290">Laurencia	¿Andaba allá don Filipe</l>
+          <l n="1291">de Córdoba?</l>
+          <l n="1292">Leonardo	Fue el esmalte					1250</l>
+          <l n="1293">del oro de aquella fiesta,</l>
+          <l n="1294">fue envidia de los galanes,</l>
+          <l n="1295">fue de las damas el blanco,</l>
+          <l n="1296">y fue español Durandarte.</l>
+          <l n="1297">Laurencia	(¡Qué discreto que anda el novio!				1255</l>
+          <l n="1298">No me ha dicho que me agrade</l>
+          <l n="1299">cosa sino esta.)</l>
+          <l n="1300">Gerarda	¿Y anduvo</l>
+          <l n="1301">en estas fiestas reales</l>
+          <l n="1302">don Enrique de Guzmán,</l>
+          <l n="1303">con aquel valor que sabe					1260</l>
+          <l n="1304">de su gentileza el mundo</l>
+          <l n="1305">y de sus heroicas partes?</l>
+          <l n="1306">Leonardo	Él y don Filipe hicieron</l>
+          <l n="1307">cosas dignas de sus talles</l>
+          <l n="1308">y de su valor y fama.						1265</l>
+          <l n="1309">Gerarda	¡Quién lo viera!</l>
+          <l n="1310">Ludovico	Si se hacen</l>
+          <l n="1311">otras fiestas, yo os convido,</l>
+          <l n="1312">y porque parece tarde,</l>
+          <l n="1313">hijo, adiós, hasta mañana.</l>
+          <l n="1314">Leonardo	El cielo, señora, os guarde.					1270</l>
+          <l n="1315">Laurencia	Y os dé lo que deseáis.</l>
+          <l n="1316">Ludovico	Ya no hay para qué te alabe</l>
+          <l n="1317">a Leonardo, pues le has visto.</l>
+          <l n="1318">Laurencia	Solicita que descanse</l>
+          <l n="1319">Gerarda, señor.</l>
+          <l n="1320">Ludovico	Adiós.						1275</l>
+          <l n="1321">Clara		Dice, Mendoza, que bajes</l>
+          <l n="1322">a la puerta, si es posible,</l>
+          <l n="1323">porque van a desnudarse</l>
+          <l n="1324">y quieren volver a verte.</l>
+          <l n="1325">Laurencia	Clara, venga, aunque me mate,				1280</l>
+          <l n="1326">que no hay, sin don Filipe,</l>
+          <l n="1327">ni vida ni honor que guarde.</l>
+          <l n="1328">
+            <hi rend="italic">Entre Feliciana y Bernardo</hi>
+          </l>
+          <l n="1329">Bernardo	¡Qué damas tan compuestas!</l>
+          <l n="1330">¡Qué aposentos tan bien aderezados!</l>
+          <l n="1331">Feliciana	Hoy para mí no hay fiestas					1285</l>
+          <l n="1332">sino pleitos, desdichas y cuidados.</l>
+          <l n="1333">Bernardo	¡Qué bizarros galanes</l>
+          <l n="1334">Silvas, Enriques, Laras y Guzmanes!</l>
+          <l n="1335">Feliciana	¡Qué fortunas crüeles,</l>
+          <l n="1336">ansias, fatigas, dudas y traiciones!				1290</l>
+          <l n="1337">Bernardo	¡Qué heroicos Pimenteles,</l>
+          <l n="1338">Mendozas, Leivas, Córdobas, Girones,</l>
+          <l n="1339">Ávilas y Toledos!</l>
+          <l n="1340">Feliciana	¡Qué engaños, qué recelos y qué miedos!</l>
+          <l n="1341">Bernardo	¡Cuál estaba y qué grave					1295</l>
+          <l n="1342">el rey de la española monarquía!</l>
+          <l n="1343">Feliciana	¡Qué veneno süave</l>
+          <l n="1344">Leonardo fiero para mí tenía,</l>
+          <l n="1345">mirando unas ventanas</l>
+          <l n="1346">de estas bellas sirenas cortesanas!				1300</l>
+          <l n="1347">Bernardo	Yo vi la infanta hermosa,</l>
+          <l n="1348">con dos soles en nieve guarnecidos.</l>
+          <l n="1349">Feliciana	Yo vi la temerosa</l>
+          <l n="1350">muerte que amenazava mis oídos.</l>
+          <l n="1351">Bernardo	¡Qué toros tan valientes!					1305</l>
+          <l n="1352">Feliciana	¡Qué amor, qué desengaños, qué accidentes!</l>
+          <l n="1353">Las damas de Leonardo</l>
+          <l n="1354">son las que viven en aquesta casa.</l>
+          <l n="1355">Siguiéndolos, Bernardo,</l>
+          <l n="1356">con la luz de la llama que me abrasa,				1310</l>
+          <l n="1357">desesperada vengo</l>
+          <l n="1358">por ver si en ella algún remedio tengo.</l>
+          <l n="1359">Bernardo	Hablarlas será en vano.</l>
+          <l n="1360">Feliciana	Amor me enseña industrias y piadoso</l>
+          <l n="1361">me quiere dar la mano.					1315</l>
+          <l n="1362">Saca esa daga tú, y el riguroso</l>
+          <l n="1363">acero ponme al pecho,</l>
+          <l n="1364">a tantas pruebas de tormentos hecho;</l>
+          <l n="1365">di que quieres matarme...</l>
+          <l n="1366">¡Y ojalá que quisieras!</l>
+          <l n="1367">Bernardo	¿A qué efeto?				1320</l>
+          <l n="1368">Feliciana	Quiero a voces quejarme</l>
+          <l n="1369">por que salgan a verme; tú, Bernardo,</l>
+          <l n="1370">huirás a la posada</l>
+          <l n="1371">donde me aguarde o muerta o remediada.</l>
+          <l n="1372">Bernardo	Pues ¿qué es lo que pretendes?				1325</l>
+          <l n="1373">Feliciana	Decir que aquí Leonardo me mataba.</l>
+          <l n="1374">Bernardo	Mucho tu honor ofendes.</l>
+          <l n="1375">Feliciana	Antes presto verás que no se alaba</l>
+          <l n="1376">de su traición y engaño,</l>
+          <l n="1377">si aquí de la verdad los desengaño.				1330</l>
+          <l n="1378">Bernardo	Saco la daga y digo,</l>
+          <l n="1379">—figura que ha ensayado tu tragedia—:</l>
+          <l n="1380">«¿Tú, infame? ¿Tú conmigo?</l>
+          <l n="1381">¿Piensas que de esa suerte se remedia</l>
+          <l n="1382">tu engaño?»</l>
+          <l n="1383">Feliciana	¡Oh, cruel Leonardo!				1335</l>
+          <l n="1384">Bernardo	Matarte tengo.</l>
+          <l n="1385">Feliciana	¡Ay, Dios! (Huye, Bernardo.</l>
+          <l n="1386">Bernardo	En la posada espero.)</l>
+          <l n="1387">Feliciana	No hay justicia en la corte, no hay justicia</l>
+          <l n="1388">contra un bárbaro fiero</l>
+          <l n="1389">pues defiéndame Dios de tu malicia.				1340</l>
+          <l n="1390">¡Piedad, piedad, señores!</l>
+          <l n="1391">
+            <hi rend="italic">Ludovico, Laurencia, Gerarda</hi>
+          </l>
+          <l n="1392">Ludovico	¿Qué es esto?</l>
+          <l n="1393">Feliciana	Una mujer y mil traidores.</l>
+          <l n="1394">Laurencia	Aquí no hay nadie.</l>
+          <l n="1395">Feliciana	Huieron,</l>
+          <l n="1396">y viendo adonde entraba me dejaron.</l>
+          <l n="1397">Laurencia	Sin duda pretendieron						1345</l>
+          <l n="1398">robarla.</l>
+          <l n="1399">Feliciana	Antes de agora me robaron.</l>
+          <l n="1400">Gerarda	¿Estáis acaso herida?</l>
+          <l n="1401">Feliciana	Con más peligro estoy: no tengo vida.</l>
+          <l n="1402">Ludovico	Mujer que sóla sale</l>
+          <l n="1403">cualquier daño merece.</l>
+          <l n="1404">Feliciana	Si no fuera				1350</l>
+          <l n="1405">que por disculpa vale</l>
+          <l n="1406">sóla, desesperada y forastera.</l>
+          <l n="1407">Laurencia	¿De qué os ha procedido</l>
+          <l n="1408">tan gran desdicha?</l>
+          <l n="1409">Feliciana	De esta casa ha sido.</l>
+          <l n="1410">Ludovico	¿Cómo de aquesta casa?					1355</l>
+          <l n="1411">Feliciana	Oídme por mujer atentamente,</l>
+          <l n="1412">y el fuego que me abrasa</l>
+          <l n="1413">en quejas tristes respirar intente</l>
+          <l n="1414">del tormento que paso.</l>
+          <l n="1415">Ludovico	Todos lo estamos.</l>
+          <l n="1416">Laurencia	Lastimoso caso.				1360</l>
+          <l n="1417">Feliciana	Entre dos soberbios montes,</l>
+          <l n="1418">a quien con grillos estrechos</l>
+          <l n="1419">calza de cristal el Tajo,</l>
+          <l n="1420">yace la imperial Toledo,</l>
+          <l n="1421">corona ilustre de España,					1365</l>
+          <l n="1422">donde, por gusto del cielo,</l>
+          <l n="1423">tuve de padres honrados</l>
+          <l n="1424">desdichado nacimiento.</l>
+          <l n="1425">Cerca de mi propia casa</l>
+          <l n="1426">vivió un hidalgo mancebo					1370</l>
+          <l n="1427">años que miró mis ojos,</l>
+          <l n="1428">que ya desengaños fueron.</l>
+          <l n="1429">Dile el alma por la suya,</l>
+          <l n="1430">no fue con ventaja el trueco</l>
+          <l n="1431">porque aunque se truequen almas				1375</l>
+          <l n="1432">puede estarse el honor quedo.</l>
+          <l n="1433">No dije bien, pues no estuvo</l>
+          <l n="1434">que tales fueron sus ruegos,</l>
+          <l n="1435">sus lágrimas, sus mentiras</l>
+          <l n="1436">que a perderle me movieron,					1380</l>
+          <l n="1437">no con livandiad notable,</l>
+          <l n="1438">sino haciendo juramento</l>
+          <l n="1439">en la presencia de quien</l>
+          <l n="1440">no hay pensamiento encubierto.</l>
+          <l n="1441">Sobre tan altas palabras					1385</l>
+          <l n="1442">y con testigo, que tiemblo</l>
+          <l n="1443">de imaginar como tuvo</l>
+          <l n="1444">de quebrarle atrevimiento.</l>
+          <l n="1445">Fue mi honor a su engaño,</l>
+          <l n="1446">mi valor a su deseo,						1390</l>
+          <l n="1447">toda mi vida a su amparo,</l>
+          <l n="1448">todo mi amor a su pecho.</l>
+          <l n="1449">Dióme este engaño una hija</l>
+          <l n="1450">que hoy tengo viva, aunque tengo</l>
+          <l n="1451">más crédito en el juez						1395</l>
+          <l n="1452">a quien de mi agravio apelo.</l>
+          <l n="1453">Pasaron tiempos que paso</l>
+          <l n="1454">amando, mas presto el tiempo</l>
+          <l n="1455">las horas hurta a las noches,</l>
+          <l n="1456">los días a los deseos,						1400</l>
+          <l n="1457">y sin haberle ofendido</l>
+          <l n="1458">ni con sólo el pensamiento,</l>
+          <l n="1459">sin asomarse a mis ojos</l>
+          <l n="1460">cosa que le diese celos,</l>
+          <l n="1461">porque a mí me parecía					1405</l>
+          <l n="1462">que cuantos hombres nacieron</l>
+          <l n="1463">se cifraban todos juntos</l>
+          <l n="1464">en aquel mi amor primero.</l>
+          <l n="1465">Dio por su gusto en casarse,</l>
+          <l n="1466">como lo intenta el efeto,					1410</l>
+          <l n="1467">sabiendo que no es posible</l>
+          <l n="1468">por ley del mundo y del cielo.</l>
+          <l n="1469">No sé con cuál de las dos,</l>
+          <l n="1470">que en esto fuera su intento</l>
+          <l n="1471">justo, a no haber un agravio					1415</l>
+          <l n="1472">dan injusto de por medio.</l>
+          <l n="1473">Partió a Madrid y seguile</l>
+          <l n="1474">con amigo de que luego</l>
+          <l n="1475">se impida su pretensión</l>
+          <l n="1476">favorecida de un deudo					1420</l>
+          <l n="1477">que el pleito me aconsejaba,</l>
+          <l n="1478">aunque ponelle no pienso,</l>
+          <l n="1479">porque el favor son sus manos</l>
+          <l n="1480">y sus pies son los dineros.</l>
+          <l n="1481">Tendré quien me ayude mal					1425</l>
+          <l n="1482">con pluma y lengua, sin ellos,</l>
+          <l n="1483">y un inorante letrado</l>
+          <l n="1484">es puñalada de un pleito.</l>
+          <l n="1485">En aquestas confesiones</l>
+          <l n="1486">vuestra casa me dijeron;					1430</l>
+          <l n="1487">vine a ver si aquí se hallaba:</l>
+          <l n="1488">no me engañó el pensamiento.</l>
+          <l n="1489">Salió de aquí, llegué a él</l>
+          <l n="1490">con lágrimas que movieron</l>
+          <l n="1491">los linteles de esta puerta					1435</l>
+          <l n="1492">pero no su ingrato pecho.</l>
+          <l n="1493">Echeme a sus pies tiranos</l>
+          <l n="1494">y dije: «de aquesto suelo</l>
+          <l n="1495">no pienso, Leonardo mío,</l>
+          <l n="1496">―alma y vida de este cuerpo—				1440</l>
+          <l n="1497">levantarme, hasta que digas</l>
+          <l n="1498">que eres mi marido, y luego</l>
+          <l n="1499">me la quita, si es tu gusto.</l>
+          <l n="1500">¡Ay Dios! Cual áspid soberbio</l>
+          <l n="1501">así se volvió a la planta					1445</l>
+          <l n="1502">que le pisó sin saberlo.</l>
+          <l n="1503">Sacó la daga, di voces,</l>
+          <l n="1504">entreme aquí, fuese huyendo;</l>
+          <l n="1505">nobles sois, honra tenéis:</l>
+          <l n="1506">este es mi triste suceso.					1450</l>
+          <l n="1507">
+            <hi rend="italic">Váyase</hi>
+          </l>
+          <l n="1508">Ludovico	Con mucha razón se queja,</l>
+          <l n="1509">y Leonardo ha procedido</l>
+          <l n="1510">como mancebo atrevido.</l>
+          <l n="1511">Laurencia	¿Cómo es posible que deja</l>
+          <l n="1512">de acudir un hombre honrado				1455</l>
+          <l n="1513">a tales obligaciones?</l>
+          <l n="1514">Gerarda	Siendo ciertas sus razones,</l>
+          <l n="1515">está Leonardo ocupado.</l>
+          <l n="1516">Ludovico	¿Quién duda que lo serán?</l>
+          <l n="1517">Ella va desesperada.						1460</l>
+          <l n="1518">Laurencia	¿Qué ha de hacer, desengañada</l>
+          <l n="1519">de que este pago le dan?</l>
+          <l n="1520">Yo a lo menos no seré</l>
+          <l n="1521">mujer de Leonardo ya.</l>
+          <l n="1522">Ludovico	Claro está.</l>
+          <l n="1523">Laurencia	Pues claro está.					1465</l>
+          <l n="1524">Ludovico	Ni yo, Laurencia, querré.</l>
+          <l n="1525">Hija y juramento guarda,</l>
+          <l n="1526">aunque estas razones son</l>
+          <l n="1527">de primera información,</l>
+          <l n="1528">y el juez discreto aguarda					1470</l>
+          <l n="1529">a oír la parte, no quiero</l>
+          <l n="1530">más parte que esta mujer,</l>
+          <l n="1531">porque yo no he de tener</l>
+          <l n="1532">yerno con tal mal agüero.</l>
+          <l n="1533">Recogeos, que ya es hora,					1475</l>
+          <l n="1534">y no haya más casamiento.</l>
+          <l n="1535">
+            <hi rend="italic">Vase</hi>
+          </l>
+          <l n="1536">Laurencia	Dadme albricias, pensamiento;</l>
+          <l n="1537">hallé mi remedio agora.</l>
+          <l n="1538">Con el fin de mi desdicha</l>
+          <l n="1539">a don Filipe os envío; 						1480</l>
+          <l n="1540">nunca, pensamiento mio,</l>
+          <l n="1541">pensaste en tanta dicha.</l>
+          <l n="1542">Desbarató mi ventura</l>
+          <l n="1543">la tempestad que venía</l>
+          <l n="1544">sobre mí, cuando no había					1485</l>
+          <l n="1545">cosa en el alma segura.</l>
+          <l n="1546">¿Hay tal dicha? Loca estoy,</l>
+          <l n="1547">mas no debo de estar loca</l>
+          <l n="1548">pues que con muestra tan poca</l>
+          <l n="1549">de mi bien indicios doy.					1490</l>
+          <l n="1550">¿Qué queréis, alma, de mí?</l>
+          <l n="1551">¡Oh quién otra alma tuviera</l>
+          <l n="1552">que por albricias os diera!</l>
+          <l n="1553">Ni aún os tengo que ya os vi.</l>
+          <l n="1554">Vamos, Gerarda, a saber					1495</l>
+          <l n="1555">si ha de hablar aquel mi dueño,</l>
+          <l n="1556">que ya no hay tratar de sueño</l>
+          <l n="1557">sino de sólo querer.</l>
+          <l n="1558">Enrique también vendrá:</l>
+          <l n="1559">alégrate, pues es justo.					1500</l>
+          <l n="1560">Gerarda	Tanto lo estoy de tu gusto,</l>
+          <l n="1561">como del que a mí me da.</l>
+          <l n="1562">Laurencia	No quieras tan tibiamente,</l>
+          <l n="1563">que una principal mujer</l>
+          <l n="1564">o en su vida ha de querer					1505</l>
+          <l n="1565">o ha de querer locamente.</l>
+          <l n="1566">
+            <hi rend="italic">Entren en hábito de noche el Marqués y don Filipe y don Enrique</hi>
+          </l>
+          <l n="1567">Enrique	¿Quién fue avisar?</l>
+          <l n="1568">Filipe		Mendoza.</l>
+          <l n="1569">A saber cuando abrirán.</l>
+          <l n="1570">Marqués	Notable cuidado os dan.</l>
+          <l n="1571">Filipe		Quien se descuida no goza.					1510</l>
+          <l n="1572">Enrique	No se quitará de allí</l>
+          <l n="1573">hasta ver si abren la puerta.</l>
+          <l n="1574">Filipe		Si ella está una vez abierta,</l>
+          <l n="1575">yo me quejaré de mí.</l>
+          <l n="1576">Enrique	¡Qué libre vive el Marqués!				1515</l>
+          <l n="1577">No hay mujer a quien se aplique.</l>
+          <l n="1578">Marqués	Sólo una vez quise, Enrique,</l>
+          <l n="1579">no he querido más después,</l>
+          <l n="1580">ni hasta casarme estoy cierto</l>
+          <l n="1581">de no volver a querer.						1520</l>
+          <l n="1582">Filipe		¡Bravo amor!</l>
+          <l n="1583">Marqués	Ansí ha de ser,</l>
+          <l n="1584">en siendo amor descubierto.</l>
+          <l n="1585">Enrique	¿Que aun dura la voluntad?</l>
+          <l n="1586">Marqués	Mientras que Mendoza viene,</l>
+          <l n="1587">oíd la causa que tiene.						1525</l>
+          <l n="1588">Filipe		Ya estoy atento.</l>
+          <l n="1589">Marqués	Escuchad.</l>
+          <l n="1590">Yacen al pie de Guadarrama helado</l>
+          <l n="1591">las Navas del Marqués —este es su nombre—,</l>
+          <l n="1592">donde el florido mayo viste un prado</l>
+          <l n="1593">que no hay escarcha o nieve que le asombre;			1530</l>
+          <l n="1594">mirale enfrente un monte levantado</l>
+          <l n="1595">sobre sí mismo, donde apenas hombre</l>
+          <l n="1596">atrevido pisó su centro escuro,</l>
+          <l n="1597">así le defendió silvestre muro.</l>
+          <l n="1598">Corren arroyos que, formando escalas			1535</l>
+          <l n="1599">por las pintadas peñas, le corona,</l>
+          <l n="1600">bajando de la cumbre, cuyas alas</l>
+          <l n="1601">tal vez rigidos hielos aprisionan.</l>
+          <l n="1602">Aquí jamás amor y fuego exhalas,</l>
+          <l n="1603">que por helado sitio le perdonan				1540</l>
+          <l n="1604">las llamas de tus rayos, que es sagrado</l>
+          <l n="1605">a deidades de nieve dedicado.</l>
+          <l n="1606">Y en esta parte tan helada y fría,</l>
+          <l n="1607">vi de Jacinta yo los ojos bellos,</l>
+          <l n="1608">parte del alma y de la sangre mía,				1545</l>
+          <l n="1609">y aquí supe morir y arder por ellos.</l>
+          <l n="1610">Viví, mientra la edad lo permitía,</l>
+          <l n="1611">sin sentir la presión de sus cabellos;</l>
+          <l n="1612">mas, como en pocos años hay engaños,</l>
+          <l n="1613">crecieron los deseos con los años.				1550</l>
+          <l n="1614">Salíamos al prado, y de sus flores</l>
+          <l n="1615">ceñí tal vez sus cándidos marfiles,</l>
+          <l n="1616">donde la variedad de los colores</l>
+          <l n="1617">en el cielo de amor fueron pensiles.</l>
+          <l n="1618">Tal vez también los pájaros cantores,				1555</l>
+          <l n="1619">ya con nudosa red, ya con sutiles</l>
+          <l n="1620">lazos le presenté; tal la pintada</l>
+          <l n="1621">pérdiz del plomo ardiente derribada.</l>
+          <l n="1622">Gustaba alguna vez de que en la silla</l>
+          <l n="1623">del fogoso bridón diese escarceos,				1560</l>
+          <l n="1624">estampando en la arena de la orilla</l>
+          <l n="1625">sus pies, como en sus ojos mis deseos.</l>
+          <l n="1626">Tal vez, corriendo toros en la villa,</l>
+          <l n="1627">ganaba aplausos para dar trofeos,</l>
+          <l n="1628">cortando las cervices arrugadas				1565</l>
+          <l n="1629">más de los años que del sol curadas.</l>
+          <l n="1630">Pero en aquesta vida generosa,</l>
+          <l n="1631">como no era mi igual para ser mía,</l>
+          <l n="1632">la casaron sus padres y fue esposa</l>
+          <l n="1633">de quien por ser su igual la merecía.				1570</l>
+          <l n="1634">Entonces, con el alma lastimosa</l>
+          <l n="1635">que las heladas nieves encendía,</l>
+          <l n="1636">hice locuras y llamé la muerte…</l>
+          <l n="1637">pero jamás en quien la llama advierte.</l>
+          <l n="1638">
+            <hi rend="italic">Mendoza entre</hi>
+            <hi rend="italic">	</hi>
+          </l>
+          <l n="1639">Mendoza	Bien me podéis dar mil palos				1575</l>
+          <l n="1640">de albricias de mal sucesos.</l>
+          <l n="1641">Filipe		Pues ¿qué tenemos, Mendoza?</l>
+          <l n="1642">Mendoza	Tenemos que no tenemos.</l>
+          <l n="1643">Enrique	¿Cómo ansí?</l>
+          <l n="1644">Mendoza	Cuando bajaban</l>
+          <l n="1645">sintió sus pasos el viejo,					1580</l>
+          <l n="1646">y bajando sin sentirle</l>
+          <l n="1647">hasta la puerta de en medio,</l>
+          <l n="1648">las ha dado muchos palos</l>
+          <l n="1649">y encerrado en su aposento.</l>
+          <l n="1650">Filipe		¿Hay hombre más desdichado?				1585</l>
+          <l n="1651">Enrique	Que no importa, volveremos</l>
+          <l n="1652">otra noche y otras mil.</l>
+          <l n="1653">Filipe		¿Cómo, si está en casa el yerno,</l>
+          <l n="1654">y le ha de querer casar</l>
+          <l n="1655">la hermosura y el deseo?					1590</l>
+          <l n="1656">Mendoza	¡Ha, qué llorones amantes!</l>
+          <l n="1657">Id, que os aguarda, id presto,</l>
+          <l n="1658">a ti la hermosa Laurencia,</l>
+          <l n="1659">Filipe, Alejandro nuevo,</l>
+          <l n="1660">que hoy has de ganar el mundo,				1595</l>
+          <l n="1661">y a ti Gerarda, que un cielo</l>
+          <l n="1662">tiene, Enrique, para ti</l>
+          <l n="1663">de nieve y claveles hecho;</l>
+          <l n="1664">que a mí la fragante Clara</l>
+          <l n="1665">también me aguarda a lo fresco,				1600</l>
+          <l n="1666">con delantal de verano</l>
+          <l n="1667">y con capote de invierno.</l>
+          <l n="1668">¡Ea! ¿Qué me estáis mirando?</l>
+          <l n="1669">Filipe		¿Mientes o no, majadero?</l>
+          <l n="1670">Mendoza	Quien tardare lo verá.						1605</l>
+          <l n="1671">Filipe		Marqués amigo, don Pedro,</l>
+          <l n="1672">aquí os habéis de quedar</l>
+          <l n="1673">por si acaso el de Toledo</l>
+          <l n="1674">volviere a ver la novia.</l>
+          <l n="1675">Marqués	Id con Dios, que en este puesto				1610</l>
+          <l n="1676">estaré como español,</l>
+          <l n="1677">sufriré como tudesco.</l>
+          <l n="1678">Enrique	Él sabe lo que ha de hacer,</l>
+          <l n="1679">no hay de qué tener recelos.</l>
+          <l n="1680">
+            <hi rend="italic">Vanse</hi>
+          </l>
+          <l n="1681">Marqués	Id con Dios, que ya sabéis					1615</l>
+          <l n="1682">lo que valgo o lo que puedo.</l>
+          <l n="1683">Noche, de estrellas vestida,</l>
+          <l n="1684">cuyo manto escuro y negro</l>
+          <l n="1685">más hurtos que tiene luces</l>
+          <l n="1686">ha concertado y cubierto;					1620</l>
+          <l n="1687">noble tercera de amor,</l>
+          <l n="1688">a cuyo grave silencio</l>
+          <l n="1689">tiene el honor de los hombres</l>
+          <l n="1690">reservado su secreto:</l>
+          <l n="1691">¡qué bien te pintó Liñán					1625</l>
+          <l n="1692">en aquellos dulces versos!</l>
+          <l n="1693">Mas todo es poco si miro</l>
+          <l n="1694">tus altos merecimientos.</l>
+          <l n="1695">Tú serás, noche, mi dama,</l>
+          <l n="1696">a ti te diré requiebros,						1630</l>
+          <l n="1697">pues no tengo a quien decillos</l>
+          <l n="1698">y tengo ocasión y tiempo.</l>
+          <l n="1699">Pero si la clara aurora</l>
+          <l n="1700">corre el argentado velo</l>
+          <l n="1701">con las manos de jazmines,					1635</l>
+          <l n="1702">al rey del cuarto elemento</l>
+          <l n="1703">perdona, que he de querer</l>
+          <l n="1704">más su calor que tu hielo,</l>
+          <l n="1705">más su aljófar que tu escarcha,</l>
+          <l n="1706">más su voz que tu silencio.					1640</l>
+          <l n="1707">Gente parece que suena.</l>
+          <l n="1708">
+            <hi rend="italic">Antonio y Leonardo de noche</hi>
+          </l>
+          <l n="1709">Antonio	¿Agora os falta sosiego?</l>
+          <l n="1710">Leonardo	No me puedo sosegar.</l>
+          <l n="1711">Antonio	Sin amor, ¿quién tiene celos?</l>
+          <l n="1712">Leonardo	No sé, por Dios, lo que son,					1645</l>
+          <l n="1713">mas sé que es honra tenerlos.</l>
+          <l n="1714">¿Qué os pareció de Laurencia?</l>
+          <l n="1715">Antonio	Hermosa por todo estremo,</l>
+          <l n="1716">y para mujer, más linda</l>
+          <l n="1717">de lo que dice un discreto;					1650</l>
+          <l n="1718">pero si de la belleza</l>
+          <l n="1719">es la virtud fundamento,</l>
+          <l n="1720">por el camino real</l>
+          <l n="1721">se irá su marido al cielo.</l>
+          <l n="1722">Leonardo	Aquello de las carreras					1655</l>
+          <l n="1723">se me ha puesto en el cerebro;</l>
+          <l n="1724">no querría que después...</l>
+          <l n="1725">Antonio	Andad, que es miedo muy necio.</l>
+          <l n="1726">Leonardo	¿Y lo del agua y el paje?</l>
+          <l n="1727">Antonio	¡Qué notable pensamiento!					1660</l>
+          <l n="1728">Es la corte cortesía.</l>
+          <l n="1729">Leonardo	Es corte con mucho acero</l>
+          <l n="1730">y no querría cortarme.</l>
+          <l n="1731">Antonio	Pues dejad el casamiento,</l>
+          <l n="1732">que agora tenéis lugar.					1665</l>
+          <l n="1733">Leonardo	No sé, Antonio, qué me tengo.</l>
+          <l n="1734">Antonio	Llamad al padre del alma,</l>
+          <l n="1735">por dicha os dará remedio.</l>
+          <l n="1736">Leonardo	Ahora bien, quiero llegar</l>
+          <l n="1737">a la puerta.</l>
+          <l n="1738">Marqués	Caballeros,					1670</l>
+          <l n="1739">echen por esotra parte.</l>
+          <l n="1740">Antonio	¿Cómo dijo?</l>
+          <l n="1741">Leonardo	¡Bueno es esto!</l>
+          <l n="1742">¿Y será corte también?</l>
+          <l n="1743">Antonio	Lo que es malo, yo no puedo</l>
+          <l n="1744">decir que es bueno, Leonardo.				1675</l>
+          <l n="1745">Leonardo	Pues ¿por qué no pasaremos?</l>
+          <l n="1746">Marqués	Porque estoy por hombre aquí,</l>
+          <l n="1747">y pienso que me dijeron</l>
+          <l n="1748">que no dejase pasar;</l>
+          <l n="1749">calles hay, vuélvanse luego,					1680</l>
+          <l n="1750">o haré que se vuelvan yo.</l>
+          <l n="1751">Leonardo	¿A entrambos?</l>
+          <l n="1752">Marqués	Y aun a otros ciento.</l>
+          <l n="1753">Leonardo	Eso quiero yo probar.</l>
+          <l n="1754">Antonio	Saquen las espadas luego.</l>
+          <l n="1755">Leonardo	¡Hombre terrible!</l>
+          <l n="1756">Antonio	¡Notable!					1685</l>
+          <l n="1757">Leonardo	Muerto soy.</l>
+          <l n="1758">Antonio	¡Ay, que me ha muerto!</l>
+          <l n="1759">Marqués	Por otra parte les dije</l>
+          <l n="1760">que echasen, y no quisieron,</l>
+          <l n="1761">y ya es fuerza rodear,</l>
+          <l n="1762">si es que han de ir por el barbero.				1690</l>
+          <l n="1763">Antonio	Con terrible cuchillada</l>
+          <l n="1764">media cabeza me ha abierto.</l>
+          <l n="1765">Leonardo	Yo de una estocada estoy,</l>
+          <l n="1766">Antonio amigo, muriendo.</l>
+          <l n="1767">Antonio	Caminad a la posada.						1695</l>
+          <l n="1768">Leonardo	¡Ay, Feliciana, que creo</l>
+          <l n="1769">que oyeron tus maldiciones</l>
+          <l n="1770">y me castigan los cielos!</l>
+          <l n="1771"/>
+          <l n="1772"><hi rend="italic">Fin del segundo acto del </hi><hi rend="italic">estraño</hi><hi rend="italic"> suceso</hi>.</l>
+          <l n="1773"/>
+          <l n="1774">Acto tercero</l>
+          <l n="1775"/>
+          <l n="1776"/>
+          <l n="1777">
+            <hi rend="italic">Mendoza y don Filipe</hi>
+          </l>
+          <l n="1778">Mendoza	Con poco gusto veniste.</l>
+          <l n="1779">Filipe		Ya no le pienso tener.						1700</l>
+          <l n="1780">Mendoza	¿Qué cosa dará placer</l>
+          <l n="1781">a quien gusta de estar triste?</l>
+          <l n="1782">Filipe	Estoy, Mendoza, cansado.</l>
+          <l n="1783">Mendoza	Pues acuéstate, si quieres.</l>
+          <l n="1784">Filipe		Tengo de aquellas mujeres					1705</l>
+          <l n="1785">lástima, pena y cuidado.</l>
+          <l n="1786">Mendoza	Mal has hecho en no volver.</l>
+          <l n="1787">Filipe		Lo que el Marqués me contó</l>
+          <l n="1788">la llama de amor templó</l>
+          <l n="1789">cuando comenzaba a arder,					1710</l>
+          <l n="1790">que yo para mí he tenido</l>
+          <l n="1791">que es el muerto el desposado.</l>
+          <l n="1792">Mendoza	Si había de ser desdichado,</l>
+          <l n="1793">dichoso en matarle ha sido.</l>
+          <l n="1794">¡Famosa cuistión, por Dios!				1715</l>
+          <l n="1795">Filipe		¡Que llegásemos después!</l>
+          <l n="1796">Mendoza	Y más que dice el Marqués</l>
+          <l n="1797">que eran muy hombres los dos.</l>
+          <l n="1798">Filipe	¡Bravo valor!</l>
+          <l n="1799">Mendoza	Espantoso:</l>
+          <l n="1800">matar uno y a otro abrir					1720</l>
+          <l n="1801">los cascos; no hay qué decir:</l>
+          <l n="1802">él es valiente y dichoso.</l>
+          <l n="1803">¡Quién se le ve mesurado</l>
+          <l n="1804">con tal linda cara y talle!</l>
+          <l n="1805">Para guardar una calle						1725</l>
+          <l n="1806">nunca fue mejor soldado</l>
+          <l n="1807">Julián Romero o García</l>
+          <l n="1808">de Paredes.</l>
+          <l n="1809">Filipe	¡Quién supiera</l>
+          <l n="1810">de Laurencia!</l>
+          <l n="1811">Mendoza	Bien quisiera</l>
+          <l n="1812">entrar de noche o de día,					1730</l>
+          <l n="1813">pero temo que se entiendan</l>
+          <l n="1814">los dueños de la quistión.</l>
+          <l n="1815">Filipe		Sí, pero será razón</l>
+          <l n="1816">que del término se ofendan.</l>
+          <l n="1817">Mendoza	¿Debes algo?</l>
+          <l n="1818">Filipe	No, por Dios.					1735</l>
+          <l n="1819">Mendoza	¿Ni Enrique?</l>
+          <l n="1820">Filipe		Menos.</l>
+          <l n="1821">Mendoza	¡Qué gente</l>
+          <l n="1822">para poblar brevemente</l>
+          <l n="1823">una isla!</l>
+          <l n="1824">Filipe	¡Si las dos</l>
+          <l n="1825">dieron en honra y más honra!</l>
+          <l n="1826">Mendoza	Perder la buena opinión					1740</l>
+          <l n="1827">es lo que en toda ocasión</l>
+          <l n="1828">a las mujeres deshonra.</l>
+          <l n="1829">Guardar la fama, señor,</l>
+          <l n="1830">es el honor verdadero,</l>
+          <l n="1831">mas ya en los dos considero					1745</l>
+          <l n="1832">dos cantimploras de amor.</l>
+          <l n="1833">¡Con qué alfeñique dirías</l>
+          <l n="1834">tus tibiezas y concetos,</l>
+          <l n="1835">andando a buscar respetos</l>
+          <l n="1836">entre consonancias frías!					1750</l>
+          <l n="1837">Yo llevé gentiles gallos.</l>
+          <l n="1838">¡Qué burla harían los dos!</l>
+          <l n="1839">Tú eres Córdoba, por Dios,</l>
+          <l n="1840">que hay allá buenos caballos.</l>
+          <l n="1841">Bien haya un amigo mío					1755</l>
+          <l n="1842">de quien no se queja Clara.</l>
+          <l n="1843">Filipe		¡Para tus locuras! ¡Para!</l>
+          <l n="1844">
+            <hi rend="italic">El Marqués y don Enrique</hi>
+          </l>
+          <l n="1845">Marqués	No me desagrada el brío.</l>
+          <l n="1846">Enrique	Quiere don Felipe ir,</l>
+          <l n="1847">y piénsole acompañar.						1760</l>
+          <l n="1848">Marqués	Bueno, me queréis dejar.</l>
+          <l n="1849">Enrique	Acábole de decir</l>
+          <l n="1850">al marqués nuestra jornada.</l>
+          <l n="1851">Filipe		¿Cómo se puede escusar</l>
+          <l n="1852">servir al Rey ni faltar						1765</l>
+          <l n="1853">a la ocasión de esta armada?</l>
+          <l n="1854">Marqués	Ya he sabido que esta lleva</l>
+          <l n="1855">a prevenciones Lisboa.</l>
+          <l n="1856">Enrique	Aquí no hay más fama y loa</l>
+          <l n="1857">que el fin para que se ordena					1770</l>
+          <l n="1858">fuera de la edad y el brío</l>
+          <l n="1859">perdido en ser cortesano.</l>
+          <l n="1860">El marqués del Carpio hermano</l>
+          <l n="1861">es de don Filipe, y mío</l>
+          <l n="1862">el de las Navas, de quien					1775</l>
+          <l n="1863">tendrán presto sucesión</l>
+          <l n="1864">nuestras casas; no es razón</l>
+          <l n="1865">que dos segundos se estén</l>
+          <l n="1866">en la corte paseando</l>
+          <l n="1867">cuando el Rey a Inglaterra					1780</l>
+          <l n="1868">intenta jornada.</l>
+          <l n="1869">Marqués	Es guerra</l>
+          <l n="1870">en que os estoy envidiando.</l>
+          <l n="1871">Esta noche no hay salir.</l>
+          <l n="1872">Filipe		Entrémonos acostar,</l>
+          <l n="1873">que después habrá lugar					1785</l>
+          <l n="1874">de tratar y prevenir</l>
+          <l n="1875">nuestra partida mejor.</l>
+          <l n="1876">Marqués	Desnúdame aquí, Mendoza.</l>
+          <l n="1877">Mendoza	La jornada me retoza.</l>
+          <l n="1878">Marqués	¿Tú vas también?</l>
+          <l n="1879">Mendoza	Sí, señor.					1790</l>
+          <l n="1880">Marqués	¡Gran soldado!</l>
+          <l n="1881">Mendoza	Soy un Cid.</l>
+          <l n="1882">Marqués	¡Alto! El salir determina,</l>
+          <l n="1883">porque tendré por gallina</l>
+          <l n="1884">quien se quedare en Madrid.</l>
+          <l n="1885">
+            <hi rend="italic">Váyanse y salga Leonardo, con el rostro sólo de difunto, vestido como antes</hi>
+          </l>
+          <l n="1886">Leonardo	De aquel lugar que tengo,					1795</l>
+          <l n="1887">hasta que llegue de mi bien el día,</l>
+          <l n="1888">en espíritu vengo</l>
+          <l n="1889">por voluntad de Dios, no de la mía,</l>
+          <l n="1890">a lo que él es servido,</l>
+          <l n="1891">que abrevie aquel descanso que le pido.			1800</l>
+          <l n="1892">Esto pudo haber hecho</l>
+          <l n="1893">que en mi muerte ha sido de mi parte,</l>
+          <l n="1894">con que del fiero estrecho</l>
+          <l n="1895">que tantas llamas tanto ardor reparte,</l>
+          <l n="1896">en mi inmortal sentido					1805</l>
+          <l n="1897">salgo otra vez al mundo que he perdido.</l>
+          <l n="1898">Este es el templo santo</l>
+          <l n="1899">de San Martín, adonde vive preso</l>
+          <l n="1900">quien me ha de hacer bien tanto,</l>
+          <l n="1901">pues di la causa yo de aquel exceso,				1810</l>
+          <l n="1902">que si no le incitara,</l>
+          <l n="1903">¿cómo pudiera ser que me matara?</l>
+          <l n="1904">Duerme junto a su cama</l>
+          <l n="1905">don Filipe de Córdoba y su hermano,</l>
+          <l n="1906">que tanto quiere y ama,					1815</l>
+          <l n="1907">la suya tiene a la siniestra mano.</l>
+          <l n="1908">Llamar al Marqués quiero,</l>
+          <l n="1909">de quien remedio en mi tormento espero;</l>
+          <l n="1910">que bien puedo fiarme</l>
+          <l n="1911">de un señor tan valiente y animoso				1820</l>
+          <l n="1912">que aquí podrá escucharme.</l>
+          <l n="1913">¡Cómo le oprime el sueño perezoso!</l>
+          <l n="1914">Quitar la colcha quiero.</l>
+          <l n="1915">Despierta, generoso caballero.</l>
+          <l n="1916">
+            <hi rend="italic">Dentro</hi>
+          </l>
+          <l n="1917">Marqués	Mendoza, Mendozilla,					1825</l>
+          <l n="1918">¡ah, Mendoza!</l>
+          <l n="1919">Mendoza	Señor.</l>
+          <l n="1920">Marqués	Mira qué es esto.</l>
+          <l n="1921">Mendoza	¿Sueñas? No es maravilla,</l>
+          <l n="1922">como estás preso y en cuidados puesto.</l>
+          <l n="1923">Marqués	¿Quién la colcha me esconde?</l>
+          <l n="1924">¿Es burla, don Filipe ? No responde.				1830</l>
+          <l n="1925">¡Ah, don Enrique, ah, hermano!</l>
+          <l n="1926">Levántate, Mendoza.</l>
+          <l n="1927">Mendoza	Ya me visto.</l>
+          <l n="1928">
+            <hi rend="italic">El Marqués sale desnudo</hi>
+          </l>
+          <l n="1929">Marqués	Con la espada en la mano,</l>
+          <l n="1930">oh sombras, oh ladrones, os envisto.</l>
+          <l n="1931">¡Afuera, digo afuera!						1835</l>
+          <l n="1932">Quienquiera que está aquí responda o muera.</l>
+          <l n="1933">¿No responde ninguno?</l>
+          <l n="1934">Pedazos le he de hacer a cuchilladas.</l>
+          <l n="1935">
+            <hi rend="italic">Salga Mendoza</hi>
+          </l>
+          <l n="1936">Mendoza	Señor, si hubiera alguno,</l>
+          <l n="1937">—con el temor de las que tienes dadas―			1840</l>
+          <l n="1938">yo sé que respondiera.</l>
+          <l n="1939">Marqués	Debo de haberle muerto.</l>
+          <l n="1940">Mendoza	Un poco espera,</l>
+          <l n="1941">que es iglesia en efeto,</l>
+          <l n="1942">y hay difuntos aquí.</l>
+          <l n="1943">Marqués	No será mucho;</l>
+          <l n="1944">tengámosla respeto.						1845</l>
+          <l n="1945">Leonardo	¡Basta, señor Marqués, basta!</l>
+          <l n="1946">Marqués	¿Qué escucho?</l>
+          <l n="1947">Mendoza	¡Vive Dios que han hablado!</l>
+          <l n="1948">Marqués	¿Quién es?</l>
+          <l n="1949">Leonardo	Muerto soy.</l>
+          <l n="1950">Mendoza	Yo lo he quedado.</l>
+          <l n="1951">¡Jesús, Santa María,</l>
+          <l n="1952">San Blas, San Luis, San Pedro, San Antonio,			1850</l>
+          <l n="1953">toda la letanía!</l>
+          <l n="1954">Marqués	Si no son ilusiones del demonio,</l>
+          <l n="1955">valor tengo tan cierto</l>
+          <l n="1956">que os volveré a matar después de muerto.</l>
+          <l n="1957">Leonardo	La iglesia derribada						1855</l>
+          <l n="1958">para la nueva fábrica que han hecho</l>
+          <l n="1959">—y ya está levantada</l>
+          <l n="1960">como la véis desde el cimiento al techo―</l>
+          <l n="1961">dejó un confesionario</l>
+          <l n="1962">no poco a lo que intento necesario.				1860</l>
+          <l n="1963">Allí podréis oírme;</l>
+          <l n="1964">¿tened ánimo?</l>
+          <l n="1965">Marqués	Nunca me ha faltado.</l>
+          <l n="1966">Leonardo	Pues bien podéis seguirme.</l>
+          <l n="1967">
+            <hi rend="italic">Entren don Filipe y don Enrique con las espadas desnudas</hi>
+          </l>
+          <l n="1968">Filipe		¿Qué es aquesto, Mendoza?</l>
+          <l n="1969">Mendoza	Que ha llamado</l>
+          <l n="1970">un muerto al Marqués.</l>
+          <l n="1971">Enrique	¿Cómo?				1865</l>
+          <l n="1972">Mendoza	Una mano de hierro, otra de plomo,</l>
+          <l n="1973">más de mil calabazas</l>
+          <l n="1974">y huesos han andado aquí danzando.</l>
+          <l n="1975">Filipe		Deben de ser quimeras.</l>
+          <l n="1976">Mendoza	¿Quimera? Ya los dos están hablando;			1870</l>
+          <l n="1977">junto al muerto se sienta.</l>
+          <l n="1978">Enrique	¡Gran valor del Marqués!</l>
+          <l n="1979">Mendoza	Algo le cuenta.</l>
+          <l n="1980">Cuando llegastes juntos,</l>
+          <l n="1981">alrededor de mí con mil cadenas</l>
+          <l n="1982">andaban mil difuntos.						1875</l>
+          <l n="1983">Filipe		¡Qué lindo miedo gastas!</l>
+          <l n="1984">Enrique	 De sus penas</l>
+          <l n="1985">pueden salir los muertos.</l>
+          <l n="1986">Filipe		Secretos son de Dios, al hombre inciertos.</l>
+          <l n="1987">Leonardo	¿Estáis ya más sosegado?</l>
+          <l n="1988">Marqués	No me has quitado el sosiego,					1880</l>
+          <l n="1989">sólo el sueño me ha quitado</l>
+          <l n="1990">el escucharos y el veros.</l>
+          <l n="1991">Leonardo	Yo fui, Marqués generoso,</l>
+          <l n="1992">un hidalgo de Toledo,</l>
+          <l n="1993">hijo de un hombre muy rico					1885</l>
+          <l n="1994">a quien fianzas trujeron</l>
+          <l n="1995">a quebrar, como a otros muchos;</l>
+          <l n="1996">murió, no quedé bien puesto,</l>
+          <l n="1997">pero pude sustentarme</l>
+          <l n="1998">onestamente, aunque haciendo				1890</l>
+          <l n="1999">algunas trampas y deudas</l>
+          <l n="2000">fïando el remedio al tiempo.</l>
+          <l n="2001">Tuve unos amores locos</l>
+          <l n="2002">que me obligaron y hicieron</l>
+          <l n="2003">darle palabra a una dama					1895</l>
+          <l n="2004">con solene juramento</l>
+          <l n="2005">delante del mismo Dios,</l>
+          <l n="2006">—que juzga vivos y muertos—</l>
+          <l n="2007">de ser su marido; en fin,</l>
+          <l n="2008">neciamente se la quiebro,					1900</l>
+          <l n="2009">codicioso de casarme</l>
+          <l n="2010">en Madrid, adonde vengo,</l>
+          <l n="2011">y ella, con mil maldiciones,</l>
+          <l n="2012">me sigue.</l>
+          <l n="2013">Marqués	¡Estraño suceso!</l>
+          <l n="2014">Mendoza	Vive Dios, que están hablando				1905</l>
+          <l n="2015">como dos padres del yermo</l>
+          <l n="2016">y yo, con veros aquí,</l>
+          <l n="2017">hecho un gazapo de miedo.</l>
+          <l n="2018">¿Contárale más despacio</l>
+          <l n="2019">Melisandra a don Gaiferos					1910</l>
+          <l n="2020">lo que le pasó en Sansueña?</l>
+          <l n="2021">¿Qué licenciado en un pleito</l>
+          <l n="2022">informara con más prosa?</l>
+          <l n="2023">Leonardo	Hablo, Marqués, con mi suegro,</l>
+          <l n="2024">tengo celos de unas hachas,					1915</l>
+          <l n="2025">vuelvo a la calle con celos,</l>
+          <l n="2026">sale un hombre a mí y a Antonio,</l>
+          <l n="2027">un noble amigo que tengo;</l>
+          <l n="2028">sobre pasar mete mano,</l>
+          <l n="2029">pásame su espada el pecho.					1920</l>
+          <l n="2030">Confiésanme en mi posada,</l>
+          <l n="2031">van por Feliciana luego,</l>
+          <l n="2032">cásome con Feliciana</l>
+          <l n="2033">el juramento cumpliendo;</l>
+          <l n="2034">vuelve un criado a la calle,					1925</l>
+          <l n="2035">con una luz busca el suelo,</l>
+          <l n="2036">y una cruz de oro, esmaltada</l>
+          <l n="2037">de rojo en un listón negro,</l>
+          <l n="2038">halla entre la misma sangre,</l>
+          <l n="2039">enséñanla a los plateros					1930</l>
+          <l n="2040">y dice que es del marqués</l>
+          <l n="2041">de las Navas uno de ellos,</l>
+          <l n="2042">porque era hechura del mismo;</l>
+          <l n="2043">fue de mi muerte consuelo</l>
+          <l n="2044">ver que a manos tan honradas					1935</l>
+          <l n="2045">—ya que lo fui― fuese muerto.</l>
+          <l n="2046">Marqués	Trabarse a la guarnición</l>
+          <l n="2047">la cinta fue causa de esto.</l>
+          <l n="2048">La cruz es mía, es verdad,</l>
+          <l n="2049">y que después la eché menos.					1940</l>
+          <l n="2050">Leonardo	Hice testamento, en fin,</l>
+          <l n="2051">y por fin mi albacea os dejo</l>
+          <l n="2052">así por vuestra conciencia,</l>
+          <l n="2053">Marqués, como porque creo</l>
+          <l n="2054">que acudiréis a mis deudas					1945</l>
+          <l n="2055">mejor que hermanos y deudos.</l>
+          <l n="2056">En poder de Feliciana</l>
+          <l n="2057">hallaréis mi testamento;</l>
+          <l n="2058">remedialda, pues podéis,</l>
+          <l n="2059">generoso caballero,						1950</l>
+          <l n="2060">que tiene de mí una hija.</l>
+          <l n="2061">Cumplid con ser heredero</l>
+          <l n="2062">del nombre de Ávila insigne,</l>
+          <l n="2063">en cuya casa os han hecho</l>
+          <l n="2064">sucesor treinta y seis hombres					1955</l>
+          <l n="2065">de padre a hijo, que en ellos</l>
+          <l n="2066">no hay hembra, cosa tan rara</l>
+          <l n="2067">que no la saben los tiempos</l>
+          <l n="2068">ni las historias la escriben;</l>
+          <l n="2069">imitad padres y agüelos					1960</l>
+          <l n="2070">que han hecho tantos servicios</l>
+          <l n="2071">con las armas y el consejo</l>
+          <l n="2072">a la corona de España.</l>
+          <l n="2073">Pero basta, que os veo</l>
+          <l n="2074">fatigado; levantaos,						1965</l>
+          <l n="2075">daraos el aire.</l>
+          <l n="2076">Marqués	Teneos,</l>
+          <l n="2077">que no es desmayo, por Dios,</l>
+          <l n="2078">aunque congojarme siento,</l>
+          <l n="2079">y decid como venís</l>
+          <l n="2080">de donde Dios os ha puesto.					1970</l>
+          <l n="2081">Leonardo	No fue por mi voluntad,</l>
+          <l n="2082">Marqués; por la suya vengo.</l>
+          <l n="2083">Tienen un mismo lugar</l>
+          <l n="2084">el purgatorio y infierno,</l>
+          <l n="2085">mas con diferentes penas,					1975</l>
+          <l n="2086">que yo la de daño tengo</l>
+          <l n="2087">y el sentido temporal;</l>
+          <l n="2088">y el condenado aquel fuego</l>
+          <l n="2089">que mereció por su culpa</l>
+          <l n="2090">de daño y sentido eterno.					1980</l>
+          <l n="2091">Este lugar, aunque hay dudas,</l>
+          <l n="2092">tiene de la tierra el centro.</l>
+          <l n="2093">Marqués	Yo sé que san Agustín</l>
+          <l n="2094">dijo que al humano ingenio</l>
+          <l n="2095">era ese lugar oculto.						1985</l>
+          <l n="2096">Leonardo	Sí, pero responde luego</l>
+          <l n="2097">que a quien Dios le revelare...</l>
+          <l n="2098">En fin, de este lugar vengo,</l>
+          <l n="2099">que a san Vicente Ferrer,</l>
+          <l n="2100">no en sueño, sino despierto,					1990</l>
+          <l n="2101">su hermana le apareció,</l>
+          <l n="2102">y sin este grave ejemplo,</l>
+          <l n="2103">a santo Tomás la suya</l>
+          <l n="2104">en París, y al mismo tiempo</l>
+          <l n="2105">la del cardenal Pascasio,					1995</l>
+          <l n="2106">libre ya del mortal peso,</l>
+          <l n="2107">al obispo Severino.</l>
+          <l n="2108">Marqués	Es Dios y son sus secretos.</l>
+          <l n="2109">Leonardo	Esto habéis de hacer por mí;</l>
+          <l n="2110">mi alma, Marqués, os dejo,					2000</l>
+          <l n="2111">no os descuidéis.</l>
+          <l n="2112">Marqués	Él se fue;</l>
+          <l n="2113">triste y asombrado quedo.</l>
+          <l n="2114">¿Quién va?</l>
+          <l n="2115">Enrique	Don Filipe y yo.</l>
+          <l n="2116">Filipe		Pues, don Pedro, ¿qué es aquesto?</l>
+          <l n="2117">Mendoza	¿Qué es esto, señor?</l>
+          <l n="2118">Marqués	El alma					2005</l>
+          <l n="2119">de aquel toledano muerto,</l>
+          <l n="2120">que me pide ciertas cosas</l>
+          <l n="2121">a que obligado le quedo.</l>
+          <l n="2122">Filipe		Estraño caso.</l>
+          <l n="2123">Enrique	Notable.</l>
+          <l n="2124">No hubiera un hombre de acero				2010</l>
+          <l n="2125">que le pudiera escuchar.</l>
+          <l n="2126">Mendoza	¡Cuerpo de Dios con el muerto!</l>
+          <l n="2127">¡Qué temerario hablador!</l>
+          <l n="2128">No dirán los que le vieron</l>
+          <l n="2129">Que no murió con su habla,					2015</l>
+          <l n="2130">y de suerte que sospecho</l>
+          <l n="2131">que la llevó al otro mundo.</l>
+          <l n="2132">Marqués	Acostémonos, que temo</l>
+          <l n="2133">no me dé algún accidente.</l>
+          <l n="2134">Filipe		Mucho en escucharle has hecho.				2020</l>
+          <l n="2135">Mendoza	¿Y ha de volver otra noche?</l>
+          <l n="2136">Porque, vive Dios, que duermo</l>
+          <l n="2137">con el padre sacristán</l>
+          <l n="2138">entre doscientos caleros</l>
+          <l n="2139">de agua bendita y de isopos.					2025</l>
+          <l n="2140">Enrique	Triste estás.</l>
+          <l n="2141">Marqués	¿Puede ser menos?</l>
+          <l n="2142">
+            <hi rend="italic">Entren</hi>
+            <hi rend="italic"> Ludovico, Laurencia y Gerarda</hi>
+          </l>
+          <l n="2143">Ludovico	Cosas de cuidados son</l>
+          <l n="2144">y de justo sentimiento.</l>
+          <l n="2145">Laurencia	Suspendes mi entendimiento</l>
+          <l n="2146">con tan triste relación.						2030</l>
+          <l n="2147">Ludovico	Dos lienzos de sangre hallaron</l>
+          <l n="2148">casi al umbral de estas puertas,</l>
+          <l n="2149">nuevas tristes, nuevas ciertas</l>
+          <l n="2150">de lo que al dueño costaron.</l>
+          <l n="2151">No porque en la vecindad					2035</l>
+          <l n="2152">cosa alguna se sintiese,</l>
+          <l n="2153">que causa, Laurencia, diese</l>
+          <l n="2154">para tanta novedad;</l>
+          <l n="2155">pero yo, que desde el día</l>
+          <l n="2156">que Leonardo estuvo aquí					2040</l>
+          <l n="2157">ni le hablé más, ni le vi,</l>
+          <l n="2158">temo la desdicha mía.</l>
+          <l n="2159">Una de dos: o le han muerto</l>
+          <l n="2160">o él ha muerto a quien dejó</l>
+          <l n="2161">esta sangre.</l>
+          <l n="2162">Laurencia	No sé yo						2045</l>
+          <l n="2163">por dónde tienes por cierto</l>
+          <l n="2164">que a un forastero suceda,</l>
+          <l n="2165">que a nadie ha dado ocasión,</l>
+          <l n="2166">causa de tener quistión.</l>
+          <l n="2167">Ludovico	Pues ¿hay ocasión que pueda					2050</l>
+          <l n="2168">ser mayor que haber venido</l>
+          <l n="2169">a quejarse esta mujer?</l>
+          <l n="2170">¿No ves tú que puede ser</l>
+          <l n="2171">que la haya muerto o herido,</l>
+          <l n="2172">o le haya muerto, por ella,					2055</l>
+          <l n="2173">aquel deudo que decía</l>
+          <l n="2174">que en su defensa venía?</l>
+          <l n="2175">Laurencia	Sin duda la muerta es ella,</l>
+          <l n="2176">y él debe de haber huido.</l>
+          <l n="2177">Ludovico	Pésame de haber tratado					2060</l>
+          <l n="2178">concierto tan desdichado.</l>
+          <l n="2179">Laurencia	Bien puede ser que haya sido</l>
+          <l n="2180">otra cosa diferente.</l>
+          <l n="2181">Ludovico	Si hay diferencia, es mayor</l>
+          <l n="2182">peligro para mi honor,						2065</l>
+          <l n="2183">si he de hablarte claramente.</l>
+          <l n="2184">Laurencia	¿Para tu honor?</l>
+          <l n="2185">Ludovico	Pues faltando</l>
+          <l n="2186">Leonardo, ocasión me dio</l>
+          <l n="2187">para que imagine yo...</l>
+          <l n="2188">Laurencia	Prosigue, ¿qué estás dudando?				2070</l>
+          <l n="2189">Ludovico	Que alguno pudo pesar,</l>
+          <l n="2190">si por dicha te servía,</l>
+          <l n="2191">que honestamente sería,</l>
+          <l n="2192">que se viniese a casar.</l>
+          <l n="2193">Laurencia	Presto lo has dicho.</l>
+          <l n="2194">Ludovico	Tan presto				2075</l>
+          <l n="2195">como lo pensé.</l>
+          <l n="2196">Laurencia	Pensaste</l>
+          <l n="2197">mal, si ofensa imaginaste</l>
+          <l n="2198">de mi proceder honesto.</l>
+          <l n="2199">Pero di, ¿qué has visto en mí</l>
+          <l n="2200">que te obligue a pensamiento					2080</l>
+          <l n="2201">tan bárbaro, en detrimento</l>
+          <l n="2202">de tu honor?</l>
+          <l n="2203">Ludovico	Tengo de ti</l>
+          <l n="2204">bastante satisfacción,</l>
+          <l n="2205">mas ¿ignoras, por ventura,</l>
+          <l n="2206">que suele dar la hermosura					2085</l>
+          <l n="2207">sin culpa suya ocasión?</l>
+          <l n="2208">No puede haber quien te quiera</l>
+          <l n="2209">y que tú no sepas de él.</l>
+          <l n="2210">Laurencia	Pues ¿qué causa hubiera en él,</l>
+          <l n="2211">cuando yo no se la diera,					2090</l>
+          <l n="2212">que le obligara a matar</l>
+          <l n="2213">a Leonardo, o a Leonardo</l>
+          <l n="2214">para matarle?</l>
+          <l n="2215">Ludovico	Yo aguardo</l>
+          <l n="2216">de esta sangre algún pesar,</l>
+          <l n="2217">y no sé más ocasión.					2095</l>
+          <l n="2218">Laurencia	¿Qué billetes me has hallado,</l>
+          <l n="2219">qué noche me has escuchado</l>
+          <l n="2220">hablando en la puerta o balcón?</l>
+          <l n="2221">¿Qué me has visto que jamás</l>
+          <l n="2222">de mi honesto punto baje?					2100</l>
+          <l n="2223">Ludovico	Unas carreras y un paje,</l>
+          <l n="2224">y no preguntes más.</l>
+          <l n="2225">
+            <hi rend="italic">Vase</hi>
+          </l>
+          <l n="2226">Laurencia	¡Ay, Gerarda, que sospecho</l>
+          <l n="2227">que aquella noche volvió</l>
+          <l n="2228">Leonardo con gente, y vio					2105</l>
+          <l n="2229">su casamiento desecho</l>
+          <l n="2230">con aquella libertad</l>
+          <l n="2231">de entrar don Filipe aquí,</l>
+          <l n="2232">si bien solamente fui</l>
+          <l n="2233">libre de mi voluntad;						2110</l>
+          <l n="2234">que en lo que toca a mi honor,</l>
+          <l n="2235">bien sabes mi resistencia!</l>
+          <l n="2236">Gerarda	Esas tristezas, Laurencia,</l>
+          <l n="2237">nacen de tu grande amor.</l>
+          <l n="2238">Laurencia	Pues ¿cómo no ha vuelto más?				2115</l>
+          <l n="2239">Gerarda	Debiose de prometer</l>
+          <l n="2240">facilidad de mujer,</l>
+          <l n="2241">como tan perdida estás,</l>
+          <l n="2242">que en una noche y un día</l>
+          <l n="2243">le ha mostrado tanto amor.					2120</l>
+          <l n="2244">Laurencia	Luego ¿por ese rigor</l>
+          <l n="2245">se venga en ausencia mía?</l>
+          <l n="2246">Gerarda	Esto imagino.</l>
+          <l n="2247">Laurencia	Si él vive</l>
+          <l n="2248">—que es lo que más yo deseo―</l>
+          <l n="2249">verá lo que de mi empleo					2125</l>
+          <l n="2250">en muchos años recibe.</l>
+          <l n="2251">Yo presumí que se usaba</l>
+          <l n="2252">tener amor.</l>
+          <l n="2253">Gerarda	Pues yo no.</l>
+          <l n="2254">Laurencia	Luego ¿el amor se acabó?</l>
+          <l n="2255">Gerarda	El tiempo todo lo acaba.					2130</l>
+          <l n="2256">Laurencia	Quiera primero mi honor</l>
+          <l n="2257">quien a mí me ha de querer,</l>
+          <l n="2258">porque querer ofender</l>
+          <l n="2259">no es posible que es amor.</l>
+          <l n="2260">Mas, para saber lo que es					2135</l>
+          <l n="2261">la fiesta, podemos ir</l>
+          <l n="2262">donde está preso el Marqués,</l>
+          <l n="2263">que quiero yo que mi honor</l>
+          <l n="2264">se pueda desengañar</l>
+          <l n="2265">que yo sabré olvidar,						2140</l>
+          <l n="2266">si supe tener amor.</l>
+          <l n="2267">
+            <hi rend="italic">Salgan Bernardo y Feliciana</hi>
+          </l>
+          <l n="2268">Feliciana	¿Cómo has hecho tal conceto</l>
+          <l n="2269">de mi lealtad y de mí?</l>
+          <l n="2270">Bernardo	Porque como hombre nací</l>
+          <l n="2271">a parecerlo sujeto;						2145</l>
+          <l n="2272">ni pienso que el más discreto,</l>
+          <l n="2273">llegado a tales antojos,</l>
+          <l n="2274">sabe encubrir sus enojos,</l>
+          <l n="2275">que aunque resulte en su mengua,</l>
+          <l n="2276">se ha de valer de la lengua					2150</l>
+          <l n="2277">si no le entienden los ojos.</l>
+          <l n="2278">En tanto que fuiste ajena,</l>
+          <l n="2279">te miré con voluntad,</l>
+          <l n="2280">parentesco y amistad</l>
+          <l n="2281">me reservaron la pena;					2155</l>
+          <l n="2282">mas luego que el cielo ordena</l>
+          <l n="2283">que sin dueño estás, miré</l>
+          <l n="2284">tus cosas con otra fe,</l>
+          <l n="2285">y me parecieron tales</l>
+          <l n="2286">que a tus rayos celestiales					2160</l>
+          <l n="2287">de mi olvido desperté.</l>
+          <l n="2288">No suele de otra manera</l>
+          <l n="2289">despertar dentro del nido</l>
+          <l n="2290">viendo al sol recién nacido</l>
+          <l n="2291">el pájaro que le espera;					2165</l>
+          <l n="2292">sale a la verde ribera</l>
+          <l n="2293">y de las pintadas flores</l>
+          <l n="2294">le enamoran los colores:</l>
+          <l n="2295">así yo, despierto al brío</l>
+          <l n="2296">de tu sol, claro sol mío,					2170</l>
+          <l n="2297">despierto a decirte amores.</l>
+          <l n="2298">Murió Leonardo, casado</l>
+          <l n="2299">contigo, que quiso el cielo</l>
+          <l n="2300">premiar tu inocente celo</l>
+          <l n="2301">después de tanto cuidado;					2175</l>
+          <l n="2302">y yo, los días que he estado</l>
+          <l n="2303">sirviéndote, de tal suerte</l>
+          <l n="2304">vengo a estimarte y quererte,</l>
+          <l n="2305">que por ser tuyo y gozarte</l>
+          <l n="2306">pretendo solicitarte						2180</l>
+          <l n="2307">el olvido de su muerte.</l>
+          <l n="2308">Feliciana	Bernardo, aún tengo el dolor</l>
+          <l n="2309">presente de aquel suceso,</l>
+          <l n="2310">que tan doloroso exceso</l>
+          <l n="2311">merece tanto rigor.						2185</l>
+          <l n="2312">Haber cobrado mi honor</l>
+          <l n="2313">debo a su muerte, no a él;</l>
+          <l n="2314">que haber sido tan crüel</l>
+          <l n="2315">bien me pudiera obligar,</l>
+          <l n="2316">si yo supiera olvidar						2190</l>
+          <l n="2317">el amor que puse en él.</l>
+          <l n="2318">Yo pensé que el testamento</l>
+          <l n="2319">hubiera el Marqués cumplido,</l>
+          <l n="2320">pero hale puesto en olvido,</l>
+          <l n="2321">cosa que en estremo siento;					2195</l>
+          <l n="2322">si bien tiene pensamiento</l>
+          <l n="2323">de que tenga ejecución,</l>
+          <l n="2324">pero tanta ocupación</l>
+          <l n="2325">no le habrá dado lugar</l>
+          <l n="2326">y así no puedo tratar						2200</l>
+          <l n="2327">de tu honrada pretensión.</l>
+          <l n="2328">Confieso que te entendía,</l>
+          <l n="2329">aunque no te declarabas,</l>
+          <l n="2330">que con los ojos me hablabas,</l>
+          <l n="2331">donde tus intentos vía.						2205</l>
+          <l n="2332">Leonardo fue prenda mía</l>
+          <l n="2333">y mi esposo, a su pesar,</l>
+          <l n="2334">y aunque no puedo dejar</l>
+          <l n="2335">de sentir tanto dolor,</l>
+          <l n="2336">yo le rogaré a mi amor					2210</l>
+          <l n="2337">que me le deje olvidar.</l>
+          <l n="2338">Mañana quiero volver</l>
+          <l n="2339">a hablar al Marqués, Bernardo,</l>
+          <l n="2340">que las cosas de Leonardo</l>
+          <l n="2341">me obligan como a mujer.					2215</l>
+          <l n="2342">Su alma quiero poner</l>
+          <l n="2343">en descanso, aunque su intento</l>
+          <l n="2344">fue tenerme en tal tormento,</l>
+          <l n="2345">porque quien jurare entienda</l>
+          <l n="2346">a qué testigo encomienda					2220</l>
+          <l n="2347">la fe de su juramento.</l>
+          <l n="2348">Bernardo	Sólo quiero yo de ti</l>
+          <l n="2349">que agradezcas la verdad</l>
+          <l n="2350">de mi honesta voluntad</l>
+          <l n="2351">con que siempre te serví.					2225</l>
+          <l n="2352">Si hallaste defensa en mí,</l>
+          <l n="2353">no seas ingrata al cielo.</l>
+          <l n="2354">Feliciana	Agradezco tu buen celo,</l>
+          <l n="2355">mas deja pasar los días,</l>
+          <l n="2356">que en penas como las mías					2230</l>
+          <l n="2357">parece mal el consuelo.</l>
+          <l n="2358">
+            <hi rend="italic">El marqués y Mendoza</hi>
+          </l>
+          <l n="2359">Mendoza	Esta licencia te pido,</l>
+          <l n="2360">la guerra al arma me toca,</l>
+          <l n="2361">porque la ocasión provoca</l>
+          <l n="2362">a todo hombre bien nacido;					2235</l>
+          <l n="2363">y aunque el servirte, señor,</l>
+          <l n="2364">pudiera bien escusarme,</l>
+          <l n="2365">no quiere el honor dejarme,</l>
+          <l n="2366">por más que lo mande amor.</l>
+          <l n="2367">No hay hombre que se reporte;				2240</l>
+          <l n="2368">y ¿que no me parta quieres,</l>
+          <l n="2369">que hacen burlas las mujeres</l>
+          <l n="2370">de quien se queda en la corte?</l>
+          <l n="2371">Todo es gala, todo es pluma,</l>
+          <l n="2372">todo es ir a Portugal,						2245</l>
+          <l n="2373">donde la armada real</l>
+          <l n="2374">tiene innumerables sumas</l>
+          <l n="2375">de naciones diferentes.</l>
+          <l n="2376">Marqués	No te canses, Mendozilla,</l>
+          <l n="2377">que no saldrás de Castilla					2250</l>
+          <l n="2378">por más que la guerra intentes,</l>
+          <l n="2379">y eres ingrato a mi amor</l>
+          <l n="2380">en dejarme de servir.</l>
+          <l n="2381">Mendoza	Sirviendo a tu hermano es ir</l>
+          <l n="2382">sirviéndote a ti, señor.						2255</l>
+          <l n="2383">Marqués	Digo que estás necio ya.</l>
+          <l n="2384">Mendoza	Acabose, ya lo dejo.</l>
+          <l n="2385">Marqués	Tu provecho te aconsejo.</l>
+          <l n="2386">Mendoza	¿Mi provecho?</l>
+          <l n="2387">Marqués	Bueno está,</l>
+          <l n="2388">que no quiero que te partas. 				2260</l>
+          <l n="2389">Dame luz, pluma y papel</l>
+          <l n="2390">que este ordinario crüel</l>
+          <l n="2391">me obliga a un millón de cartas.</l>
+          <l n="2392">Mendoza	Voy por él.</l>
+          <l n="2393">Marqués	Llégame aquí</l>
+          <l n="2394">una silla. Más quisiera						2265</l>
+          <l n="2395">salir esta noche fuera,</l>
+          <l n="2396">aunque es tarde para mí,</l>
+          <l n="2397">que en fin este templo santo</l>
+          <l n="2398">es para todo prisión;</l>
+          <l n="2399">pero es forzosa ocasión,					2270</l>
+          <l n="2400">puesto que la siento tanto.</l>
+          <l n="2401">
+            <hi rend="italic">Mendoza con dos velas encendidas</hi>
+          </l>
+          <l n="2402">Mendoza	Aquí tienes luz, y tienes</l>
+          <l n="2403">recado para escribir.</l>
+          <l n="2404">¿Tienes más que me pedir?</l>
+          <l n="2405">Marqués	¡Qué falso conmigo vienes!					2275</l>
+          <l n="2406">¡Qué metida que tenías</l>
+          <l n="2407">la guerra en el pensamiento!</l>
+          <l n="2408">
+            <hi rend="italic">Siéntese</hi>
+          </l>
+          <l n="2409">Mendoza	Por los amigos lo siento.</l>
+          <l n="2410">Marqués	¿Contra mi gusto porfías?</l>
+          <l n="2411">Mendoza	Escribe, escribe.</l>
+          <l n="2412">Marqués	Bien tengo				2280</l>
+          <l n="2413">que escribir, aunque me canso.   <hi rend="italic">	</hi><hi rend="italic">	</hi><hi rend="italic">	</hi></l>
+          <l n="2414">
+            <hi rend="italic">Escriba. Leonardo difunto sale</hi>
+          </l>
+          <l n="2415">Leonardo	A procurar mi descanso</l>
+          <l n="2416">otra vez al mundo vengo.</l>
+          <l n="2417">Cuando la gran magestad</l>
+          <l n="2418">de Dios licencia me dio,					2285</l>
+          <l n="2419">hablé al Marqués, a quien yo</l>
+          <l n="2420">supliqué mi libertad;</l>
+          <l n="2421">descuidado se ha de mí;</l>
+          <l n="2422">es mozo y hase olvidado</l>
+          <l n="2423">de lo que habemos tratado,					2290</l>
+          <l n="2424">si bien entonces le vi</l>
+          <l n="2425">con ánimo de ayudarme,</l>
+          <l n="2426">pero negocios han sido</l>
+          <l n="2427">causa del injusto olvido</l>
+          <l n="2428">que ha tenido en libertarme.					2295</l>
+          <l n="2429">¡Oh mortales, qué podéis,</l>
+          <l n="2430">como soy testigo yo,</l>
+          <l n="2431">hacer por quien ya partió</l>
+          <l n="2432">del mundo! No os descuidéis,</l>
+          <l n="2433">porque se descuidarán					2300</l>
+          <l n="2434">de vuestras almas también</l>
+          <l n="2435">aquellos mismos a quien</l>
+          <l n="2436">ecomendadas están.</l>
+          <l n="2437">Pues tenéis tantos testigos,</l>
+          <l n="2438">no nos dejéis padecer;						2305</l>
+          <l n="2439">mirad que podemos ser</l>
+          <l n="2440">después muy buenos amigos.</l>
+          <l n="2441">Mendoza	El sueño me va apretando;</l>
+          <l n="2442">no será mal alcagüete</l>
+          <l n="2443">este amigo taburete,						2310</l>
+          <l n="2444">que también me están llamando,</l>
+          <l n="2445">
+            <hi rend="italic">Siéntese Mendoza</hi>
+          </l>
+          <l n="2446">que a fe que hay bien que escribir</l>
+          <l n="2447">y ya son más de las dos.</l>
+          <l n="2448">Cabezadas doy, por Dios;</l>
+          <l n="2449">esto se llama dormir.						2315</l>
+          <l n="2450">Marqués	¿No hay más cartas en la lista?</l>
+          <l n="2451">¡Oh imenso trabajo mío!</l>
+          <l n="2452">Aun falta la de mi tío</l>
+          <l n="2453">el conde de Alba de Lista.</l>
+          <l n="2454">Ya me acuerdo, es el concierto				2320</l>
+          <l n="2455">que en el pleito pretendí.</l>
+          <l n="2456">
+            <hi rend="italic">Llega Leonardo, y tomando las velas por detrás del Marqués, las mata en los candeleros.</hi>
+          </l>
+          <l n="2457">Marqués	¿Qué es esto? No hay aire aquí</l>
+          <l n="2458">y las bujías se han muerto.</l>
+          <l n="2459">¡Mendoza, Mendoza! ¡Hola!</l>
+          <l n="2460">Mendoza	¡Señor, Señor!</l>
+          <l n="2461">Marqués	¿Dónde estás?					2325</l>
+          <l n="2462">Mendoza	Aquí estoy.</l>
+          <l n="2463">Marqués	Llégate más;</l>
+          <l n="2464">toda la cuadra está sola.</l>
+          <l n="2465">Mendoza	¿Adónde estás tú, que yo</l>
+          <l n="2466">te oigo hablar y no te veo?</l>
+          <l n="2467">Marqués	¿Adónde tengo de estar,					2330</l>
+          <l n="2468">sino en el mismo aposento?</l>
+          <l n="2469">Mendoza	Pues ¿sin luz?</l>
+          <l n="2470">Marqués	Sin luz estoy,</l>
+          <l n="2471">que las velas se me han muerto.</l>
+          <l n="2472">¿Está abierta alguna puerta?</l>
+          <l n="2473">¿No respondes?</l>
+          <l n="2474">Mendoza	Ando a tiento,				2235</l>
+          <l n="2475">que se ha perdido el que tenía.</l>
+          <l n="2476">Marqués	Llégate acá, majadero.</l>
+          <l n="2477">Mendoza	Estaba medio dormido.</l>
+          <l n="2478">¡Jesús! Las manos he puesto</l>
+          <l n="2479">sobre una cara muy fría.					2340</l>
+          <l n="2480">Marqués	¿Que aún no aciertas?</l>
+          <l n="2481">Mendoza	Aun no acierto.</l>
+          <l n="2482">Marqués	Daca la mano.</l>
+          <l n="2483">Mendoza	Ahora sí.</l>
+          <l n="2484">¡Cuerpo de Dios con el sueño!</l>
+          <l n="2485">Marqués	Toma presto estas bujías;</l>
+          <l n="2486">los papeles me has revuelto.					2345</l>
+          <l n="2487">Mendoza	Ya voy a encender, señor.</l>
+          <l n="2488">Marqués	¿Habrás vertido el tintero</l>
+          <l n="2489">sobre las cartas?</l>
+          <l n="2490">Mendoza	¿Qué importa?</l>
+          <l n="2491">No son tan necios sus dueños</l>
+          <l n="2492">que no entiendan lo que escribes,				2350</l>
+          <l n="2493">un conceto más o menos.</l>
+          <l n="2494">
+            <hi rend="italic">Vase</hi>
+          </l>
+          <l n="2495">Marqués	Sin entender la ocasión</l>
+          <l n="2496">se me ha erizado el cabello.</l>
+          <l n="2497">¿Cuándo al marqués de las Navas</l>
+          <l n="2498">osó acometer el miedo?					2355</l>
+          <l n="2499">¡Vive Dios, que es fuerte cosa</l>
+          <l n="2500">la imaginación!</l>
+          <l n="2501">
+            <hi rend="italic">Mendoza con las velas</hi>
+          </l>
+          <l n="2502">Mendoza	Ya vuelvo.</l>
+          <l n="2503">Marqués	Pon esas velas aquí.</l>
+          <l n="2504">
+            <hi rend="italic">Al ponerlas mira Mendoza a Leonardo sentado</hi>
+            <hi rend="italic">.</hi>
+          </l>
+          <l n="2505">Mendoza	¡Jesús, San Blas, San Guillermo,</l>
+          <l n="2506">Verbum caro, Anima Christi!					2360</l>
+          <l n="2507">Marqués	¿De qué tiemblas?</l>
+          <l n="2508">Mendoza	¿De qué tiemblo?</l>
+          <l n="2509">¿Tú no ves ese vecino</l>
+          <l n="2510">que tienes al lado diestro?</l>
+          <l n="2511">Marqués	¿Quién eres?</l>
+          <l n="2512">Leonardo	Leonardo soy.</l>
+          <l n="2513">Marqués	¿El muerto Leonardo?</l>
+          <l n="2514">Leonardo	El muerto.				2365</l>
+          <l n="2515">Don Pedro de Ávila, escucha...</l>
+          <l n="2516">Mendoza	¡Buena plática tenemos!</l>
+          <l n="2517">No se irá hasta la mañana,</l>
+          <l n="2518">que lo ha tomado de asiento.</l>
+          <l n="2519">No sé por dónde me vaya,					2370</l>
+          <l n="2520">la sangre se me ha revuelto;</l>
+          <l n="2521">de medio abajo he sentido</l>
+          <l n="2522">cierto sudor en el cuerpo...</l>
+          <l n="2523">Pero ¿qué mejor pastilla</l>
+          <l n="2524">merece un muerto tan necio?					2375</l>
+          <l n="2525">Que se aparezca al Marqués</l>
+          <l n="2526">—matole— está muy bien hecho;</l>
+          <l n="2527">mas yo, ¿qué culpa he tenido</l>
+          <l n="2528">que se andaba aquí este muerto?</l>
+          <l n="2529">Leonardo	¿Cómo os habéis descuidado,					2380</l>
+          <l n="2530">sabiendo que estaba preso,</l>
+          <l n="2531">en sacarme de la cárcel?</l>
+          <l n="2532">Marqués	Ocupaciones lo han hecho.</l>
+          <l n="2533">Yo os doy, Leonardo, palabra</l>
+          <l n="2534">que apenas de que aqueste templo				2385</l>
+          <l n="2535">corone el sol la capilla,</l>
+          <l n="2536">cuando comienze a poneros</l>
+          <l n="2537">en libertad, que es justo,</l>
+          <l n="2538">para que vais satisfecho</l>
+          <l n="2539">a la patria deseada.						2390</l>
+          <l n="2540">Leonardo	Eso os pido, que padezco,</l>
+          <l n="2541">Marqués, por vuestro descuido</l>
+          <l n="2542">innumerables tormentos;</l>
+          <l n="2543">que en pago a Dios rogaré</l>
+          <l n="2544">que os dé un sucesor tan bueno				2395</l>
+          <l n="2545">que iguale en fama y virtud</l>
+          <l n="2546">los antecesores vuestros,</l>
+          <l n="2547">aquellos grandes señores</l>
+          <l n="2548">a quien los reyes tuvieron</l>
+          <l n="2549">en la guerra por caudillos					2400</l>
+          <l n="2550">y en la paz por consejeros.</l>
+          <l n="2551">Con esto, quedaos con Dios,</l>
+          <l n="2552">y acuérdeseos que os advierto</l>
+          <l n="2553">el hacer bien por las almas</l>
+          <l n="2554">que de este mundo partieron.					2405</l>
+          <l n="2555">
+            <hi rend="italic">Vase</hi>
+          </l>
+          <l n="2556">Mendoza	¿Fuese?</l>
+          <l n="2557">Marqués	Sí.</l>
+          <l n="2558">Mendoza	 Míralo bien.</l>
+          <l n="2559">Marqués	Ya lo tengo bien mirado.</l>
+          <l n="2560">Mendoza	¿Cosa que se haya quedado</l>
+          <l n="2561">—como aquestos no se ven―</l>
+          <l n="2562">escondido por aquí? 					2410</l>
+          <l n="2563">
+            <hi rend="italic">Levántese el Marqués</hi>
+          </l>
+          <l n="2564">Marqués	Ahora bien, quita esta mesa.</l>
+          <l n="2565">De no haber hecho me pesa,</l>
+          <l n="2566">lo que entonces pormetí.</l>
+          <l n="2567">Yo haré las restituciones</l>
+          <l n="2568">si sé venderme.</l>
+          <l n="2569">Mendoza	Y si no					2415</l>
+          <l n="2570">él volviera, y pienso yo</l>
+          <l n="2571">que a más peligro te pones,</l>
+          <l n="2572">porque viendo que por puntos</l>
+          <l n="2573">te descuidas de él ansí,</l>
+          <l n="2574">ha de traer contra ti						2420</l>
+          <l n="2575">un escuadrón de difuntos.</l>
+          <l n="2576">Marqués	Lo primero es menester</l>
+          <l n="2577">remediar a Feliciana,</l>
+          <l n="2578">la gallarda toledana</l>
+          <l n="2579">que fue del muerto mujer.					2425</l>
+          <l n="2580">Casarte quiero con ella</l>
+          <l n="2581">y darte tres mil ducados.</l>
+          <l n="2582">Mendoza	Fueran muy bien empleados</l>
+          <l n="2583">mis pensamientos en ella,</l>
+          <l n="2584">mas no me atrevo, señor,					2430</l>
+          <l n="2585">porque vendrá cada día,</l>
+          <l n="2586">sobre cualquier niñería,</l>
+          <l n="2587">este difunto hablador</l>
+          <l n="2588">a romperme los oídos:</l>
+          <l n="2589">si reñí, si no reñi,						2435</l>
+          <l n="2590">si los vestidos le di,</l>
+          <l n="2591">si no le di los vestidos...</l>
+          <l n="2592">Que en enseñándole andar,</l>
+          <l n="2593">como si vivo estuviera,</l>
+          <l n="2594">un muerto por acá fuera,					2440</l>
+          <l n="2595">Dios lo puede remediar.</l>
+          <l n="2596">Yo quiero mujer sin puntos,</l>
+          <l n="2597">ni agentes tan efectivos,</l>
+          <l n="2598">que tenga parientes vivos</l>
+          <l n="2599">y no habladores difuntos.					2445</l>
+          <l n="2600">Marido hallarás mejor.</l>
+          <l n="2601">Marqués	Darele joyas también.</l>
+          <l n="2602">Mendoza	Harás en hacerle bien</l>
+          <l n="2603">como cristiano y señor,</l>
+          <l n="2604">porque yo con mi pobreza					2450</l>
+          <l n="2605">cien misas le he prometido.</l>
+          <l n="2606">Marqués	Estraño suceso ha sido.</l>
+          <l n="2607">Ya el aurora la cabeza</l>
+          <l n="2608">baña en jazmín y clavel.</l>
+          <l n="2609">Mendoza	Ya no hay para dormir.					2455</l>
+          <l n="2610">Marqués	A misa me quiero ir</l>
+          <l n="2611">y rogar a Dios por él.</l>
+          <l n="2612">
+            <hi rend="italic">Laurencia, Gerarda y Clara con mantos; don Filipe y don Enrique</hi>
+          </l>
+          <l n="2613">Laurencia	Hame causado temor</l>
+          <l n="2614">—si bien mi muerta esperanza</l>
+          <l n="2615">ha resuscitado en veros― 					2460</l>
+          <l n="2616">una historia tan estraña</l>
+          <l n="2617">cual no se ha visto en el mundo.</l>
+          <l n="2618">Filipe		Esta es, Laurencia, la causa</l>
+          <l n="2619">de no veros desde entonces,</l>
+          <l n="2620">porque el Marqués nos rogaba				2465</l>
+          <l n="2621">no diésemos ocasión.</l>
+          <l n="2622">Laurencia	En Madrid sólo se habla</l>
+          <l n="2623">un día en cualquier suceso,</l>
+          <l n="2624">que unos a otros se alcanzan.</l>
+          <l n="2625">Con grande pena he vivido					2470</l>
+          <l n="2626">en vuestra ausencia.</l>
+          <l n="2627">Filipe	No estaba</l>
+          <l n="2628">menos en la vuestra yo.</l>
+          <l n="2629">Enrique	En fin, señora Gerarda,</l>
+          <l n="2630">a breve amor, breve olvido.</l>
+          <l n="2631">Gerarda	¿Qué os debe mi confianza					2475</l>
+          <l n="2632">que la habéis tratado ansí?</l>
+          <l n="2633">Pues aun apenas con Clara</l>
+          <l n="2634">me habéis hecho una visita;</l>
+          <l n="2635">que si yo libre me hallara</l>
+          <l n="2636">para entrar con libertad					2480</l>
+          <l n="2637">día o noche en vuestra casa,</l>
+          <l n="2638">muy obligada estuviera.</l>
+          <l n="2639">
+            <hi rend="italic">Entre el Marqués, Feliciana, Bernardo y Mendoza</hi>
+          </l>
+          <l n="2640">Marqués	Ya con Mendoza trataba</l>
+          <l n="2641">vuestro remedio.</l>
+          <l n="2642">Feliciana	Señor,</l>
+          <l n="2643">donde la grandeza es tanta,					2485</l>
+          <l n="2644">seguro está mi remedio.</l>
+          <l n="2645">Marqués	No se cubran estas damas,</l>
+          <l n="2646">pues la que traigo conocen.</l>
+          <l n="2647">Laurencia	Ni es justo de Feliciana</l>
+          <l n="2648">de quien somos servidoras					2490</l>
+          <l n="2649">y sentimos sus desgracias.</l>
+          <l n="2650">Feliciana	Es muy propio del valor</l>
+          <l n="2651">dar favor a quien le falta.</l>
+          <l n="2652">Marqués	Pues en aquesta ocasión</l>
+          <l n="2653">tales personas se hallan					2495</l>
+          <l n="2654">que a guardarme este secreto</l>
+          <l n="2655">están por fuerza obligadas.</l>
+          <l n="2656">No siendo ya necesario</l>
+          <l n="2657">repetirle lo que pasa,</l>
+          <l n="2658">casi en presencia de todos,					2500</l>
+          <l n="2659">escúchenme dos palabras:</l>
+          <l n="2660">yo dejo depositados</l>
+          <l n="2661">para cumplir con el alma</l>
+          <l n="2662">de Leonardo y de sus deudas,</l>
+          <l n="2663">restituciones y mandas,					2505</l>
+          <l n="2664">diez mil ducados, que quiero</l>
+          <l n="2665">que entre todos se repartan,</l>
+          <l n="2666">si bien confiesa que deja</l>
+          <l n="2667">en joyas, muebles y casas</l>
+          <l n="2668">hasta seis mil, y no quiero					2510</l>
+          <l n="2669">quitarlos a Feliciana;</l>
+          <l n="2670">ella y su hija los gozen</l>
+          <l n="2671">y Mendoza —que rehusaba</l>
+          <l n="2672">ser su esposo, pues ya quiere,</l>
+          <l n="2673">a persuasión de quien le ama—				2515</l>
+          <l n="2674">goce otro dos mil con ella.</l>
+          <l n="2675">Mendoza	Dame tus heroicas plantas,</l>
+          <l n="2676">Ávila ilustre y famoso,</l>
+          <l n="2677">que a la bella Feliciana</l>
+          <l n="2678">doy el alma con la mano.					2520</l>
+          <l n="2679">Bernardo	Guardad la mano y el alma,</l>
+          <l n="2680">que desde ayer tiene dueño.</l>
+          <l n="2681">Mendoza	¿Cómo dueño?</l>
+          <l n="2682">Bernardo	Está casada</l>
+          <l n="2683">conmigo, que soy su primo,</l>
+          <l n="2684">y para el efeto aguarda					2525</l>
+          <l n="2685">desde hoy la dispensación.</l>
+          <l n="2686">Filipe		Está muy bien empleada,</l>
+          <l n="2687">y me ofrezco a ser padrino.</l>
+          <l n="2688">Laurencia	Y yo Madrina, o mi hermana.</l>
+          <l n="2689">Marqués	Burlado quedas, Mendoza.					2530</l>
+          <l n="2690">Mendoza	De esas burlillas me hagan,</l>
+          <l n="2691">que más que cuatro quisieran</l>
+          <l n="2692">que como a mí los burlaran.</l>
+          <l n="2693">Bernardo, buena mujer</l>
+          <l n="2694">lleváis, buen provecho os haga,				2535</l>
+          <l n="2695">que allá os lo dirá un difunto</l>
+          <l n="2696">después de los doce dadas.</l>
+          <l n="2697">Bernardo	Durmiendo yo con un ángel,</l>
+          <l n="2698">ninguna cosa me espanta.</l>
+          <l n="2699">Mendoza	Ángel los primeros días…					2540</l>
+          <l n="2700">Filipe		Aquí, senado, se acaba</l>
+          <l n="2701">este notable suceso</l>
+          <l n="2702">que al gran marqués de las Navas</l>
+          <l n="2703">sucedió preso en Madrid;</l>
+          <l n="2704">dadnos perdón de las faltas.					2545</l>
+          <l n="2705"/>
+          <l n="2706"/>
+          <l n="2707"/>
+          <l n="2708"/>
+        </sp>
+      </div>
+    </body>
+    <back>
+    </back>
+  </text>
+</TEI>
