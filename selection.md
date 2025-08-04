@@ -3,8 +3,6 @@ layout: default
 title: Acceder al texto
 ---
 
-<h1>Acceder al texto editado</h1>
-
 <p>Seleccione el tipo de edición que desea consultar:</p>
 
 <div class="row">
