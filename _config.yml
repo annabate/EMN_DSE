@@ -1,6 +1,6 @@
 title: El marqués de las Navas 
 description: Edición genética digital
-baseurl: "https://annabate.github.io/EMN_DSE/"
-url: ""
+baseurl: "/EMN_DSE"
+url: "https://annabate.github.io"  
 markdown: kramdown
 theme: null
