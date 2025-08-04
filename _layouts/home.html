@@ -1,54 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-    {% include head.html %}
-    
-    <body>
-        <div class="container">
-            <div class="dse">El marqués de las Navas - edición genética digital</div>
-            <div class="row" style="display: block;">
-                <div class="section-grid" id="contenidotexto">
-                    <section class="home-box" id="presentation">
-                        <img alt="presentation" class="home-image" src="images/presentation.png" />
-                        <h2>
-                            <a href="presentation.html">Presentación</a>
-                        </h2>
-                        <p>Bienvenidos a la edición genética digital de <i>El marqués de las Navas</i>, comedia autógrafa de Lope de Vega. Esta plataforma proporciona acceso al texto editado y anotado críticamente. Igualmente, permite la visión sinóptica del facsímil del manuscrito, para apreciar en su totalidad el proceso de composición de la pieza.</p>
-                    </section>
-                      <section class="home-box" id="this-edition">
-                        <img alt="this-edition" class="home-image" src="images/this_edition.png" />
-                        <h2><a href="edition.html">Esta edición</a></h2>
-                        <p>Aquí podrán encontrar información sobre los criterios de edición y el modelo de transcripción.</p>
-                    </section>
-                    <section class="home-box" id="access">
-                        <img alt="access" class="home-image" src="images/access_text.png" />
-                        <h2>
-                            <a href="selection.html">Acceder al texto</a>
-                        </h2>
-                        <p>Aquí podrán acceder al texto editado.</p>
-                    </section>
-                    <section class="home-box" id="documentation">
-                        <img alt="documentation" class="home-image" src="images/documentation.png" />
-                        <h2><a href="documentation.html">Documentación</a></h2>
-                        <p>Hagan clic para explorar la documentación técnica y editorial en que se basa esta edición.</p>
-                    </section>
-                    <section class="home-box" id="credit">
-                        <img alt="credit" class="home-image" src="images/credits.png" />
-                        <h2><a href="credits.html">Créditos</a></h2>
-                        <p>Este proyecto ha sido desarrollado gracias a la colaboración de varios especialistas y programadores. Hagan clic para saber más.</p>
-                    </section>
-                     <section class="home-box" id="credit">
-                        <img alt="bibliography" class="home-image" src="images/bibliography.png" />
-                        <h2><a href="bibliography.html">Bibliografía</a></h2>
-                        <p>Hagan clic para explorar las fuentes.</p>
-                    </section>
-                </div>
-            </div>
+  {% include head.html %}
+
+  <body>
+    <div class="container">
+      <div class="dse">El marqués de las Navas - edición genética digital</div>
+      <div class="row" style="display: block;">
+        <div class="section-grid" id="contenidotexto">
+          <section class="home-box" id="presentation">
+            <img alt="presentation" class="home-image" src="{{ site.baseurl }}/images/presentation.png" />
+            <h2>
+              <a href="{{ site.baseurl }}/presentation.html">Presentación</a>
+            </h2>
+            <p>Bienvenidos a la edición genética digital de <i>El marqués de las Navas</i>, comedia autógrafa de Lope de Vega. Esta plataforma proporciona acceso al texto editado y anotado críticamente. Igualmente, permite la visión sinóptica del facsímil del manuscrito, para apreciar en su totalidad el proceso de composición de la pieza.</p>
+          </section>
+
+          <section class="home-box" id="this-edition">
+            <img alt="this-edition" class="home-image" src="{{ site.baseurl }}/images/this_edition.png" />
+            <h2>
+              <a href="{{ site.baseurl }}/edition.html">Esta edición</a>
+            </h2>
+            <p>Aquí podrán encontrar información sobre los criterios de edición y el modelo de transcripción.</p>
+          </section>
+
+          <section class="home-box" id="access">
+            <img alt="access" class="home-image" src="{{ site.baseurl }}/images/access_text.png" />
+            <h2>
+              <a href="{{ site.baseurl }}/selection.html">Acceder al texto</a>
+            </h2>
+            <p>Aquí podrán acceder al texto editado.</p>
+          </section>
+
+          <section class="home-box" id="documentation">
+            <img alt="documentation" class="home-image" src="{{ site.baseurl }}/images/documentation.png" />
+            <h2>
+              <a href="{{ site.baseurl }}/documentation.html">Documentación</a>
+            </h2>
+            <p>Hagan clic para explorar la documentación técnica y editorial en que se basa esta edición.</p>
+          </section>
+
+          <section class="home-box" id="credit">
+            <img alt="credit" class="home-image" src="{{ site.baseurl }}/images/credits.png" />
+            <h2>
+              <a href="{{ site.baseurl }}/credits.html">Créditos</a>
+            </h2>
+            <p>Este proyecto ha sido desarrollado gracias a la colaboración de varios especialistas y programadores. Hagan clic para saber más.</p>
+          </section>
+
+          <section class="home-box" id="bibliography">
+            <img alt="bibliography" class="home-image" src="{{ site.baseurl }}/images/bibliography.png" />
+            <h2>
+              <a href="{{ site.baseurl }}/bibliography.html">Bibliografía</a>
+            </h2>
+            <p>Hagan clic para explorar las fuentes.</p>
+          </section>
         </div>
-        <!-- /.container -->
-        
-        {% include footer.html %}
-        
-        <script src="assets/scripts.js"></script>
-    </body>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script src="{{ site.baseurl }}/assets/scripts.js"></script>
+  </body>
+
 </html>
