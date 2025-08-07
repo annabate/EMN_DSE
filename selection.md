@@ -28,7 +28,7 @@ title: Acceder al texto
         <p class="card-text">
           Consulte la edición crítica con variantes de los testigos y colación textual.
         </p>
-        <a href="{{ site.baseurl }}/critical/index.html" class="btn btn-primary">Ver edición crítica</a>
+        <a href="{{ site.baseurl }}/critical/index.html" class="btn btn-secondary">Ver edición crítica</a>
       </div>
     </div>
   </div>
