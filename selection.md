@@ -3,7 +3,7 @@ layout: default
 title: Acceder al texto
 ---
 
-<h2 class="text-center my-4">Seleccione el tipo de edición que desea consultar:</h2>
+<h2 class="text-left">Seleccione el tipo de edición que desea consultar:</h2>
 
 <div class="row justify-content-center">
 
