@@ -1,4 +1,4 @@
-f/*!
+/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -9038,3 +9038,4 @@ a.tooltip2.crit-app:hover,
   25%{width: 8px;height: 0;border-bottom-color: cornflowerblue;}
   50%{width: 8px;height: 13px;border-bottom-color: cornflowerblue;border-right-color: cornflowerblue;}
 }
+
