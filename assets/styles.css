@@ -7608,7 +7608,8 @@ button.bg-dark:hover {
     text-align: right !important
 }
 .text-center {
-    text-align: center !important
+    text-align: center !important;
+    font-size: 24px;
 }
 @media (min-width : 576px) {
     .text-sm-left {
