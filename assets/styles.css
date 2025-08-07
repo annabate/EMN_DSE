@@ -8232,7 +8232,7 @@ a.text-dark:hover {
 .navbar-inverse .navbar-offcanvas .navmenu-brand:hover,
 .navmenu-inverse .navmenu-brand:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-brand:focus {
-    color: #ffffff;
+    color: rgb(159 133 107 / 80%);;
     background-color: transparent;
 }
 .navmenu-inverse .navmenu-text,
