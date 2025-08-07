@@ -140,7 +140,8 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
+    font-size: 20px
 }
 p {
     margin-top: 0;
@@ -1538,42 +1539,6 @@ pre code {
         text-decoration: underline;
       }
 
-      .btn-primary {
-        background-color: #153959;
-        border: none;
-      }
-
-      .btn-primary:hover {
-        background-color: #102c43;
-      }
-
-      .btn-secondary {
-        background-color: #8b0000;
-        color: white;
-        border: none;
-      }
-
-      .btn-secondary:hover {
-        background-color: #5a0000;
-      }
-
-      .card-title {
-        color: #4e3629;
-      }
-
-      .bg-white {
-        background-color: #fff !important;
-      }
-
-      footer {
-        background-color: #f8f9fa;
-        color: #3a2f25;
-        padding: 1rem 0;
-        text-align: center;
-        font-size: 0.9rem;
-        margin-top: 2rem;
-      }
-
 }
 .table {
     width: 100%;
@@ -2302,13 +2267,13 @@ fieldset:disabled a.btn {
 }
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #334a63;
+    border-color: #1a2d42
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc
+    background-color: #3e6fa4;
+    border-color: #3c5774
 }
 .btn-primary.focus,
 .btn-primary:focus {
@@ -2317,15 +2282,15 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #3e6fa4;
+    border-color: #3e6fa4
 }
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf
+    background-color: #3e6fa4;
+    border-color: #3e6fa4
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -2334,13 +2299,13 @@ fieldset:disabled a.btn {
 }
 .btn-secondary {
     color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
+    background-color: #464e54;
+    border-color: #26333e
 }
 .btn-secondary:hover {
     color: #fff;
-    background-color: #5a6268;
-    border-color: #545b62
+    background-color: #86aac7;
+    border-color: #6e859b
 }
 .btn-secondary.focus,
 .btn-secondary:focus {
@@ -8637,6 +8602,7 @@ h5 {
     font-size: 22px;
     font-style: normal
 }
+h
 .dse {
     font-optical-sizing: initial;
     text-align: center;
