@@ -11,7 +11,7 @@ title: Acceder al texto
   <div class="col-md-5 mb-4 d-flex align-items-stretch">
     <div class="card shadow-sm w-100">
       <div class="card-body">
-        <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Edición genética</h5>
+        <h5 class="card-title">Edición genética</h5>
         <p class="card-text">
           Acceda a la edición genética digital basada en el manuscrito autógrafo.
         </p>
@@ -24,7 +24,7 @@ title: Acceder al texto
   <div class="col-md-5 mb-4 d-flex align-items-stretch">
     <div class="card shadow-sm w-100">
       <div class="card-body">
-        <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Edición crítica</h5>
+        <h5 class="card-title">Edición crítica</h5>
         <p class="card-text">
           Consulte la edición crítica con variantes de los testigos y colación textual.
         </p>
