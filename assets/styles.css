@@ -147,7 +147,10 @@ p {
     margin-bottom: 1rem;
     margin-left: 1em;
     margin-right: 1em;
-	text-align: justify
+	text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 abbr[data-original-title],
 abbr[title] {
