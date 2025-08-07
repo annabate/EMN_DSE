@@ -78,7 +78,10 @@ section {
     border-radius: 6px;
     transform: translateY(0px);
     transition: all 0.25s ease-out;
-    max-width: 100%;
+    max-width: 95%;
+     hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .home-box:hover {
@@ -1032,8 +1035,7 @@ pre code {
         max-width: 25%
     }
     .col-md-4 {
-        background-color: #bbb;
-        font-size: 13px;
+        font-size: 14px;
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
         max-width: 33.333333%
@@ -8636,7 +8638,7 @@ h5 {
     background: #ffffffad;
     width: 100%;
     /* padding-right: 10px; */
-    font-family: "Georgia", Times, serif;
+    font-family: Playfair Display, serif;
     font-size: 34px;
     font-style: italic;
     font-weight: 400;
