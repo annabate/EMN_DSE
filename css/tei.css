@@ -638,3 +638,24 @@ html, body {
     width: auto;
     height: 70px;
 }
+
+.marginal-reveal-button {
+  font-size: 0.9em;
+  padding: 0 0.4em;
+  margin: 0 0.2em;
+  cursor: pointer;
+  background: #eef6ff;
+  border: 1px solid #0077cc;
+  border-radius: 4px;
+  color: #0077cc;
+}
+
+.marginal-fade-text {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  display: inline;
+}
+
+.marginal-fade-text.fade-in {
+  opacity: 1;
+}

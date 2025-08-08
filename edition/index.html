@@ -261,6 +261,7 @@
   rdg.classList.add(`wit-${wit}`);
   rdg.classList.add("decorated");
 
+  // Add sequence number as superscript
   if (seq && !rdg.querySelector(".rdg-seq")) {
     const sup = document.createElement("sup");
     sup.className = "rdg-seq";
@@ -268,16 +269,69 @@
     rdg.appendChild(sup);
   }
 
+  // Handle <subst> (deletion + addition)
   const subst = rdg.querySelector("tei-subst");
   if (subst) {
     const del = subst.querySelector("tei-del");
     const add = subst.querySelector("tei-add");
 
-    if (del) del.outerHTML = `<span class="deletion">${del.innerHTML}</span>`;
-    if (add) add.outerHTML = `<span class="addition">${add.innerHTML}</span>`;
-  }
-}
+    const parts = [];
 
+    if (del) {
+      const delSpan = document.createElement("span");
+      delSpan.className = "deletion";
+      delSpan.textContent = del.textContent;
+      parts.push(delSpan);
+    }
+
+    if (add) {
+      const addSpan = document.createElement("span");
+      addSpan.className = "addition";
+      addSpan.textContent = add.textContent;
+
+      // Check for marginal addition
+      if (add.getAttribute("place") === "margin" && add.getAttribute("hand")) {
+        addSpan.classList.add("marginal-add");
+        addSpan.dataset.hand = add.getAttribute("hand");
+        addSpan.dataset.text = add.textContent;
+      }
+
+      parts.push(addSpan);
+    }
+
+    subst.replaceWith(...parts);
+  }
+
+  // Handle standalone <add> elements (outside of <subst>)
+  const adds = rdg.querySelectorAll("tei-add");
+  adds.forEach(add => {
+    const place = add.getAttribute("place");
+    const hand = add.getAttribute("hand");
+    const text = add.textContent;
+
+    const span = document.createElement("span");
+    span.textContent = text;
+
+    if (place === "margin" && hand) {
+      span.classList.add("marginal-add");
+      span.dataset.hand = hand;
+      span.dataset.text = text;
+    } else {
+      span.classList.add("addition");
+    }
+
+    add.replaceWith(span);
+  });
+
+  // Handle standalone <del> elements (outside of <subst>)
+  const dels = rdg.querySelectorAll("tei-del");
+  dels.forEach(del => {
+    const span = document.createElement("span");
+    span.className = "deletion";
+    span.textContent = del.textContent;
+    del.replaceWith(span);
+  });
+}
 
 function filterReadings({ wit = null, showAll = false, defaultView = false }) {
   const apps = document.querySelectorAll("tei-app");
@@ -287,6 +341,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     let bestRdg = null;
     let highestSeq = -1;
 
+    // Find best variant sequence (not strictly necessary if you don't use it)
     rdgs.forEach(rdg => {
       const seq = parseInt(rdg.getAttribute("varSeq"), 10);
       if (!isNaN(seq) && seq > highestSeq) {
@@ -295,11 +350,12 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       }
     });
 
-    // Reset all rdgs first
+    // Reset all readings
     if (!showAll && !defaultView) {
       rdgs.forEach(rdg => {
         rdg.style.display = "none";
         rdg.classList.remove("active-reading", "wit-A0", "wit-A1", "wit-A2", "wit-B1", "wit-B2", "decorated");
+
         if (rdg.dataset.originalHtml) rdg.innerHTML = rdg.dataset.originalHtml;
 
         const existingSup = rdg.querySelector(".rdg-seq");
@@ -307,40 +363,66 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       });
     }
 
+    // ✅ PHASE FILTERING (A0, A1, A2, B)
     if (wit) {
-    let found = false;
-    let exactMatchFound = false;
-    const allowedWits = phaseHierarchy[wit] || [wit];
+      let found = false;
+      let exactMatchFound = false;
+      const allowedWits = phaseHierarchy[wit] || [wit];
 
-    rdgs.forEach(rdg => {
-      const rdgWit = rdg.getAttribute("wit");
-      if (allowedWits.includes(rdgWit)) {
-        rdg.style.display = "inline";
-        found = true;
+      rdgs.forEach(rdg => {
+        const rdgWit = rdg.getAttribute("wit");
+
+        if (allowedWits.includes(rdgWit)) {
+          rdg.style.display = "inline";
+          found = true;
+        }
+
+        if (rdgWit === wit) {
+          decorateRdgWithHighlight(rdg);
+          rdg.classList.add("active-reading");
+          exactMatchFound = true;
+        }
+      });
+
+      // Optional fallback to A0 if A1/A2 have no hits
+      if (!exactMatchFound && (wit === "A1" || wit === "A2")) {
+        const a0 = rdgs.find(rdg => rdg.getAttribute("wit") === "A0");
+        if (a0) {
+          a0.style.display = "inline";
+          found = true;
+        }
       }
 
-      if (rdgWit === wit) {
-        decorateRdgWithHighlight(rdg);
-        rdg.classList.add("active-reading");
-        exactMatchFound = true;
-      }
-    });
+      app.style.display = found ? "inline" : "none";
 
-    // Fallback: show A0 if no exact match found for A1/A2
-    if (!exactMatchFound && (wit === "A1" || wit === "A2")) {
-      const a0 = rdgs.find(rdg => rdg.getAttribute("wit") === "A0");
-      if (a0) {
-        a0.style.display = "inline";
-        // DO NOT decorate or add 'active-reading' for fallback
-        found = true;
-      }
+      // ✅ MARGINAL ADDITION BUTTONS FOR CURRENT WIT
+      document.querySelectorAll(`.marginal-add[data-hand="#${wit}"]`).forEach(span => {
+        const text = span.dataset.text;
+
+        // Avoid inserting button multiple times
+        if (span.querySelector(".marginal-reveal-button")) return;
+
+        const button = document.createElement("button");
+        button.className = "marginal-reveal-button";
+        button.textContent = "+";
+        button.title = `Mostrar añadido marginal de ${wit}`;
+
+        span.textContent = "";
+        span.appendChild(button);
+
+        button.addEventListener("click", () => {
+          const fadeSpan = document.createElement("span");
+          fadeSpan.className = "marginal-fade-text";
+          fadeSpan.textContent = text;
+          button.replaceWith(fadeSpan);
+          requestAnimationFrame(() => fadeSpan.classList.add("fade-in"));
+        });
+      });
+
+      return; // end if (wit)
     }
 
-
-    app.style.display = found ? "inline" : "none";
-    return;
-  }
-
+    // ✅ SHOW ALL VARIANTS
     if (showAll || defaultView) {
       rdgs.forEach(rdg => {
         decorateRdgWithHighlight(rdg);
@@ -351,6 +433,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     }
   });
 }
+
     
   function handleVariantChange(value) {
     document.body.classList.remove("clean-mode");
@@ -593,51 +676,49 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     });4
 
     let searchResults = [];
-    let currentMatchIndex = 0;
+    let currentResultIndex = 0;
 
-    function clearSearchHighlights(container) {
-      container.querySelectorAll("span.search-highlight").forEach(span => {
-        const textNode = document.createTextNode(span.textContent);
-        span.replaceWith(textNode);
+    function clearHighlights(container) {
+      const highlights = container.querySelectorAll(".search-highlight");
+      highlights.forEach(span => {
+        const parent = span.parentNode;
+        parent.replaceChild(document.createTextNode(span.textContent), span);
+        parent.normalize(); // Merge adjacent text nodes
       });
     }
 
-    function highlightMatches(container, query) {
-      const results = [];
-      const regex = new RegExp(query, 'gi');
+   function highlightText(container, query, results = []) {
+      clearHighlights(container);
+      if (!query) return [];
+
+      const regex = new RegExp(query, "gi");
 
       container.querySelectorAll("*:not(script):not(style)").forEach(node => {
         node.childNodes.forEach(child => {
-          if (child.nodeType === Node.TEXT_NODE && regex.test(child.textContent)) {
-            const matches = [...child.textContent.matchAll(regex)];
+          if (
+            child.nodeType === 3 &&                 // Text node
+            regex.test(child.textContent) &&       // Match found
+            !node.closest(".search-highlight")     // ⚠ Prevent nesting
+          ) {
+            const span = document.createElement("span");
+            span.className = "search-highlight";
+            span.textContent = child.textContent.match(regex)[0];
 
-            if (matches.length) {
-              const parent = child.parentNode;
-              const fragments = [];
-              let lastIndex = 0;
+            const split = child.textContent.split(regex);
+            const fragments = [];
 
-              matches.forEach(match => {
-                const { index } = match;
-                const before = child.textContent.slice(lastIndex, index);
-                const matchedText = match[0];
-
-                if (before) fragments.push(document.createTextNode(before));
-
-                const span = document.createElement("span");
-                span.className = "search-highlight";
-                span.textContent = matchedText;
-                results.push(span);
-                fragments.push(span);
-
-                lastIndex = index + matchedText.length;
-              });
-
-              const after = child.textContent.slice(lastIndex);
-              if (after) fragments.push(document.createTextNode(after));
-
-              fragments.forEach(f => parent.insertBefore(f, child));
-              parent.removeChild(child);
+            for (let i = 0; i < split.length; i++) {
+              fragments.push(document.createTextNode(split[i]));
+              if (i < split.length - 1) {
+                const newSpan = span.cloneNode(true);
+                fragments.push(newSpan);
+                results.push(newSpan);
+              }
             }
+
+            const parent = child.parentNode;
+            fragments.forEach(f => parent.insertBefore(f, child));
+            parent.removeChild(child);
           }
         });
       });
@@ -645,71 +726,80 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       return results;
     }
 
-    function scrollToMatch(index) {
-      if (searchResults.length === 0) return;
 
-      searchResults.forEach(el => el.classList.remove("active-match"));
-      const match = searchResults[index];
-      match.classList.add("active-match");
+    let lastSearchQuery = "";
 
-      const container = match.closest('.tei-column-scroll');
-      if (container) {
-        container.scrollTo({
-          top: match.offsetTop - 40,
-          behavior: "smooth"
-        });
-      }
-    }
-
-    function performSearch() {
+    document.getElementById("search-button").addEventListener("click", () => {
       const query = document.getElementById("search-input").value.trim();
       const scope = document.getElementById("search-scope").value;
 
-      const modernContainer = document.querySelector("#modern-container .tei-column-scroll");
-      const diplomaticContainer = document.querySelector("#diplomatic-container .tei-column-scroll");
+      const modern = document.querySelector("#modern-container .tei-column-scroll");
+      const diplomatic = document.querySelector("#diplomatic-container .tei-column-scroll");
 
-      clearSearchHighlights(modernContainer);
-      clearSearchHighlights(diplomaticContainer);
+      // Clear highlights where needed
+      if (scope === "modern" || scope === "both") clearHighlights(modern);
+      if (scope === "diplomatic" || scope === "both") clearHighlights(diplomatic);
 
+      // Perform scoped highlighting
       searchResults = [];
-
-      if (query === "") return;
-
-      if (scope === "both" || scope === "modern") {
-        searchResults.push(...highlightMatches(modernContainer, query));
+      if (scope === "modern" || scope === "both") {
+        searchResults.push(...highlightText(modern, query));
       }
-
-      if (scope === "both" || scope === "diplomatic") {
-        searchResults.push(...highlightMatches(diplomaticContainer, query));
+      if (scope === "diplomatic" || scope === "both") {
+        searchResults.push(...highlightText(diplomatic, query));
       }
+      
+      scrollToMatch(currentResultIndex);
+    });
 
-      currentMatchIndex = 0;
-      if (searchResults.length > 0) scrollToMatch(currentMatchIndex);
+
+    function scrollToMatch(index) {
+      if (!searchResults.length) return;
+
+      // Remove all previous highlights
+      searchResults.forEach(el => el.classList.remove("active-match"));
+
+      // Activate current match
+      const match = searchResults[index];
+      match.classList.add("active-match");
+
+      const scrollable = match.closest('.tei-column-scroll');
+      if (!scrollable) return;
+
+      // Calculate correct position relative to container
+      const matchTop = match.offsetTop;
+      scrollable.scrollTo({
+        top: matchTop - 40,
+        behavior: "smooth"
+      });
+
+      // Also scroll page if needed (e.g. sticky header covering it)
+      const rect = match.getBoundingClientRect();
+      if (rect.top < 100 || rect.bottom > window.innerHeight) {
+        match.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     }
-
-    document.getElementById("search-button").addEventListener("click", performSearch);
 
     document.getElementById("search-input").addEventListener("input", () => {
       if (document.getElementById("search-input").value.trim() === "") {
-        const modernContainer = document.querySelector("#modern-container .tei-column-scroll");
-        const diplomaticContainer = document.querySelector("#diplomatic-container .tei-column-scroll");
-        clearSearchHighlights(modernContainer);
-        clearSearchHighlights(diplomaticContainer);
+        clearHighlights(document.querySelector("#modern-container .tei-column-scroll"));
+        clearHighlights(document.querySelector("#diplomatic-container .tei-column-scroll"));
         searchResults = [];
-        currentMatchIndex = 0;
+        currentResultIndex = 0;
+        lastSearchQuery = "";
       }
     });
 
     document.getElementById("next-match").addEventListener("click", () => {
       if (searchResults.length === 0) return;
-      currentMatchIndex = (currentMatchIndex + 1) % searchResults.length;
-      scrollToMatch(currentMatchIndex);
+      currentResultIndex = (currentResultIndex + 1) % searchResults.length;
+      scrollToMatch(currentResultIndex);
     });
 
     document.getElementById("prev-match").addEventListener("click", () => {
       if (searchResults.length === 0) return;
-      currentMatchIndex = (currentMatchIndex - 1 + searchResults.length) % searchResults.length;
-      scrollToMatch(currentMatchIndex);
+      currentResultIndex = (currentResultIndex - 1 + searchResults.length) % searchResults.length;
+      scrollToMatch(currentResultIndex);
     });
 
   };
