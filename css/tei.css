@@ -381,12 +381,13 @@ tei-pb::before {
 }
 
 .note-icon {
-  display: inline-block;
-  cursor: pointer;
-  line-height: 0.5em;
-  padding-bottom: 0.4em;
-  vertical-align:text-bottom;
-}
+    font-size: 0.8em;
+    color: var(--accent-icon);
+    font-weight: bold;
+    user-select: none;
+    display: inline;
+    vertical-align: super;
+  }
 
 .floating-note {
   position:absolute;
