@@ -593,49 +593,51 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
     });4
 
     let searchResults = [];
-    let currentResultIndex = 0;
+    let currentMatchIndex = 0;
 
-    function clearHighlights(container) {
-      const highlights = container.querySelectorAll(".search-highlight");
-      highlights.forEach(span => {
-        const parent = span.parentNode;
-        parent.replaceChild(document.createTextNode(span.textContent), span);
-        parent.normalize(); // Merge adjacent text nodes
+    function clearSearchHighlights(container) {
+      container.querySelectorAll("span.search-highlight").forEach(span => {
+        const textNode = document.createTextNode(span.textContent);
+        span.replaceWith(textNode);
       });
     }
 
-   function highlightText(container, query, results = []) {
-      clearHighlights(container);
-      if (!query) return [];
-
-      const regex = new RegExp(query, "gi");
+    function highlightMatches(container, query) {
+      const results = [];
+      const regex = new RegExp(query, 'gi');
 
       container.querySelectorAll("*:not(script):not(style)").forEach(node => {
         node.childNodes.forEach(child => {
-          if (
-            child.nodeType === 3 &&                 // Text node
-            regex.test(child.textContent) &&       // Match found
-            !node.closest(".search-highlight")     // ⚠ Prevent nesting
-          ) {
-            const span = document.createElement("span");
-            span.className = "search-highlight";
-            span.textContent = child.textContent.match(regex)[0];
+          if (child.nodeType === Node.TEXT_NODE && regex.test(child.textContent)) {
+            const matches = [...child.textContent.matchAll(regex)];
 
-            const split = child.textContent.split(regex);
-            const fragments = [];
+            if (matches.length) {
+              const parent = child.parentNode;
+              const fragments = [];
+              let lastIndex = 0;
 
-            for (let i = 0; i < split.length; i++) {
-              fragments.push(document.createTextNode(split[i]));
-              if (i < split.length - 1) {
-                const newSpan = span.cloneNode(true);
-                fragments.push(newSpan);
-                results.push(newSpan);
-              }
+              matches.forEach(match => {
+                const { index } = match;
+                const before = child.textContent.slice(lastIndex, index);
+                const matchedText = match[0];
+
+                if (before) fragments.push(document.createTextNode(before));
+
+                const span = document.createElement("span");
+                span.className = "search-highlight";
+                span.textContent = matchedText;
+                results.push(span);
+                fragments.push(span);
+
+                lastIndex = index + matchedText.length;
+              });
+
+              const after = child.textContent.slice(lastIndex);
+              if (after) fragments.push(document.createTextNode(after));
+
+              fragments.forEach(f => parent.insertBefore(f, child));
+              parent.removeChild(child);
             }
-
-            const parent = child.parentNode;
-            fragments.forEach(f => parent.insertBefore(f, child));
-            parent.removeChild(child);
           }
         });
       });
@@ -643,80 +645,71 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       return results;
     }
 
-
-    let lastSearchQuery = "";
-
-    document.getElementById("search-button").addEventListener("click", () => {
-      const query = document.getElementById("search-input").value.trim();
-      const scope = document.getElementById("search-scope").value;
-
-      const modern = document.querySelector("#modern-container .tei-column-scroll");
-      const diplomatic = document.querySelector("#diplomatic-container .tei-column-scroll");
-
-      // Clear highlights where needed
-      if (scope === "modern" || scope === "both") clearHighlights(modern);
-      if (scope === "diplomatic" || scope === "both") clearHighlights(diplomatic);
-
-      // Perform scoped highlighting
-      searchResults = [];
-      if (scope === "modern" || scope === "both") {
-        searchResults.push(...highlightText(modern, query));
-      }
-      if (scope === "diplomatic" || scope === "both") {
-        searchResults.push(...highlightText(diplomatic, query));
-      }
-      
-      scrollToMatch(currentResultIndex);
-    });
-
-
     function scrollToMatch(index) {
-      if (!searchResults.length) return;
+      if (searchResults.length === 0) return;
 
-      // Remove all previous highlights
       searchResults.forEach(el => el.classList.remove("active-match"));
-
-      // Activate current match
       const match = searchResults[index];
       match.classList.add("active-match");
 
-      const scrollable = match.closest('.tei-column-scroll');
-      if (!scrollable) return;
-
-      // Calculate correct position relative to container
-      const matchTop = match.offsetTop;
-      scrollable.scrollTo({
-        top: matchTop - 40,
-        behavior: "smooth"
-      });
-
-      // Also scroll page if needed (e.g. sticky header covering it)
-      const rect = match.getBoundingClientRect();
-      if (rect.top < 100 || rect.bottom > window.innerHeight) {
-        match.scrollIntoView({ behavior: "smooth", block: "center" });
+      const container = match.closest('.tei-column-scroll');
+      if (container) {
+        container.scrollTo({
+          top: match.offsetTop - 40,
+          behavior: "smooth"
+        });
       }
     }
 
+    function performSearch() {
+      const query = document.getElementById("search-input").value.trim();
+      const scope = document.getElementById("search-scope").value;
+
+      const modernContainer = document.querySelector("#modern-container .tei-column-scroll");
+      const diplomaticContainer = document.querySelector("#diplomatic-container .tei-column-scroll");
+
+      clearSearchHighlights(modernContainer);
+      clearSearchHighlights(diplomaticContainer);
+
+      searchResults = [];
+
+      if (query === "") return;
+
+      if (scope === "both" || scope === "modern") {
+        searchResults.push(...highlightMatches(modernContainer, query));
+      }
+
+      if (scope === "both" || scope === "diplomatic") {
+        searchResults.push(...highlightMatches(diplomaticContainer, query));
+      }
+
+      currentMatchIndex = 0;
+      if (searchResults.length > 0) scrollToMatch(currentMatchIndex);
+    }
+
+    document.getElementById("search-button").addEventListener("click", performSearch);
+
     document.getElementById("search-input").addEventListener("input", () => {
       if (document.getElementById("search-input").value.trim() === "") {
-        clearHighlights(document.querySelector("#modern-container .tei-column-scroll"));
-        clearHighlights(document.querySelector("#diplomatic-container .tei-column-scroll"));
+        const modernContainer = document.querySelector("#modern-container .tei-column-scroll");
+        const diplomaticContainer = document.querySelector("#diplomatic-container .tei-column-scroll");
+        clearSearchHighlights(modernContainer);
+        clearSearchHighlights(diplomaticContainer);
         searchResults = [];
-        currentResultIndex = 0;
-        lastSearchQuery = "";
+        currentMatchIndex = 0;
       }
     });
 
     document.getElementById("next-match").addEventListener("click", () => {
       if (searchResults.length === 0) return;
-      currentResultIndex = (currentResultIndex + 1) % searchResults.length;
-      scrollToMatch(currentResultIndex);
+      currentMatchIndex = (currentMatchIndex + 1) % searchResults.length;
+      scrollToMatch(currentMatchIndex);
     });
 
     document.getElementById("prev-match").addEventListener("click", () => {
       if (searchResults.length === 0) return;
-      currentResultIndex = (currentResultIndex - 1 + searchResults.length) % searchResults.length;
-      scrollToMatch(currentResultIndex);
+      currentMatchIndex = (currentMatchIndex - 1 + searchResults.length) % searchResults.length;
+      scrollToMatch(currentMatchIndex);
     });
 
   };
