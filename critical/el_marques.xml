@@ -3,8 +3,14 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>El marqués de las Navas</title>
+        <title type="main">El marqués de las Navas</title>
+        <title type="sub">Edición Digital Académica</title>
+        <author xml:id="LdV">Lope de Vega</author>
       </titleStmt>
+      <respStmt>
+        <resp>Edición crítico-genética y marcado de:</resp>
+        <name xml:id="AA">Anna Abate</name>
+      </respStmt>
       <publicationStmt>
         <p/>
       </publicationStmt>

@@ -162,8 +162,11 @@
 
       const span = document.createElement("span");
       span.className = "note-icon";
-       icon.textContent = "❋";
-      span.textContent = ""; //
+      span.textContent = "*"; //
+      span.style.fontWeight = "bold";
+      span.style.fontSize = "1.2em";
+      span.style.color = "#FF0000";
+      span.style.cursor = "pointer";
 
       cleanNote.appendChild(span);
       originalNote.replaceWith(cleanNote);
@@ -251,17 +254,17 @@
     "B": ["A1", "A2", "B"]
   };
 
-
-  function decorateRdgWithHighlight(rdg) {
+function decorateRdgWithHighlight(rdg) {
+  if (!rdg.dataset.originalHtml) {
+    rdg.dataset.originalHtml = rdg.innerHTML; // save pristine
+  }
   if (rdg.classList.contains("decorated")) return;
 
   const wit = rdg.getAttribute("wit") || "unknown";
   const seq = rdg.getAttribute("varSeq") || "";
 
-  rdg.classList.add(`wit-${wit}`);
-  rdg.classList.add("decorated");
+  rdg.classList.add(`wit-${wit}`, "decorated");
 
-  // Add sequence number as superscript
   if (seq && !rdg.querySelector(".rdg-seq")) {
     const sup = document.createElement("sup");
     sup.className = "rdg-seq";
@@ -269,182 +272,183 @@
     rdg.appendChild(sup);
   }
 
-  // Handle <subst> (deletion + addition)
   const subst = rdg.querySelector("tei-subst");
   if (subst) {
     const del = subst.querySelector("tei-del");
     const add = subst.querySelector("tei-add");
+    if (del) del.outerHTML = `<span class="deletion">${del.innerHTML}</span>`;
+    if (add) add.outerHTML = `<span class="addition">${add.innerHTML}</span>`;
+  }
+}
 
-    const parts = [];
+function setupMarginalAdd(add, wit) {
+  // ---- phase / witness -----------------------------------------------
+  const currentPhase = (document.getElementById("variant-selector")?.value || "all")
+    .trim().toUpperCase();
+  const noteWit = (wit || add.getAttribute("wit") || "unknown")
+    .trim().toUpperCase();
+  const isActive = currentPhase === "ALL" || currentPhase === noteWit;
 
-    if (del) {
-      const delSpan = document.createElement("span");
-      delSpan.className = "deletion";
-      delSpan.textContent = del.textContent;
-      parts.push(delSpan);
-    }
+  // ---- normalize place + Spanish label for the tooltip ----------------
+  const placeRaw = (add.getAttribute("place") || "left").toLowerCase();
+  const dir = ["left", "right", "top", "bottom"].includes(placeRaw) ? placeRaw : "left";
+  const sideES = { left: "izquierdo", right: "derecho", top: "alto", bottom: "bajo" }[dir];
 
-    if (add) {
-      const addSpan = document.createElement("span");
-      addSpan.className = "addition";
-      addSpan.textContent = add.textContent;
+  // Set the hover tooltip on the note (always)
+  add.setAttribute("title", `añadido en el margen ${sideES}`);
 
-      // Check for marginal addition
-      if (add.getAttribute("place") === "margin" && add.getAttribute("hand")) {
-        addSpan.classList.add("marginal-add");
-        addSpan.dataset.hand = add.getAttribute("hand");
-        addSpan.dataset.text = add.textContent;
-      }
+  // ---- clean old toggles & reset -------------------------------------
+  if (add.previousElementSibling?.classList?.contains("marginal-toggle")) add.previousElementSibling.remove();
+  if (add.nextElementSibling?.classList?.contains("marginal-toggle")) add.nextElementSibling.remove();
 
-      parts.push(addSpan);
-    }
+  add.classList.remove(
+    "marginal-hidden","marginal-active","marginal-a0-block",
+    "highlighted-marginal","marginal-processed","reveal","reveal-in"
+  );
+  add.removeAttribute("data-reveal");
+  add.style.display = "";
+  add.style.removeProperty("--note-left");
+  add.style.removeProperty("--note-nudge-x");
 
-    subst.replaceWith(...parts);
+  if (!add.dataset.originalContent) add.dataset.originalContent = add.innerHTML;
+  else add.innerHTML = add.dataset.originalContent;
+
+  add.classList.add(`wit-${noteWit}`, "marginal-processed");
+
+  // ---- per-line alignment (optional but recommended) ------------------
+  const verse = add.closest("tei-l, l");
+  if (verse) {
+    const cs = getComputedStyle(verse);
+    const pad = parseFloat(cs.paddingLeft) || 0;
+    const indent = parseFloat(cs.textIndent) || 0;
+    add.style.setProperty("--note-left", `${pad + indent}px`);
   }
 
-  // Handle standalone <add> elements (outside of <subst>)
-  const adds = rdg.querySelectorAll("tei-add");
-  adds.forEach(add => {
-    const place = add.getAttribute("place");
-    const hand = add.getAttribute("hand");
-    const text = add.textContent;
+  // ---- inactive: plain inline, no button -----------------------------
+  if (!isActive) {
+    add.style.display = "inline";
+    return;
+  }
 
-    const span = document.createElement("span");
-    span.textContent = text;
+  // ---- active: decorate + button -------------------------------------
+  add.classList.add("marginal-active", "highlighted-marginal");
+  if (noteWit === "A0") add.classList.add("marginal-a0-block");
+  add.classList.add("marginal-hidden");
 
-    if (place === "margin" && hand) {
-      span.classList.add("marginal-add");
-      span.dataset.hand = hand;
-      span.dataset.text = text;
-    } else {
-      span.classList.add("addition");
-    }
+  const btn = document.createElement("button");
+  btn.textContent = "+";
+  btn.className = "marginal-toggle";
+  btn.title = `Mostrar anotación marginal — añadido en el margen ${sideES} en ${noteWit}`;
 
-    add.replaceWith(span);
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    add.classList.remove("marginal-hidden");
+    add.classList.add("reveal");
+    add.dataset.reveal = dir;
+    add.style.display = "inline-block";
+    btn.replaceWith(add);
+    requestAnimationFrame(() => add.classList.add("reveal-in"));
   });
 
-  // Handle standalone <del> elements (outside of <subst>)
-  const dels = rdg.querySelectorAll("tei-del");
-  dels.forEach(del => {
-    const span = document.createElement("span");
-    span.className = "deletion";
-    span.textContent = del.textContent;
-    del.replaceWith(span);
-  });
+  add.parentNode?.insertBefore(btn, add);
 }
+
 
 function filterReadings({ wit = null, showAll = false, defaultView = false }) {
   const apps = document.querySelectorAll("tei-app");
 
   apps.forEach(app => {
     const rdgs = Array.from(app.querySelectorAll("tei-rdg, tei-lem"));
-    let bestRdg = null;
-    let highestSeq = -1;
 
-    // Find best variant sequence (not strictly necessary if you don't use it)
-    rdgs.forEach(rdg => {
-      const seq = parseInt(rdg.getAttribute("varSeq"), 10);
-      if (!isNaN(seq) && seq > highestSeq) {
-        highestSeq = seq;
-        bestRdg = rdg;
-      }
-    });
-
-    // Reset all readings
     if (!showAll && !defaultView) {
       rdgs.forEach(rdg => {
         rdg.style.display = "none";
         rdg.classList.remove("active-reading", "wit-A0", "wit-A1", "wit-A2", "wit-B1", "wit-B2", "decorated");
-
         if (rdg.dataset.originalHtml) rdg.innerHTML = rdg.dataset.originalHtml;
-
-        const existingSup = rdg.querySelector(".rdg-seq");
-        if (existingSup) existingSup.remove();
+        const sup = rdg.querySelector(".rdg-seq");
+        if (sup) sup.remove();
       });
     }
 
-    // ✅ PHASE FILTERING (A0, A1, A2, B)
     if (wit) {
       let found = false;
-      let exactMatchFound = false;
       const allowedWits = phaseHierarchy[wit] || [wit];
 
       rdgs.forEach(rdg => {
         const rdgWit = rdg.getAttribute("wit");
-
         if (allowedWits.includes(rdgWit)) {
           rdg.style.display = "inline";
           found = true;
+          rdg.querySelectorAll("tei-add[place]").forEach(add => setupMarginalAdd(add, rdgWit));
         }
-
         if (rdgWit === wit) {
           decorateRdgWithHighlight(rdg);
           rdg.classList.add("active-reading");
-          exactMatchFound = true;
         }
       });
 
-      // Optional fallback to A0 if A1/A2 have no hits
-      if (!exactMatchFound && (wit === "A1" || wit === "A2")) {
-        const a0 = rdgs.find(rdg => rdg.getAttribute("wit") === "A0");
+      if (!rdgs.some(r => r.style.display !== "none") && (wit === "A1" || wit === "A2")) {
+        const a0 = rdgs.find(r => r.getAttribute("wit") === "A0");
         if (a0) {
           a0.style.display = "inline";
+          a0.querySelectorAll("tei-add[place]").forEach(add => setupMarginalAdd(add, "A0"));
           found = true;
         }
       }
 
       app.style.display = found ? "inline" : "none";
-
-      // ✅ MARGINAL ADDITION BUTTONS FOR CURRENT WIT
-      document.querySelectorAll(`.marginal-add[data-hand="#${wit}"]`).forEach(span => {
-        const text = span.dataset.text;
-
-        // Avoid inserting button multiple times
-        if (span.querySelector(".marginal-reveal-button")) return;
-
-        const button = document.createElement("button");
-        button.className = "marginal-reveal-button";
-        button.textContent = "+";
-        button.title = `Mostrar añadido marginal de ${wit}`;
-
-        span.textContent = "";
-        span.appendChild(button);
-
-        button.addEventListener("click", () => {
-          const fadeSpan = document.createElement("span");
-          fadeSpan.className = "marginal-fade-text";
-          fadeSpan.textContent = text;
-          button.replaceWith(fadeSpan);
-          requestAnimationFrame(() => fadeSpan.classList.add("fade-in"));
-        });
-      });
-
-      return; // end if (wit)
+      return;
     }
 
-    // ✅ SHOW ALL VARIANTS
     if (showAll || defaultView) {
       rdgs.forEach(rdg => {
-        decorateRdgWithHighlight(rdg);
         rdg.style.display = "inline";
+        decorateRdgWithHighlight(rdg);
+        rdg.querySelectorAll("tei-add[place]").forEach(add => {
+          setupMarginalAdd(add, rdg.getAttribute("wit") || "unknown");
+        });
       });
       app.style.display = "inline";
-      return;
     }
   });
 }
 
-    
-  function handleVariantChange(value) {
-    document.body.classList.remove("clean-mode");
-    restoreAllReadings(); // ← full restoration
-    if (value === "all") {
-      filterReadings({ showAll: true });
-    } else if (["A0", "A1", "A2", "B"].includes(value)) {
-      filterReadings({ wit: value });
+function highlightMarginaliaForPhase(wit) {
+  document.querySelectorAll("tei-add[place]").forEach(add => {
+    add.classList.remove("highlighted-marginal");
+  });
+
+  if (!wit || wit === "all") return;
+
+  const allowedWits = phaseHierarchy[wit] || [wit];
+  document.querySelectorAll("tei-rdg, tei-lem").forEach(varEl => {
+    const varWit = varEl.getAttribute("wit");
+    if (allowedWits.includes(varWit) && varWit === wit) {
+      varEl.querySelectorAll("tei-add[place]").forEach(add => {
+        add.classList.add("highlighted-marginal");
+      });
     }
+  });
+}
+
+function handleVariantChange(value) {
+  document.body.classList.remove("clean-mode");
+  restoreAllReadings();
+
+  if (value === "all") {
+    filterReadings({ showAll: true });
+  } else if (["A0", "A1", "A2", "B"].includes(value)) {
+    filterReadings({ wit: value });
   }
 
+  highlightMarginaliaForPhase(value);
+
+  document.querySelectorAll("tei-add[place]").forEach(add => {
+    const parentRdg = add.closest("tei-rdg, tei-lem");
+    const wit = parentRdg?.getAttribute("wit") || "unknown";
+    setupMarginalAdd(add, wit);
+  });
+}
 
   function showCleanLemmasOnly() {
     const apps = document.querySelectorAll("tei-app");
@@ -483,7 +487,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
         });
       });
 
-      // ✅ Hide all note icons (red dots)
+      // Hide all note icons (red dots)
       document.querySelectorAll("tei-note.note-decorated").forEach(note => {
         note.style.display="none";  
       });
@@ -509,7 +513,7 @@ function filterReadings({ wit = null, showAll = false, defaultView = false }) {
       note.style.display = "inline";
     });
   }
-
+  
   window.onload = function () {
     const pbSelector = document.getElementById("pb-selector");
     let diplomaticLoaded = false;
