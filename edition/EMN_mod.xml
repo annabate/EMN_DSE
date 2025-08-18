@@ -26,36 +26,36 @@
 <pb type="folio" n="[Fol. 1r]"/>
     <head><app><rdg wit="B" varSeq="3" hand="non-authorial">El marqués de las Navas</rdg></app></head>
     <castList>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">de Lope</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">De Fadrique Doristán</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Felipe de Cardona</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Diego de Cardona</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">el conde don Felis</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Frutos Bravo</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Bernardo - el marqués</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Felipe</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Leonardo</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Mendozilla</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Gerarda</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Laurencia</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Clara</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Bernardo</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Fadrique</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Antonio</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Ludovico</rdg><note>Este reparto y el contenido de este folio no son autógrafos. Parecen intervenir dos manos distintas; con toda probabilidad, se trata de los autores de las compañías responsables de la puesta en escena de la pieza.</note></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">de Lope</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">De Fadrique Doristán</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">don Felipe de Cardona</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">don Diego de Cardona</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">el conde don Felis</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Frutos Bravo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Bernardo - el marqués</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">don Felipe</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Leonardo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Mendozilla</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Gerarda</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Laurencia</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Clara</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Bernardo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Fadrique</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Antonio</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Ludovico</rdg><note>Este reparto y el contenido de este folio no son autógrafos. Parecen intervenir dos manos distintas; con toda probabilidad, se trata de los autores de las compañías responsables de la puesta en escena de la pieza.</note></app></castItem>
         </castList>
           <pb type="folio" n="[Fol. 1v]"/>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Juan - Jordán</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">músico - Cuadrado</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Luis - Vicente</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Gerarda - señora Catarina</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Antonio - Jordán</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Ludovico - Escorigüela</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Clara - señora Germana</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">lacayo - Vicente</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">don Enrique - Mateo</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Bernardo - Jerónimo</rdg></app></castItem>
-          <castItem><app><rdg wit="B" varSeq="3" hand="non-authorial">Laurencia - señora María Vitoria</rdg><note>Tampoco este reparto es autógrafo. Junto a los nombres de los personajes, aparecen a la derecha nombres de actores. Parece tratarse de los actores que formaban parte de la compañía de Antonio de Prado, según señala M. de los Reyes Peña.</note></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">don Juan - Jordán</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">músico - Cuadrado</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">don Luis - Vicente</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Gerarda - señora Catarina</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Antonio - Jordán</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Ludovico - Escorigüela</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Clara - señora Germana</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">lacayo - Vicente</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">don Enrique - Mateo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Bernardo - Jerónimo</rdg></app></castItem>
+          <castItem><app><rdg wit="B" hand="non-authorial">Laurencia - señora María Vitoria</rdg><note>Tampoco este reparto es autógrafo. Junto a los nombres de los personajes, aparecen a la derecha nombres de actores. Parece tratarse de los actores que formaban parte de la compañía de Antonio de Prado, según señala M. de los Reyes Peña.</note></app></castItem>
 <div type="act" n="1">
 <pb type="folio" n="[Fol. 2r]"/>
 <head>Acto primero</head>
@@ -67,7 +67,7 @@
 <l met="stanza">Al mismo Nerón te igualas.</l>
 <l>
 <app>
-  <lem wit="B" hand="authorial"><add place="bottom" hand="B"><l type="marginalia">No tengo remedio</l></add></lem>
+  <lem wit="A2" hand="authorial"><add place="bottom" hand="B"><l type="marginalia">Prueba marginalia</l></add></lem>
 </app>
 </l>
 </lg>
