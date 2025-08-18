@@ -48,6 +48,12 @@
         <option value="A2">A2 (revisión posterior)</option>
         <option value="B">B (mano ajena)</option>
       </select>
+      <div class="color-legend">
+        <span><span class="color-box wit-A0"></span> A0 (original)</span>
+        <span><span class="color-box wit-A1"></span> A1 (correcciones inmediatas)</span>
+        <span><span class="color-box wit-A2"></span> A2 (revisión posterior)</span>
+        <span><span class="color-box wit-B"></span> B (mano ajena)</span>
+      </div>
       <button id="clean-text-button">Texto limpio</button>
     </div>
   </div>
@@ -338,7 +344,7 @@ function setupMarginalAdd(add, wit) {
   const btn = document.createElement("button");
   btn.textContent = "+";
   btn.className = "marginal-toggle";
-  btn.title = `Mostrar anotación marginal — añadido en el margen ${sideES} en ${noteWit}`;
+  btn.title = `Mostrar marginalia — añadido en el margen ${sideES} en ${noteWit}`;
 
   btn.addEventListener("click", (e) => {
     e.stopPropagation();

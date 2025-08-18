@@ -524,6 +524,23 @@ tei-add {
 .wit-A2 { background-color: #edd1f1; } /* Light purple */
 .wit-B { background-color: #d0f3bf; } /* Light green */
 
+.color-legend {
+  display: flex;
+  gap: 1em;
+  margin-top: 0.5em;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.color-legend .color-box {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.3em;
+  vertical-align: middle;
+  border: 1px solid #555;
+  border-radius: 2px;
+}
 
 .rdg-seq {
   font-size: 0.6em;
