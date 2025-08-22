@@ -63,8 +63,8 @@ section {
 /* START: Addition by SAT for the Homepage  */
 .section-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
     padding: 2rem;
    /* SAT */
     margin-top: 25px;
