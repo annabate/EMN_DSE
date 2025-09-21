@@ -79,6 +79,7 @@ section {
     transform: translateY(0px);
     transition: all 0.25s ease-out;
     max-width: 95%;
+    width: 300px;
      hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
