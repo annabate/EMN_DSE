@@ -1318,6 +1318,160 @@ window.onload = function () {
     }
   }
 
+  // ======= Zoom & Pan for facsimile image (mouse + touch) =======
+const wrap = document.getElementById("facsimile-wrapper");
+const img  = document.getElementById("facsimile-image");
+
+const Z = { scale: 1, min: 1, max: 6, x: 0, y: 0 };  // zoom/pan state
+let isPanning = false;
+let panStart = { x: 0, y: 0 };
+let lastTapTime = 0;
+
+// Apply transform to image
+function apply() {
+  img.style.transform = `translate(${Z.x}px, ${Z.y}px) scale(${Z.scale})`;
+}
+
+// Constrain panning so the image doesn't slide away completely
+function clampPan() {
+  const vw = wrap.clientWidth;
+  const vh = wrap.clientHeight;
+  const bw = img.offsetWidth * Z.scale;
+  const bh = img.offsetHeight * Z.scale;
+
+  // If the image is smaller than the viewport, keep it centered
+  const minX = Math.min(0, vw - bw);
+  const minY = Math.min(0, vh - bh);
+
+  Z.x = Math.max(minX, Math.min(0, Z.x));
+  Z.y = Math.max(minY, Math.min(0, Z.y));
+}
+
+// Zoom at a specific clientX/clientY point
+function zoomAt(clientX, clientY, nextScale) {
+  nextScale = Math.max(Z.min, Math.min(Z.max, nextScale));
+  const rect = wrap.getBoundingClientRect();
+
+  // point coordinates relative to the current transform
+  const px = (clientX - rect.left - Z.x) / Z.scale;
+  const py = (clientY - rect.top  - Z.y) / Z.scale;
+
+  // update scale and reposition so the point stays under the cursor/finger
+  Z.scale = nextScale;
+  Z.x = clientX - rect.left - px * Z.scale;
+  Z.y = clientY - rect.top  - py * Z.scale;
+
+  clampPan();
+  apply();
+}
+
+// --- Mouse wheel zoom (desktop)
+wrap.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  const factor = Math.exp(-e.deltaY * 0.0015); // smooth zoom factor
+  zoomAt(e.clientX, e.clientY, Z.scale * factor);
+}, { passive: false });
+
+// --- Mouse drag panning
+img.addEventListener("mousedown", (e) => {
+  if (Z.scale <= 1) return; // no pan when fully zoomed out
+  isPanning = true;
+  img.classList.add("grabbing");
+  panStart = { x: e.clientX - Z.x, y: e.clientY - Z.y };
+});
+
+window.addEventListener("mousemove", (e) => {
+  if (!isPanning) return;
+  Z.x = e.clientX - panStart.x;
+  Z.y = e.clientY - panStart.y;
+  clampPan(); apply();
+});
+
+window.addEventListener("mouseup", () => {
+  isPanning = false;
+  img.classList.remove("grabbing");
+});
+
+// --- Double click to zoom in, Shift+click to zoom out
+wrap.addEventListener("dblclick", (e) => {
+  e.preventDefault();
+  const targetScale = e.shiftKey ? Math.max(Z.min, Z.scale / 2) : Math.min(Z.max, Z.scale * 2);
+  zoomAt(e.clientX, e.clientY, targetScale);
+});
+
+// --- Touch helpers (pan with 1 finger, pinch with 2 fingers)
+let touchState = null; // { d, cx, cy } previous distance & center
+
+function getTouchCenterAndDistance(touches) {
+  const t1 = touches[0], t2 = touches[1];
+  const cx = (t1.clientX + t2.clientX) / 2;
+  const cy = (t1.clientY + t2.clientY) / 2;
+  const dx = t1.clientX - t2.clientX;
+  const dy = t1.clientY - t2.clientY;
+  const d  = Math.hypot(dx, dy);
+  return { cx, cy, d };
+}
+
+wrap.addEventListener("touchstart", (e) => {
+  if (e.touches.length === 1) {
+    // double tap to zoom in/out
+    const now = Date.now();
+    if (now - lastTapTime < 300) {
+      const t = e.touches[0];
+      const target = (Z.scale < 2) ? Math.min(Z.max, Z.scale * 2) : Math.max(1, Z.scale / 2);
+      zoomAt(t.clientX, t.clientY, target);
+      lastTapTime = 0;
+      return;
+    }
+    lastTapTime = now;
+    if (Z.scale > 1) {
+      isPanning = true;
+      panStart = { x: e.touches[0].clientX - Z.x, y: e.touches[0].clientY - Z.y };
+    }
+  } else if (e.touches.length === 2) {
+    e.preventDefault();
+    touchState = getTouchCenterAndDistance(e.touches);
+  }
+}, { passive: false });
+
+wrap.addEventListener("touchmove", (e) => {
+  if (e.touches.length === 1 && isPanning) {
+    e.preventDefault();
+    Z.x = e.touches[0].clientX - panStart.x;
+    Z.y = e.touches[0].clientY - panStart.y;
+    clampPan(); apply();
+  } else if (e.touches.length === 2) {
+    e.preventDefault();
+    const cur = getTouchCenterAndDistance(e.touches);
+    if (touchState && touchState.d > 0) {
+      const factor = cur.d / touchState.d;
+      zoomAt(cur.cx, cur.cy, Z.scale * factor);
+      // update state for continuous gesture
+      touchState = { cx: cur.cx, cy: cur.cy, d: cur.d };
+    } else {
+      touchState = cur;
+    }
+  }
+}, { passive: false });
+
+wrap.addEventListener("touchend", () => {
+  isPanning = false;
+  touchState = null;
+}, { passive: false });
+
+// Reset zoom/pan when switching folio
+function resetFacsView() { Z.scale = 1; Z.x = 0; Z.y = 0; apply(); }
+document.getElementById("prev-folio").addEventListener("click", resetFacsView);
+document.getElementById("next-folio").addEventListener("click", resetFacsView);
+document.getElementById("pb-selector").addEventListener("change", resetFacsView);
+
+// Recalculate after image load (ensures correct offsetWidth)
+img.addEventListener("load", () => { resetFacsView(); });
+
+// Initialize
+apply();
+
+
   function loadTEI(filename, containerId, prefix, onComplete) {
     CETEIcean.getHTML5(filename, data => {
       decorateNotes(data);
