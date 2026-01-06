@@ -443,16 +443,15 @@
         <sp who="#El_marqués">
           <speaker>Marqués</speaker>
           <l n="178">No, es el que menos entiende.</l>
-          <!-- delimita l’intervallo dell’aggiunta -->
+          <!-- delimits the addition span -->
           <anchor xml:id="addA1"/>
-          <!-- QUI dentro metti il contenuto dell’aggiunta,
-              così il testimone lo potrà recuperare -->
-          <l n="123">Este es el pasaje añadido…</l>
-          <l n="124">…que ocupa varias líneas.</l>
+          <!-- content of the addition -->
+          <l n="123">Mas, por Dios, que ya le escucho</l>
+          <l n="124">con ánimo tan rebelde.</l>
           <anchor xml:id="addA2"/>
-          <!-- apparatus a raggio lungo che dichiara l’aggiunta -->
+          <!-- apparatus that declares the addition -->
           <app type="addition" from="#addA1" to="#addA2">
-            <!-- Testimoni che contengono l’aggiunta -->
+            <!-- witnesses that contain the addition  -->
             <rdg wit="#M">
               <add/>  
             </rdg>

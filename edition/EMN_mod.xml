@@ -65,11 +65,6 @@
 <milestone unit="stanza" type="décimas"/>
 <lg>
 <l met="stanza">Al mismo Nerón te igualas.</l>
-<l>
-<app>
-  <lem wit="A2" hand="authorial"><add place="bottom" hand="B"><l type="marginalia">Prueba marginalia</l></add></lem>
-</app>
-</l>
 </lg>
 </sp>
 <sp>
@@ -78,14 +73,6 @@
 <l>Mira que es gran necedad</l>
 <l>detener la voluntad,</l>
 <l>porque la pintan con alas.</l>
-<anchor xml:id="l_2"/>
-<l type="marginalia">ancora prova</l>
-<l type="marginalia">ancora prova</l>
-<l type="marginalia">ancora prova</l>
-<anchor xml:id="l_5"/>
-<app>
-  <addSpan from="#l_2" to="#l_5" type="marginalia" place="bottom" wit="#A1" hand="authorial"/>
-</app>
 </lg>
 </sp>
 <sp>
@@ -97,23 +84,6 @@
 <l>de que te vengo a deber</l>
 <l>quererle agora poner</l>
 <l n="10">a tantas injustas penas.</l>
-<anchor xml:id="l_11"/>
-<l>prova prova prova prova</l>
-<l><app><lem wit="#A0" varSeq="0" hand="authorial">prova prova</lem> <rdg wit="A1" varSeq="1" hand="authorial">prova <del>prova</del></rdg></app></l>
-<l>prova prova prova prova</l>
-<anchor xml:id="l_13"/>
-<app>
-  <delSpan from="#l_11" to="#l_13"><rdg wit="B" varSeq="1" hand="non-authorial"></rdg></delSpan>
-</app>
-<l>prova prova prova prova</l>
-<anchor xml:id="l_14"/>
-<app><delSpan from="#l_11" to="#l_14"><rdg wit="A2" varSeq="2" hand="authorial"></rdg></delSpan></app>
-<l><app><rdg wit=" #A0" varSeq="0" hand="authorial">prova prova</rdg><lem wit="A1" varSeq="1" hand="authorial">prova prova <del>prova</del></lem></app></l>
-<l>prova prova prova prova</l>
-<anchor xml:id="l_16"/>
-<app>
-  <addSpan from="#l_14" to="l_16"><rdg wit="A2" varSeq="2" hand="non-authorial"></rdg></addSpan>
-</app>
 </lg>
 </sp>
 <sp>

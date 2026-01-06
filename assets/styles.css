@@ -275,6 +275,9 @@ label {
     display: inline-block;
     margin-bottom: .5rem
 }
+.edition label {
+    margin-bottom: 0;
+}
 button {
     border-radius: 0
 }
@@ -9023,4 +9026,3 @@ a.tooltip2.crit-app:hover,
   25%{width: 8px;height: 0;border-bottom-color: cornflowerblue;}
   50%{width: 8px;height: 13px;border-bottom-color: cornflowerblue;border-right-color: cornflowerblue;}
 }
-

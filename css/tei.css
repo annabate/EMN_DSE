@@ -1,16 +1,17 @@
 body {
-    margin: 0;
-    font-family: Garamond, serif;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #212529;
-    text-align: justify;
-    background-color: #decfa2e3;
-    font-size: var(--user-font-size, 100%);
+  margin: 0;
+  font-family: Garamond, serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #212529;
+  text-align: justify;
+  background-color: #decfa2e3;
+  font-size: var(--user-font-size, 100%);
 }
 
 /* Make the whole page a flex column */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
@@ -58,26 +59,28 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  touch-action: none; 
+  touch-action: none;
 }
 
 #facsimile-image {
   max-width: 100%;
   max-height: 100%;
-  transform-origin: 0 0;  /* use translate+scale from top-left corner */
+  transform-origin: 0 0; /* use translate+scale from top-left corner */
   cursor: grab;
   user-select: none;
   -webkit-user-drag: none;
 }
 
-#facsimile-image.grabbing { cursor: grabbing; }
+#facsimile-image.grabbing {
+  cursor: grabbing;
+}
 
 body > #tei-wrapper {
   flex: 1 0 auto;
 }
 
-
-tei-div, tei-p {
+tei-div,
+tei-p {
   margin-bottom: 1.2em;
 }
 
@@ -111,7 +114,6 @@ tei-note::after {
   overflow-wrap: break-word;
   white-space: normal;
 }
-
 
 tei-sp {
   display: grid;
@@ -149,7 +151,6 @@ tei-l {
   text-align: left;
 }
 
-
 tei-l[part="M"] {
   padding-left: 5em;
 }
@@ -174,7 +175,7 @@ tei-l::before {
   border-radius: 60%;
   color: #938e87;
   margin-right: 0.6em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Hide all line numbers except those ending in 0 or 5 */
@@ -182,7 +183,6 @@ tei-l:not([n$="0"]):not([n$="5"])::before {
   content: none;
   background: none;
 }
-
 
 tei-head {
   display: block;
@@ -207,7 +207,6 @@ tei-pb {
   color: #777;
 }
 
-
 tei-pb::before {
   content: attr(n);
   background-color: #dac4a65b;
@@ -225,7 +224,7 @@ tei-pb::before {
 #main-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1021;
   background: white;
   border-bottom: 3px solid #75603b98;
   padding: 0.1em 1em;
@@ -248,10 +247,15 @@ tei-pb::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .3em .6em;
+  padding: 0.3em 0.6em;
   background: #f6f2e8;
   border-bottom: 1px solid #ccc;
   font-weight: bold;
+}
+
+.column-header button:not(.close-column) {
+  border-radius: 5px;
+  border: 1px solid #828282;
 }
 
 .close-column {
@@ -266,7 +270,9 @@ tei-pb::before {
   color: #c00;
 }
 
-.hidden { display: none !important; }
+.hidden {
+  display: none !important;
+}
 
 #search-bar {
   padding: 0.5em;
@@ -304,9 +310,14 @@ tei-pb::before {
   transform: scale(0.95);
 }
 
-#close-search.close-search{
-  position: absolute; right: 0.5em; top: 8.5em;
-  border: 0; background: transparent; font-size: 1.25rem; line-height: 1;
+#close-search.close-search {
+  position: absolute;
+  right: 0.5em;
+  top: 8.5em;
+  border: 0;
+  background: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -326,7 +337,7 @@ tei-pb::before {
   flex-wrap: wrap;
 }
 
-.toolbar-group-search{
+.toolbar-group-search {
   display: flex;
   padding-left: 73rem;
   padding-top: 0em;
@@ -347,7 +358,7 @@ tei-pb::before {
 
 #toolbar button:hover,
 #toolbar select:hover {
-  background-color:#decfa298;
+  background-color: #decfa298;
 }
 
 /* === SYNOPTIC VIEW === */
@@ -371,7 +382,7 @@ tei-pb::before {
   max-width: 100%;
   transition: transform 0.3s ease;
   cursor: zoom-in;
-  border-radius: 8px
+  border-radius: 8px;
 }
 
 #facsimile-image.zoomed {
@@ -392,8 +403,8 @@ tei-pb::before {
 
 .header-title h1 {
   font-size: 1.6rem;
-  font-weight:bolder;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin: 0;
   color: #b49970;
 }
@@ -408,10 +419,11 @@ tei-pb::before {
   overflow-x: auto;
   min-width: 0; /* ✅ per evitare overflow */
   box-sizing: border-box;
-  padding-bottom:  3rem;
+  padding-bottom: 3rem;
 }
 
-.tei-column h1, .tei-column head {
+.tei-column h1,
+.tei-column head {
   font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 1em;
@@ -432,7 +444,7 @@ tei-pb::before {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   background-color: #f9f9f9;
   padding: 0.5em;
 }
@@ -442,7 +454,7 @@ tei-pb::before {
   top: 4.5em;
   align-self: flex-start;
   z-index: 10;
-  max-width: 100%;        /* ✅ Prevent overflow */
+  max-width: 100%; /* ✅ Prevent overflow */
   box-sizing: border-box; /* ✅ Include padding in width */
 }
 
@@ -491,27 +503,28 @@ tei-pb::before {
   margin-bottom: 1em;
 }
 
-#folio-controls button, .zoom-control button {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #333;
-    padding: 0.2em 0.8em;
-    margin: 0 0.3em;
-    cursor: pointer;
+#folio-controls button,
+.zoom-control button {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 0.2em 0.8em;
+  margin: 0 0.3em;
+  cursor: pointer;
 }
 
 .note-icon {
-    font-size: 0.8em;
-    color: var(--accent-icon);
-    font-weight: bold;
-    user-select: none;
-    display: inline;
-    vertical-align: super;
-  }
+  font-size: 0.8em;
+  color: var(--accent-icon);
+  font-weight: bold;
+  user-select: none;
+  display: inline;
+  vertical-align: super;
+}
 
 .floating-note {
-  position:absolute;
+  position: absolute;
   background-color: #ffffffd3;
   border: 1px solid #c1c1c1;
   box-shadow: 2px 2px 5px rgba(161, 161, 161, 0.3);
@@ -528,7 +541,6 @@ tei-pb::before {
   bottom: auto;
   right: auto;
 }
-
 
 .tei-column {
   flex: 1 1 0;
@@ -640,10 +652,18 @@ tei-add {
   color: rgb(228, 60, 60);
 }
 
-.wit-A0 { background-color: #c5edf5e8; } /* Light blue */
-.wit-A1 { background-color: #fed794d8; } /* Light orange */
-.wit-A2 { background-color: #e2cbe6; } /* Light purple */
-.wit-B { background-color: #bcecac; } /* Light green */
+.wit-A0 {
+  background-color: #c5edf5e8;
+} /* Light blue */
+.wit-A1 {
+  background-color: #fed794d8;
+} /* Light orange */
+.wit-A2 {
+  background-color: #e2cbe6;
+} /* Light purple */
+.wit-B {
+  background-color: #bcecac;
+} /* Light green */
 
 .color-legend {
   display: flex;
@@ -672,18 +692,30 @@ tei-add {
 
 /* Multi-line deletion highlight (witness B etc.) */
 
-
-.has-del-gutter{ position: relative; }
-.has-del-gutter::before{
-  content:"✖";
-  position:absolute; left:-1.1rem; top:.1rem;
-  color:#b00000; font-weight:700; opacity:.7;
+.has-del-gutter {
+  position: relative;
 }
-.collapsed-del{ display:none !important; }
+.has-del-gutter::before {
+  content: "✖";
+  position: absolute;
+  left: -1.1rem;
+  top: 0.1rem;
+  color: #b00000;
+  font-weight: 700;
+  opacity: 0.7;
+}
+.collapsed-del {
+  display: none !important;
+}
 
-.range-add   { outline: 2px solid currentColor; outline-offset: -2px; }
-.range-del   { text-decoration: line-through; text-decoration-thickness: .15em; }
-
+.range-add {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+.range-del {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.15em;
+}
 
 body.clean-mode .note-icon {
   display: none !important;
@@ -705,9 +737,8 @@ body.clean-mode .note-icon {
   }
 }
 
-.font-size-ctr
-{
- position: sticky;
+.font-size-ctr {
+  position: sticky;
   top: 0;
   z-index: 100;
   display: flex;
@@ -717,13 +748,13 @@ body.clean-mode .note-icon {
   padding: 0.5em 1em;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
-
 
 .tei-column {
   display: flex;
@@ -762,7 +793,7 @@ html, body {
 #site-footer {
   border-top: 3px solid #75603b98;
   padding: 2em 1em;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 0.95em;
   background-color: #fff;
   color: #333;
@@ -781,104 +812,134 @@ html, body {
   line-height: 1;
 }
 
+.edition footer {
+  margin-top: 0!important;
+}
+
 #unitn {
-    height: 70px;
+  height: 70px;
 }
 
 .logo {
-    display: inline-block;
-    width: auto;
-    height: 70px;
+  display: inline-block;
+  width: auto;
+  height: 70px;
 }
 
-:root{
+:root {
   /* Fallback if JS can’t measure per line; per-note override is --note-left */
   --line-pad-left: 12px;
 }
 
 /* ===== Phase palette: vars a note inherits via its .wit-* class ===== */
-.wit-A0 { --marginal-bg:#d7edf3; --marginal-accent:#7fb6c5; }
-.wit-A1 { --marginal-bg:#fee0ab; --marginal-accent:#e29a1e; }
-.wit-A2 { --marginal-bg:#edd1f1; --marginal-accent:#b07fbb; }
-.wit-B  { --marginal-bg:#d0f3bf; --marginal-accent:#67a953; }
+.wit-A0 {
+  --marginal-bg: #d7edf3;
+  --marginal-accent: #7fb6c5;
+}
+.wit-A1 {
+  --marginal-bg: #fee0ab;
+  --marginal-accent: #e29a1e;
+}
+.wit-A2 {
+  --marginal-bg: #edd1f1;
+  --marginal-accent: #b07fbb;
+}
+.wit-B {
+  --marginal-bg: #d0f3bf;
+  --marginal-accent: #67a953;
+}
 
 /* ---------------- Base neutral style ---------------- */
-tei-add[place]{
-  display:inline-block;
-  margin:0;
-  padding:0;
-  border:0;
-  font-style:normal;
-  vertical-align:baseline;
-  line-height:inherit;
+tei-add[place] {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  vertical-align: baseline;
+  line-height: inherit;
 }
 
 /* ---------------- Active decoration (uses phase colors) ---------------- */
-tei-add.marginal-active{
-  background:var(--marginal-bg,transparent);
-  border-left:2px dashed var(--marginal-accent,currentColor);
-  padding-left:.5em;
-  border-radius:3px;
+tei-add.marginal-active {
+  background: var(--marginal-bg, transparent);
+  border-left: 2px dashed var(--marginal-accent, currentColor);
+  padding-left: 0.5em;
+  border-radius: 3px;
 }
 
 /* ---- ALIGNMENT in verse lines (descendant, not direct child) ----
    Cancel the line's left offset for the note's box,
    then add it back + a small nudge inside so text aligns perfectly. */
-:is(tei-l,l) tei-add[place].marginal-active{
+:is(tei-l, l) tei-add[place].marginal-active {
   margin-left: calc((var(--note-left, var(--line-pad-left))) * -0) !important;
-  padding-left:calc( .5em + var(--note-left,var(--line-pad-left)) + var(--marginal-align-pad) ) !important;
+  padding-left: calc(
+    0.5em + var(--note-left, var(--line-pad-left)) + var(--marginal-align-pad)
+  ) !important;
 }
 
 /* If a verse line appears INSIDE a marginal note, remove its own left offset. */
-tei-add[place] :is(tei-l,l){
-  padding-left:0 !important;
-  margin-left:0 !important;
-  text-indent:0 !important;
+tei-add[place] :is(tei-l, l) {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  text-indent: 0 !important;
 }
 
 /* ---------------- A0 offset ---------------- */
-tei-add.marginal-a0-block{
-  display:inline-block;
-  margin-left:2em; /* default in prose */
-  vertical-align:baseline;
+tei-add.marginal-a0-block {
+  display: inline-block;
+  margin-left: 2em; /* default in prose */
+  vertical-align: baseline;
 }
 /* Adjust A0 when inside verse lines (measure from text column) */
-:is(tei-l,l) tei-add[place].marginal-a0-block{
-  margin-left:calc( 2em - var(--note-left,var(--line-pad-left)) ) !important;
+:is(tei-l, l) tei-add[place].marginal-a0-block {
+  margin-left: calc(2em - var(--note-left, var(--line-pad-left))) !important;
 }
 
 /* ---------------- Hidden state ---------------- */
-.marginal-hidden{ display:none !important; }
+.marginal-hidden {
+  display: none !important;
+}
 
 /* ---------------- Emphasis when active ---------------- */
-tei-add.highlighted-marginal{
-  font-weight:bold;
-  outline:2px solid color-mix(in srgb, var(--marginal-accent,#555) 25%, transparent);
-  outline-offset:2px;
+tei-add.highlighted-marginal {
+  font-weight: bold;
+  outline: 2px solid
+    color-mix(in srgb, var(--marginal-accent, #555) 25%, transparent);
+  outline-offset: 2px;
 }
 
 /* ---------------- Reveal animation ---------------- */
-tei-add.reveal{
-  display:inline-block;   /* keep baseline alignment */
-  position:relative;
-  opacity:0;
-  transform:scale(.97);
-  transition:
-    transform 680ms cubic-bezier(.25,.8,.25,1),
-    opacity   220ms ease-out;
-  background-color:rgba(255,230,180,.4); /* soft flash */
+tei-add.reveal {
+  display: inline-block; /* keep baseline alignment */
+  position: relative;
+  opacity: 0;
+  transform: scale(0.97);
+  transition: transform 680ms cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 220ms ease-out;
+  background-color: rgba(255, 230, 180, 0.4); /* soft flash */
 }
-tei-add.marginal-a0-block.reveal{ display:inline-block; }
+tei-add.marginal-a0-block.reveal {
+  display: inline-block;
+}
 
-tei-add.reveal[data-reveal="left"]   { transform:translateX(-10px) scale(.97); }
-tei-add.reveal[data-reveal="right"]  { transform:translateX( 10px) scale(.97); }
-tei-add.reveal[data-reveal="top"]    { transform:translateY(-8px)  scale(.97); }
-tei-add.reveal[data-reveal="bottom"] { transform:translateY( 8px)  scale(.97); }
+tei-add.reveal[data-reveal="left"] {
+  transform: translateX(-10px) scale(0.97);
+}
+tei-add.reveal[data-reveal="right"] {
+  transform: translateX(10px) scale(0.97);
+}
+tei-add.reveal[data-reveal="top"] {
+  transform: translateY(-8px) scale(0.97);
+}
+tei-add.reveal[data-reveal="bottom"] {
+  transform: translateY(8px) scale(0.97);
+}
 
-tei-add.reveal.reveal-in{
-  opacity:1;
-  transform:none;
-  background-color:transparent;
+tei-add.reveal.reveal-in {
+  opacity: 1;
+  transform: none;
+  background-color: transparent;
 }
 
 /* ---------------- Arrow (➤) colored by phase accent ----------------
@@ -888,55 +949,55 @@ tei-add.reveal.reveal-in{
    - top   -> arrow on LEFT,  pointing DOWN
    - bottom-> arrow on RIGHT, pointing UP
 */
-tei-add.reveal::after{
-  content:"➤";
-  position:absolute;
-  font-size:.9em;
-  line-height:1;
-  color:var(--marginal-accent,currentColor);
-  opacity:.85;
-  pointer-events:none;
+tei-add.reveal::after {
+  content: "➤";
+  position: absolute;
+  font-size: 0.9em;
+  line-height: 1;
+  color: var(--marginal-accent, currentColor);
+  opacity: 0.85;
+  pointer-events: none;
 }
 
 /* LEFT: left side, pointing right */
-tei-add.reveal[data-reveal="left"]::after{
-  left:-1.2em;
-  top:50%;
-  transform:translateY(-50%);
+tei-add.reveal[data-reveal="left"]::after {
+  left: -1.2em;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* RIGHT: right side, pointing left */
-tei-add.reveal[data-reveal="right"]::after{
-  right:-1.2em;
-  top:50%;
-  transform:translateY(-50%) rotate(180deg);
+tei-add.reveal[data-reveal="right"]::after {
+  right: -1.2em;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 /* TOP: left side, pointing down */
-tei-add.reveal[data-reveal="top"]::after{
-  left:-1.2em;
-  top:0;
-  transform:translate(-10%,-10%) rotate(90deg);
+tei-add.reveal[data-reveal="top"]::after {
+  left: -1.2em;
+  top: 0;
+  transform: translate(-10%, -10%) rotate(90deg);
 }
 
 /* BOTTOM: right side, pointing up */
-tei-add.reveal[data-reveal="bottom"]::after{
-  right:-1.2em;
-  bottom:0;
-  transform:translate(10%,10%) rotate(-90deg);
+tei-add.reveal[data-reveal="bottom"]::after {
+  right: -1.2em;
+  bottom: 0;
+  transform: translate(10%, 10%) rotate(-90deg);
 }
 
 /* ---------------- Toggle button ---------------- */
-.marginal-toggle{
-  font-size:.8em;
-  line-height:1;
-  padding:.1em .4em;
-  margin:0 .25em 0 0;
-  background:#eee;
-  border:1px solid #999;
-  border-radius:3px;
-  cursor:pointer;
-  vertical-align:baseline;
+.marginal-toggle {
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 0.1em 0.4em;
+  margin: 0 0.25em 0 0;
+  background: #eee;
+  border: 1px solid #999;
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: baseline;
 }
 
 /* Deletions */
@@ -953,4 +1014,3 @@ tei-add.reveal[data-reveal="bottom"]::after{
   text-underline-offset: 0.15em;
   text-decoration-color: currentColor; /* overridden per wit below */
 }
-
