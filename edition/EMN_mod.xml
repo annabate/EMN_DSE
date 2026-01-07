@@ -98,7 +98,9 @@
 <sp>
 <speaker>Feli</speaker>
 <lg>
-<l n="15">Y ¿cuándo <app><rdg wit="A0" varSeq="0" hand="authorial">ser</rdg><lem wit="A1" varSeq="1" hand="authorial"><del>ser</del></lem></app>darás la vuelta? </l>
+<l n="15">Y ¿cuándo <mod change="A0" varSeq="0" hand="authorial">ser</mod>
+  <mod change="A1" varSeq="1" hand="authorial">
+    <del>ser</del></mod>darás la vuelta? </l>
 </lg
 ></sp>
 <sp>

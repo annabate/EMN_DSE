@@ -15,9 +15,9 @@
       <span><em>El marqués de las Navas</em> – Edición Digital Académica</span>
     </div>
     <div id="floating-tools">
-      <button id="add-witness-btn" title="Comparar testimonio" class="hidden"></button>
+      <button id="add-witness-btn" title="Cotejar testimonio" class="hidden"></button>
       <select id="witness-select" class="visible">
-        <option value="">Selecciona testimonio</option>
+        <option value="">Cotejar testimonio</option>
       </select>
       <button id="open-stats-btn">Ver estadísticas</button>
     </div>
@@ -25,8 +25,22 @@
 
   <!-- TEI Content Wrapper -->
   <div id="tei-wrapper" class="synoptic-view">
-    <div id="critical-container" class="tei-column critical-column"></div>
-    <div id="witness-container" class="tei-column witness-column hidden"></div>
+    <div id="critical-container" class="tei-column critical-column">
+      <div id="critical-banner" class="critical-banner hidden">
+        <div class="banner-content">
+          <div class="banner-label">Edición Crítica</div>
+        </div>
+      </div>
+      <div id="critical-content"></div>
+    </div>
+    <div id="witness-container" class="tei-column witness-column hidden">
+      <div id="witness-banner" class="witness-banner hidden">
+        <div class="banner-content">
+          <div class="banner-label">Testimonio: <span id="witness-siglum"></span></div>
+        </div>
+      </div>
+      <div id="witness-content"></div>
+    </div>
   </div>
 
   <!-- Modal wrapper for centering and backdrop -->
@@ -1072,15 +1086,21 @@
       select.classList.toggle("visible");
     });
 
-    // delega completamente su openWitness
+    // Handle header dropdown
     select.addEventListener("change", () => {
-      openWitness(select.value);
+      if (select.value) {
+        openWitness(select.value);
+      } else {
+        closeWitness();
+      }
     });
   }
 
   function populateWitnessSelect(allWitnesses) {
     const select = document.getElementById("witness-select");
-    select.innerHTML = '<option value="">Selecciona testimonio</option>';
+    
+    // Populate header dropdown
+    select.innerHTML = '<option value="">Cotejar testimonio</option>';
     allWitnesses.forEach(witID => {
       const option = document.createElement("option");
       option.value = witID;
@@ -1093,12 +1113,28 @@
     if (!witnessID) return;
 
     const container = document.getElementById("witness-container");
-    container.innerHTML = "";
+    const contentDiv = document.getElementById("witness-content");
+    const banner = document.getElementById("witness-banner");
+    const witnessSiglum = document.getElementById("witness-siglum");
+    const criticalBanner = document.getElementById("critical-banner");
+    
+    // Show and populate the witness banner
+    if (banner && witnessSiglum) {
+      witnessSiglum.textContent = witnessID;
+      banner.classList.remove("hidden");
+    }
+    
+    // Show the critical banner when synoptic view is activated
+    if (criticalBanner) {
+      criticalBanner.classList.remove("hidden");
+    }
+    
+    contentDiv.innerHTML = "";
     container.classList.remove("hidden");
 
     const witnessDOM = reconstructWitness(witnessID, baseTEI);
     witnessDOM.setAttribute("data-witness-id", witnessID);
-    container.appendChild(witnessDOM);
+    contentDiv.appendChild(witnessDOM);
 
     requestAnimationFrame(() => {
       decorateNotes(witnessDOM);
@@ -1125,6 +1161,24 @@
     });
   }
 
+  function closeWitness() {
+    const container = document.getElementById("witness-container");
+    const banner = document.getElementById("witness-banner");
+    const criticalBanner = document.getElementById("critical-banner");
+    const select = document.getElementById("witness-select");
+    
+    container.classList.add("hidden");
+    if (banner) {
+      banner.classList.add("hidden");
+    }
+    if (criticalBanner) {
+      criticalBanner.classList.add("hidden");
+    }
+    if (select) {
+      select.value = "";
+    }
+  }
+
   // =========================
   // Boot
   // =========================
@@ -1135,9 +1189,9 @@
       originalData = data.cloneNode(true);
 
       // 2) Monta nel DOM
-      const criticalContainer = document.getElementById("critical-container");
-      criticalContainer.appendChild(data);
-      const root = criticalContainer;
+      const criticalContent = document.getElementById("critical-content");
+      criticalContent.appendChild(data);
+      const root = criticalContent;
 
       // 3) Dati di supporto
       const castMap  = buildCastMap(baseTEI);
@@ -1187,6 +1241,15 @@
 
       // 5) Controlli flottanti
       setupFloatingControls();
+
+      // Ensure banners stick below the main header by setting a CSS variable
+      function setHeaderHeightVar() {
+        const header = document.getElementById('sticky-header');
+        const h = header ? header.offsetHeight : 0;
+        document.documentElement.style.setProperty('--header-height', h + 'px');
+      }
+      setHeaderHeightVar();
+      window.addEventListener('resize', setHeaderHeightVar);
     });
   };
 </script>

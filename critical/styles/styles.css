@@ -94,6 +94,13 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#witness-content {
+  flex: 1;
+  overflow-y: auto;
 }
 
 /* TEI Headers */
@@ -348,6 +355,56 @@ tei-l[part="F"] {
 #witness-container.hidden {
   display: none;
 }
+
+.witness-column {
+  padding: 2em;
+}
+
+.critical-banner,
+.witness-banner {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, #fffdf7 0%, #ffffff 100%);
+  border-bottom: 2px solid #d4b896;
+  padding: 1em;
+  z-index: 20;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.critical-banner.hidden,
+.witness-banner.hidden {
+  display: none;
+}
+
+.critical-banner .banner-content,
+.witness-banner .banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.banner-label {
+  font-weight: 600;
+  color: var(--text-heading);
+  font-size: 1.05rem;
+}
+
+#witness-siglum {
+  font-weight: 700;
+  color: #6b5d4c;
+  font-family: "Courier New", monospace;
+}
+
+
 /* Ensures line containers render even when content is replaced (e.g. in omitted spans) */
 .line-container.omitted {
   font-style: italic;
