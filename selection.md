@@ -13,7 +13,7 @@ title: Acceder al texto
       <div class="card-body">
         <h5 class="card-title">Edición crítica</h5>
         <p class="card-text">
-          Consulte la edición crítica digital del texto basada en la colación entre testimonios.
+          Aquí puedes acceder a la edición crítica digital del texto basada en la colación entre testimonios.
         </p>
         <a href="{{ site.baseurl }}/critical/index.html" class="btn btn-secondary">Acceder</a>
       </div>
@@ -27,7 +27,7 @@ title: Acceder al texto
       <div class="card-body">
         <h5 class="card-title">Edición crítico-genética</h5>
         <p class="card-text">
-          Acceda a la edición genética digital basada en el manuscrito autógrafo.
+          Aquí puedes acceder a la edición crítico-genética digital basada en el manuscrito autógrafo.
         </p>
         <a href="{{ site.baseurl }}/edition/index.html" class="btn btn-primary">Acceder</a>
       </div>
